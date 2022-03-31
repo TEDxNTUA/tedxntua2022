@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load render_bundle from webpack_loader %}
+{% block title %}{% trans 'about.title' %}{% endblock %}
+{% block description %}{% trans 'about.description' %}{% endblock %}
+{% block image %}{% static "images/tedxntua_photo_1200.jpg" %}{% endblock %}
+{% block content %}
+
+<!-- CODE HERE -->
+
+
+{% endblock %}
+{% block scripts %}
+    {% render_bundle 'about' 'js' %}
+{% endblock %}

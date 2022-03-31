@@ -1,0 +1,1730 @@
+# TEDxNTUA 2021
+# Copyright (C) 2021 TEDxNTUA
+# This file is distributed under the same license as the tedxntua2021 package.
+# Nick Bellos <nikolas.bellos@gmail.com>, 2021.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-12-07 17:26+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: \n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\project\about\templates\about\index.html:5
+msgid "about.title"
+msgstr "Σχετικά με μας"
+
+#: .\project\about\templates\about\index.html:6
+msgid "about.description"
+msgstr ""
+"Ποιοι είμαστε; Τι είναι το TED; Τι είναι το TEDx; Γνωρίστε τους θεσμούς που "
+"εμπλέκονται σε αυτήν την προσπάθεια και την ιστορία που κρύβεται πίσω από "
+"την ομάδα του TEDxNTUA."
+
+#: .\project\about\templates\about\index.html:13
+msgid "about.meet_the_team"
+msgstr "ΓΝΩΡΙΣΕ ΤΗΝ ΟΜΑΔΑ"
+
+#: .\project\about\templates\about\index.html:44
+#, python-format
+msgid "%(team_name)s TEAM"
+msgstr "ΟΜΑΔΑ %(team_name)s"
+
+#: .\project\about\templates\about\index.html:65
+msgid "about.tedxntua"
+msgstr ""
+"<h3>Τι είναι το TEDxNTUA;</h3><p>Το TEDxNTUA είναι ένα συνέδριο που "
+"περιλαμβάνει <strong>ομιλίες</strong> γύρω από την <strong>εκλαϊκευμένη "
+"επιστήμη</strong>, την <strong>τέχνη</strong>, και τα <strong>κοινωνικά "
+"ζητήματα</strong>, <strong>ιστορίες που εμπνέουν</strong>, καθώς και "
+"<strong>πολυδιάστατα workshops</strong> και <strong>παραστάσεις</strong>. "
+"Τελεί υπό την αιγίδα του Εθνικού Μετσόβιου Πολυτεχνείου (<a href=\"https://"
+"www.ntua.gr\" target=\"_blank\">ΕΜΠ</a>) και απευθύνεται κυρίως στην "
+"κοινότητα του πανεπιστημίου αλλά και στις ευρύτερες φοιτητικές και τοπικές "
+"κοινότητες της Αθήνας.</p><p>Η οργανωτική μας ομάδα αποτελείται από "
+"<strong>εθελοντές φοιτητές</strong>, κυρίως του ΕΜΠ, που ασπάζονται τη "
+"φιλοσοφία της κοινότητας του TED για &quot;ιδέες που αξίζει να "
+"διαδοθούν&quot;. Η φιλοδοξία μας σαν ομάδα είναι να αναπτύξουμε την εκδήλωση "
+"σε μία πλατφόρμα όπου θα μπορούν να ακουστούν οι φωνές ατόμων που μπορούν να "
+"κάνουν τη διαφορά. Όπου τα μέλη της κοινότητας θα μπορούν να αλληλεπιδρούν "
+"μεταξύ τους και να πυροδοτούν γόνιμες συζητήσεις για τις κοινές μας "
+"ανησυχίες, όπως η <strong>μηχανική</strong> και ο ρόλος της στο χτίσιμο "
+"<strong>μίας καλύτερης και πιο συμπεριληπτικής κοινωνίας</strong>.</p><p>Από "
+"την αρχή του εγχειρήματος το <strong>2015</strong>, τα μέλη της φοιτητικής "
+"κοινότητας έχουν δείξει σταθερά τη στήριξή τους, συμμετέχοντας τόσο ως "
+"θεατές όσο και ως εθελοντές. Έτσι, έχουν βοηθήσει να καθιερωθεί το TEDxNTUA "
+"σαν θεσμός και μας έχουν εμποτίσει με αίσθημα ευθύνης απέναντί τους. Για να "
+"επιτευχθεί αυτό, αποτελεί σημαντικό στοιχείο η συνεχής προσπάθειά μας να "
+"παρέχουμε μία εκδήλωση <strong>ανοιχτή προς όλους</strong> χωρίς αντίτιμο, "
+"με τη βοήθεια των συνεργατών μας.</p><p>Το TEDxNTUA έχει <strong>μη "
+"κερδοσκοπικό</strong> χαρακτήρα και χρηματοδοτείται αποκλειστικά από "
+"χορηγούς, όπως εταιρίες, οργανισμούς ή ευεργέτες. Τελεί υπό την επίβλεψη "
+"καθηγητών του ΕΜΠ και ανήκει θεσμικά στο Ερευνητικό Πανεπιστημιακό "
+"Ινστιτούτο Συστημάτων Επικοινωνιών και Υπολογιστών (<a href=\"https://www."
+"iccs.gr\" target=\"_blank\">ΕΠΙΣΕΥ</a>) του ΕΜΠ.</p>"
+
+#: .\project\about\templates\about\index.html:66
+msgid "about.join"
+msgstr ""
+"<details><summary><strong>Θέλω να συμμετέχω στην ομάδα!</strong></"
+"summary><p>Η οργανωτική ομάδα ανανεώνεται κάθε χρόνο. Αναζητούμε "
+"<strong>παθιασμένους φοιτητές</strong> με ενδιαφέρον στο να ανακαλύπτουν "
+"άτομα και ιδέες που χρειάζεται να ακουστούν, να χτίζουν τη συνολική εμπειρία "
+"της εκδήλωσης, να συνεργάζονται με χορηγούς που χρηματοδοτούν το project, να "
+"δημιουργούν εκπληκτικά γραφικά, να εντοπίζουν ιδανικούς χώρους για την "
+"εκδήλωση, να χρησιμοποιούν τα social media για να διηγηθούν συναρπαστικές "
+"ιστορίες και να προωθήσουν τον σκοπό μας, ή να αναπτύσσουν ελκυστικές "
+"ιστοσελίδες και εφαρμογές για την εκδήλωσή μας.</p><p>Τα μέλη της ομάδας "
+"εργάζονται μαζί για μήνες ώστε να φτιάξουν μία <strong>μοναδική εμπειρία</"
+"strong>, μέσω ενός ταξιδιού που, παρότι απαιτητικό, στο τέλος πραγματικά "
+"δημιουργεί <strong>δεσμούς</strong> και μας γεμίζει με <strong>ικανοποίηση</"
+"strong>.</p><p>Εναλλακτικά, μπορείς να συμμετέχεις ως <strong>εθελοντής/ρια "
+"για την ημέρα της εκδήλωσης</strong> όπου χρειαζόμαστε μεγαλύτερη βοήθεια.</"
+"p><p>Οι αιτήσεις ανοίγουν γύρω στον Σεπτέμβρη για την οργανωτική ομάδα και 4-"
+"6 εβδομάδες πριν την εκδήλωση για τους εθελοντές εκείνης της μέρας. "
+"<strong>Συντονίσου</strong> στις σελίδες μας στα social media ώστε να "
+"παραμένεις ενημερωμένος/η.</p></details>"
+
+#: .\project\about\templates\about\index.html:71
+msgid "about.ted"
+msgstr ""
+"<h3>Τι είναι το TED;</h3><p>Το TED είναι ένας μη κερδοσκοπικός οργανισμός "
+"αφοσιωμένος σε <strong>Ιδέες που Αξίζει να Διαδοθούν</strong>. Ξεκινώντας ως "
+"τετραήμερο συνέδριο στην Καλιφόρνια 30 χρόνια πριν, το TED έχει μεγαλώσει "
+"για να υποστηρίξει την αποστολή του με πολλαπλές πρωτοβουλίες. Τα δύο ετήσια "
+"συνέδρια TED προσκαλούν τους καλύτερους στοχαστές του κόσμου για να μιλήσουν "
+"18 ή λιγότερα λεπτά. Πολλές από αυτές τις ομιλίες προσφέρονται δωρεάν στο "
+"κοινό, στο <a href=\"https://www.ted.com\" target=\"_blank\">TED.com</a>.</"
+"p><p>Μεταξύ των ατόμων που έχουν υπάρξει <strong>ομιλητές του TED</strong> "
+"είναι και ο Bill Gates, η Jane Goodall, η Elizabeth Gilbert, ο Sir Richard "
+"Branson, η Nandan Nilekani, ο Philippe Starck, η Ngozi Okonjo-Iweala, ο Sal "
+"Khan και ο Daniel Kahneman.</p><p>Το ετήσιο συνέδριο TED πραγματοποιείται "
+"κάθε άνοιξη στο Βανκούβερ, στη Βρετανική Κολομβία. Οι πρωτοβουλίες του TED "
+"σε θέματα κοινωνικής δικτύωσης, περιλαμβάνουν το <a href=\"https://www.ted."
+"com\" target=\"_blank\">TED.com</a>, όπου οι νέες ομιλίες δημοσιεύονται "
+"καθημερινά, υποτιτλίζονται και εφοδιάζονται με διαδραστικά transcripts από "
+"το <a href=\"https://www.ted.com/about/programs-initiatives/ted-translators"
+"\" target=\"_blank\">Open Translation Project</a>, και την εκπαιδευτική "
+"πρωτοβουλία <a href=\"https://www.ted.com/about/programs-initiatives/ted-ed"
+"\" target=\"_blank\">TED-Ed</a>. Το TED έχει καθιερώσει το ετήσιο <a href="
+"\"https://www.ted.com/about/programs-initiatives/ted-prize\" target=\"_blank"
+"\">TED Prize</a>, όπου εξέχοντες υποψήφιοι με μια ευχή να αλλάξουν τον κόσμο "
+"βοηθούν στη μετατροπή των ευχών τους σε πράξεις, το <a href=\"https://www."
+"ted.com/about/programs-initiatives/tedx-program\" target=\"_blank\">TEDx</"
+"a>, το οποίο υποστηρίζει πρόσωπα και ομάδες στη διοργάνωση τοπικών, αυτόνομα "
+"οργανωμένων εκδηλώσεων στο στυλ του TED σε ολόκληρο τον κόσμο, καθώς και το "
+"πρόγραμμα <a href=\"https://www.ted.com/about/programs-initiatives/ted-"
+"fellows-program\" target=\"_blank\">TED Fellows</a> που βοηθάει πρωτοπόρους "
+"που θέλουν να αλλάξουν τον κόσμο να ενισχύσουν τον αντίκτυπο των "
+"αξιοσημείωτων έργων τους, όπως και των δραστηριοτήτων τους.</p>"
+
+#: .\project\about\templates\about\index.html:74
+msgid "about.tedx"
+msgstr ""
+"<h3>Τι είναι το TEDx;</h3><p>Στο πνεύμα των Ιδεών που Αξίζει να Διαδοθούν, "
+"το TEDx είναι ένα πρόγραμμα <strong>τοπικών, αυτόνομα οργανωμένων "
+"εκδηλώσεων</strong> που φέρνουν τους ανθρώπους μαζί για να μοιραστούν μια "
+"εμπειρία TED. Σε μια εκδήλωση TEDx, τα βίντεο των ομιλιών TED και οι "
+"ζωντανοί ομιλητές συνδυάζονται για να προκαλέσουν <strong>βαθιά συζήτηση και "
+"σύνδεση</strong>. Αυτές οι τοπικές, αυτόνομα οργανωμένες εκδηλώσεις "
+"ονομάζονται TEDx, όπου <em>x = ανεξάρτητα οργανωμένη εκδήλωση TED</em>.</"
+"p><p>Το συνέδριο TED παρέχει γενικές οδηγίες για το πρόγραμμα TEDx, αλλά τα "
+"μεμονωμένα γεγονότα TEDx είναι αυτόνομα οργανωμένα (σύμφωνα με ορισμένους "
+"κανόνες και κανονισμούς).</p>"
+
+#: .\project\home\templates\home\about.html:5
+msgid "home.about.title"
+msgstr "ΣΧΕΤΙΚΑ"
+
+#: .\project\home\templates\home\about.html:10
+msgid "home.about.pyrforos"
+msgstr "Πυρφόρος: Το έμβλημα του Εθνικού Μετσόβιου Πολυτεχνείου"
+
+#: .\project\home\templates\home\about.html:12
+msgid "home.about.auspices"
+msgstr "Υπό την αιγίδα του ΕΜΠ"
+
+#: .\project\home\templates\home\about.html:15
+msgid "home.about.content"
+msgstr ""
+"<h3>Τι είναι αυτή η εκδήλωση;</h3><p>Το TEDx είναι ένα πρόγραμμα "
+"<strong>τοπικών, αυτόνομα οργανωμένων εκδηλώσεων</strong> που φέρνουν τους "
+"ανθρώπους μαζί. Δημιουργήθηκε από το TED και υπόκειται στη γενική καθοδήγηση "
+"του συνεδρίου TED.</p><p>Το TEDxNTUA είναι ένα συνέδριο που περιλαμβάνει "
+"ομιλίες γύρω από την <strong>εκλαϊκευμένη επιστήμη</strong>, την "
+"<strong>τέχνη</strong> και τα <strong>κοινωνικά ζητήματα</strong>, "
+"<strong>ιστορίες που εμπνέουν</strong>, καθώς και <strong>πολυδιάστατα "
+"workshops και παραστάσεις</strong>. Ξεκίνησε το 2015 και διοργανώνεται "
+"έκτοτε από εθελοντές φοιτητές που προέρχονται κυρίως από το ΕΜΠ.</p><p>Μάθε "
+"περισσότερα για την εκδήλωση, γνώρισε τη φετινή ομάδα και μάθε πώς μπορείς "
+"να συμμετέχεις στην επόμενη, κάνοντας κλικ παρακάτω.</p>"
+
+#: .\project\home\templates\home\about.html:17
+msgid "home.about.learn_more"
+msgstr "Μάθε περισσότερα για μας"
+
+#: .\project\home\templates\home\about.html:20
+msgid "home.about.cta_header"
+msgstr "Και μην ξεχάσεις:"
+
+#: .\project\home\templates\home\about.html:22
+#: .\project\home\templates\home\hero.html:36
+msgid "tickets.cta"
+msgstr "Κάνε κράτηση!"
+
+#: .\project\home\templates\home\hero.html:14
+msgid "home.dualism_logo"
+msgstr "Το λογότυπο του θέματός μας: Δυϊσμός"
+
+#: .\project\home\templates\home\hero.html:18
+msgid "home.dualism_summary"
+msgstr ""
+"<p><strong>ΔΥΪΣΜΟΣ</strong>, η προσπάθεια ερμηνείας του κόσμου με βάση "
+"<strong>δύο εξηγητικές αρχές</strong> που συνεργάζονται και συνενεργούν. Η "
+"αποδοχή του δυϊσμού ως <strong>βάση σύνδεσης και δημιουργίας</strong>, η "
+"κατάρριψη της σύνδεσής του με την αντίθεση.</p>"
+
+#: .\project\home\templates\home\hero.html:19
+msgid "home.dualism_full"
+msgstr ""
+"<details><summary>Διάβασε περισσότερα</summary><p>Στο φετινό μας συνέδριο "
+"προσεγγίζουμε θεματικές που άπτονται σύγχρονων κοινωνικών, ανθρωπιστικών, "
+"καλλιτεχνικών και επιστημονικών θεμάτων, τα οποία συνίστανται από δύο αρχές."
+"</p><p>Πρόκειται για δύο αρχές που φαινομενικά ασυσχέτιστες που "
+"ανταγωνίζονται η μία την άλλη, αλλά στην πραγματικότητα αλληλοσυμπληρώνονται "
+"και συνεργούν στην επίτευξη μιας αρμονικής ενότητας.</p><p>Τι είναι ο "
+"άνθρωπος, ψυχή και σώμα ή μόνο ύλη; Πώς από τον κυματοσωματιδιακό δυϊσμό "
+"οδηγούμαστε στην τεχνολογία αιχμής των κβαντικών υπολογιστών; Πώς από την "
+"ταυτόχρονη συνύπαρξη του ηλεκτρισμού και του μαγνητισμού και της συσχέτισης "
+"τους από τον Maxwell οδηγούμαστε στη σύγχρονη οικονομία και κοινωνία; Πώς ο "
+"ψηφιακός δυισμός καθορίζει την καθημερινή μας ζωή; Πώς η αντίθεση λευκού και "
+"μαύρου συνθέτουν την εσάνς μιας φωτογραφίας; Πώς το κενό και το πλήρες "
+"συνθέτουν τοπία στην αρχιτεκτονική;</p><p>Σε όλα τα παραπάνω γίνεται σαφής η "
+"σχέση εξάρτησης των εκάστοτε εννοιών. Χωρίς την ύπαρξη της μίας αναιρείται "
+"το νόημα ύπαρξης της άλλης.</p></details>"
+
+#: .\project\home\templates\home\hero.html:23
+msgid "home.date"
+msgstr "28 Μαρτίου"
+
+#: .\project\home\templates\home\index.html:5
+msgid "home.title"
+msgstr "Αρχική"
+
+#: .\project\home\templates\home\index.html:6
+msgid "home.description"
+msgstr ""
+"Το TEDxNTUA 2020 διεξάγεται φέτος, το Σάββατο 28 Μαρτίου, στο Hub Events. Το "
+"θέμα της εκδήλωσης είναι ο Δυϊσμός. Ακολουθήστε μας σε αυτό το ταξίδι, "
+"γεμάτο από ομιλίες που θα σας κινήσουν την περιέργεια, παραστάσεις που θα "
+"σας γοητεύσουν και πολυδιάστατα workshops."
+
+#: .\project\home\templates\home\lineup.html:4
+msgid "home.lineup.title"
+msgstr "LINE UP"
+
+#: .\project\home\templates\home\lineup.html:11
+#: .\project\program\templates\program\_event-tabs.html:5
+#: .\project\program\templates\program\listing.html:5
+#: .\project\templates\layouts\partials\nav.html:50
+msgid "Speakers"
+msgstr "Ομιλητές"
+
+#: .\project\home\templates\home\lineup.html:18
+#: .\project\program\templates\program\_event-tabs.html:8
+#: .\project\program\templates\program\listing.html:7
+#: .\project\templates\layouts\partials\nav.html:56
+msgid "Performers"
+msgstr "Performers"
+
+#: .\project\home\templates\home\lineup.html:25
+#: .\project\program\templates\program\_event-tabs.html:11
+#: .\project\program\templates\program\listing.html:9
+#: .\project\templates\layouts\partials\nav.html:62
+msgid "Side events"
+msgstr "Side events"
+
+#: .\project\home\templates\home\lineup.html:97
+#: .\project\program\templates\program\listing.html:66
+msgid "more_soon"
+msgstr "Σύντομα περισσότερα"
+
+#: .\project\home\templates\home\venue.html:5
+msgid "home.venue.title"
+msgstr "ΧΩΡΟΣ"
+
+#: .\project\home\templates\home\venue.html:9
+msgid "home.venue.name"
+msgstr "The HUB Events"
+
+#: .\project\home\templates\home\venue.html:10
+msgid "home.venue.address"
+msgstr "Αλκμήνης 5, Κεραμεικός"
+
+#: .\project\home\templates\home\venue.html:15
+msgid "home.venue.accessible_icon"
+msgstr "Για άτομα περιορισμένης κινητικότητας"
+
+#: .\project\home\templates\home\venue.html:16
+msgid "home.venue.accessible"
+msgstr "Προσβάσιμο"
+
+#: .\project\home\templates\home\venue.html:26
+msgid "home.venue.photo_alt"
+msgstr "Φωτογραφία του κτιρίου του The HUB Events"
+
+#: .\project\home\templates\home\venue.html:30
+msgid "home.venue.access"
+msgstr ""
+"<h3>Οδηγίες πρόσβασης</h3><h4>Μέσα μαζικής μεταφοράς</h4><p>Ο χώρος "
+"βρίσκεται 7 λεπτά μακριά με τα πόδια από τον κοντινότερο σταθμό μετρό, "
+"<strong>Κεραμεικός</strong> (γραμμή M3) και 12 λεπτά μακριά από τον σταθμό "
+"<strong>Κάτω Πετράλωνα</strong> (γραμμή M1).</p><p>Επίσης, μπορείς να έρθεις "
+"με λεωφορείο ή τρόλεϊ:</p><ul><li>Γραμμές λεωφορείων 049, 815, 838, 914, "
+"Β18, Γ18 (στάση Καμπά)</li><li>Γραμμή τρόλεϊ 21 (στάση Καμπά)</li></"
+"ul><p>Χρησιμοποίησε το εργαλείο <a class=\"underline-parent\" href=\"http://"
+"telematics.oasa.gr/\"><span class=\"underline\">Βέλτιστη Διαδρομή</span></a> "
+"της ιστοσελίδας του ΟΑΣΑ για αναλυτικές οδηγίες.</a>"
+
+#: .\project\partners\admin.py:15
+#: .\project\program\admin\presenter_admin.py:18
+msgid "Link"
+msgstr "Σύνδεσμος"
+
+#: .\project\partners\models.py:65
+msgid "Platinum Sponsor"
+msgstr "Platinum Χορηγός"
+
+#: .\project\partners\models.py:66
+msgid "Grand Sponsors"
+msgstr "Μεγάλοι Χορηγοί"
+
+#: .\project\partners\models.py:67
+msgid "Grand Carrier Sponsors"
+msgstr "Μεγάλοι Χορηγοί Μεταφορών"
+
+#: .\project\partners\models.py:68
+msgid "Grand Hospitality Sponsors"
+msgstr "Μεγάλοι Χορηγοί Φιλοξενίας"
+
+#: .\project\partners\models.py:69
+msgid "Sponsors"
+msgstr "Χορηγοί"
+
+#: .\project\partners\models.py:70
+msgid "Supporters"
+msgstr "Υποστηρικτές"
+
+#: .\project\partners\models.py:71
+msgid "Media Partners"
+msgstr "Χορηγοί Επικοινωνίας"
+
+#: .\project\partners\models.py:72
+msgid "Community Partners"
+msgstr "Συνεργάτες Κοινότητας"
+
+#: .\project\partners\models.py:89 .\project\program\models.py:223
+#: .\project\program\models.py:347 .\project\team\models.py:101
+msgid "Published"
+msgstr "Δημόσιο"
+
+#: .\project\partners\templates\partners\index.html:3
+#: .\project\templates\layouts\partials\nav.html:79
+msgid "Partners"
+msgstr "Συνεργάτες"
+
+#: .\project\partners\templates\partners\index.html:4
+msgid "partners.description"
+msgstr ""
+"Η εκδήλωσή μας δεν θα ήταν εφικτή χωρίς τη στήριξη από οργανισμούς που "
+"συμμερίζονται τις αξίες και τα οράματά μας. Επισκεφθείτε τις ιστοσελίδες "
+"τους και μάθετε περισσότερα για αυτούς."
+
+#: .\project\partners\templates\partners\index.html:36
+#: .\project\partners\templates\partners\index.html:50
+msgid "website"
+msgstr "ΣΕΛΙΔΑ"
+
+#: .\project\partners\templates\partners\index.html:46
+msgid "leaflet"
+msgstr "ΦΥΛΛΑΔΙΟ"
+
+#: .\project\program\admin\activity_admin.py:26
+msgid "Presenter"
+msgstr "Παρουσιαστής δραστηριότητας"
+
+#: .\project\program\admin\presenter_admin.py:30
+msgid "Activities"
+msgstr "Δραστηριότητες"
+
+#: .\project\program\forms\activity_form.py:17
+msgid "Get image from presenter"
+msgstr "Λήψη εικόνας από τον παρουσιαστή δραστηριότητας"
+
+#: .\project\program\forms\activity_form.py:18
+msgid "If selected, the image will be overridden by that of the presenter"
+msgstr ""
+"Αν επιλεχθεί, η εικόνα θα αντικατασταθεί με την εικόνα του παρουσιαστή "
+"δραστηριότητας"
+
+#: .\project\program\forms\presenter_form.py:9
+#: .\venv\Lib\site-packages\django\forms\widgets.py:711
+msgid "No"
+msgstr "Όχι"
+
+#: .\project\program\forms\presenter_form.py:21
+msgid "Assign empty activity"
+msgstr "Ανάθεση κενής δραστηριότητας"
+
+#: .\project\program\forms\presenter_form.py:22
+msgid ""
+"This will create an empty and unpublished activity of the given type with "
+"the same photo as the presenter's"
+msgstr ""
+"Θα δημιουργηθεί μία κενή και μη δημόσια δραστηριότητα του δοθέντος τύπου που "
+"θα έχει την ίδια εικόνα με τον παρουσιαστή δραστηριότητας"
+
+#: .\project\program\models.py:44
+msgid "MAIN STAGE"
+msgstr "ΚΥΡΙΑ ΣΚΗΝΗ"
+
+#: .\project\program\models.py:45
+msgid "SIDE EVENTS"
+msgstr "SIDE EVENTS"
+
+#: .\project\program\models.py:193
+msgid "General"
+msgstr "Γενικά"
+
+#: .\project\program\models.py:194
+msgid "Talk"
+msgstr "Ομιλία"
+
+#: .\project\program\models.py:195
+msgid "Performance"
+msgstr "Performance"
+
+#: .\project\program\models.py:196
+msgid "Side event"
+msgstr "Side event"
+
+#: .\project\program\models.py:197
+msgid "Hosting"
+msgstr "Παρουσίαση"
+
+#: .\project\program\templates\program\_event-tabs.html:15
+#: .\project\templates\layouts\partials\nav.html:69
+msgid "Schedule"
+msgstr "Πρόγραμμα"
+
+#: .\project\program\templates\program\listing.html:14
+msgid "speakers.description"
+msgstr "Γνώρισε τους ομιλητές του φετινού TEDxNTUA 2020!"
+
+#: .\project\program\templates\program\listing.html:16
+msgid "performers.description"
+msgstr "Γνώρισε τους performers του φετινού TEDxNTUA 2020!"
+
+#: .\project\program\templates\program\listing.html:18
+msgid "side_events.description"
+msgstr "Μάθε περισσότερα για τα side events του φετινού TEDxNTUA 2020!"
+
+#: .\project\program\templates\program\presenter.html:9
+msgid "back"
+msgstr "Πίσω"
+
+#: .\project\program\templates\program\presenter.html:36
+msgid "presenter.read_full"
+msgstr "Διάβασε την πλήρη περιγραφή"
+
+#: .\project\program\templates\program\schedule.html:4
+msgid "schedule.title"
+msgstr "Πρόγραμμα"
+
+#: .\project\program\templates\program\schedule.html:5
+msgid "schedule.description"
+msgstr ""
+"Όλη η ουσία μίας εκδήλωσης TEDx κρύβεται στο μίγμα των ομιλιών, των "
+"παραστάσεων και των workshops που περιλαμβάνει. Ανακαλύψτε τους τομείς που "
+"θα εξερευνήσουμε και ελάτε μαζί μας σε ένα ταξίδι γεμάτο Δυϊσμό."
+
+#: .\project\program\templates\program\schedule.html:12
+msgid "TIME"
+msgstr "ΩΡΑ"
+
+#: .\project\settings\base.py:179
+msgid "Greek"
+msgstr "Ελληνικά"
+
+#: .\project\settings\base.py:180
+msgid "English"
+msgstr "Αγγλικά"
+
+#: .\project\templates\layouts\partials\footer.html:9
+msgid "Find us"
+msgstr "Βρείτε μας"
+
+#: .\project\templates\layouts\partials\footer.html:52
+msgid "More stuff from us"
+msgstr "Περισσότερα από εμάς"
+
+#: .\project\templates\layouts\partials\footer.html:115
+msgid "Privacy Policy"
+msgstr "Πολιτική Απορρήτου"
+
+#: .\project\templates\layouts\partials\footer.html:118
+msgid "Terms of Use"
+msgstr "Όροι Χρήσης"
+
+#: .\project\templates\layouts\partials\footer.html:122
+msgid "This independent TEDx event is operated under license from TED."
+msgstr ""
+"Αυτή η ανεξάρτητα οργανωμένη εκδήλωση TEDx λειτουργεί με άδεια από το TED."
+
+#: .\project\templates\layouts\partials\nav.html:20
+msgid "MENU"
+msgstr "ΜΕΝΟΥ"
+
+#: .\project\templates\layouts\partials\nav.html:21
+msgid "CLOSE"
+msgstr "ΚΛΕΙΣΕ"
+
+#: .\project\templates\layouts\partials\nav.html:31
+msgid "Home"
+msgstr "Αρχική"
+
+#: .\project\templates\layouts\partials\nav.html:42
+msgid "The event"
+msgstr "Η εκδήλωση"
+
+#: .\project\templates\layouts\partials\nav.html:42
+msgid "(Toggle dropdown)"
+msgstr "(Εμφάνιση/Απόκρυψη υπομενού)"
+
+#: .\project\templates\layouts\partials\nav.html:87
+msgid "About us"
+msgstr "Σχετικά"
+
+#: .\project\templates\layouts\partials\nav.html:95
+msgid "Tickets"
+msgstr "Εισιτήρια"
+
+#: .\project\templates\layouts\partials\nav.html:100
+msgid "LANGUAGE"
+msgstr "ΓΛΩΣΣΑ"
+
+#: .\project\urls.py:37
+msgid "TEDxNTUA 2021 administration"
+msgstr "Διαχείριση TEDxNTUA 2021"
+
+#: .\project\urls.py:38
+msgid "TEDxNTUA 2021 admin"
+msgstr "Διαχείριση TEDxNTUA 2021"
+
+#: .\project\utils\admin.py:20
+msgid "Translatable"
+msgstr "Προς μετάφραση"
+
+#: .\venv\Lib\site-packages\django\contrib\messages\apps.py:7
+msgid "Messages"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\contrib\sitemaps\apps.py:7
+msgid "Site Maps"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\contrib\staticfiles\apps.py:9
+msgid "Static Files"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\contrib\syndication\apps.py:7
+msgid "Syndication"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\paginator.py:45
+msgid "That page number is not an integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\paginator.py:47
+msgid "That page number is less than 1"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\paginator.py:52
+msgid "That page contains no results"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:31
+msgid "Enter a valid value."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:102
+#: .\venv\Lib\site-packages\django\forms\fields.py:658
+msgid "Enter a valid URL."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:154
+msgid "Enter a valid integer."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:165
+msgid "Enter a valid email address."
+msgstr ""
+
+#. Translators: "letters" means latin letters: a-z and A-Z.
+#: .\venv\Lib\site-packages\django\core\validators.py:239
+msgid ""
+"Enter a valid 'slug' consisting of letters, numbers, underscores or hyphens."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:246
+msgid ""
+"Enter a valid 'slug' consisting of Unicode letters, numbers, underscores, or "
+"hyphens."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:255
+#: .\venv\Lib\site-packages\django\core\validators.py:275
+msgid "Enter a valid IPv4 address."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:260
+#: .\venv\Lib\site-packages\django\core\validators.py:276
+msgid "Enter a valid IPv6 address."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:270
+#: .\venv\Lib\site-packages\django\core\validators.py:274
+msgid "Enter a valid IPv4 or IPv6 address."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:304
+msgid "Enter only digits separated by commas."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:310
+#, python-format
+msgid "Ensure this value is %(limit_value)s (it is %(show_value)s)."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:342
+#, python-format
+msgid "Ensure this value is less than or equal to %(limit_value)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:351
+#, python-format
+msgid "Ensure this value is greater than or equal to %(limit_value)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:361
+#, python-format
+msgid ""
+"Ensure this value has at least %(limit_value)d character (it has %"
+"(show_value)d)."
+msgid_plural ""
+"Ensure this value has at least %(limit_value)d characters (it has %"
+"(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:376
+#, python-format
+msgid ""
+"Ensure this value has at most %(limit_value)d character (it has %(show_value)"
+"d)."
+msgid_plural ""
+"Ensure this value has at most %(limit_value)d characters (it has %"
+"(show_value)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:395
+#: .\venv\Lib\site-packages\django\forms\fields.py:290
+#: .\venv\Lib\site-packages\django\forms\fields.py:325
+msgid "Enter a number."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:397
+#, python-format
+msgid "Ensure that there are no more than %(max)s digit in total."
+msgid_plural "Ensure that there are no more than %(max)s digits in total."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:402
+#, python-format
+msgid "Ensure that there are no more than %(max)s decimal place."
+msgid_plural "Ensure that there are no more than %(max)s decimal places."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:407
+#, python-format
+msgid ""
+"Ensure that there are no more than %(max)s digit before the decimal point."
+msgid_plural ""
+"Ensure that there are no more than %(max)s digits before the decimal point."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:469
+#, python-format
+msgid ""
+"File extension '%(extension)s' is not allowed. Allowed extensions are: '%"
+"(allowed_extensions)s'."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\core\validators.py:521
+msgid "Null characters are not allowed."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\base.py:1162
+#: .\venv\Lib\site-packages\django\forms\models.py:756
+msgid "and"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\base.py:1164
+#, python-format
+msgid "%(model_name)s with this %(field_labels)s already exists."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:104
+#, python-format
+msgid "Value %(value)r is not a valid choice."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:105
+msgid "This field cannot be null."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:106
+msgid "This field cannot be blank."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:107
+#, python-format
+msgid "%(model_name)s with this %(field_label)s already exists."
+msgstr ""
+
+#. Translators: The 'lookup_type' is one of 'date', 'year' or 'month'.
+#. Eg: "Title must be unique for pub_date year"
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:111
+#, python-format
+msgid ""
+"%(field_label)s must be unique for %(date_field_label)s %(lookup_type)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:128
+#, python-format
+msgid "Field of type: %(field_type)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:905
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1772
+msgid "Integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:909
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1770
+#, python-format
+msgid "'%(value)s' value must be an integer."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:984
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1850
+msgid "Big (8 byte) integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:996
+#, python-format
+msgid "'%(value)s' value must be either True or False."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:997
+#, python-format
+msgid "'%(value)s' value must be either True, False, or None."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:999
+msgid "Boolean (Either True or False)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1040
+#, python-format
+msgid "String (up to %(max_length)s)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1104
+msgid "Comma-separated integers"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1153
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid date format. It must be in YYYY-MM-DD "
+"format."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1155
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1298
+#, python-format
+msgid ""
+"'%(value)s' value has the correct format (YYYY-MM-DD) but it is an invalid "
+"date."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1158
+msgid "Date (without time)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1296
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[."
+"uuuuuu]][TZ] format."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1300
+#, python-format
+msgid ""
+"'%(value)s' value has the correct format (YYYY-MM-DD HH:MM[:ss[.uuuuuu]]"
+"[TZ]) but it is an invalid date/time."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1304
+msgid "Date (with time)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1452
+#, python-format
+msgid "'%(value)s' value must be a decimal number."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1454
+msgid "Decimal number"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1593
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid format. It must be in [DD] [HH:[MM:]]ss[."
+"uuuuuu] format."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1596
+msgid "Duration"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1646
+msgid "Email address"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1669
+msgid "File path"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1735
+#, python-format
+msgid "'%(value)s' value must be a float."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1737
+msgid "Floating point number"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1866
+msgid "IPv4 address"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1897
+msgid "IP address"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1977
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1978
+#, python-format
+msgid "'%(value)s' value must be either None, True or False."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:1980
+msgid "Boolean (Either True, False or None)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2015
+msgid "Positive integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2028
+msgid "Positive small integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2042
+#, python-format
+msgid "Slug (up to %(max_length)s)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2074
+msgid "Small integer"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2081
+msgid "Text"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2109
+#, python-format
+msgid ""
+"'%(value)s' value has an invalid format. It must be in HH:MM[:ss[.uuuuuu]] "
+"format."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2111
+#, python-format
+msgid ""
+"'%(value)s' value has the correct format (HH:MM[:ss[.uuuuuu]]) but it is an "
+"invalid time."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2114
+msgid "Time"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2240
+msgid "URL"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2262
+msgid "Raw binary data"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2312
+#, python-format
+msgid "'%(value)s' is not a valid UUID."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\__init__.py:2314
+msgid "Universally unique identifier"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\files.py:221
+msgid "File"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\files.py:360
+msgid "Image"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:778
+#, python-format
+msgid "%(model)s instance with %(field)s %(value)r does not exist."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:780
+msgid "Foreign Key (type determined by related field)"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1007
+msgid "One-to-one relationship"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1057
+#, python-format
+msgid "%(from)s-%(to)s relationship"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1058
+#, python-format
+msgid "%(from)s-%(to)s relationships"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\db\models\fields\related.py:1100
+msgid "Many-to-many relationship"
+msgstr ""
+
+#. Translators: If found as last label character, these punctuation
+#. characters will prevent the default label_suffix to be appended to the label
+#: .\venv\Lib\site-packages\django\forms\boundfield.py:146
+msgid ":?.!"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:53
+msgid "This field is required."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:245
+msgid "Enter a whole number."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:396
+#: .\venv\Lib\site-packages\django\forms\fields.py:1126
+msgid "Enter a valid date."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:420
+#: .\venv\Lib\site-packages\django\forms\fields.py:1127
+msgid "Enter a valid time."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:442
+msgid "Enter a valid date/time."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:471
+msgid "Enter a valid duration."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:472
+msgid "The number of days must be between {min_days} and {max_days}."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:532
+msgid "No file was submitted. Check the encoding type on the form."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:533
+msgid "No file was submitted."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:534
+msgid "The submitted file is empty."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:536
+#, python-format
+msgid "Ensure this filename has at most %(max)d character (it has %(length)d)."
+msgid_plural ""
+"Ensure this filename has at most %(max)d characters (it has %(length)d)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:539
+msgid "Please either submit a file or check the clear checkbox, not both."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:600
+msgid ""
+"Upload a valid image. The file you uploaded was either not an image or a "
+"corrupted image."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:762
+#: .\venv\Lib\site-packages\django\forms\fields.py:852
+#: .\venv\Lib\site-packages\django\forms\models.py:1270
+#, python-format
+msgid "Select a valid choice. %(value)s is not one of the available choices."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:853
+#: .\venv\Lib\site-packages\django\forms\fields.py:968
+#: .\venv\Lib\site-packages\django\forms\models.py:1269
+msgid "Enter a list of values."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:969
+msgid "Enter a complete value."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\fields.py:1185
+msgid "Enter a valid UUID."
+msgstr ""
+
+#. Translators: This is the default suffix added to form field labels
+#: .\venv\Lib\site-packages\django\forms\forms.py:86
+msgid ":"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\forms.py:212
+#, python-format
+msgid "(Hidden field %(name)s) %(error)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\formsets.py:91
+msgid "ManagementForm data is missing or has been tampered with"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\formsets.py:338
+#, python-format
+msgid "Please submit %d or fewer forms."
+msgid_plural "Please submit %d or fewer forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\forms\formsets.py:345
+#, python-format
+msgid "Please submit %d or more forms."
+msgid_plural "Please submit %d or more forms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\forms\formsets.py:371
+#: .\venv\Lib\site-packages\django\forms\formsets.py:373
+msgid "Order"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\formsets.py:375
+#, fuzzy
+#| msgid "leaflet"
+msgid "Delete"
+msgstr "ΦΥΛΛΑΔΙΟ"
+
+#: .\venv\Lib\site-packages\django\forms\models.py:751
+#, python-format
+msgid "Please correct the duplicate data for %(field)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:755
+#, python-format
+msgid "Please correct the duplicate data for %(field)s, which must be unique."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:761
+#, python-format
+msgid ""
+"Please correct the duplicate data for %(field_name)s which must be unique "
+"for the %(lookup)s in %(date_field)s."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:770
+msgid "Please correct the duplicate values below."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:1091
+msgid "The inline value did not match the parent instance."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:1158
+msgid "Select a valid choice. That choice is not one of the available choices."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\models.py:1272
+#, python-format
+msgid "\"%(pk)s\" is not a valid value."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\utils.py:162
+#, python-format
+msgid ""
+"%(datetime)s couldn't be interpreted in time zone %(current_timezone)s; it "
+"may be ambiguous or it may not exist."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:395
+msgid "Clear"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:396
+msgid "Currently"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:397
+msgid "Change"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:709
+msgid "Unknown"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\forms\widgets.py:710
+msgid "Yes"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:788
+msgid "yes,no,maybe"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:817
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:834
+#, python-format
+msgid "%(size)d byte"
+msgid_plural "%(size)d bytes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:836
+#, python-format
+msgid "%s KB"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:838
+#, python-format
+msgid "%s MB"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:840
+#, python-format
+msgid "%s GB"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:842
+#, python-format
+msgid "%s TB"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\template\defaultfilters.py:844
+#, python-format
+msgid "%s PB"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:62
+msgid "p.m."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:63
+msgid "a.m."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:68
+msgid "PM"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:69
+msgid "AM"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:150
+msgid "midnight"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dateformat.py:152
+msgid "noon"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:6
+msgid "Monday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:6
+msgid "Tuesday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:6
+msgid "Wednesday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:6
+msgid "Thursday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:6
+msgid "Friday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:7
+msgid "Saturday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:7
+msgid "Sunday"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:10
+msgid "Mon"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:10
+msgid "Tue"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:10
+msgid "Wed"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:10
+msgid "Thu"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:10
+msgid "Fri"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:11
+msgid "Sat"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:11
+msgid "Sun"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:14
+msgid "January"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:14
+msgid "February"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:14
+msgid "March"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:14
+msgid "April"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:14
+msgid "May"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:14
+msgid "June"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:15
+msgid "July"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:15
+msgid "August"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:15
+msgid "September"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:15
+msgid "October"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:15
+msgid "November"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:16
+msgid "December"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:19
+msgid "jan"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:19
+msgid "feb"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:19
+msgid "mar"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:19
+msgid "apr"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:19
+msgid "may"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:19
+msgid "jun"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:20
+msgid "jul"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:20
+msgid "aug"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:20
+msgid "sep"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:20
+msgid "oct"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:20
+msgid "nov"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:20
+msgid "dec"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:23
+msgctxt "abbrev. month"
+msgid "Jan."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:24
+msgctxt "abbrev. month"
+msgid "Feb."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:25
+msgctxt "abbrev. month"
+msgid "March"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:26
+msgctxt "abbrev. month"
+msgid "April"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:27
+msgctxt "abbrev. month"
+msgid "May"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:28
+msgctxt "abbrev. month"
+msgid "June"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:29
+msgctxt "abbrev. month"
+msgid "July"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:30
+msgctxt "abbrev. month"
+msgid "Aug."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:31
+msgctxt "abbrev. month"
+msgid "Sept."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:32
+msgctxt "abbrev. month"
+msgid "Oct."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:33
+#, fuzzy
+#| msgid "No"
+msgctxt "abbrev. month"
+msgid "Nov."
+msgstr "Όχι"
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:34
+msgctxt "abbrev. month"
+msgid "Dec."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:37
+msgctxt "alt. month"
+msgid "January"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:38
+msgctxt "alt. month"
+msgid "February"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:39
+msgctxt "alt. month"
+msgid "March"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:40
+msgctxt "alt. month"
+msgid "April"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:41
+msgctxt "alt. month"
+msgid "May"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:42
+msgctxt "alt. month"
+msgid "June"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:43
+msgctxt "alt. month"
+msgid "July"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:44
+msgctxt "alt. month"
+msgid "August"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:45
+msgctxt "alt. month"
+msgid "September"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:46
+msgctxt "alt. month"
+msgid "October"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:47
+msgctxt "alt. month"
+msgid "November"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\dates.py:48
+msgctxt "alt. month"
+msgid "December"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\ipv6.py:8
+msgid "This is not a valid IPv6 address."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\text.py:67
+#, python-format
+msgctxt "String to return when truncating text"
+msgid "%(truncated_text)s…"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\text.py:233
+msgid "or"
+msgstr ""
+
+#. Translators: This string is used as a separator between list elements
+#: .\venv\Lib\site-packages\django\utils\text.py:252
+#: .\venv\Lib\site-packages\django\utils\timesince.py:83
+msgid ", "
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:9
+#, python-format
+msgid "%d year"
+msgid_plural "%d years"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:10
+#, python-format
+msgid "%d month"
+msgid_plural "%d months"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:11
+#, python-format
+msgid "%d week"
+msgid_plural "%d weeks"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:12
+#, python-format
+msgid "%d day"
+msgid_plural "%d days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:13
+#, python-format
+msgid "%d hour"
+msgid_plural "%d hours"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:14
+#, python-format
+msgid "%d minute"
+msgid_plural "%d minutes"
+msgstr[0] ""
+msgstr[1] ""
+
+#: .\venv\Lib\site-packages\django\utils\timesince.py:72
+msgid "0 minutes"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\utils\translation\__init__.py:274
+msgid "name"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:110
+msgid "Forbidden"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:111
+msgid "CSRF verification failed. Request aborted."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:115
+msgid ""
+"You are seeing this message because this HTTPS site requires a 'Referer "
+"header' to be sent by your Web browser, but none was sent. This header is "
+"required for security reasons, to ensure that your browser is not being "
+"hijacked by third parties."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:120
+msgid ""
+"If you have configured your browser to disable 'Referer' headers, please re-"
+"enable them, at least for this site, or for HTTPS connections, or for 'same-"
+"origin' requests."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:124
+msgid ""
+"If you are using the <meta name=\"referrer\" content=\"no-referrer\"> tag or "
+"including the 'Referrer-Policy: no-referrer' header, please remove them. The "
+"CSRF protection requires the 'Referer' header to do strict referer checking. "
+"If you're concerned about privacy, use alternatives like <a rel=\"noreferrer"
+"\" ...> for links to third-party sites."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:132
+msgid ""
+"You are seeing this message because this site requires a CSRF cookie when "
+"submitting forms. This cookie is required for security reasons, to ensure "
+"that your browser is not being hijacked by third parties."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:137
+msgid ""
+"If you have configured your browser to disable cookies, please re-enable "
+"them, at least for this site, or for 'same-origin' requests."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\csrf.py:142
+msgid "More information is available with DEBUG=True."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:41
+msgid "No year specified"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:61
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:111
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:208
+msgid "Date out of range"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:90
+msgid "No month specified"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:142
+msgid "No day specified"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:188
+msgid "No week specified"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:338
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:367
+#, python-format
+msgid "No %(verbose_name_plural)s available"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:589
+#, python-format
+msgid ""
+"Future %(verbose_name_plural)s not available because %(class_name)s."
+"allow_future is False."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\dates.py:623
+#, python-format
+msgid "Invalid date string '%(datestr)s' given format '%(format)s'"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\detail.py:54
+#, python-format
+msgid "No %(verbose_name)s found matching the query"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\list.py:67
+msgid "Page is not 'last', nor can it be converted to an int."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\list.py:72
+#, python-format
+msgid "Invalid page (%(page_number)s): %(message)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\generic\list.py:154
+#, python-format
+msgid "Empty list and '%(class_name)s.allow_empty' is False."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\static.py:40
+msgid "Directory indexes are not allowed here."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\static.py:42
+#, python-format
+msgid "\"%(path)s\" does not exist"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\static.py:80
+#, python-format
+msgid "Index of %(directory)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:6
+msgid "Django: the Web framework for perfectionists with deadlines."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:345
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:367
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:368
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
+"\">DEBUG=True</a> is in your settings file and you have not configured any "
+"URLs."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:383
+msgid "Django Documentation"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:384
+msgid "Topics, references, &amp; how-to's"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:395
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:396
+msgid "Get started with Django"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:407
+msgid "Django Community"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:408
+msgid "Connect, get help, or contribute"
+msgstr ""
+
+#: .\venv\Lib\site-packages\versatileimagefield\fields.py:37
+msgid "Versatile Image Field"
+msgstr ""
+
+#: .\venv\Lib\site-packages\versatileimagefield\templates\versatileimagefield\forms\widgets\versatile_image.html:17
+#: .\venv\Lib\site-packages\versatileimagefield\templates\versatileimagefield\forms\widgets\versatile_image_bootstrap.html:17
+msgid "Primary Point of Interest"
+msgstr ""
+
+#~ msgid "Picture #1 of"
+#~ msgstr "Φωτογραφία #1 του/της"
+
+#~ msgid "Picture #2 of"
+#~ msgstr "Φωτογραφία #2 του/της"
+
+#~ msgid "home.location"
+#~ msgstr "Hub Events, Κεραμεικός"

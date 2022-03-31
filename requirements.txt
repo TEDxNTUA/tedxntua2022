@@ -1,0 +1,8 @@
+dj-database-url==0.5.0
+Django==2.2.17
+mysqlclient==2.0.1
+django-versatileimagefield==1.10
+django-webpack-loader==0.7.0
+django-parler==2.2
+django-extensions==3.1.0
+django-active-link==0.1.6

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% load static %}
+{% load render_bundle from webpack_loader %}
+{% block title %}{% trans 'home.title' %}{% endblock %}
+{% block description %}{% trans 'home.description' %}{% endblock %}
+{% block content %}
+
+<!-- CODE HERE -->
+
+{% endblock %}
+{% block scripts %}
+    {% render_bundle 'home' 'js' %}
+{% endblock %}
