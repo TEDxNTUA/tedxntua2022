@@ -1,4 +1,4 @@
-# TEDxNTUA Base-v2
+# TEDxNTUA 2022
 Django project that serves as a base for [TEDxNTUA](https://tedxntua.com)'s websites.
 
 ## Usage
@@ -14,8 +14,8 @@ The project contains some `<VAR:NAME>` occurrences for information that changes 
 Listed alphabetically:
 1. Elina Syrri ([ElinaSyr](https://github.com/ElinaSyr))
 1. George Papadoulis ([G-Papad](https://github.com/G-Papad))
-1. Lydia Balafouti ([LydiaBal](https://github.com/LydiaBal))
-1. Nick Bellos ([nickbel7](https://github.com/nickbel7))
+1. Evaggelos Pipis ([evpipis](https://github.com/evpipis))
+1. Yianis Xatzigiannhs ([yiannisha](https://github.com/yiannisha))
 
 ## Documentation
 * [Contributing](docs/contributing.md)
