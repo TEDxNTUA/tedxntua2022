@@ -13,9 +13,9 @@ The project contains some `<VAR:NAME>` occurrences for information that changes 
 ## Contributors
 Listed alphabetically:
 1. Elina Syrri ([ElinaSyr](https://github.com/ElinaSyr))
-1. George Papadoulis ([G-Papad](https://github.com/G-Papad))
-1. Evaggelos Pipis ([evpipis](https://github.com/evpipis))
-1. Yianis Xatzigiannhs ([yiannisha](https://github.com/yiannisha))
+2. Evaggelos Pipis ([evpipis](https://github.com/evpipis))
+3. George Papadoulis ([G-Papad](https://github.com/G-Papad))
+4. Yianis Xatzigiannhs ([yiannisha](https://github.com/yiannisha))
 
 ## Documentation
 * [Contributing](docs/contributing.md)
