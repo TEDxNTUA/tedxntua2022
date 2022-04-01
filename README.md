@@ -1,21 +1,21 @@
-# TEDxNTUA Base-v2
+# TEDxNTUA 2022
 Django project that serves as a base for [TEDxNTUA](https://tedxntua.com)'s websites.
 
 ## Usage
-Copy this repository into a new one, e.g. `tedxntua2019`.
+Copy this repository into a new one, e.g. `tedxntua2022`.
 
 The project contains some `<VAR:NAME>` occurrences for information that changes for each event, such as the year of the event, the repository URL etc. Search for `<VAR:` in the project directory to find all of them and edit them accordingly.
 ##### FIND & REPLACE (in the project folder):
-* `<VAR:DJANGO_VERSION>` (ex. 2.2.17)
-* `2022` (ex.2021)
-* `<VAR:REPO_URL>` (ex. https://github.com/TEDxNTUA/tedxntua2021)
+* `<VAR:DJANGO_VERSION>` (ex. 3.2)
+* `2022` (ex.2022)
+* `<VAR:REPO_URL>` (ex. https://github.com/TEDxNTUA/tedxntua2022)
 
 ## Contributors
 Listed alphabetically:
 1. Elina Syrri ([ElinaSyr](https://github.com/ElinaSyr))
-1. George Papadoulis ([G-Papad](https://github.com/G-Papad))
-1. Lydia Balafouti ([LydiaBal](https://github.com/LydiaBal))
-1. Nick Bellos ([nickbel7](https://github.com/nickbel7))
+2. Evaggelos Pipis ([evpipis](https://github.com/evpipis))
+3. George Papadoulis ([G-Papad](https://github.com/G-Papad))
+4. Yianis Xatzigiannhs ([yiannisha](https://github.com/yiannisha))
 
 ## Documentation
 * [Contributing](docs/contributing.md)
