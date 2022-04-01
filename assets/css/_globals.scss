@@ -32,15 +32,15 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: bold;
 }
 
-@mixin underline($in: 5px, $out: 1px) {
-    box-shadow: inset 0 (-$in) $primary, 0 $out $primary;
-}
+// @mixin underline($in: 5px, $out: 1px) {
+//     box-shadow: inset 0 (-$in) $primary, 0 $out $primary;
+// }
 
-.underline,
-:hover > .underline-hover,
-.underline-parent:hover .underline-hover {
-    @include underline();
-}
+// .underline,
+// :hover > .underline-hover,
+// .underline-parent:hover .underline-hover {
+//     @include underline();
+// }
 
 @include media-breakpoint-up(lg) {
     main {

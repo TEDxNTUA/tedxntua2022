@@ -1,22 +1,58 @@
 $nav-hover-border-width: 6px;
+ body {
+     overflow: scroll;
+ }
 
-nav#nav {
+ .largediv {
+     font-size: 55em;
+ }
+
+ nav#nav {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     padding: $page-padding-y $page-padding-x;
     font-size: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    &.scrolled {
+        padding: 0.6*$page-padding-y $page-padding-x;
+        transition: 0.4s;
+    }
+    #navbar-nav {
+        &.scrolled {
+            margin-top: 0.15em;
+            transition: 0.4s;
+        }
+    }
     hr {
         flex-basis: 100%;
         height: 0;
         margin: 0;
         border: 0;
     }
+
+    .c-header__line--lg, .c-header__line:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    background: $body-bg;
+    border-bottom: 1px solid $primary;
+    z-index: -1;
+    }
+
+    //for sticky navbar
+    position: fixed;
+	top: 0;
+    width: 100%;
+    background-color: $body-bg;
+    z-index: 10;
 }
 
 .navbar-brand {
-    height: 3.25em;
-    border-bottom: $nav-hover-border-width solid transparent;
+    height: $logo-height-lg;
+    margin-right: auto;
     font-size: inherit;
     &:hover {
         border-color: $primary;
@@ -25,131 +61,153 @@ nav#nav {
         height: 100%;
         width: auto;
     }
-}
 
-.navbar-toggler {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 3.6em;
-    margin-left: auto;
-    // Counterweight for the border of the logo which due to center alignment
-    // causes the toggler to appear lower than the logo.
-    margin-top: -$nav-hover-border-width;
-    padding: 0 .75rem;
-    font-size: 1em;
-    > span {
-        margin-top: .25em;
-    }
-    .unexpanded {
-        display: block;
-    }
-    .expanded {
-        display: none;
-    }
-    &[aria-expanded="true"] {
-        .unexpanded {
-            display: none;
-        }
-        .expanded {
-            display: block;
-        }
-    }
 }
 
 .navbar-toggler-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 1.2em;
-    height: 1.2em;
-    span {
-        display: block;
-        width: 100%;
-        height: 0.3em;
-        background-color: $navbar-toggler-color;
+    box-sizing: border-box;
+    width: 0;
+    height: 30px;
+    border-style: solid;
+    // border-width: 15px 0 15px 31px;
+    border-style: double;
+    border-width: 0px 0px 0px 31px;
+    border-color: transparent transparent transparent $primary;
+    cursor: pointer;
+    will-change: border-width;
+    transition: all .2s ease;
+    &.paused {
+        border-style: solid;
+        border-width: 15px 0px 15px 31px;
     }
 }
 
 .navbar-nav {
     position: absolute;
-    top: calc(#{$page-padding-y} + 3.25em);
+    top: calc(#{$page-padding-y} + 2.8em);
     left: 0;
     right: 0;
     z-index: 50;
     display: flex;
     flex-direction: column;
-    padding: 0 $page-padding-x $page-padding-y;
+    padding: 0.5rem 2*$page-padding-x $page-padding-y;
     margin-top: .75em;
     background: $body-bg;
-    border-bottom: 4px solid black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 0 0 $border-radius $border-radius;
     &.collapsing {
-        transition: none;
+        transition: 0.4s;
     }
     .nav-link {
         display: flex;
         flex-direction: row;
         align-items: center;
         margin-bottom: .25em;
-        color: inherit;
+        color: white;
         font-family: $font-family-serif;
         font-size: 1.5em;
         font-weight: 500;
         &:hover, &:active, &.active {
             .nav-item-text {
-                @include underline(3px, 3px);
+                color: $primary;
             }
         }
         &.dropdown-toggle {
             &::after {
                 content: none;
             }
+            display: none;
         }
     }
-    .nav-link-icon, .nav-dropdown-item-icon {
+    .dropdown-toggle-hidden {
+        display: flex;
+    }
+    .nav-dropdown-item-icon {
         width: 1em;
         height: 1em;
         margin-right: .4em;
-    }
-    .nav-dropdown-item-icon img {
-        width: 100%;
-        height: 100%;
+        display: none;
     }
     .dropdown-menu {
+        background-color: $body-bg;
         display: flex;
         flex-direction: column;
         min-width: auto;
         margin: 0 0 0 2.5em;
         padding: 0;
         border: none;
-        font-size: 1em;
+        font-size: 1em;   
     }
     .dropdown-item {
         &:active, &.active {
             background: none;
+            color: $primary;
+        }
+    }
+    .activelink {
+        color: $primary;
+    }
+}
+.phonemenu {
+    display: flex; 
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: $body-bg;
+    width: 100%;
+    height: 100%;
+    color: white;
+    position: fixed;
+    top: 4.3em;
+    ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-items: center;
+        list-style-type: none;
+        padding: 8em 0;
+        li {
+            font-size: large;
+            padding-bottom: 3em;
+            a {
+                text-decoration: none;
+                display: block;
+                position: relative;
+                color: white;
+                text-transform: uppercase;
+            }
+            a::after {
+                content: "";
+                width: 0;
+                height: 1px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background: $primary;
+                transition: width .3s linear;  
+            }
+            a:hover::after {width: 100%;}
         }
     }
 }
 
-.language-switch-container {
-    position: absolute;
-    top: 0;
-    right: $page-padding-x;
-    z-index: 1;
-    text-align: right;
-}
+.hidden {
+    display: none; 
+} 
 
 /**
 Enforce that dropdown becomes static for small screens.
  */
-@include media-breakpoint-down(sm) {
+@media only screen and (max-width: 576px) {
+    .navbar-brand {
+        height: $logo-height;
+    }
     .navbar-nav .dropdown-menu {
         position: static !important;
         transform: none !important;
     }
 }
 
-@include media-breakpoint-up(md) {
+@media only screen and (min-width: 768px)  {
     nav#nav {
         font-size: 1.1rem;
         hr {
@@ -175,35 +233,29 @@ Enforce that dropdown becomes static for small screens.
         .nav-link {
             flex-direction: column;
             align-items: center;
-            padding: .1em .75em;
+            padding: .1em 1vw;
             margin-bottom: 0;
-            border-bottom: $nav-hover-border-width solid transparent;
             font-size: .9em;
             &:hover, &:active, &.active {
                 border-color: $primary;
             }
             &.dropdown-toggle {
-                .nav-item-text {
-                    @include caret;
-                    &::after {
-                        vertical-align: $caret-width * .6;
-                    }
-                }
+                display: flex;
             }
         }
         .nav-item > .nav-link {
             &:hover, &:active, &.active {
+                color: $primary; 
                 .nav-item-text {
                     box-shadow: none;
                 }
             }
         }
-        .nav-link-icon {
-            width: 1.5em;
-            height: 1.5em;
-            margin-bottom: .2em;
-            margin-right: 0;
+
+        .dropdown-toggle-hidden {
+            display: none;
         }
+
         .dropdown-menu {
             display: none;
             flex-direction: column;
@@ -213,7 +265,8 @@ Enforce that dropdown becomes static for small screens.
             }
             margin: .125rem 0 0;
             padding: .5rem 0;
-            border: 1px solid #000;
+            border: 1px solid $body-color;
+            border-radius: $border-radius-sm;
         }
         .dropdown-item {
             flex-direction: row;
@@ -221,6 +274,11 @@ Enforce that dropdown becomes static for small screens.
             padding: .4em 1em;
             border: none;
             line-height: 1;
+            &:hover {
+                background-color: transparent;
+                // border-bottom: 2px solid $primary;
+                color: $primary;
+            }
         }
         .nav-dropdown-item-icon {
             width: 1em;
@@ -228,16 +286,50 @@ Enforce that dropdown becomes static for small screens.
             margin-right: .4em;
         }
     }
+    .phonemenu {
+        display: none;
+    }
 }
 
-@include media-breakpoint-up(lg) {
+@media only screen and (min-width: 992px) {
     nav#nav {
         padding: $page-padding-y-lg $page-padding-x-lg;
         font-size: 1.35rem;
-    }
-    .navbar-nav {
-        .nav-link-icon {
-            margin-bottom: .35em;
+        &.scrolled {
+            padding: 0.4*$page-padding-y-lg $page-padding-x-lg;
+            transition: 0.4s;
         }
     }
 }
+
+// @mixin arrow {
+//     div.arrow {
+//         width: 3vmin;
+//         height: 3vmin;
+//         box-sizing: border-box;
+//         position: absolute;
+//         left: 50%;
+//         top: 50%;
+//         transform: rotate(135deg);
+            
+//         &::before {
+//             content: '';
+//             width: 100%;
+//             height: 100%;
+//             border-width: .8vmin .8vmin 0 0;
+//             border-style: solid;
+//             border-color: #fafafa;
+//             transition: .2s ease;
+//             display: block;
+//             transform-origin: 100% 0;
+//         }
+//     }
+// }
+
+// .language-switch-container {
+//     position: absolute;
+//     top: 0;
+//     right: $page-padding-x;
+//     z-index: 10;
+//     text-align: right;
+// }

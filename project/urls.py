@@ -34,5 +34,5 @@ urlpatterns += i18n_patterns(
     path('about/', include('project.about.urls')),
 )
 
-admin.site.site_header = _('TEDxNTUA <VAR:YEAR> administration')
-admin.site.site_title = _('TEDxNTUA <VAR:YEAR> admin')
+admin.site.site_header = _('TEDxNTUA 2022 administration')
+admin.site.site_title = _('TEDxNTUA 2022 admin')
