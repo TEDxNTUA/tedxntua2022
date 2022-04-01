@@ -1,2 +1,0 @@
-import "./cubeView"
-import "./curtain"

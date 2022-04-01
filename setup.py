@@ -9,12 +9,12 @@ from setuptools import setup, find_packages
 from _version import __version__
 
 setup(
-    name='tedxntua<VAR:YEAR>',
+    name='tedxntua2022',
     version=__version__,
     packages=find_packages(),
     scripts=['manage.py'],
-    url='<VAR:REPO_URL>',
-    author='TEDxNTUA IT Team <VAR:YEAR>',
+    url='2022',
+    author='TEDxNTUA IT Team 2022',
     author_email='webmaster@tedxntua.com',
     install_requires=[
         'dj-database-url',
