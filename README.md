@@ -2,13 +2,13 @@
 Django project that serves as a base for [TEDxNTUA](https://tedxntua.com)'s websites.
 
 ## Usage
-Copy this repository into a new one, e.g. `tedxntua2019`.
+Copy this repository into a new one, e.g. `tedxntua2022`.
 
 The project contains some `<VAR:NAME>` occurrences for information that changes for each event, such as the year of the event, the repository URL etc. Search for `<VAR:` in the project directory to find all of them and edit them accordingly.
 ##### FIND & REPLACE (in the project folder):
-* `<VAR:DJANGO_VERSION>` (ex. 2.2.17)
-* `2022` (ex.2021)
-* `<VAR:REPO_URL>` (ex. https://github.com/TEDxNTUA/tedxntua2021)
+* `<VAR:DJANGO_VERSION>` (ex. 3.2)
+* `2022` (ex.2022)
+* `<VAR:REPO_URL>` (ex. https://github.com/TEDxNTUA/tedxntua2022)
 
 ## Contributors
 Listed alphabetically:
