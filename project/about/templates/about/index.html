@@ -8,7 +8,66 @@
 {% block content %}
 
 <!-- CODE HERE -->
+  <script src="https://kit.fontawesome.com/9bebf666e9.js" crossorigin="anonymous"></script>
 
+    <div id="teamDescription" class="team_description">
+      <h2 id="teamName">GRAPHICS</h2>
+      <h2>TEAM</h2>
+    </div>
+
+    <div id="mainPage">
+      {% for team in teams %}
+      <div class="team_container">
+        {% for member in members %}
+        {% if member.team == team.team %}
+        <div class="team_item">
+          <a href="">
+            <h2>{{ member.name }}</h2>
+            <img src="{{ member.image.thumbnail.320x320 }}" class="team_item_img">
+            <div class="team_item_blackbox">
+              <div class="team_item_linkedin_hover"></div>
+              <h3>LinkedIn <i class="fa-solid fa-arrow-right"></i></h3>
+            </div>
+          </a>
+        </div>
+        {% endif %}
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+      <!--
+
+  <div class="about_separator">
+    <p style="transform: rotate(180deg)">
+      "What is TED?"
+      <span>.</span>
+      "What is TEDx?"
+      <span>.</span>
+      "What is TEDxNTUA?"
+      <span>.</span>
+      "What is TED?"
+      <span>.</span>
+      "What is TEDx?"
+      <span>.</span>
+      "What is TEDxNTUA?"
+      <span>.</span>
+    </p>
+  </div>
+
+  <div id="secondaryPage">
+    <div class="glassText">
+      <h3>What is TEDxNTUA</h3>
+      <hr>
+      <p>TEDxNTUA is a conference that features talks on the topics of popular science, art, and social issues, stories that can inspire, as well as intriguing workshops and performances. It runs under the auspices of the National Technical University of Athens, Greece (NTUA) and is primarily aimed at the university community, but also at the wider student and local communities of Athens.
+
+        Our organizing team consists of volunteer students, mainly of NTUA, who embrace the notion of spreading worthy ideas, as conceived by the TED organization. Our aspiration as a team is to build this event into a platform where people who can make a difference will have their voices heard; where community members can engage with one another and spark fruitful discussion about our common concerns, like engineering and its role in building a better and more inclusive society.
+
+        Since the project’s inception in 2015, the members of the student community have consistently shown their support with their participation as attendees or volunteers. They have thus helped establish it as an institution and imbued us with a sense of duty towards them. A crucial part in achieving this, is our constant effort to make the event open for everyone, by charging no attendance fee, with the help of our partners.
+
+        TEDxNTUA has a non-profit motive and is solely funded by sponsor companies, organizations and patrons. It is supervised by NTUA professors and formally belongs to the Institute of Communication and Computer Systems (ICCS) of NTUA.
+      </p>
+    </div>
+  </div> -->
 
 {% endblock %}
 {% block scripts %}

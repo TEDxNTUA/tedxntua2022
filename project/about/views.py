@@ -14,6 +14,9 @@ class AboutView(View):
         else:
             members = TeamMember.objects.published()
 
+        teams = TeamMember.objects.values('team').distinct()
+
         return render(request, self.template_name, {
             'members': members,
+            'teams': teams
         })
