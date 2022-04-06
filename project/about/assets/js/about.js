@@ -203,7 +203,12 @@ var prevDeltaY = 0;
 window.addEventListener("wheel", function (e) {
     // true if reached end
     // reachEnd = (window.innerHeight + window.scrollY > document.body.offsetHeight);
-    // console.log("reacheEnd: " + reachEnd);
+    // let containerHeight = parseInt(getComputedStyle(teamContainerList[0]).height.slice(0, -2));
+    // let totalBodyHeight = containerHeight * teamContainerList.length;
+    let totalBodyHeight = teamName_map[teamName_map.length-1];
+    let footerTop = document.getElementById("footer").getBoundingClientRect().top;
+    reachEnd = footerTop < window.innerHeight;
+    console.log("reacheEnd: " + reachEnd);
     if (reachEnd) {
       // set default secondary page coordinates
 
