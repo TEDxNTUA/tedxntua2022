@@ -1,7 +1,7 @@
-
-#header {
-  display: none;
-}
+//
+// #header {
+//   display: none;
+// }
 
 /* disable overscroll on apple devices */
 html, body {
@@ -200,4 +200,77 @@ body {
   /* transform: rotate(90deg); */
 
   border: 2px red solid;
+}
+
+.invisible_up {
+  animation: go_out_up .125s;
+}
+
+.invisible_down {
+  animation: go_out_down .125s;
+}
+
+.visible_up {
+  animation: come_in_up .125s;
+}
+
+.visible_down {
+  animation: come_in_down .125s;
+}
+
+
+@keyframes go_out_up {
+
+  0% {
+    opacity: 1;
+    transform:translate3d(0,0,0);
+  }
+
+  100% {
+    opacity: 0;
+    transform:translate3d(0,-100px,0);
+  }
+
+}
+
+@keyframes go_out_down {
+
+  0% {
+    opacity: 1;
+    transform:translate3d(0,0,0);
+  }
+
+  100% {
+    opacity: 0;
+    transform:translate3d(0,100px,0);
+  }
+
+}
+
+@keyframes come_in_up {
+
+  0% {
+    opacity: 0;
+    transform:translate3d(0,100px,0);
+  }
+
+  100% {
+    opacity: 1;
+    transform:translate3d(0,0,0);
+  }
+
+}
+
+@keyframes come_in_down {
+
+  0% {
+    opacity: 0;
+    transform:translate3d(0,-100px,0);
+  }
+
+  100% {
+    opacity: 1;
+    transform:translate3d(0,0,0);
+  }
+
 }

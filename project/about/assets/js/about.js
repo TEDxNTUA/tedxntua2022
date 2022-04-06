@@ -13,7 +13,7 @@ window.onbeforeunload = function () {
 }
 
 // team containers and individual team items
-const teamContainerList = document.getElementsByClassName("team_container");
+var teamContainerList = document.getElementsByClassName("team_container");
 const teamItems = document.getElementsByClassName("team_item_linkedin_hover");
 const teamImges = document.getElementsByClassName("team_item_img");
 
@@ -72,6 +72,117 @@ function updateBlackBoxes () {
 resizePictures();
 updateBlackBoxes();
 
+// --- Change Team Names ---
+const teamName = document.getElementById("teamName");
+var teamNames = ["IT", "EXPERIENCE", "GRAPHICS", "FUNDRAISING", "MEDIA", "SPEAKERS", "PRODUCTION"];
+
+// map each word to Y coordinates
+// each word is mapped to range equal to the team container's height
+let containerHeight = parseInt(window.getComputedStyle(teamContainerList[0]).height.slice(0, -2));
+let range = containerHeight;
+let offset = -0.33 * containerHeight;
+var teamName_map = mapTeamNames(range, offset);
+
+/**
+ *
+ * Returns an array of numbers representing the limits for
+ * a single team name.
+ *
+ * @param {number} range range that each team name gets
+ * @param {number} offset offset to start the first mapping from
+ */
+function mapTeamNames (range, offset = 0) {
+
+  let t_range = range + offset;
+  let map = [];
+  // t_range += range;
+  for (let i=0;i<teamNames.length;i++) {
+    map.push(t_range);
+    t_range += range;
+  }
+
+  return map;
+}
+
+// event listener to update team name
+// var cordY = 0;
+window.addEventListener("scroll", function (e) {
+  // if (cordY <= 0) cordY = 0;
+  // cordY += parseInt(e.deltaY);
+  updateTeamName(scrollY);
+  console.log("cordY: " + scrollY);
+  console.log("map: " + teamName_map);
+});
+
+/**
+ *
+ * Updates the team name inside the team description div
+ * based on the current Y coordinate.
+ *
+ * @param {number} cordY
+ */
+var prev_index = 0; // global variable to keep track last team name
+function updateTeamName (cordY) {
+
+  // find in what part y belongs
+  var index; // index of word mapped to current Y coordinate
+  if(cordY <= teamName_map[0]){
+    index = 0; // return first word in list if Ycord < 0
+  }
+  if(cordY >= teamName_map[teamName_map.length-1]) index = teamName_map.length-1;
+  else {
+    for( let i=1;i<teamName_map.length;i++ ) {
+      if(cordY <= teamName_map[i] && cordY > teamName_map[i-1]){
+        index = i;
+        break;
+      }
+    }
+  }
+
+  // add animation to text changing
+  // animate word transition
+  if(index != prev_index){
+    let a = teamName;
+
+    a.classList.remove("visible_up");
+    a.classList.remove("visible_down");
+
+    // move both words upwards when exiting/entering
+    var direction = "up";
+    // move both words downwards when exiting/entering
+    if (index < prev_index) direction = "down";
+
+    a.classList.add(`invisible_${direction}`);
+
+    // make new word appear once old one dissapears
+    a.onanimationend = () => {
+      a.classList.remove("invisible_up");
+      a.classList.remove("invisible_down");
+
+      a.classList.add(`visible_${direction}`);
+      // change innerText to new word
+      a.innerText = teamNames[index];
+      prev_index = index;
+    };
+  }
+
+}
+
+// event listener to update team name map on resize
+window.addEventListener("resize", function () {
+  // update container list
+  teamContainerList = document.getElementsByClassName("team_container");
+
+  // get new range
+  let containerHeight = parseInt(window.getComputedStyle(teamContainerList[0]).height.slice(0, -2));
+  let range = containerHeight;
+  let offset = -0.33 * containerHeight;
+  teamName_map = mapTeamNames(range, offset);
+});
+
+// initialise with the first team name
+teamName.innerHTML = teamNames[0];
+
 // --- Sidescrolling pages ---
 
 const mainPage = document.getElementById("mainPage");
@@ -91,7 +202,8 @@ var reachEnd = false;
 var prevDeltaY = 0;
 window.addEventListener("wheel", function (e) {
     // true if reached end
-    reachEnd = (window.innerHeight + window.scrollY > document.body.offsetHeight);
+    // reachEnd = (window.innerHeight + window.scrollY > document.body.offsetHeight);
+    // console.log("reacheEnd: " + reachEnd);
     if (reachEnd) {
       // set default secondary page coordinates
 
