@@ -1,0 +1,60 @@
+article.home-page {
+    overflow-x: hidden;
+    .nav-scrollable-tabs {
+        a {
+            display: inline;
+            margin-right: .5em;
+            font-size: 1.25em;
+            &.active {
+                color: $body-color;
+            }
+        }
+    }
+    .section-container > section {
+        padding: 2rem 0;
+        line-height: 1.5;
+        &:first-child {
+            padding-top: 0;
+        }
+    }
+
+    ////// HERO //////
+    .hero {
+        #model {
+            height: 25em;
+        }
+        .content {
+            .infobox-left {
+                font-size: 13em;
+            }
+        }
+    }
+    
+    ////// SUMMARY //////   
+    section#summary {
+        .summary-container {
+            padding: 0 $page-padding-x-lg;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            overflow: hidden;
+            .image-container img{
+                height: 25em; 
+            }
+            .summary-text {
+                display: flex;
+                flex-direction: column;
+                padding: 2vh 2vw;
+                justify-content: center;
+                transition: 1s ease-in;
+                background: rgba(255, 255, 255, 0.49);
+                border-radius: 16px;
+                box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+                backdrop-filter: blur(15.4px);
+                -webkit-backdrop-filter: blur(15.4px);
+                border: 1px solid rgba(255, 255, 255, 0.52);
+                
+            }
+        }
+    }
+}

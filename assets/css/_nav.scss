@@ -158,14 +158,14 @@ $nav-hover-border-width: 6px;
     color: white;
     position: fixed;
     top: 4.3em;
-    ul {
+    .phonemenulist {
         display: flex;
         flex-direction: column;
         align-items: center;
         align-items: center;
         list-style-type: none;
         padding: 8em 0;
-        li {
+        .phone-nav-item {
             font-size: large;
             padding-bottom: 3em;
             a {
