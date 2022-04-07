@@ -1,0 +1,104 @@
+{% load i18n %}
+{% load lang_extras %}
+{% get_available_languages as LANGUAGES %}
+{% get_current_language as CURR_LANG %}
+{% load static %}
+<section id="footer-main">
+    <!-- Previous Events -->
+    <div id="prev-events" class="footer-container">
+        <header>
+            <h4>Previous Events</h4>
+        </header>
+        <div id="prev-events-card" class="carousel" data-ride="carousel" data-interval="4000">
+            <div class="carousel-inner scrollable-cards">
+            {% for prevEvent in previousEvents %}
+                {% if forloop.first %}
+                <div class="carousel-item carousel-card active">
+                    <a href="{{ prevEvent.link }}" target="_blank" class="underline-parent">
+                        <img src="{{ prevEvent.image.url }}" alt="Website {{ prevEvent.year }}">
+                        <div class="overlay">
+                            <h5 class="underline-hover">{{ prevEvent.year }}</h5>
+                        </div>
+                    </a>
+                </div>
+                {% else %}
+                <div class="carousel-item carousel-card">
+                    <a href="{{ prevEvent.link }}" target="_blank" class="underline-parent">
+                        <img src="{{ prevEvent.image.url }}" alt="Website {{ prevEvent.year }}" />
+                        <div class="overlay">
+                            <h5 class="underline-hover">{{ prevEvent.year }}</h5>
+                        </div>
+                    </a>
+                </div>
+                {% endif %}
+            {% endfor %}
+            </div>
+            <a class="carousel-control-prev" href="#prev-events-card" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </a>
+            <a class="carousel-control-next" href="#prev-events-card" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </a>
+        </div>
+    </div> 
+    <!-- Social -->
+    <div id="footer-social-container">
+        <header>
+            <h4>Find us on social</h4>
+        </header>
+        <div class="social-container">
+            <a href="https://www.instagram.com/tedxntua/?hl=en" target="_blank">
+                <img src="{% static 'images/social-instagram.png' %}">
+            </a>
+            <a href="https://www.facebook.com/tedxntua/" target="_blank">
+                <img src="{% static 'images/social-facebook.png' %}">
+            </a>
+            <a href="https://www.linkedin.com/company/tedxntua/" target="_blank">
+                <img src="{% static 'images/social-linkedin.png' %}">
+            </a>
+            <a href="https://www.youtube.com/channel/UCVtjgrrBdSPZERmdso2o0dw/featured" target="_blank">
+                <img src="{% static 'images/social-youtube.png' %}">
+            </a>
+        </div>
+        <header>
+            <h4>Newsletter</h4>
+        </header>
+        <div id="newsletter-card">
+            <form id="newsletter-form">
+                <input id="newsletter-input-field" type="email" name="Email" placeholder="Your email"></input>
+            </form>
+            <div id="newsletter-submit-btn" class="submit-btn">Submit</div>
+        </div>
+    </div>
+    <!-- Infos: Dialogs/Blog -->
+    <div id="info" class="footer-container">
+        <header>
+            <h4>More Stuff from Us</h4>
+        </header>
+        <div class="Action-container">
+            <a>Blog</a>
+            <img src="{% static 'images/blog.png' %}" width="100%" height="100%">
+        </div>
+        <div class="Action-container">
+            <a>Dialogues</a>
+            <img src="{% static 'images/dialogues.png' %}" width="100%" height="100%">
+        </div>
+    </div>
+
+</section>
+<section id="footer-bottom">
+    <div class="legal">
+        <div class="links">
+            <span>&copy; TEDxNTUA 2022</span> &middot;
+            <a href="/privacy" class="underline-parent">
+                <span class="underline-hover">Privacy Policy</span>
+            </a> &middot;
+            <a href="/terms" class="underline-parent">
+                <span class="underline-hover">Terms of Use</span>
+            </a>
+        </div>
+        <div class="license">
+            This independent TEDx event is operated under license from TED.
+        </div>
+    </div>
+</section>
