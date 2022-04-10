@@ -107,8 +107,6 @@ function mapTeamNames (range, offset = 0) {
 // event listener to update team name
 window.addEventListener("scroll", function () {
   updateTeamName(scrollY);
-  console.log("scrollY: " + scrollY);
-  console.log("map: " + teamName_map);
 });
 
 /**
@@ -181,89 +179,53 @@ window.addEventListener("resize", function () {
 teamName.innerHTML = teamNames[0];
 
 // --- Sidescrolling pages ---
-// hideFooter();
 
+// main page
 const mainPage = document.getElementById("mainPage");
-const mainDefaultY = mainPage.getBoundingClientRect().y;
 const mainDefaultX = mainPage.getBoundingClientRect().x;
 const teamNameDiv = document.getElementById("teamDescription");
-//
-let mult = teamContainerList.length;
+
+let mult = teamContainerList.length; // number of containers
 containerHeight = parseInt(window.getComputedStyle(teamContainerList[0]).height.slice(0, -2));
 
-// secondary page
-const secondaryPage = document.getElementById("secondaryPage");
-const defaultSecondaryPageTranslateCords = [window.innerWidth, ((mult-1) * containerHeight), 0];
-// const defaultSecondaryPageTranslateCords = [0, 0, 0];
-setTranslateCords(secondaryPage, defaultSecondaryPageTranslateCords);
+// side pages
+const sidePageList = document.getElementsByClassName("sidePage");
+for (let i=0; i < sidePageList.length; i++) {
+  setTranslateCords(sidePageList[i], [window.innerWidth * (i+1), ((mult-1) * containerHeight), 0]);
+}
 
-// third page
-const thirdPage = document.getElementById("thirdPage");
-const defaultThirdPageTranslateCords = [window.innerWidth * 2, ((mult-1) * containerHeight), 0];
-setTranslateCords(thirdPage, defaultThirdPageTranslateCords);
-
-//fourth page
-const fourthPage = document.getElementById("fourthPage");
-const defaultFourthPageTranslateCords = [window.innerWidth * 3, ((mult-1) * containerHeight), 0];
-setTranslateCords(fourthPage, defaultFourthPageTranslateCords);
-
+const speed = 7; // sidescrolling speed
 var reachEnd = false;
 var prevDeltaY = 0;
 window.addEventListener("wheel", function (e) {
-    // true if reached end
-    // let footer = document.getElementById("footer");
-    // let footerBCR = footer.getBoundingClientRect();
-    // reachEnd = footerBCR.top < window.innerHeight;
+
+    // true when we reach the page's vertical end
     reachEnd = scrollY >= ((mult - 1) * containerHeight);
     if (reachEnd) {
       // scroll back to default height
       scrollTo(scrollX, ((mult - 1) * containerHeight));
-      // set default secondary page coordinates
 
       // disable vertical scroll when sidescrolling starts
       disableScrolling();
 
-      // sidescrolling speed
-      let speed = 7;
-      // sidescrolling direction
-      if (e.deltaY - prevDeltaY < 0) {
-        speed = -speed;
+      // check if reached horizontal end
+      // check for reaching horizontal end
+      let [x, y, z] = getCords(sidePageList[sidePageList.length-1].style.transform);
+      x = parseInt(x);
+      let reachHorizontalEnd = (x <= 0);
+      let direction = (e.deltaY - prevDeltaY < 0); // true for left
+      if ((!direction && !reachHorizontalEnd) || direction) {
+        // sidescrolling direction
+        if (direction) {
+          sidescrollPage(-speed);
+        }
+        else {
+          sidescrollPage(speed);
+        }
       }
 
-      // show footer when reaching horizontal end
-      // let footer = document.getElementById("footer");
-      // let footerHeight = footer.getBoundingClientRect().height;
-      // let [footer_x, footer_y, footer_z] = ['0px', '0px', '0px'];
-      // if (footer.style.transform) {
-      //   [footer_x, footer_y, footer_z] = getCoords(footer.style.transform);
-      // }
-      // let isZero = (footer_x == '0px' && footer_y == '0px' && footer_z == '0px');
-      // if (reachHorizontalEnd && isZero) {
-      //   setTranslateCords(footer, [0, -footerHeight, 0]);
-      //   footer.animate([
-      //       { transform: 'translate3d(0px, 0px, 0px)' },
-      //       { transform: `translate3d(0px, -${footerHeight}px, 0px)` }
-      //     ],
-      //     {
-      //       duration: 200,
-      //       fill: "forwards"
-      //     }
-      //   );
-      //
-      // }
-      // else if (!isZero && !reachHorizontalEnd) {
-      //   footer.animate([
-      //       { transform: `translate3d(0px, -${footerHeight}px, 0px)` },
-      //       { transform: `translate3d(0px, 0px, 0px)` }
-      //     ],
-      //     {
-      //       duration: 200,
-      //       fill: "forwards"
-      //     }
-      //   );
-      //   setTranslateCords(footer);
-      // }
-      animateFooter(speed);
+      // animate footer accordingly
+      animateFooter(reachHorizontalEnd);
 
       // stop sidescrolling
       if (mainPage.getBoundingClientRect().x > mainDefaultX) {
@@ -271,10 +233,9 @@ window.addEventListener("wheel", function (e) {
         // move pages back to their default positions
         setTranslateCords(mainPage);
         setTranslateCords(teamNameDiv);
-        setTranslateCords(secondaryPage, defaultSecondaryPageTranslateCords);
-        setTranslateCords(thirdPage, defaultThirdPageTranslateCords);
-        setTranslateCords(fourthPage, defaultFourthPageTranslateCords);
-
+        for (let i=0; i < sidePageList.length; i++) {
+          setTranslateCords(sidePageList[i], [window.innerWidth * (i+1), ((mult-1) * containerHeight), 0]);
+        }
         // scroll a little bit upwards to escape reachEnd
         window.scrollTo(scrollX, scrollY - 150);
         // enable scrolling
@@ -314,39 +275,37 @@ function hideFooter () {
   document.getElementById("footer").style.display = "none";
 }
 
-/**
- *
- * Animates footer
- *
- */
+// --- Footer Animations ---
+
 const footer = document.getElementById("footer");
 var footerHeight = footer.getBoundingClientRect().height;
 var isanimated = false;
+
+// event listener to handle footer animations
 footer.addEventListener("animationend", function (event) {
   isanimated = false;
   footer.classList.toggle(event.animationName);
   if (event.animationName == "footer_up") {
-    setTranslateCords(footer, [0, -footerHeight, 0]);
+    setTranslateCords(footer, [0, -(1.7 * footerHeight), 0]);
   }
   else if (event.animationName == "footer_down") {
     setTranslateCords(footer, [0, 0, 0]);
   }
-  console.log("animation ended");
 });
-function animateFooter (speed) {
-  // check for reaching horizontal end
-  let [x, y, z] = getCoords(fourthPage.style.transform);
-  x = parseInt(x);
-  let reachHorizontalEnd = (x <= 0);
-  if ((speed > 0 && !reachHorizontalEnd) || (speed < 0)) {
-    sidescrollMain(speed);
-  }
+
+/**
+ *
+ * Animates footer
+ *
+ * @param {bool} reachHorizontalEnd True if the horizontal end has been reached
+ */
+function animateFooter (reachHorizontalEnd) {
 
   // show footer once reaching the horizontal end if it
   // is not already shown
   let [footer_x, footer_y, footer_z] = ['0px', '0px', '0px'];
   if (footer.style.transform) {
-    [footer_x, footer_y, footer_z] = getCoords(footer.style.transform);
+    [footer_x, footer_y, footer_z] = getCords(footer.style.transform);
   }
   else {
     setTranslateCords(footer, [0, 0, 0]);
@@ -374,15 +333,14 @@ function animateFooter (speed) {
  * @param {number} speed the speed of the sidescroll
  *
  */
-function sidescrollMain (speed = 1) {
-
+function sidescrollPage (speed = 1) {
   incrementTranslateCords(mainPage, [speed, 0, 0]);
   incrementTranslateCords(teamNameDiv, [speed, 0, 0]);
-  incrementTranslateCords(secondaryPage, [speed, 0, 0]);
-  incrementTranslateCords(thirdPage, [speed, 0, 0]);
-  incrementTranslateCords(fourthPage, [speed, 0, 0]);
-
+  for (let i=0; i < sidePageList.length; i++) {
+    incrementTranslateCords(sidePageList[i], [speed, 0, 0]);
+  }
 }
+
 
 /**
  *
@@ -399,7 +357,7 @@ function incrementTranslateCords (node, [x_cord, y_cord, z_cord] = [0, 0, 0]) {
 
   if (node.style.transform) {
 
-    let [x, y, z] = getCoords(node.style.transform);
+    let [x, y, z] = getCords(node.style.transform);
     x = parseInt(x) - x_cord;
     y = parseInt(y) - y_cord;
     z = parseInt(z) - z_cord;
@@ -435,6 +393,6 @@ function setTranslateCords (node, [x_cord, y_cord, z_cord] = [0, 0, 0]) {
  * @param {string} str the translate3d string to get coordinates from
  *
  */
-function getCoords (str) {
+function getCords (str) {
   return str.match(/([\d-]+)px/g);
 }

@@ -1,11 +1,3 @@
-//
-// #header {
-//   display: none;
-// }
-//
-// #footer {
-//   display: hidden;
-// }
 
 /* disable overscroll on apple devices */
 html, body {
@@ -13,7 +5,7 @@ html, body {
 }
 
 body {
-  // overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 .noscroll {
@@ -39,7 +31,6 @@ body {
 
   text-align: left;
 
-  /* border: solid 2px red; */
   border-radius: 25px;
   background-color: #EC519D;
 
@@ -75,8 +66,6 @@ body {
   left: 0px;
   top: 0px;
   position: relative;
-
-  /* border: solid 2px red; */
 }
 
 .team_item {
@@ -177,16 +166,7 @@ body {
   top: 25%;
 
   width: 100%;
-  // height: 100%;
 }
-
-// #secondaryPage {
-//   position: absolute;
-//   top: 25%;
-//
-//   width: 100%;
-//   height: 100%;
-// }
 
 .glassText {
   background: rgba(236, 81, 157, 0.49);
@@ -221,17 +201,6 @@ body {
   left: 60%;
 
   z-index: -1;
-}
-
-.about_separator {
-  position: absolute;
-
-  display: flex;
-  justify-content: center;
-
-  /* transform: rotate(90deg); */
-
-  border: 2px red solid;
 }
 
 .invisible_up {
@@ -325,7 +294,7 @@ body {
   }
 
   100% {
-    transform: translate3d(0px, -100%, 0px);
+    transform: translate3d(0px, -170%, 0px);
   }
 
 }
@@ -333,7 +302,7 @@ body {
 @keyframes footer_down {
 
   0% {
-    transform: translate3d(0px, -100%, 0px);
+    transform: translate3d(0px, -170%, 0px);
   }
 
   100% {
