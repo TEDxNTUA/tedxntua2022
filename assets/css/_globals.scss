@@ -24,7 +24,9 @@ main {
 	// Seen at:
 	// https://dev.to/domysee/keeping-the-footer-at-the-bottom-with-css-flexbox-5h5f
     flex-grow: 1;
-    padding: 0 $page-padding-x $page-padding-y;
+	padding: 0 0 $page-padding-y;
+	// Top padding so that content is not hidden by the sticky header
+	padding-top: $logo-height + 2 * 1.25em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -44,6 +46,8 @@ h1, h2, h3, h4, h5, h6 {
 
 @include media-breakpoint-up(lg) {
     main {
-        padding: 0 $page-padding-x-lg $page-padding-y-lg;
+		padding: 0 0 $page-padding-y-lg;
+		// Top padding so that content is not hidden by the sticky header
+		padding-top: $logo-height + 2 * 2.5em;
     }
 }

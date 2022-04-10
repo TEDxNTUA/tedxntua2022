@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.views.generic import TemplateView
 from django.shortcuts import render
+from .models import *
 
 from project.program.models import Presenter, Activity
 
@@ -22,8 +23,12 @@ class HomeView(TemplateView):
 
         qs['side_events'] = qs['side_events'].select_related('presenter')
 
+        #for footer previous events
+        previousEvents = PreviousEvent.objects.all()
+
         return render(request, self.template_name, {
             'lineup': qs,
             'placeholders': list(range(4)),
             'event_date': settings.TEDXNTUA_DATE,
+            'previousEvents': previousEvents
         })
