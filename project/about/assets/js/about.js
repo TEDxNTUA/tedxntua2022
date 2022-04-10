@@ -105,12 +105,9 @@ function mapTeamNames (range, offset = 0) {
 }
 
 // event listener to update team name
-// var cordY = 0;
-window.addEventListener("scroll", function (e) {
-  // if (cordY <= 0) cordY = 0;
-  // cordY += parseInt(e.deltaY);
+window.addEventListener("scroll", function () {
   updateTeamName(scrollY);
-  console.log("cordY: " + scrollY);
+  console.log("scrollY: " + scrollY);
   console.log("map: " + teamName_map);
 });
 
@@ -184,32 +181,38 @@ window.addEventListener("resize", function () {
 teamName.innerHTML = teamNames[0];
 
 // --- Sidescrolling pages ---
+// hideFooter();
 
 const mainPage = document.getElementById("mainPage");
 const mainDefaultY = mainPage.getBoundingClientRect().y;
 const mainDefaultX = mainPage.getBoundingClientRect().x;
 const teamNameDiv = document.getElementById("teamDescription");
 //
+let mult = teamContainerList.length;
+containerHeight = parseInt(window.getComputedStyle(teamContainerList[0]).height.slice(0, -2));
+
+// secondary page
 const secondaryPage = document.getElementById("secondaryPage");
-let mult = document.getElementsByClassName("team_container").length;
-const defaultSecondaryPageTranslateCords = [window.innerWidth, (mult-1)*window.innerHeight, 0];
-setTranslateCords(secondaryPage, defaultSecondaryPageTranslateCords)
-//
-const separator = document.getElementsByClassName("about_separator")[0];
-const defaultSeparatorPageTranslateCords = [window.innerWidth, (mult-1)*window.innerHeight, 0];
+const defaultSecondaryPageTranslateCords = [window.innerWidth, ((mult-1) * containerHeight), 0];
+// const defaultSecondaryPageTranslateCords = [0, 0, 0];
+setTranslateCords(secondaryPage, defaultSecondaryPageTranslateCords);
+
+// third page
+const thirdPage = document.getElementById("thirdPage");
+const defaultThirdPageTranslateCords = [window.innerWidth * 2, ((mult-1) * containerHeight), 0];
+setTranslateCords(thirdPage, defaultThirdPageTranslateCords);
 
 var reachEnd = false;
 var prevDeltaY = 0;
 window.addEventListener("wheel", function (e) {
     // true if reached end
-    // reachEnd = (window.innerHeight + window.scrollY > document.body.offsetHeight);
-    // let containerHeight = parseInt(getComputedStyle(teamContainerList[0]).height.slice(0, -2));
-    // let totalBodyHeight = containerHeight * teamContainerList.length;
-    let totalBodyHeight = teamName_map[teamName_map.length-1];
-    let footerTop = document.getElementById("footer").getBoundingClientRect().top;
-    reachEnd = footerTop < window.innerHeight;
-    console.log("reacheEnd: " + reachEnd);
+    // let footer = document.getElementById("footer");
+    // let footerBCR = footer.getBoundingClientRect();
+    // reachEnd = footerBCR.top < window.innerHeight;
+    reachEnd = scrollY >= ((mult - 1) * containerHeight);
     if (reachEnd) {
+      // scroll back to default height
+      scrollTo(scrollX, ((mult - 1) * containerHeight));
       // set default secondary page coordinates
 
       // disable vertical scroll when sidescrolling starts
@@ -231,7 +234,7 @@ window.addEventListener("wheel", function (e) {
         setTranslateCords(teamNameDiv);
         setTranslateCords(secondaryPage, defaultSecondaryPageTranslateCords);
         // scroll a little bit upwards to escape reachEnd
-        window.scrollTo(scrollX, scrollY + 20);
+        window.scrollTo(scrollX, scrollY - 150);
         // enable scrolling
         enableScrolling();
       }
@@ -262,6 +265,15 @@ function enableScrolling () {
 
 /**
  *
+ * Hides the footer
+ *
+ */
+function hideFooter () {
+  document.getElementById("footer").style.display = "none";
+}
+
+/**
+ *
  * Sidescrolls from the main page to the secondary page.
  *
  * @param {number} speed the speed of the sidescroll
@@ -271,6 +283,7 @@ function sidescrollMain (speed = 1) {
   incrementTranslateCords(mainPage, [speed, 0, 0]);
   incrementTranslateCords(teamNameDiv, [speed, 0, 0]);
   incrementTranslateCords(secondaryPage, [speed, 0, 0]);
+  incrementTranslateCords(thirdPage, [speed, 0, 0]);
 }
 
 /**

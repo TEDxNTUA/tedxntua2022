@@ -2,6 +2,10 @@
 // #header {
 //   display: none;
 // }
+//
+// #footer {
+//   display: hidden;
+// }
 
 /* disable overscroll on apple devices */
 html, body {
@@ -9,11 +13,16 @@ html, body {
 }
 
 body {
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 .noscroll {
   overflow-y: hidden;
+}
+
+#main {
+  display: flex;
+  flex-flow: row;
 }
 
 .team_description {
@@ -163,32 +172,51 @@ body {
   top: 65%;
 }
 
-#secondaryPage {
+.sidePage {
   position: absolute;
-  left: 25%;
   top: 25%;
 
   width: 100%;
-  height: 100%;
-
+  // height: 100%;
 }
+
+// #secondaryPage {
+//   position: absolute;
+//   top: 25%;
+//
+//   width: 100%;
+//   height: 100%;
+// }
 
 .glassText {
   background: rgba(236, 81, 157, 0.49);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  /* backdrop-filter: blur(5px); */
+  backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(236, 81, 157, 0.3);
 
-  width: 45%;
-  height: 50%;
+  width: 80%;
+  height: 70%;
+
+  top: 25%;
 
   margin: 0px;
   padding: 5%;
   padding-right: 15%;
 
   text-align: left;
+}
+
+.glassImage {
+  position: absolute;
+
+  width: 40%;
+
+  top: -3em;
+  left: 60%;
+
+  z-index: -1;
 }
 
 .about_separator {
