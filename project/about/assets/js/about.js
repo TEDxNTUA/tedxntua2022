@@ -202,6 +202,11 @@ const thirdPage = document.getElementById("thirdPage");
 const defaultThirdPageTranslateCords = [window.innerWidth * 2, ((mult-1) * containerHeight), 0];
 setTranslateCords(thirdPage, defaultThirdPageTranslateCords);
 
+//fourth page
+const fourthPage = document.getElementById("fourthPage");
+const defaultFourthPageTranslateCords = [window.innerWidth * 3, ((mult-1) * containerHeight), 0];
+setTranslateCords(fourthPage, defaultFourthPageTranslateCords);
+
 var reachEnd = false;
 var prevDeltaY = 0;
 window.addEventListener("wheel", function (e) {
@@ -233,6 +238,9 @@ window.addEventListener("wheel", function (e) {
         setTranslateCords(mainPage);
         setTranslateCords(teamNameDiv);
         setTranslateCords(secondaryPage, defaultSecondaryPageTranslateCords);
+        setTranslateCords(thirdPage, defaultThirdPageTranslateCords);
+        setTranslateCords(fourthPage, defaultFourthPageTranslateCords);
+
         // scroll a little bit upwards to escape reachEnd
         window.scrollTo(scrollX, scrollY - 150);
         // enable scrolling
@@ -280,10 +288,19 @@ function hideFooter () {
  *
  */
 function sidescrollMain (speed = 1) {
-  incrementTranslateCords(mainPage, [speed, 0, 0]);
-  incrementTranslateCords(teamNameDiv, [speed, 0, 0]);
-  incrementTranslateCords(secondaryPage, [speed, 0, 0]);
-  incrementTranslateCords(thirdPage, [speed, 0, 0]);
+  // sidescroll only if the end of the page has not been reached
+  // end of page
+  let [x, y, z] = getCoords(fourthPage.style.transform);
+  x = parseInt(x);
+  let reachHorizontalEnd = (x <= 0);
+  if ((speed > 0 && !reachHorizontalEnd) || (speed < 0)) {
+    incrementTranslateCords(mainPage, [speed, 0, 0]);
+    incrementTranslateCords(teamNameDiv, [speed, 0, 0]);
+    incrementTranslateCords(secondaryPage, [speed, 0, 0]);
+    incrementTranslateCords(thirdPage, [speed, 0, 0]);
+    incrementTranslateCords(fourthPage, [speed, 0, 0]);
+  }
+
 }
 
 /**
