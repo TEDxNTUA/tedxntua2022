@@ -208,6 +208,10 @@ body {
   text-align: left;
 }
 
+.glassText hr {
+  border-color: white;
+}
+
 .glassImage {
   position: absolute;
 
@@ -299,6 +303,41 @@ body {
   100% {
     opacity: 1;
     transform:translate3d(0,0,0);
+  }
+
+}
+
+// --- Footer animation ---
+.footer_up {
+  animation: footer_up .5s;
+  animation-fill-mode: forwards;
+}
+
+.footer_down {
+  animation: footer_down .5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes footer_up {
+
+  0% {
+    transform: translate3d(0px, 0px, 0px);
+  }
+
+  100% {
+    transform: translate3d(0px, -100%, 0px);
+  }
+
+}
+
+@keyframes footer_down {
+
+  0% {
+    transform: translate3d(0px, -100%, 0px);
+  }
+
+  100% {
+    transform: translate3d(0px, 0px, 0px);
   }
 
 }

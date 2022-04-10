@@ -229,7 +229,41 @@ window.addEventListener("wheel", function (e) {
       if (e.deltaY - prevDeltaY < 0) {
         speed = -speed;
       }
-      sidescrollMain(speed);
+
+      // show footer when reaching horizontal end
+      // let footer = document.getElementById("footer");
+      // let footerHeight = footer.getBoundingClientRect().height;
+      // let [footer_x, footer_y, footer_z] = ['0px', '0px', '0px'];
+      // if (footer.style.transform) {
+      //   [footer_x, footer_y, footer_z] = getCoords(footer.style.transform);
+      // }
+      // let isZero = (footer_x == '0px' && footer_y == '0px' && footer_z == '0px');
+      // if (reachHorizontalEnd && isZero) {
+      //   setTranslateCords(footer, [0, -footerHeight, 0]);
+      //   footer.animate([
+      //       { transform: 'translate3d(0px, 0px, 0px)' },
+      //       { transform: `translate3d(0px, -${footerHeight}px, 0px)` }
+      //     ],
+      //     {
+      //       duration: 200,
+      //       fill: "forwards"
+      //     }
+      //   );
+      //
+      // }
+      // else if (!isZero && !reachHorizontalEnd) {
+      //   footer.animate([
+      //       { transform: `translate3d(0px, -${footerHeight}px, 0px)` },
+      //       { transform: `translate3d(0px, 0px, 0px)` }
+      //     ],
+      //     {
+      //       duration: 200,
+      //       fill: "forwards"
+      //     }
+      //   );
+      //   setTranslateCords(footer);
+      // }
+      animateFooter(speed);
 
       // stop sidescrolling
       if (mainPage.getBoundingClientRect().x > mainDefaultX) {
@@ -282,24 +316,71 @@ function hideFooter () {
 
 /**
  *
+ * Animates footer
+ *
+ */
+const footer = document.getElementById("footer");
+var footerHeight = footer.getBoundingClientRect().height;
+var isanimated = false;
+footer.addEventListener("animationend", function (event) {
+  isanimated = false;
+  footer.classList.toggle(event.animationName);
+  if (event.animationName == "footer_up") {
+    setTranslateCords(footer, [0, -footerHeight, 0]);
+  }
+  else if (event.animationName == "footer_down") {
+    setTranslateCords(footer, [0, 0, 0]);
+  }
+  console.log("animation ended");
+});
+function animateFooter (speed) {
+  // check for reaching horizontal end
+  let [x, y, z] = getCoords(fourthPage.style.transform);
+  x = parseInt(x);
+  let reachHorizontalEnd = (x <= 0);
+  if ((speed > 0 && !reachHorizontalEnd) || (speed < 0)) {
+    sidescrollMain(speed);
+  }
+
+  // show footer once reaching the horizontal end if it
+  // is not already shown
+  let [footer_x, footer_y, footer_z] = ['0px', '0px', '0px'];
+  if (footer.style.transform) {
+    [footer_x, footer_y, footer_z] = getCoords(footer.style.transform);
+  }
+  else {
+    setTranslateCords(footer, [0, 0, 0]);
+  }
+  let isHidden = (footer_x == '0px' && footer_y == '0px' && footer_z == '0px');
+
+  if (isHidden && !isanimated && reachHorizontalEnd) {
+    // animate footer
+    isanimated = true;
+    footer.classList.toggle("footer_up");
+  }
+  // hide footer once leaving the horizontal end if it
+  // is already shown
+  else if (!isHidden && !isanimated && !reachHorizontalEnd) {
+    // animate footer
+    isanimated = true;
+    footer.classList.toggle("footer_down");
+  }
+}
+
+/**
+ *
  * Sidescrolls from the main page to the secondary page.
  *
  * @param {number} speed the speed of the sidescroll
  *
  */
 function sidescrollMain (speed = 1) {
-  // sidescroll only if the end of the page has not been reached
-  // end of page
-  let [x, y, z] = getCoords(fourthPage.style.transform);
-  x = parseInt(x);
-  let reachHorizontalEnd = (x <= 0);
-  if ((speed > 0 && !reachHorizontalEnd) || (speed < 0)) {
-    incrementTranslateCords(mainPage, [speed, 0, 0]);
-    incrementTranslateCords(teamNameDiv, [speed, 0, 0]);
-    incrementTranslateCords(secondaryPage, [speed, 0, 0]);
-    incrementTranslateCords(thirdPage, [speed, 0, 0]);
-    incrementTranslateCords(fourthPage, [speed, 0, 0]);
-  }
+
+  incrementTranslateCords(mainPage, [speed, 0, 0]);
+  incrementTranslateCords(teamNameDiv, [speed, 0, 0]);
+  incrementTranslateCords(secondaryPage, [speed, 0, 0]);
+  incrementTranslateCords(thirdPage, [speed, 0, 0]);
+  incrementTranslateCords(fourthPage, [speed, 0, 0]);
 
 }
 
