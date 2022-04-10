@@ -69,3 +69,9 @@ venv.bak/
 
 # User-generated files
 media/
+
+#env
+ted-env/
+
+#node_modules
+node_modules/
