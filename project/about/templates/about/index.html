@@ -28,10 +28,16 @@
               <div class="team_item_linkedin_hover"></div>
               <h3>LinkedIn <i class="fa-solid fa-arrow-right"></i></h3>
             </div>
+            <img src="{% static 'images/social-linkedin.png' %}" class="team_item_linkedin_icon">
           </a>
         </div>
         {% endif %}
         {% endfor %}
+        <div class="team_description_mobile">
+          <h2>{{ team.team|upper }}</h2>
+          <h2>TEAM</h2>
+          <hr>
+        </div>
       </div>
       {% endfor %}
     </div>

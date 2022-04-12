@@ -6,6 +6,36 @@ if(/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine
     isMobile = true;
 }
 console.log(isMobile);
+// change important elements classes to mobile only
+if (isMobile) {
+
+  // change main page flex-flow to column
+  document.getElementById("main").style.flexFlow = "column";
+
+  // hide fixed team description element
+  document.getElementById("teamDescription").style.display = "none";
+
+  // change team member elements class
+  let teamMembers = document.getElementsByClassName("team_item");
+  // every time we change the class value of an element it exits the array
+  // so we have to do this while loop to change all elements' classes
+  while (teamMembers.length) {
+    teamMembers[0].classList.value = "team_item_mobile";
+  }
+
+  // show linked in icons
+  let linkedInIcons = document.getElementsByClassName("team_item_linkedin_icon");
+  for (icon of linkedInIcons) {
+    icon.style.display = "block";
+  }
+
+  // change side pages to mobile side pages
+  let sidePages = document.getElementsByClassName("sidePage");
+  while (sidePages.length) {
+    sidePages[0].classList.value = "sidePage_mobile";
+  }
+
+}
 
 // set scroll at beginning of page
 window.onbeforeunload = function () {
@@ -73,16 +103,17 @@ resizePictures();
 updateBlackBoxes();
 
 // --- Change Team Names ---
-const teamName = document.getElementById("teamName");
-var teamNames = ["IT", "EXPERIENCE", "GRAPHICS", "FUNDRAISING", "MEDIA", "SPEAKERS", "PRODUCTION"];
+if (!isMobile) {
+  const teamName = document.getElementById("teamName");
+  var teamNames = ["IT", "EXPERIENCE", "GRAPHICS", "FUNDRAISING", "MEDIA", "SPEAKERS", "PRODUCTION"];
 
-// map each word to Y coordinates
-// each word is mapped to range equal to the team container's height
-let containerHeight = parseInt(window.getComputedStyle(teamContainerList[0]).height.slice(0, -2));
-let range = containerHeight;
-let offset = -0.33 * containerHeight;
-var teamName_map = mapTeamNames(range, offset);
-
+  // map each word to Y coordinates
+  // each word is mapped to range equal to the team container's height
+  let containerHeight = parseInt(window.getComputedStyle(teamContainerList[0]).height.slice(0, -2));
+  let range = containerHeight;
+  let offset = -0.33 * containerHeight;
+  var teamName_map = mapTeamNames(range, offset);
+}
 /**
  *
  * Returns an array of numbers representing the limits for
@@ -163,86 +194,89 @@ function updateTeamName (cordY) {
 
 }
 
-// event listener to update team name map on resize
-window.addEventListener("resize", function () {
-  // update container list
-  teamContainerList = document.getElementsByClassName("team_container");
+if (!isMobile) {
+  // event listener to update team name map on resize
+  window.addEventListener("resize", function () {
+    // update container list
+    teamContainerList = document.getElementsByClassName("team_container");
 
-  // get new range
-  let containerHeight = parseInt(window.getComputedStyle(teamContainerList[0]).height.slice(0, -2));
-  let range = containerHeight;
-  let offset = -0.33 * containerHeight;
-  teamName_map = mapTeamNames(range, offset);
-});
+    // get new range
+    let containerHeight = parseInt(window.getComputedStyle(teamContainerList[0]).height.slice(0, -2));
+    let range = containerHeight;
+    let offset = -0.33 * containerHeight;
+    teamName_map = mapTeamNames(range, offset);
+  });
 
-// initialise with the first team name
-teamName.innerHTML = teamNames[0];
+  // initialise with the first team name
+  teamName.innerHTML = teamNames[0];
+}
 
 // --- Sidescrolling pages ---
 
-// main page
-const mainPage = document.getElementById("mainPage");
-const mainDefaultX = mainPage.getBoundingClientRect().x;
-const teamNameDiv = document.getElementById("teamDescription");
+if (!isMobile) {
+  // main page
+  const mainPage = document.getElementById("mainPage");
+  const mainDefaultX = mainPage.getBoundingClientRect().x;
+  const teamNameDiv = document.getElementById("teamDescription");
 
-let mult = teamContainerList.length; // number of containers
-containerHeight = parseInt(window.getComputedStyle(teamContainerList[0]).height.slice(0, -2));
+  let mult = teamContainerList.length; // number of containers
+  containerHeight = parseInt(window.getComputedStyle(teamContainerList[0]).height.slice(0, -2));
 
-// side pages
-const sidePageList = document.getElementsByClassName("sidePage");
-for (let i=0; i < sidePageList.length; i++) {
-  setTranslateCords(sidePageList[i], [window.innerWidth * (i+1), ((mult-1) * containerHeight), 0]);
-}
+  // side pages
+  const sidePageList = document.getElementsByClassName("sidePage");
+  for (let i=0; i < sidePageList.length; i++) {
+    setTranslateCords(sidePageList[i], [window.innerWidth * (i+1), ((mult-1) * containerHeight), 0]);
+  }
 
-const speed = 7; // sidescrolling speed
-var reachEnd = false;
-var prevDeltaY = 0;
-window.addEventListener("wheel", function (e) {
+  const speed = 7; // sidescrolling speed
+  var reachEnd = false;
+  var prevDeltaY = 0;
+  window.addEventListener("wheel", function (e) {
 
-    // true when we reach the page's vertical end
-    reachEnd = scrollY >= ((mult - 1) * containerHeight);
-    if (reachEnd) {
-      // scroll back to default height
-      scrollTo(scrollX, ((mult - 1) * containerHeight));
+      // true when we reach the page's vertical end
+      reachEnd = scrollY >= ((mult - 1) * containerHeight);
+      if (reachEnd) {
+        // scroll back to default height
+        scrollTo(scrollX, ((mult - 1) * containerHeight));
 
-      // disable vertical scroll when sidescrolling starts
-      disableScrolling();
+        // disable vertical scroll when sidescrolling starts
+        disableScrolling();
 
-      // check if reached horizontal end
-      // check for reaching horizontal end
-      let [x, y, z] = getCords(sidePageList[sidePageList.length-1].style.transform);
-      x = parseInt(x);
-      let reachHorizontalEnd = (x <= 0);
-      let direction = (e.deltaY - prevDeltaY < 0); // true for left
-      if ((!direction && !reachHorizontalEnd) || direction) {
-        // sidescrolling direction
-        if (direction) {
-          sidescrollPage(-speed);
+        // check if reached horizontal end
+        // check for reaching horizontal end
+        let [x, y, z] = getCords(sidePageList[sidePageList.length-1].style.transform);
+        x = parseInt(x);
+        let reachHorizontalEnd = (x <= 0);
+        let direction = (e.deltaY - prevDeltaY < 0); // true for left
+        if ((!direction && !reachHorizontalEnd) || direction) {
+          // sidescrolling direction
+          if (direction) {
+            sidescrollPage(-speed);
+          }
+          else {
+            sidescrollPage(speed);
+          }
         }
-        else {
-          sidescrollPage(speed);
+
+        // animate footer accordingly
+        animateFooter(reachHorizontalEnd);
+
+        // stop sidescrolling
+        if (mainPage.getBoundingClientRect().x > mainDefaultX) {
+          reachEnd = false;
+          // move pages back to their default positions
+          setTranslateCords(mainPage);
+          setTranslateCords(teamNameDiv);
+          for (let i=0; i < sidePageList.length; i++) {
+            setTranslateCords(sidePageList[i], [window.innerWidth * (i+1), ((mult-1) * containerHeight), 0]);
+          }
+          // scroll a little bit upwards to escape reachEnd
+          window.scrollTo(scrollX, scrollY - 150);
+          // enable scrolling
+          enableScrolling();
         }
       }
-
-      // animate footer accordingly
-      animateFooter(reachHorizontalEnd);
-
-      // stop sidescrolling
-      if (mainPage.getBoundingClientRect().x > mainDefaultX) {
-        reachEnd = false;
-        // move pages back to their default positions
-        setTranslateCords(mainPage);
-        setTranslateCords(teamNameDiv);
-        for (let i=0; i < sidePageList.length; i++) {
-          setTranslateCords(sidePageList[i], [window.innerWidth * (i+1), ((mult-1) * containerHeight), 0]);
-        }
-        // scroll a little bit upwards to escape reachEnd
-        window.scrollTo(scrollX, scrollY - 150);
-        // enable scrolling
-        enableScrolling();
-      }
-    }
-});
+  });
 
 /**
  *
@@ -395,4 +429,6 @@ function setTranslateCords (node, [x_cord, y_cord, z_cord] = [0, 0, 0]) {
  */
 function getCords (str) {
   return str.match(/([\d-]+)px/g);
+}
+
 }

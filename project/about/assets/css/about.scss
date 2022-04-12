@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 .noscroll {
@@ -13,6 +13,7 @@ body {
 }
 
 #main {
+  overflow-x: hidden;
   display: flex;
   flex-flow: row;
 }
@@ -37,7 +38,33 @@ body {
   box-shadow: 5px 10px #A09696;
 }
 
-.team_description h2 {
+.team_description_mobile {
+
+  position: absolute;
+
+  width: 90%;
+  height: 75%;
+
+  margin: 1em;
+  padding-top: 5%;
+  padding-left: 10%;
+  padding-right: 10%;
+
+  text-align: left;
+
+  border-radius: 25px;
+  background-color: #EC519D;
+
+  box-shadow: 5px 10px #A09696;
+
+  z-index: -1;
+}
+
+.team_description_mobile hr {
+  border-color: #4D3EAD;
+}
+
+.team_description h2, .team_description_mobile h2 {
   margin: 0px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -48,12 +75,12 @@ body {
   color: #4D3EAD;
 }
 
-.team_description h2:nth-child(1) {
+.team_description h2:nth-child(1), .team_description_mobile h2:nth-child(1) {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
 }
 
-.team_description h2:nth-child(2) {
+.team_description h2:nth-child(2), .team_description_mobile h2:nth-child(2) {
   font-family: 'Times New Roman', Times, serif;
   /* Custom italic filter */
   transform: skew(-13deg);
@@ -70,6 +97,13 @@ body {
 
 .team_item {
   width: 20%;
+  position: absolute;
+
+  cursor: pointer;
+}
+
+.team_item_mobile {
+  width: 40%;
   position: absolute;
 
   cursor: pointer;
@@ -96,7 +130,7 @@ body {
   opacity: 0;
 }
 
-.team_item h2 {
+.team_item h2, .team_item_mobile h2 {
   position: absolute;
 
   padding: 0px;
@@ -107,7 +141,7 @@ body {
   font-size: 1em;
 }
 
-.team_item h3 {
+.team_item h3, .team_item_mobile h3 {
   margin: 0px;
   padding: 5px;
 
@@ -130,10 +164,12 @@ body {
   transition: 0.5s;
 }
 
-.team_item img {
+.team_item_img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+
+  border-radius: 20px;
 }
 
 .team_item:nth-child(1) {
@@ -161,11 +197,66 @@ body {
   top: 65%;
 }
 
+.team_item_mobile:nth-child(1) {
+  left: 8%;
+  top: 28%;
+}
+
+.team_item_mobile:nth-child(2) {
+  left: 50%;
+  top: 28%;
+}
+
+.team_item_mobile:nth-child(3) {
+  left: 8%;
+  top: 45%;
+}
+
+.team_item_mobile:nth-child(4) {
+  left: 50%;
+  top: 45%;
+}
+
+.team_item_mobile:nth-child(5) {
+  left: 30%;
+  top: 62%;
+}
+
+.team_item_linkedin_icon {
+  width: 30%;
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+
+  display: none;
+}
+
 .sidePage {
   position: absolute;
   top: 25%;
 
   width: 100%;
+}
+
+.sidePage_mobile {
+  position: relative;
+
+  left: 10%;
+
+  height: 5%;
+}
+
+.sidePage_mobile .glassText {
+
+  padding: 5%;
+  text-align: justify;
+
+  overflow: scroll;
+}
+
+.sidePage_mobile .glassImage {
+  display: none;
 }
 
 .glassText {
