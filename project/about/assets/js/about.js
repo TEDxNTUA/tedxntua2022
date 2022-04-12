@@ -36,6 +36,13 @@ if (isMobile) {
   }
 
 }
+else {
+  // hide individual team descriptions
+  let teamDescriptions = document.getElementsByClassName("team_description_mobile");
+  for (teamDesc of teamDescriptions) {
+      teamDesc.style.display = "none";
+  }
+}
 
 // set scroll at beginning of page
 window.onbeforeunload = function () {
