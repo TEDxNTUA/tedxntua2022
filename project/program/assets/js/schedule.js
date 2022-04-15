@@ -61,10 +61,10 @@ function phone_mode(media_query){
         }
         for(let i=0; i<right_texts.length; i+=2){
             right_texts[i].style.display = 'none';
-            right_texts[i+1].removeAttribute('text-align');
-            left_texts[i+1].style.display = 'none';
+            if(right_texts[i+1]) right_texts[i+1].removeAttribute('text-align');
+            if(left_texts[i+1]) left_texts[i+1].style.display = 'none';
             lines[i].style.display = 'none';
-            lines[i+1].style.display = 'none';
+            if(lines[i+1]) lines[i+1].style.display = 'none';
         }
         let rows = document.getElementsByClassName("table-row");
         let cells = document.getElementsByClassName("table-cell-full");
