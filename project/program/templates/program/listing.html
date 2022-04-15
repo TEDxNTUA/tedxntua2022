@@ -43,8 +43,23 @@
     <ul class="c-work__list" id="js-work-container">
       {% for item in items %}
         <li class="c-work__item" id="js-work-scroll-1">
+          <i class="bi bi-play" style="z-index: 11;"></i>
           <a href="{% url "presenter" slug=item.slug %}" class="c-work__link">
             <div class="c-work__showcase" id="js-work-img">
+              <span class="c-work__play">
+                <svg class="c-work__play__icon">
+                  <defs>
+                    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%"
+                      style="stop-color:#EC519D;stop-opacity:1" />
+                      <stop offset="100%"
+                      style="stop-color:#4D3EAD;stop-opacity:1" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="50%" cy="50%" r="20%"
+                  stroke="white" stroke-width="2" fill="url(#grad1)" />
+                </svg>
+              </span>
               <img class="event-img" srcset="{{ item.image.thumbnail.320x320.url }} 320w,
                             {{ item.image.thumbnail.720x720.url }} 720w,
                             {{ item.image.thumbnail.1024x1024.url }} 1024w"
