@@ -4,8 +4,16 @@
 {% block description %}{{ presenter.name }}: {{ presenter.occupation }}{% endblock %}
 {% block content %}
 <article class="presenter-page">
-    {% if go_back_url %}
-        <a href="{{ go_back_url }}" class="btn btn-secondary">
+    {% if activities.0.get_activity_type_display == 'Talk' %}
+        <a href="{% url 'speakers' %}" class="btn btn-secondary back-btn">
+            &lt; {% trans 'back' %}
+        </a>
+    {% elif activities.0.get_activity_type_display == 'Performance' %}
+        <a href="{% url 'performers' %}" class="btn btn-secondary back-btn">
+            &lt; {% trans 'back' %}
+        </a>
+    {% elif activities.0.get_activity_type_display == 'Side event' %}
+        <a href="{% url 'side-events' %}" class="btn btn-secondary back-btn">
             &lt; {% trans 'back' %}
         </a>
     {% endif %}
@@ -26,34 +34,19 @@
             </div>
         {% endif %}
         <div class="info">
-            <h1>{{presenter.name}}</h1>
-            <h2>{{presenter.occupation}}</h2>
-            <div class="collapse content" id="description">
-                {{presenter.short_bio|safe}}
-            </div>
-            <a href="#description" class="btn btn-primary" data-toggle="collapse"
-                aria-expanded="false" aria-controls="description">
-                {% trans 'presenter.read_full' %}
-            </a>
+            <h3>{{presenter.name}}</h1>
+            <h5>{{presenter.occupation}}</h2>
         </div>
-    </div>
-    <div class="activities">
+        <div class="bio">
+            <div><p class="header">Bio:</p></div>
+            <div><p class="text">{{presenter.short_bio}}</p></div>
+        </div>
         {% for activity in activities %}
         <div class="activity">
-            <header>
-                <h5>{{ activity.title }}</h5>
-                <h6 class="h5">
-                    <span class="type">
-                        {{activity.get_activity_type_display | upper}}
-                    </span>
-                    {% if activity.start and activity.end %}
-                        <span class="sep">|</span>
-                        <time>{{activity.start_time}}</time>&mdash;<time>{{activity.end_time}}</time>
-                    {% endif %}
-                </h6>
-            </header>
-            <div class="content">
-                {{activity.description|safe}}
+            <p class="header">{{activity.get_activity_type_display}}:</p>
+            <div>
+                <p>{{ activity.title }}</p>
+                <p>{{activity.description|safe}}</p>
             </div>
         </div>
         {% endfor %}
