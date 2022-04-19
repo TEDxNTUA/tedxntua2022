@@ -11,7 +11,7 @@ let maxH4FontSize = 1.33;
 let maxpFontSize = 1.1;
 
 function update_rows(){
-    let threshold = 0.2 * window.innerHeight;
+    let threshold = 0.4 * window.innerHeight;
     let imgs = document.getElementsByClassName("event-img");
     let texts = document.getElementsByClassName("detail-text");
     let length = imgs.length;
@@ -49,7 +49,7 @@ function phone_mode(media_query){
         }
         let right_texts = document.getElementsByClassName("div-right");
         let left_texts = document.getElementsByClassName("text-left");
-        let lines = document.getElementsByClassName("detail-line");
+        //let lines = document.getElementsByClassName("detail-line");
         let text_containers = document.getElementsByClassName("detail-container");
         let borders = document.getElementsByClassName("table-cell-border");
         let time_slots = document.getElementsByClassName("time-slot");
@@ -63,8 +63,8 @@ function phone_mode(media_query){
             right_texts[i].style.display = 'none';
             if(right_texts[i+1]) right_texts[i+1].removeAttribute('text-align');
             if(left_texts[i+1]) left_texts[i+1].style.display = 'none';
-            lines[i].style.display = 'none';
-            if(lines[i+1]) lines[i+1].style.display = 'none';
+            //lines[i].style.display = 'none';
+            //if(lines[i+1]) lines[i+1].style.display = 'none';
         }
         let rows = document.getElementsByClassName("table-row");
         let cells = document.getElementsByClassName("table-cell-full");

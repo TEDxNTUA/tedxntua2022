@@ -1,7 +1,47 @@
+.place-container{
+    position: relative;
+}
+
+.place-info-container{
+    display: flex;
+    flex-direction: column;
+    background-color: $body-bg;
+    position:absolute;
+    top:5%;
+    left:1em;
+    width: 40vw;
+    height: 90%;
+    border-radius: $border-radius;
+    // padding: 1em;
+    h1{
+        color:$ted;
+        padding-left:0.5em;
+    }
+    h3{
+        color:$ted;
+        padding-left: 1em;
+    }
+}
+
 .place-image{
-    width: 50vw;
-    height: 30vh;
-    position: absolute;
-    top:0;
-    left:0;
+    // width: 50vw;
+    // height: 30vh;
+    //position: absolute;
+    // top:1em;
+    // left:1em;
+    object-fit: contain;
+    padding: 1em;
+    width:100%;
+    height: 100%;
+}
+
+.image-container{
+    display: flex;
+    width: 100%;
+    height: -webkit-fill-available;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
