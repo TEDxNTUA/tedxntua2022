@@ -22,8 +22,8 @@
         <li class="nav-item dropdown">
             <a role="menuitem" href="#"
                 class="nav-link dropdown-toggle"
-                id="dropdownMenuLink" 
-                data-bs-toggle="dropdown" 
+                id="dropdownMenuLink"
+                data-bs-toggle="dropdown"
                 data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
                 <span class="nav-item-text">
@@ -102,8 +102,17 @@
     <button class="navbar-toggler" data-toggle="collapse"
             data-target="#navbar-nav" aria-controls="navbar-nav"
             aria-label="Toggle navigation menu" aria-expanded="false">
-        <div class="navbar-toggler-icon" aria-hidden="true">
-        </div>
+        <!-- <div class="navbar-toggler-icon" aria-hidden="true"></div> -->
+        <svg class="svg-header-stop" width="30px" height="30px">
+            <rect x="30%" y="0%" width="5px" height="100%"
+            class="header-stop" />
+            <rect x="70%" y="0%" width="5px" height="100%"
+            class="header-stop" />
+        </svg>
+        <!-- <svg class="svg-header-play" height="30px" width="30px">
+          <polygon points="30,15 15,0 15 ,30" class="header-play"/>
+          Sorry, your browser does not support inline SVG.
+        </svg> -->
     </button>
 </nav>
 <!--
@@ -114,4 +123,3 @@
     </div>
 {% endif %}
 -->
-
