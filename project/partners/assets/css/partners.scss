@@ -1,0 +1,517 @@
+article.sponsors {
+    padding: 0 $page-padding-x-lg;
+    
+    h2 {  
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 2rem;
+        &.PS-heading {
+            font-size: 2.5rem;
+        }
+        &.GS-heading {
+            font-size: 2.25rem;
+        }
+    }
+    p {
+        font-family: $font-family-serif;
+        align-self: center;
+    }
+
+    .category-container {
+        display: block;
+        flex-direction: column;
+        .partners-collection {
+            @include make-col(12);
+            display: flex;
+            flex-flow: row wrap;
+            width: 100%;
+            align-items: center;
+            justify-content: center;  
+        }
+    }
+
+    .pop-up-button {
+        display: none;
+        position: absolute;
+        color: blue;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+
+    }
+
+    .career-button, .website-button {
+        background-color: #272626d9;
+        padding: 0 2px;
+        p {
+            color: $body-color;
+        }
+        &:hover {
+            background-color: black;
+        }
+    }
+
+    .career-button {
+        height: 40%;
+        width: 40%;
+        border-radius: $border-radius-sm;
+        border: 1px solid black;
+        z-index:1;
+        display: none;
+        p {
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+            line-height: 1.1;
+            margin-bottom: 0;
+        }
+    }
+
+    .website-button {
+        height: 60%;
+        width: 60%;
+        border-radius: $border-radius-sm;
+        border: 1px solid black;
+        z-index:1;
+        display: none;
+        p {  
+            font-weight: bold;
+            width: 100%;
+            text-align: center;
+            z-index:2;
+            margin-bottom: 0;
+        }
+    }
+    
+    .partner-instance {
+        margin: 2em 0.25rem;
+        display: flex;
+        padding: 0;
+        .partner-card {
+            position: relative; // to absolutely position the child
+            margin: auto;
+            width: 10em;
+            height: 10em;
+            &:hover {
+                .logo {
+                    filter: blur(4px);
+                    -webkit-filter: blur(4px);
+                }
+                .pop-up-button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+        .image-container{
+            position: relative;
+            margin: auto;
+            height: 100%;
+            width: 100%;
+            background-color: white;
+            border-radius: $border-radius;
+            align-self: center;
+            border: 5px solid $primary;
+            .partner-buttons {
+                display: flex;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                align-items: center;
+                justify-content: space-around;
+            }
+            &.hover {
+                .website-button {
+                    display: flex;
+                }
+                &.hasCareerLink{
+                    .career-button {
+                        display: flex;
+                    }   
+                }
+            }
+            &.hasCareerLink {
+                .website-button, .career-button {
+                    width: 40%;
+                    height: 40%;
+                    p {
+                        font-size: 0.6rem;
+                    }    
+                }
+            }
+        }
+        .logo{
+            width: 100%;
+            height:100%;
+            object-fit: contain;
+            border-radius: $border-radius;
+            padding: 1em;
+        }
+    }
+
+    //partner categories
+    .category-container#PS {
+        h2 {
+            margin-top: 1rem;
+        }
+        .partners-collection {
+            justify-content: space-evenly;
+        }
+        .partner-instance {
+            max-width: 100%;
+            flex: 0;
+            margin: 1em;
+            .partner-card {
+                width: 20em;
+                height: 20em;
+            }
+            .career-button {
+                p {
+                    font-size: 1.2em;
+                }
+            }
+            .website-button {
+                width: 40%;
+                height: 40%;
+                p {
+                    font-size: 1.2em;
+                }
+            }
+            
+        }
+    }
+
+    .category-container#GS, .category-container#GHS, .category-container#GPS {
+        .partner-instance {
+            @include make-col(4);
+            margin-left: 0;
+            margin-right: 0;
+            .partner-card {
+                position: relative;
+                width: 15em;
+                height: 15em;
+            }
+            .image-container {
+                width: 100%;
+                height: 100%;
+            }
+
+            .career-button {
+                p{
+                    font-size: 1em;
+                    top:40%;
+                }
+            }
+            .website-button {
+                width: 40%;
+                height: 40%;
+                p {
+                    font-size: 1em;
+                    top:37%;
+                }
+            }
+            .triangle {
+                width: 1.7em;
+                height: 1.7em;
+                position: absolute;
+                top: 0;
+                right: 0;
+                border-bottom: solid 1.2em #CACACA;
+                border-bottom-left-radius: 15px;
+                border-left: solid 1.2em #CACACA;
+                border-top: solid 1.2em $body-bg;
+                border-right: solid 1.2em $body-bg;
+            }
+            .triangle:hover {
+                width: 3em;
+                height: 3em;
+                border-bottom: solid 1.7em #CACACA;
+                border-left: solid 1.7em #CACACA;
+                border-top: solid 1.7em $body-bg;
+                border-right: solid 1.7em $body-bg;
+                transition-duration: 0.4s ;
+            }
+        }
+    }
+
+}
+
+/////////////////////////////////
+// Modal
+/////////////////////////////////
+.modal {
+    display: flex; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 10; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    //overflow: auto; /* Enable scroll if needed */
+    background-color: $body-bg; /* Fallback color */
+    background-color: rgba(36, 42, 48, 0.4); /* Black w/ opacity */
+    &.hidden {
+        display:none;
+    }
+}
+
+.modal-content {
+    background-color: rgba(50,50,50,0.9);
+    margin: auto;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    height: auto;
+    border-radius: $border-radius;
+
+    .modal-close {
+        color: #aaaaaa; // change color and everythin else
+        font-size: 40px;
+        font-weight: bold;
+        width: max-content;
+        margin-left: auto;
+      }
+
+    .modal-info {
+        display: flex;
+        flex-direction: row;
+        height: 80%;
+        
+        //overflow: scroll;
+        // &::-webkit-scrollbar {
+        //     display: none;
+        // }
+    
+        .modal-logo {
+            position: relative;
+            left: -10%;
+            height: 90%
+        }
+    
+        .modal-text {
+            position: relative;
+            left: -5%;
+            //width: 60%;
+            overflow: scroll;
+            &::-webkit-scrollbar {
+                display: none;
+            }
+    
+            h3 {
+    
+            }
+    
+            p {
+                
+            }
+        }
+    }
+
+    .modal-buttons {
+        display: inline-flex;
+        justify-content: center;
+        width: 95%;
+        height: auto;
+        flex-wrap: wrap;
+        margin-top: 1em;
+        .modal-career-button {
+            border-radius:5px ;
+            background-color: #171717;
+            padding: 0.5em 1em;
+            margin: 0.5em;
+            text-align: center;
+        }
+        .modal-website-button {
+            border-radius: 5px ;
+            background-color: #171717;
+            padding: 0.5em 1em;
+            margin: 0.5em;
+            text-align: center;
+        }
+        .modal-career-button:hover, .modal-website-button:hover {
+            background-color: rgba(39, 38, 38, 0.8);
+        }
+    }
+}
+
+
+
+// .modal-info-container {
+//     display: flex;
+//     overflow: scroll;
+//     &::-webkit-scrollbar {
+//         display: none;
+//     }
+//     .info {
+//         align-self: center;
+//         text-align: left;
+//         overflow: scroll;
+//         width: 100%;
+//         height: 100%;
+//         word-wrap: break-word;
+//         &::-webkit-scrollbar {
+//             display: none;
+//         }
+//         .name {
+//             text-align: left;
+//             font-size: 200%;
+//         }
+//         p {
+//             font-size: 1.2rem;
+//             line-height: 150%;
+//         }
+//     }
+// }
+// .modal-image-container {
+//     @include make-col (4);
+//     .modal-logo {
+//         top: 0;
+//         width: 95%;
+//         height: auto;
+//         object-fit: contain;
+//         border-radius: 25px;
+//         padding: 1em 2em;
+//         background: white;
+//     }
+//     .modal-buttons {
+//         display: inline-flex;
+//         justify-content: center;
+//         width: 95%;
+//         height: auto;
+//         flex-wrap: wrap;
+//         margin-top: 1em;
+//         .modal-career-button {
+//             border-radius:5px ;
+//             background-color: #171717;
+//             padding: 0.5em 1em;
+//             margin: 0.5em;
+//             text-align: center;
+//         }
+//         .modal-website-button {
+//             border-radius: 5px ;
+//             background-color: #171717;
+//             padding: 0.5em 1em;
+//             margin: 0.5em;
+//             text-align: center;
+//         }
+//         .modal-career-button:hover, .modal-website-button:hover {
+//             background-color: rgba(39, 38, 38, 0.8);
+//         }
+//     }
+// }
+
+@include media-breakpoint-up(xl) {
+    .image-container:hover {
+        .website-button {
+            display: flex;
+        }
+        .logo {
+            filter: blur(5px);
+            -webkit-filter: blur(5px); 
+        }
+        &.hasCareerLink {
+            .website-button {
+                top: 30%;
+                left: 10%;
+            }
+            .career-button {
+                display: flex;
+            }   
+        }
+    }
+}
+
+@include media-breakpoint-down(md){
+    article.sponsors {
+        padding: 0 $page-padding-x;
+        .partner-instance{
+            margin: 1em 0 ;
+        }
+        .triangle{
+            margin: -1px;
+        }
+        .website-button, .career-button{
+            border-radius: 10px;
+            font-size: 0.8rem;
+        }
+        .category-container#PS{
+            font-size: 0.9rem;
+            .website-button, .career-button{
+                font-size: 1rem;
+            }
+        }       
+        .category-conainer#GS, .category-container#GHS, .category-container#GPS {
+            .partner-instance{
+                @include make-col(6);
+            }
+        }
+    }
+}
+@include media-breakpoint-down(sm){
+    article.sponsors {
+        h2 {  
+            font-size: 1.5rem;
+            &.PS-heading {
+                font-size: 2rem;
+            }
+            &.GS-heading {
+                font-size: 1.75rem;
+            }
+        }
+        padding: 0 5px;
+        .category-conainer#PS .partner-instance .partner-card {
+            width: 17em;
+            height: 17em;
+        } 
+        .category-conainer#GS, .category-container#GHS, .category-container#GPS {
+            .partner-instance .partner-card {
+                width: 11em;
+                height: 11em;
+            }
+        }
+    }
+    .modal-content{
+        height: 100%;
+    }
+    .modal-info-container{
+        display: flex;
+        flex-flow: column;
+        overflow: scroll;
+        .modal-image-container{
+            max-width: unset;
+            width: 80%;
+            height: auto;
+            align-self: center;
+        }
+        .info{
+            overflow: initial;
+        }
+        .name{
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 372px) {
+    article.sponsors {
+        .partner-instance .partner-card {
+            width: 8em;
+            height: 8em;
+        }
+        .category-container#GS, .category-container#GHS, .category-container#GPS {
+            .partner-instance .partner-card {
+                width: 9em;
+                height: 9em;
+            }
+        }
+    }
+}
