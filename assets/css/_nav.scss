@@ -7,6 +7,30 @@ $nav-hover-border-width: 6px;
      font-size: 55em;
  }
 
+.header-stop{
+  fill:$body-bg;
+  stroke:$primary;
+  stroke-width:1;
+}
+
+.svg-header-stop:hover{
+  .header-stop{
+    fill:$primary;
+  }
+}
+
+.header-play{
+  fill:$body-bg;
+  stroke:$primary;
+  stroke-width:1;
+}
+
+.svg-header-play:hover{
+  .header-play{
+    fill:$primary;
+  }
+}
+
  nav#nav {
     display: flex;
     flex-flow: row wrap;
@@ -136,7 +160,7 @@ $nav-hover-border-width: 6px;
         margin: 0 0 0 2.5em;
         padding: 0;
         border: none;
-        font-size: 1em;   
+        font-size: 1em;
     }
     .dropdown-item {
         &:active, &.active {
@@ -149,7 +173,7 @@ $nav-hover-border-width: 6px;
     }
 }
 .phonemenu {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     background-color: $body-bg;
@@ -183,7 +207,7 @@ $nav-hover-border-width: 6px;
                 left: 0;
                 bottom: 0;
                 background: $primary;
-                transition: width .3s linear;  
+                transition: width .3s linear;
             }
             a:hover::after {width: 100%;}
         }
@@ -191,8 +215,8 @@ $nav-hover-border-width: 6px;
 }
 
 .hidden {
-    display: none; 
-} 
+    display: none;
+}
 
 /**
 Enforce that dropdown becomes static for small screens.
@@ -245,7 +269,7 @@ Enforce that dropdown becomes static for small screens.
         }
         .nav-item > .nav-link {
             &:hover, &:active, &.active {
-                color: $primary; 
+                color: $primary;
                 .nav-item-text {
                     box-shadow: none;
                 }
@@ -311,7 +335,7 @@ Enforce that dropdown becomes static for small screens.
 //         left: 50%;
 //         top: 50%;
 //         transform: rotate(135deg);
-            
+
 //         &::before {
 //             content: '';
 //             width: 100%;
