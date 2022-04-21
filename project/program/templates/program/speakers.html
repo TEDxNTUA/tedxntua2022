@@ -2,14 +2,13 @@
 {% block title %}Speakers{% endblock %}
 {% block content %}
 <article id="speakers">
-
-<ul class="list">
-    {% for speaker in speakers %}
-    <li>
-         {{ speaker.name }}
-         <p>{{ speaker.short_bio }}</p>
-    </li>
-    {% endfor %}
-</ul>
+    <ul class="list">
+        {% for speaker in speakers %}
+        <li>
+            {{ speaker.name }}
+            <p>{{ speaker.short_bio }}</p>
+        </li>
+        {% endfor %}
+    </ul>
 </article>
 {% endblock %}
