@@ -19,7 +19,22 @@
 //   modelViewer.cameraOrbit
 // ];
 
+// Header animation 
+const spans = document.querySelectorAll('.header-text span');
 
+spans.forEach((span, idx) => {
+	span.addEventListener('click', (e) => {
+		e.target.classList.add('active');
+	});
+	span.addEventListener('animationend', (e) => {
+		e.target.classList.remove('active');
+	});
+	
+	// Initial animation
+	setTimeout(() => {
+		span.classList.add('active');
+	}, 7500 * (idx+1))
+});
 
 // Event Statistics 
 const stats = document.getElementById('event_stats')
