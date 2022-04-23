@@ -4,7 +4,6 @@
     <div class="content">
         <div class="infobox-left">
             <span>Michael Cacoyannis Foundation</span>
-            <hr>
             <div class="location">
                 <a href="https://www.youtube.com/" target="_blank">
                     <i class="fa-solid fa-location-dot bounce"></i>
@@ -13,8 +12,8 @@
             </div>
         </div>
         <div class="hero">
-            <model-viewer src="{% static "images/3D_head.glb" %}" alt="3d model"
-            loading="eager" camera-controls disable-zoom 
+            <model-viewer class="head-model" src="{% static "images/head.glb" %}" alt="3d model"
+            loading="eager" auto-rotate camera-controls disable-zoom 
             reveal="auto" 
             id="model">
             </model-viewer>

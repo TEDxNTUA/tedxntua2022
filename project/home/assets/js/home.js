@@ -1,24 +1,3 @@
-// gsap.fromTo(
-//     "#js-work-img",
-//     { rotateX: "-90deg", perspective: "1000px", autoAlpha: 0 },
-//     {
-//       scrollTrigger: { trigger: "#js-work-container", start: "top center" },
-//       stagger: 0.3,
-//       rotateX: "0",
-//       perspective: "1000px",
-//       autoAlpha: 1,
-//       duration: 1.6
-//     }
-//   );
-
-// Hero - Model Viever 
-// const modelViewer = document.getElementById('model'); 
-// const orbitCycle = [
-//   '45deg 55deg 4m',
-//   '-60deg 110deg 2m',
-//   modelViewer.cameraOrbit
-// ];
-
 // Header animation 
 const spans = document.querySelectorAll('.header-text span');
 
@@ -31,9 +10,9 @@ spans.forEach((span, idx) => {
 	});
 	
 	// Initial animation
-	setTimeout(() => {
+	setInterval(() => {
 		span.classList.add('active');
-	}, 7500 * (idx+1))
+	}, 5600 * (idx+1))
 });
 
 // Event Statistics 
@@ -57,7 +36,7 @@ const observer = new IntersectionObserver(entries => {
       // Add the animation class
       entry.target.classList.remove('isnotVisible')
       entry.target.classList.add('isVisible');
-      console.log(entry.target)
+      // console.log(entry.target)
     }
   });
 });
@@ -93,3 +72,10 @@ for (i = 0; i < givoDates.length; i++) {
 }
 ////////////
 
+// Hero - Model Viever 
+// const modelViewer = document.getElementById('model'); 
+// const orbitCycle = [
+//   '45deg 55deg 4m',
+//   '-60deg 110deg 2m',
+//   modelViewer.cameraOrbit
+// ];

@@ -158,6 +158,7 @@ $nav-hover-border-width: 6px;
     color: white;
     position: fixed;
     top: 4.3em;
+    z-index: 4;
     .phonemenulist {
         display: flex;
         flex-direction: column;
