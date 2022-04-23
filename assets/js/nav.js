@@ -14,7 +14,6 @@ links_buttons.forEach(element => {
         current.classList.add('activelink');
     }
 });
-console.log("Hi");
 
 const box = document.querySelector('.navbar-toggler-icon');
 let dropmenu = document.getElementById('phone-navbar-nav');
@@ -24,7 +23,7 @@ box.addEventListener('click', (e)=>{
   dropmenu.classList.toggle('hidden');
 })
 
-// const div1 = document.querySelector('.dropdown-list-identifier'); 
-// div1.addEventListener('click', (e)=> {
-//   e.target.classList.toggle('hidden');
-// })
+const div1 = document.querySelector('.dropdown-list-identifier'); 
+div1.addEventListener('click', (e)=> {
+  e.target.classList.toggle('hidden');
+})

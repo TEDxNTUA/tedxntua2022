@@ -1,0 +1,38 @@
+{% load i18n %}
+{% load static %}
+<section id="hero">
+    <div class="content">
+        <div class="infobox-left">
+            <span>Michael Cacoyannis Foundation</span>
+            <div class="location">
+                <a href="https://www.youtube.com/" target="_blank">
+                    <i class="fa-solid fa-location-dot bounce"></i>
+                    <span>Pireos 206</span>
+                </a>
+            </div>
+        </div>
+        <div class="hero">
+            <model-viewer class="head-model" src="{% static "images/head.glb" %}" alt="3d model"
+            loading="eager" auto-rotate camera-controls disable-zoom 
+            reveal="auto" 
+            id="model">
+            </model-viewer>
+        </div>
+        <div class="infobox-right">
+            <span>21 May 2022</span>
+        </div>
+    </div>
+    <div class="infobox">
+        <div class="days-left">
+            <span class="days-left-text" ending-time="21/05/2022">00</span> 
+        </div>
+        <a href="https://www.youtube.com/">
+            <div class="ticket">
+              <div data-number="198812">Book<br/>Your Ticket</div>
+            </div>
+            <div class="ticket">
+              <div data-number="198813">Book<br/>Your Ticket</div>
+            </div>
+        </a>          
+    </div>
+</section>
