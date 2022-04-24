@@ -3,6 +3,19 @@
 html, body {
 	height: 100%;
 	width: 100%;
+
+	scrollbar-width: thin;
+	scrollbar-color: $primary $body-bg;
+	&::-webkit-scrollbar {
+		background: $body-bg;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: rgba(236, 81, 157, 0.5);
+		border-radius: calc(15px / 2);
+		&:hover {
+			background: rgba(236, 81, 157, 1);
+		}
+	}
 }
 
 body {

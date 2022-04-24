@@ -306,10 +306,12 @@ article.home-page {
                     opacity .6s cubic-bezier(0.215, 0.61, 0.355, 1);
                   }
                   .showcase_stats_figure {
+                    width: 25vw;
+                    height: auto;
                     position: absolute;
-                    top: -3em;
+                    top: -1em;
                     left: calc(100% + .625rem);
-                    height: calc(100% + 4em);
+                    // height: calc(100% + 4em);
                     // width: calc((100vw - 100%) / 2 - 1.25rem);
                     cursor: pointer;
                     border-radius: .75rem;
@@ -633,7 +635,7 @@ article.home-page {
               display: none;
             }
             &:nth-child(2) {
-              figure {
+              .showcase_stats_figure {
                 margin-left: 2em;
                 margin-right: 0;
               }
