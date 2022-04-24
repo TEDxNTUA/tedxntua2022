@@ -14,11 +14,12 @@ class SpeakersView(View):
             items = Presenter.speakers.all()
         else:
             items = Presenter.speakers.published()
-
+        host = Presenter.hosts.all()
         return render(request, self.template_name, {
             'listing_type': 'speakers',
             'items': items,
             'placeholders': list(range(4)),
+            'host':host,
         })
 
 class PerformersView(View):
@@ -29,11 +30,12 @@ class PerformersView(View):
             items = Presenter.performers.all()
         else:
             items = Presenter.performers.published()
-
+        host = Presenter.hosts.all()
         return render(request, self.template_name, {
             'listing_type': 'performers',
             'items': items,
             'placeholders': list(range(4)),
+            'host':host,
         })
 
 class SideEventsView(View):
@@ -46,11 +48,12 @@ class SideEventsView(View):
             items = Activity.side_events.select_related('presenter')
         else:
             items = Activity.side_events.published().select_related('presenter')
-
+        host = Presenter.hosts.all()
         return render(request, self.template_name, {
             'listing_type': 'side_events',
             'items': items,
             'placeholders': list(range(4)),
+            'host': host,
         })
 
 

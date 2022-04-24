@@ -1,4 +1,17 @@
 section#listing {
+  .host-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:5em;
+    flex-direction: column;
+    .host-title{
+      color: $primary
+    }
+    ul{
+      width: 100%;
+    }
+  }
     .back-btn{
         border: 2px solid $primary;
         border-radius: $border-radius;
@@ -48,16 +61,29 @@ section#listing {
         //     margin-top: 25px;
         //   }
         // }
+        &__list{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-evenly;
+        }
         &__item {
           position: relative;
-          width: 100%;
-          max-width: fit-content;
-          margin: auto;
+          width: 20%;
+          //max-width: fit-content;
+          //margin: auto;
           margin-top: 3em;
-          margin-right: 3em;
-          @media(max-width:500px){
+          padding-right: 2em; 
+          // margin-right: 3em;
+          text-align: center;
+          
+
+          @media(max-width:1200px){
+            width: 33%;
+          }
+          @media(max-width:650px){
             display: flex;
             justify-content: center;
+            width: 50%;
           }
         //   @include media(">=700px") {
         //     width: 50%;
@@ -98,6 +124,11 @@ section#listing {
           transform-origin: top center;
           display: flex;
           justify-content: center;
+          object-fit: contain;
+          .event-img{
+            height: 100%;
+            width: 100%;
+          }
         }
         //button
         &__play{
@@ -117,11 +148,13 @@ section#listing {
           transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
         }
         &__title {
-          padding: 15px 0;
+          padding: 20px 0;
           position: relative;
-          font-size: 1.3rem;
+          font-size: 1rem;
+          font-weight: 600;
           text-transform: uppercase;
           border-bottom: 1px solid white;
+          //white-space: nowrap;
           &:before {
             // @include media(">=1000px") {
             //   position: absolute;
@@ -132,6 +165,9 @@ section#listing {
             //   left: 0;
             // }
           }
+          @media(max-width:500px){
+            font-size:0.7rem;
+          }
         }
         &__text {
           transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -140,9 +176,10 @@ section#listing {
           position: absolute;
           top: 0;
           left: 0;
-          padding: 15px 0;
+          padding: 20px 0;
           opacity: 0;
           transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
+          font-weight: 100;
           span {
             margin-left: 20px;
           }
@@ -161,4 +198,20 @@ section#listing {
 }
 li{
     display: inline-flex;
+}
+
+.animate {
+  position: relative;
+  animation: leftright 3s infinite alternate ease-in-out;
+}
+
+@keyframes leftright {
+0%{
+ // transform: translateX(0%);
+  right: 0%;
+}
+100% {
+ // transform: translateX(-100%);
+  right: 100%;
+}
 }

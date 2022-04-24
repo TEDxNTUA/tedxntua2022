@@ -40,7 +40,7 @@
     }
 
     .table-cell-border{
-        border-right: 1px solid $primary;
+        border-right: 4px solid $primary;
         width: 1px;
         vertical-align: middle;
         .time-slot{
@@ -52,6 +52,7 @@
                 position: absolute;
                 background-color: $body-bg;
                 margin:0;
+                font-size: 1em;
             }
         }
         

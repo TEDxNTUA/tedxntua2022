@@ -9,9 +9,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: $secondary-2;
+    color: $primary;
     margin-top: 1em;
     margin-bottom: 2em;
+    .info-name{
+        display: flex;
+        flex-direction: row;
+        .link_icon{
+            svg{
+                fill: $primary;
+            }
+        }
+    }
+}
+
+.h-header{
+    color: $primary;
+    text-decoration: underline;
+    width: 30px;
 }
 
 .bio{
@@ -22,13 +37,15 @@
     // margin-left: 1em;
     p{
         margin:0;
-        margin-left: 1em;
+        margin-left: 1.2em;
+        font-size: 1.1em;
     }
     .header{
-        color:$secondary-2;
-        margin: 0;
-        font-weight: bold;
-        font-size: 1rem;
+        color:$primary;
+        margin: 1em 0;
+        font-weight: 600;
+        font-size: 1.2rem;
+        text-decoration: underline;
     }
 }
 
@@ -41,13 +58,15 @@
     // margin-left: 1em;
     p{
         margin:0;
-        margin-left: 1em;
+        margin-left: 1.2em;
+        font-size: 1.1em;
     }
     .header{
-        color:$secondary-2;
-        margin: 0;
-        font-weight: bold;
-        font-size: 1rem;
+        color:$primary;
+        margin: 1em 0;
+        font-weight: 600;
+        font-size: 1.2rem;
+        text-decoration: underline;
     }
 }
 
