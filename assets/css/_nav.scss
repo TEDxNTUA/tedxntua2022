@@ -189,7 +189,7 @@ Enforce that dropdown becomes static for small screens.
     .navbar-nav {
         .nav-link {
             &:hover, &:active, &.active {
-                border-color: $primary;
+                color: $primary;
             }
         }
         .nav-item > .nav-link {
@@ -283,8 +283,7 @@ Enforce that dropdown becomes static for small screens.
             border: none;
             line-height: 1;
             &:hover {
-                border-bottom: 2px solid $primary;
-                border-radius: $border-radius-sm;
+                color: $primary;
             }
         }
         .nav-dropdown-item-icon {
