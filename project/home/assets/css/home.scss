@@ -586,8 +586,6 @@ article.home-page {
     section#summary {
       padding-top: 10em;
       .summary-container {
-        position: relative;
-        justify-content: center;
         align-items: end;
         .image-container-summary {
           opacity: .3;
@@ -602,7 +600,7 @@ article.home-page {
         .summary-text-container {
           align-items: center;
           width: 100%;
-          padding: 0;
+          padding: 0 !important; 
           .header-text {
             letter-spacing: .2em;
           }
