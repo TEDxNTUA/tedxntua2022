@@ -4,26 +4,26 @@
     <div class="showcase_content">
         <ul class="showcase_stats">
             <li class="showcase_stats_item" data-showcase="line">
-                <span class="showcase_stats_count isnotVisible stat1">20</span>
-                <span class="showcase_stats_label isnotVisible stat2">talks</span>
-                <figure class="showcase_stats_figure"> 
-                    <img class="figure" src="{% static "images/placeholder123.jpg" %}" width="500px" alt="happy face">
-                </figure>
+                <a href="{% url 'speakers' %}" role="link" tabindex="0">
+                    <span class="showcase_stats_count isnotVisible stat1">9</span>
+                    <span class="showcase_stats_label isnotVisible stat2">talks</span>
+                </a>
+                <img class="showcase_stats_figure" src="{% static "images/placeholder123.jpg" %}" alt="happy face">
             </li>
             <li class="showcase_stats_item" data-showcase="line">
-                <span class="showcase_stats_count isnotVisible stat3" >9</span>
-                <span class="showcase_stats_label isnotVisible stat4">workshops</span>
-                <figure class="showcase_stats_figure"> 
-                    <img class="figure" src="{% static "images/placeholder123.jpg" %}" width="500px" alt="happy face">
-                </figure>
+                <a href="{% url 'side-events' %}" role="link" tabindex="0">
+                    <span class="showcase_stats_count isnotVisible stat3" >6</span>
+                    <span class="showcase_stats_label isnotVisible stat4">workshops</span>
+                </a>
+                <img class="showcase_stats_figure" src="{% static "images/placeholder123.jpg" %}" alt="happy face">
             </li>
-            <li class="showcase_stats_item" data-showcase="line">
-                <span class="showcase_stats_count isnotVisible stat5">4</span>
-                <span class="showcase_stats_label isnotVisible stat6">performances</span>
-                <figure class="showcase_stats_figure"> 
-                    <img class="figure" src="{% static "images/placeholder123.jpg" %}" width="500px" alt="happy face">
-                </figure>
-            </li>
+            <li class="showcase_stats_item" data-showcase="line" role="link" tabindex="0">
+                <a href="{% url 'performers' %}">
+                    <span class="showcase_stats_count isnotVisible stat5">4</span>
+                    <span class="showcase_stats_label isnotVisible stat6">performances</span>
+                </a>
+                <img class="showcase_stats_figure" src="{% static "images/placeholder123.jpg" %}" alt="happy face">
+            </li>  
         </ul>
     </div>
 </section>
