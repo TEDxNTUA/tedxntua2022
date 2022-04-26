@@ -24,7 +24,7 @@
 <section id="listing">
   <div class="listing-container">
     {% with url_name=request.resolver_match.url_name %}
-    <ul class="nav nav-scrollable-tabs">
+    <ul class="nav-listing nav nav-scrollable-tabs">
         <li class="nav-item">
             <a href="{% url 'speakers' %}" class="btn {% if url_name == 'speakers' %}back-btn{% else %}btn-secondary{% endif %}">{% trans 'Speakers' %}</a>
         </li>
@@ -93,6 +93,40 @@
           </a>
         </li>
         {%endfor%}
+        {% for p in placeholders reversed %}
+      {% if items|length <= p %}
+      <li class="c-work__item">
+        <!-- <i class="bi bi-play" style="z-index: 11;"></i> -->
+        <a class="c-work__link">
+          <div class="c-work__showcase" id="js-work-img">
+            <img class="event-img" 
+                          sizes="(max-width: 576px) 320px,
+                                          (max-width: 992px) 720px,
+                                          1024px"
+                          src="{% static 'images/placeholder.png' %}"
+                          alt="{{ item.name }}" />
+            <!-- <img src="{% static "images/happyface.png" %}" alt="happy face" width="100%" height="100%"/>  -->
+          </div>
+          <div class="c-work__title o-bg-theme">
+            <div class="c-work__text">
+              <span>More Soon</span></div>
+            <marquee behavior="" direction="left" class="c-work__marquee">
+              <span>More Soon</span>
+              <span>More Soon</span>
+              <span>More Soon</span>
+              <span>More Soon</span>
+              <span>More Soon</span>
+              <span>More Soon</span>
+              <span>More Soon</span>
+              <span>More Soon</span>
+              <span>More Soon</span>
+              <span>More Soon</span>
+            </marquee>
+          </div>
+        </a>
+      </li>
+      {% endif %}
+  {% endfor %}
     </ul>
     <div class="host-container">
       <h1 class="host-title">Host</h1>
