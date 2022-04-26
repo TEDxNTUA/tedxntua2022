@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-24 11:56+0300\n"
+"POT-Creation-Date: 2022-04-26 12:22+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,6 +28,18 @@ msgstr ""
 "Ποιοι είμαστε; Τι είναι το TED; Τι είναι το TEDx; Γνωρίστε τους θεσμούς που "
 "εμπλέκονται σε αυτήν την προσπάθεια και την ιστορία που κρύβεται πίσω από "
 "την ομάδα του TEDxNTUA."
+
+#: .\project\home\templates\home\hero.html:6
+msgid "event.location"
+msgstr "Ίδρυμα Μιχάλης Κακογιάννης"
+
+#: .\project\home\templates\home\hero.html:10
+msgid "event.address"
+msgstr "Πειρεώς "
+
+#: .\project\home\templates\home\hero.html:22
+msgid "event.date"
+msgstr "21 Μαΐου 2022"
 
 #: .\project\home\templates\home\index.html:5
 msgid "home.title"
@@ -84,7 +96,7 @@ msgid "Published"
 msgstr "Δημόσιο"
 
 #: .\project\partners\templates\partners\index.html:3
-#: .\project\templates\layouts\partials\nav.html:69
+#: .\project\templates\layouts\partials\nav.html:61
 msgid "Partners"
 msgstr "Συνεργάτες"
 
@@ -159,57 +171,55 @@ msgid "Hosting"
 msgstr "Παρουσίαση"
 
 #: .\project\program\templates\program\_event-tabs.html:5
-#: .\project\program\templates\program\listing.html:5
-#: .\project\templates\layouts\partials\nav.html:42
+#: .\project\program\templates\program\listing.html:7
+#: .\project\program\templates\program\listing.html:29
+#: .\project\templates\layouts\partials\nav.html:40
 msgid "Speakers"
 msgstr "Ομιλητές"
 
 #: .\project\program\templates\program\_event-tabs.html:8
-#: .\project\program\templates\program\listing.html:7
-#: .\project\templates\layouts\partials\nav.html:48
+#: .\project\program\templates\program\listing.html:9
+#: .\project\program\templates\program\listing.html:32
+#: .\project\templates\layouts\partials\nav.html:44
 msgid "Performers"
 msgstr "Performers"
 
 #: .\project\program\templates\program\_event-tabs.html:11
-#: .\project\program\templates\program\listing.html:9
-#: .\project\templates\layouts\partials\nav.html:54
+#: .\project\program\templates\program\listing.html:11
+#: .\project\program\templates\program\listing.html:35
+#: .\project\templates\layouts\partials\nav.html:48
 msgid "Side events"
 msgstr "Side events"
 
 #: .\project\program\templates\program\_event-tabs.html:15
-#: .\project\templates\layouts\partials\nav.html:61
+#: .\project\program\templates\program\listing.html:39
+#: .\project\templates\layouts\partials\nav.html:53
 msgid "Schedule"
 msgstr "Πρόγραμμα"
 
-#: .\project\program\templates\program\listing.html:14
+#: .\project\program\templates\program\listing.html:16
 msgid "speakers.description"
 msgstr "Γνώρισε τους ομιλητές του φετινού TEDxNTUA 2020!"
 
-#: .\project\program\templates\program\listing.html:16
+#: .\project\program\templates\program\listing.html:18
 msgid "performers.description"
 msgstr "Γνώρισε τους performers του φετινού TEDxNTUA 2020!"
 
-#: .\project\program\templates\program\listing.html:18
+#: .\project\program\templates\program\listing.html:20
 msgid "side_events.description"
 msgstr "Μάθε περισσότερα για τα side events του φετινού TEDxNTUA 2020!"
 
-#: .\project\program\templates\program\listing.html:67
-msgid "more_soon"
-msgstr "Σύντομα περισσότερα"
-
 #: .\project\program\templates\program\presenter.html:9
+#: .\project\program\templates\program\presenter.html:13
+#: .\project\program\templates\program\presenter.html:17
 msgid "back"
 msgstr "Πίσω"
 
-#: .\project\program\templates\program\presenter.html:36
-msgid "presenter.read_full"
-msgstr "Διάβασε την πλήρη περιγραφή"
-
-#: .\project\program\templates\program\schedule.html:4
+#: .\project\program\templates\program\schedule.html:5
 msgid "schedule.title"
 msgstr "Πρόγραμμα"
 
-#: .\project\program\templates\program\schedule.html:5
+#: .\project\program\templates\program\schedule.html:6
 msgid "schedule.description"
 msgstr ""
 "Όλη η ουσία μίας εκδήλωσης TEDx κρύβεται στο μίγμα των ομιλιών, των "
@@ -224,6 +234,18 @@ msgstr "Ελληνικά"
 msgid "English"
 msgstr "Αγγλικά"
 
+#: .\project\templates\layouts\partials\footer.html:10
+msgid "footer.events"
+msgstr "Προηγούμενες Εκδηλώσεις"
+
+#: .\project\templates\layouts\partials\footer.html:47
+msgid "footer.social"
+msgstr "Ακολούθησε μας"
+
+#: .\project\templates\layouts\partials\footer.html:76
+msgid "footer.more"
+msgstr "Περισσότερα για εμάς"
+
 #: .\project\templates\layouts\partials\nav.html:19
 msgid "Home"
 msgstr "Αρχική"
@@ -237,11 +259,11 @@ msgstr "Η εκδήλωση"
 msgid "(Toggle dropdown)"
 msgstr "(Εμφάνιση/Απόκρυψη υπομενού)"
 
-#: .\project\templates\layouts\partials\nav.html:75
+#: .\project\templates\layouts\partials\nav.html:67
 msgid "About us"
 msgstr "Σχετικά"
 
-#: .\project\templates\layouts\partials\nav.html:81
+#: .\project\templates\layouts\partials\nav.html:73
 msgid "Tickets"
 msgstr "Εισιτήρια"
 
@@ -1463,6 +1485,12 @@ msgstr ""
 #: .\venv\Lib\site-packages\versatileimagefield\templates\versatileimagefield\forms\widgets\versatile_image_bootstrap.html:17
 msgid "Primary Point of Interest"
 msgstr ""
+
+#~ msgid "more_soon"
+#~ msgstr "Σύντομα περισσότερα"
+
+#~ msgid "presenter.read_full"
+#~ msgstr "Διάβασε την πλήρη περιγραφή"
 
 #~ msgid "about.meet_the_team"
 #~ msgstr "ΓΝΩΡΙΣΕ ΤΗΝ ΟΜΑΔΑ"
