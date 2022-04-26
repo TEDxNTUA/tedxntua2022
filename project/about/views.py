@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.views import View
 
 from project.team.models import TeamMember
+from project.home.models import PreviousEvent
 
 
 class AboutView(View):
@@ -14,6 +15,9 @@ class AboutView(View):
         else:
             members = TeamMember.objects.published()
 
+        #for footer
+        previousEvents = PreviousEvent.objects.all()
         return render(request, self.template_name, {
             'members': members,
+            'previousEvents': previousEvents,
         })

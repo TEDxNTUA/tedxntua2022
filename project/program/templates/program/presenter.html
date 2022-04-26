@@ -4,8 +4,16 @@
 {% block description %}{{ presenter.name }}: {{ presenter.occupation }}{% endblock %}
 {% block content %}
 <article class="presenter-page">
-    {% if go_back_url %}
-        <a href="{{ go_back_url }}" class="btn btn-secondary">
+    {% if activities.0.get_activity_type_display == 'Talk' %}
+        <a href="{% url 'speakers' %}" class="btn btn-secondary back-btn">
+            &lt; {% trans 'back' %}
+        </a>
+    {% elif activities.0.get_activity_type_display == 'Performance' %}
+        <a href="{% url 'performers' %}" class="btn btn-secondary back-btn">
+            &lt; {% trans 'back' %}
+        </a>
+    {% elif activities.0.get_activity_type_display == 'Side event' %}
+        <a href="{% url 'side-events' %}" class="btn btn-secondary back-btn">
             &lt; {% trans 'back' %}
         </a>
     {% endif %}
@@ -16,8 +24,8 @@
                         {{ presenter.image.thumbnail.720x720.url }} 720w,
                         {{ presenter.image.thumbnail.1024x1024.url }} 1024w"
                 sizes="(max-width: 576px) 320px,
-                        (max-width: 992px) 720px,
-                        1024px"
+                        (max-width: 992px) 400px,
+                        500px"
                 src="{{ presenter.image.thumbnail.320x320.url }}"
                 alt="" />
         {% else %}
@@ -26,34 +34,31 @@
             </div>
         {% endif %}
         <div class="info">
-            <h1>{{presenter.name}}</h1>
-            <h2>{{presenter.occupation}}</h2>
-            <div class="collapse content" id="description">
-                {{presenter.short_bio|safe}}
+            <div class="info-name">
+                <h3>{{presenter.name}}</h3>
+                <div class="link_icon">
+                    <a href= {{presenter.link}} target="blank" >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                            <path d="M4.715 6.542L3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.001 1.001 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
+                            <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 0 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 0 0-4.243-4.243L6.586 4.672z"/>
+                        </svg>
+                    </a>
+                </div>
             </div>
-            <a href="#description" class="btn btn-primary" data-toggle="collapse"
-                aria-expanded="false" aria-controls="description">
-                {% trans 'presenter.read_full' %}
-            </a>
+            <h5>{{presenter.occupation}}</h2>
         </div>
-    </div>
-    <div class="activities">
+        <div class="bio">
+            <!-- <div><p class="header">Bio</p></div> -->
+            <h5 class="h-header">Bio:</h5>
+            <div><p class="text">{{presenter.short_bio}}</p></div>
+        </div>
         {% for activity in activities %}
         <div class="activity">
-            <header>
-                <h5>{{ activity.title }}</h5>
-                <h6 class="h5">
-                    <span class="type">
-                        {{activity.get_activity_type_display | upper}}
-                    </span>
-                    {% if activity.start and activity.end %}
-                        <span class="sep">|</span>
-                        <time>{{activity.start_time}}</time>&mdash;<time>{{activity.end_time}}</time>
-                    {% endif %}
-                </h6>
-            </header>
-            <div class="content">
-                {{activity.description|safe}}
+            <!-- <div><p class="header">{{activity.get_activity_type_display}}</p></div> -->
+            <h5 class="h-header">{{activity.get_activity_type_display}}:</h5>
+            <div>
+                <p>{{ activity.title }}</p>
+                <p>{{activity.description|safe}}</p>
             </div>
         </div>
         {% endfor %}

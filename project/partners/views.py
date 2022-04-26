@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.views import View
 
 from .models import Partner
+from project.home.models import PreviousEvent
 
 
 class PartnersView(View):
@@ -12,4 +13,7 @@ class PartnersView(View):
         partners = Partner.objects.get_partners_by_type(
             unpublished=settings.TEDXNTUA_SHOW_UNPUBLISHED,
         )
-        return render(request, self.template, {'partners': partners})
+
+        #for footer
+        previousEvents = PreviousEvent.objects.all()
+        return render(request, self.template, {'partners': partners, 'previousEvents': previousEvents})

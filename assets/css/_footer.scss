@@ -172,6 +172,7 @@ $social-icon-size: 3em;
         }
     }
     .Action-container{
+      position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -182,6 +183,14 @@ $social-icon-size: 3em;
         border-radius: $border-radius;
         a {
             position: absolute;
+            font-weight: bold;
+            width:100%;
+            height:100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            // change
+            
             img {
                 // position: absolute;
                 width: 100%;
@@ -206,7 +215,7 @@ $social-icon-size: 3em;
         }
         p{
             margin-top: 0.5em;
-            margin-bottom: 0.5em; 
+            margin-bottom: 0.5em;
          }
     }
 
@@ -247,7 +256,7 @@ $social-icon-size: 3em;
         .Action-container{
             p{
                margin-top: 0.5em;
-               margin-bottom: 0.5em; 
+               margin-bottom: 0.5em;
             }
         }
     }
