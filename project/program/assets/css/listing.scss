@@ -25,7 +25,7 @@ section#listing {
     }
     .btn-secondary:hover{
         background-color: $primary;
-        border: 2px solid $primary;
+        // border: 2px solid $primary;
     }
     padding: 0 $page-padding-x-lg;
     .c-work {
@@ -65,6 +65,9 @@ section#listing {
           display: flex;
           flex-wrap: wrap;
           justify-content: space-evenly;
+          @media(max-width:500px){
+            padding:0;
+          }
         }
         &__item {
           position: relative;
@@ -84,6 +87,7 @@ section#listing {
             display: flex;
             justify-content: center;
             width: 50%;
+            padding: 0.5em;
           }
         //   @include media(">=700px") {
         //     width: 50%;
@@ -218,4 +222,10 @@ li{
  // transform: translateX(-100%);
   right: 100%;
 }
+}
+
+@media (max-width:500px){
+  section#listing{
+    padding:0;
+  }
 }
