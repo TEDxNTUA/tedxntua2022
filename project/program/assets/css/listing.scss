@@ -117,6 +117,9 @@ section#listing {
         &__link:hover{
           .c-work__play{
             display: flex;
+            @media(max-width:500px){
+              display: none;
+            }
           }
         }
         &__showcase {
