@@ -12,4 +12,7 @@ class PartnersView(View):
         partners = Partner.objects.get_partners_by_type(
             unpublished=settings.TEDXNTUA_SHOW_UNPUBLISHED,
         )
+
+        for id, category in partners.items():
+            print(category)
         return render(request, self.template, {'partners': partners})
