@@ -1,0 +1,280 @@
+article.sponsors {
+    padding: 0 $page-padding-x-lg;
+
+    p {
+        font-family: $font-family-serif;
+        align-self: center;
+    }
+
+    /////////////////////////////////
+    // partners view
+    /////////////////////////////////
+    .page-heading { // to change
+        text-align: center;
+        margin-top: 2rem;
+        font-size: 2rem;
+        
+        &.PS-heading {
+            font-size: 2.5rem;
+        }
+        
+        &.GS-heading { // why not all grand sponsors?
+            font-size: 2.25rem;
+        }
+    }
+
+    .category-container {
+        display: block;
+        
+        .partners-collection {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+    }
+
+    .partner-instance {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 1.5em 0;
+        //auto padding here
+        
+        .partner-card {
+            position: relative; // to absolutely position the child
+            width: 10em; // default size
+            height: 10em;
+            border-radius: $border-radius;
+            padding: 0;
+            
+            .logo{
+                width: 100%;
+                height:100%;
+                object-fit: contain; // keep dimensions ratio
+                border-radius: $border-radius;
+            }
+
+            .pop-up-button {
+                display: none;
+                position: absolute;
+                color: $primary;
+                font-size: 1em;
+                font-weight: bold;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+        
+            }
+
+            &:hover {
+                border: 0.4em solid $primary; // pixel vs em ???
+                cursor: pointer;
+
+                .logo {
+                    filter: blur(4px);
+                    -webkit-filter: blur(4px);
+                }
+
+                .pop-up-button {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+        // .image-container{
+        //     position: relative;
+        //     margin: auto;
+        //     height: 100%;
+        //     width: 100%;
+        //     background-color: white;
+        //     border-radius: $border-radius;
+        //     align-self: center;
+        //     border: 5px solid $primary;
+        //     .partner-buttons {
+        //         display: flex;
+        //         position: absolute;
+        //         top: 0;
+        //         left: 0;
+        //         width: 100%;
+        //         height: 100%;
+        //         align-items: center;
+        //         justify-content: space-around;
+        //     }
+        //     &.hover {
+        //         .website-button {
+        //             display: flex;
+        //         }
+        //         &.hasCareerLink{
+        //             .career-button {
+        //                 display: flex;
+        //             }   
+        //         }
+        //     }
+        //     &.hasCareerLink {
+        //         .website-button, .career-button {
+        //             width: 40%;
+        //             height: 40%;
+        //             p {
+        //                 font-size: 0.6rem;
+        //             }    
+        //         }
+        //     }
+        // }
+        
+    }
+
+    /////////////////////////////////
+    // special adjustments - check responsibility because we cancelled bootstrap classes
+    /////////////////////////////////
+    .category-container#PS {
+        .page-heading { // erase PS-heading above!
+            margin-top: 1rem;
+            font-size: 2.5rem;
+        }
+
+        // .partners-collection {
+        //     justify-content: space-evenly;
+        // }
+
+        .partner-instance {
+            max-width: 100%; // ?
+            //flex: 0; // ?
+            //margin: 1em; // fix margin/padding
+            .partner-card {
+                width: 16em;
+                height: 16em;
+                
+                .pop-up-button {
+                    font-size: 1.6em;
+                }
+    
+                &:hover {
+                    border: 0.6em solid $primary;
+                }
+            }
+        }
+    }
+
+    .category-container#GS, .category-container#GHS, .category-container#GPS, .category-container#GCS {
+        .partner-instance {
+            max-width: 100%; // ?
+            //flex: 0; // ?
+            //margin: 1em; // fix margin/padding
+            .partner-card {
+                width: 12em;
+                height: 12em;
+                
+                .pop-up-button {
+                    font-size: 1.2em;
+                }
+    
+                &:hover {
+                    border: 0.5em solid $primary;
+                }
+            }
+        }
+    }
+
+    /////////////////////////////////
+    // Modal - TODO
+    /////////////////////////////////
+    .modal {
+        display: flex; /* Hidden by default */
+        position: fixed; /* Stay in place */
+        z-index: 10; /* Sit on top */
+        padding-top: 100px; /* Location of the box */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        //overflow: auto; /* Enable scroll if needed */
+        background-color: $body-bg; /* Fallback color */
+        background-color: rgba(36, 42, 48, 0.4); /* Black w/ opacity */
+        &.hidden {
+            display:none;
+        }
+    }
+
+    .modal-content {
+        background-color: rgba(50,50,50,0.9);
+        margin: auto;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        height: 60%;
+        border-radius: $border-radius;
+
+        .modal-close {
+            color: #aaaaaa; // change color and everythin else
+            font-size: 40px;
+            font-weight: bold;
+            width: max-content;
+            margin-left: auto;
+        }
+
+        .modal-info {
+            display: flex;
+            flex-direction: row;
+            height: 80%;
+        
+            .modal-logo {
+                position: relative;
+                left: -10%;
+                height: 90%
+            }
+        
+            .modal-text {
+                position: relative;
+                left: -5%;
+                //width: 60%;
+                overflow: scroll;
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+        
+                h3 {
+        
+                }
+        
+                p {
+                    
+                }
+            }
+        }
+
+        .modal-buttons {
+            display: inline-flex;
+            justify-content: center;
+            width: 95%;
+            height: auto;
+            flex-wrap: wrap;
+            margin-top: 1em;
+            .modal-career-button {
+                border-radius:5px ;
+                background-color: #171717;
+                padding: 0.5em 1em;
+                margin: 0.5em;
+                text-align: center;
+            }
+            .modal-website-button {
+                border-radius: 5px ;
+                background-color: #171717;
+                padding: 0.5em 1em;
+                margin: 0.5em;
+                text-align: center;
+            }
+            .modal-career-button:hover, .modal-website-button:hover {
+                background-color: rgba(39, 38, 38, 0.8);
+            }
+        }
+    }
+}

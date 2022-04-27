@@ -1,10 +1,86 @@
 {% extends 'base.html' %}
 {% load i18n %}
+{% load static %}
 {% block title %}{% trans 'Partners' %}{% endblock %}
 {% block description %}{% trans 'partners.description' %}{% endblock %}
 {% block content %}
 
-<!-- CODE HERE -->
+<article class="sponsors">
+    {% for id, category in partners.items %}
+        {% if category.items %}
+        <div class="category-container" id="{{ id }}">
+            <h2 class="page-heading {{ id }}-heading">{{ category.title }}</h2>
+            <div class="partners-collection">
+        
+            {% for partner in category.items %}
+                <div class="partner-instance col-6 col-sm-4 col-lg-3 col-xl-2">
+                    <div class="partner-card">
+                        {% if partner.image %}
+                        <!-- change width and height to 100% -->
+                        <img class="logo lazy lazy-on-view"
+                            src="{{ partner.image.thumbnail.320x320.url }}"
+                            />
+                        {% else %}
+                        <!-- it might be useless -->
+                        <div class="logo no-image">
+                            <h3>{{ partner.name }}</h3>
+                        </div>
+                        {% endif %}
 
+                        {% if partner.description %}
+                        <a class="pop-up-button hidden" id="{{ partner.name }}">Learn More</a>
+                        {% else %}
+                        <a href="{{ partner.link }}" target="_blank" class="pop-up-button hidden">Website</a>
+                        {% endif %}
+                    </div>
+                </div>
+
+                {% if partner.description %}
+                <div class="modal hidden" id="{{partner.name}}-modal">
+                    <div class="modal-content col-8">
+                        <span class="modal-close">&times;</span>
+                        
+                        <div class="modal-info">
+                            {% if partner.image %}
+                            <img class="modal-logo lazy lazy-on-view" 
+                            src="{{ partner.image.thumbnail.320x320.url }}"
+                            data-srcset="{{ partner.image.thumbnail.320x320.url }} 320w,
+                                {{ partner.image.thumbnail.720x720.url }} 720w,
+                                {{ partner.image.thumbnail.1024x1024.url }} 1024w"
+                            sizes="(max-width: 576px) 320px,
+                                (max-width: 992px) 720px,
+                                1024px"
+                            alt="" />
+                            {% else %}
+                            <div class="logo no-image">
+                                <h3>{{ partner.name }}</h3>
+                            </div>
+                            {% endif %}
+
+                            <div class="modal-text">
+                                <h3 class="name">{{ partner.name }}</h3>
+                                <p>{{ partner.description }}</p>
+                            </div>
+
+                        </div>
+
+                        <div class="modal-buttons">
+                                    
+                            <a href="{{ partner.link }}" target="_blank" class="modal-website-button">Website</a>
+                            {% if partner.career_link %}
+                            <a href="{{ partner.career_link }}" target="blank" class="modal-career-button">Career site</a>
+                            {% endif %}
+                            
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+
+            {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    {% endfor %}
+</article>
 
 {% endblock %}
