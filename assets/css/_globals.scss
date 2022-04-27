@@ -3,6 +3,19 @@
 html, body {
 	height: 100%;
 	width: 100%;
+
+	scrollbar-width: thin;
+	scrollbar-color: $primary $body-bg;
+	&::-webkit-scrollbar {
+		background: $body-bg;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: rgba(236, 81, 157, 0.5);
+		border-radius: calc(15px / 2);
+		&:hover {
+			background: rgba(236, 81, 157, 1);
+		}
+	}
 }
 
 body {
@@ -27,6 +40,12 @@ main {
 	padding: 0 0 $page-padding-y;
 	// Top padding so that content is not hidden by the sticky header
 	padding-top: $logo-height + 2 * 1.25em;
+}
+
+ul {
+	list-style: none;
+	margin: 0; 
+	padding: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {

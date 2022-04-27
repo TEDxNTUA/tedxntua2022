@@ -6,60 +6,50 @@
 {% get_current_language as CURR_LANG %}
 
 <nav id="nav" aria-label="Navigation header">
-    <!-- <div class="c-header__line--lg" id="js-header-line-lg"></div> -->
-    <a class="navbar-brand" href="" aria-label="Go to homepage">
-        <img src="{% static "images/tedxntua_logo_blacktext.png" %}"
+    <a class="navbar-brand" href="{% url 'index' %}"
+        aria-label="Go to homepage">
+        <img src="{% static "images/tedxntua_logo_whitetext.png" %}"
              alt="TEDxNTUA logo" />
     </a>
     <ul role="menu" id="navbar-nav" class="navbar-nav collapse"
         aria-label="Navigation menu">
         <li class="nav-item">
             <a role="menuitem" href="{% url 'index' %}"
-                class="nav-link">
-                {% trans 'Home' %}
+                class="nav-link {% active_link 'index' strict=True %}">
+                <span class="nav-item-text">{% trans 'Home' %}</span>
             </a>
         </li>
         <li class="nav-item dropdown">
             <a role="menuitem" href="#"
-                class="nav-link dropdown-toggle"
-                id="dropdownMenuLink" 
-                data-bs-toggle="dropdown" 
+                class="nav-link dropdown-toggle {% active_link 'speakers || performers || side-events || presenter' %}"
                 data-toggle="dropdown" aria-haspopup="true"
                 aria-expanded="false">
                 <span class="nav-item-text">
-                    {% trans 'The Event' %}<span class="sr-only">{% trans '(Toggle dropdown)' %}</span>
+                    {% trans 'The event' %}<span class="sr-only">{% trans '(Toggle dropdown)' %}</span>
                 </span>
             </a>
-            <!-- <a role="menuitem" href=""
+            <a role="menuitem" href="{% url 'speakers' %}"
                 class="nav-link dropdown-toggle-hidden">
                 <span class="nav-item-text">
-                    {% trans 'The Event' %}
+                    {% trans 'The event' %}
                 </span>
-            </a> -->
-            <div role="menu" class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            </a>
+            <div role="menu" class="dropdown-menu">
                 <a role="menuitem" href="{% url 'speakers' %}"
                     class="nav-link dropdown-item">
-                    <!-- <div class="nav-dropdown-item-icon black-bg woman-icon"
-                        aria-hidden="true"></div> -->
-                    <span class="nav-item-text underline">{% trans 'Speakers' %}</span>
+                    <span class="nav-item-text">{% trans 'Speakers' %}</span>
                 </a>
                 <a role="menuitem" href="{% url 'performers' %}"
                     class="nav-link dropdown-item">
-                    <!-- <div class="nav-dropdown-item-icon bordered man-icon"
-                        aria-hidden="true"></div> -->
-                    <span class="nav-item-text underline">{% trans 'Performers' %}</span>
+                    <span class="nav-item-text">{% trans 'Performers' %}</span>
                 </a>
                 <a role="menuitem" href="{% url 'side-events' %}"
                     class="nav-link dropdown-item">
-                    <!-- <div class="nav-dropdown-item-icon white-rectangles-in-black"
-                        aria-hidden="true"></div> -->
-                    <span class="nav-item-text underline">{% trans 'Workshops' %}</span>
+                    <span class="nav-item-text">{% trans 'Side events' %}</span>
                 </a>
                 {% if settings.TEDXNTUA_SCHEDULE_ENABLED %}
                 <a role="menuitem" href="{% url 'schedule' %}"
                     class="nav-link dropdown-item">
-                    <!-- <div class="nav-dropdown-item-icon"
-                        aria-hidden="true"></div> -->
                     <span class="nav-item-text">{% trans 'Schedule' %}</span>
                 </a>
                 {% endif %}
@@ -67,51 +57,44 @@
         </li>
         <li class="nav-item">
             <a role="menuitem" href="{% url 'partners' %}"
-                class="nav-link">
+                class="nav-link {% active_link 'partners' %}">
                 <span class="nav-item-text">{% trans 'Partners' %}</span>
             </a>
         </li>
         <li class="nav-item">
             <a role="menuitem" href="{% url 'about' %}"
-                class="nav-link">
+                class="nav-link {% active_link 'about' %}">
                 <span class="nav-item-text">{% trans 'About us' %}</span>
             </a>
         </li>
         {% if settings.TEDXNTUA_TICKETS_ENABLED %}
         <li class="nav-item">
-            <a role="menuitem" class="nav-link" href="{{ settings.TEDXNTUA_TICKETS_URL }}">
-                <div class="nav-link-icon"
-                    aria-hidden="true"></div>
+            <a role="menuitem" class="nav-link" href="{{ settings.TEDXNTUA_TICKETS_URL }}" target="_blank">
                 <span class="nav-item-text">{% trans 'Tickets' %}</span>
             </a>
         </li>
         {% endif %}
-        <li class="nav-item language-switch-container">
-            <h6>{% trans 'LANGUAGE' %}</h6>
-            <div role="group" class="btn-group language-switch"
-                aria-label="Select website language">
-                {% for code, lang_name in LANGUAGES %}
-                <a class="btn{% if code == CURR_LANG %} active{% endif %}"
-                    aria-label="{{ lang_name }}" href="{% change_lang code %}">
-                    {{ code | lang_short_name }}
-                </a>
-                {% endfor %}
-            </div>
-        </li>
     </ul>
-    <button class="navbar-toggler" data-toggle="collapse"
-            data-target="#navbar-nav" aria-controls="navbar-nav"
-            aria-label="Toggle navigation menu" aria-expanded="false">
-        <div class="navbar-toggler-icon" aria-hidden="true">
-        </div>
+    <div role="group" class="btn-group language-switch"
+        aria-label="Select website language">
+        {% for code, lang_name in LANGUAGES %}
+        <a class="btn{% if code == CURR_LANG %} active{% endif %}"
+            aria-label="{{ lang_name }}" href="{% change_lang code %}">
+            {{ code | lang_short_name }}
+        </a>
+        {% endfor %}
+    </div>
+    <button class="navbar-toggler" id="navbar-button" data-toggle="collapse"
+        data-target="#navbar-nav" aria-controls="navbar-nav"
+        aria-label="Toggle navigation menu" aria-expanded="false">
+        <svg class="svg-header-stop" id="stop-button" width="30px" height="30px">
+            <rect x="30%" y="2%" width="6px" height="96%"
+                class="header-stop" />
+            <rect x="70%" y="2%" width="6px" height="96%"
+                class="header-stop" />
+        </svg>
+        <svg class="svg-header-play hidden" id="play-button" height="30px" width="30px">
+            <polygon points="28, 15 10, 2 10, 28" class="header-play"/>
+        </svg>
     </button>
 </nav>
-<!--
-{% if settings.TEDXNTUA_SHOW_LIVE %}
-    <div id="on-air-label">
-        <i class="fa fa-circle"></i>
-        <span class="live">&nbsp;LIVE</span>
-    </div>
-{% endif %}
--->
-

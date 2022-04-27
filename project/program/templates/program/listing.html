@@ -19,6 +19,7 @@
     {% endif %}
 {% endspaceless %}{% endblock %}
 {% block content %}
+{% load static %}
 <article class="event-page listing-page {{ listing_type }}-page">
     {% include "program/_event-tabs.html" %}
     <div class="container-fluid listing-grid">
