@@ -1,20 +1,93 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load static %}
 {% load render_bundle from webpack_loader %}
 {% block title %}{% trans 'schedule.title' %}{% endblock %}
 {% block description %}{% trans 'schedule.description' %}{% endblock %}
 {% block content %}
 <article class="event-page schedule-page">
-    <h1>schedule</h1>   
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id hendrerit diam, et rhoncus nisl. Proin dui quam, iaculis vel ullamcorper eget, cursus venenatis velit. Donec accumsan, arcu eu blandit varius, dolor nisl porttitor neque, elementum mattis dui lorem vitae diam. Vestibulum ut risus leo. Nullam rutrum nec leo a auctor. Curabitur ligula nisl, tempor a dui quis, dapibus venenatis nisi. Nullam rhoncus sagittis libero nec eleifend. Ut fermentum egestas arcu ac aliquet. Mauris efficitur dolor ac ligula mattis pretium. Cras consectetur ligula eu felis pulvinar, in consequat elit facilisis. Pellentesque nulla ligula, fermentum eget nunc a, varius vehicula massa. Nulla lacinia auctor ante vel fringilla. Cras vestibulum ultricies sem, et porttitor odio venenatis in. Pellentesque blandit mollis eros non placerat. Pellentesque molestie mauris vitae quam cursus, placerat placerat nisi tempor. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-
-        Vivamus eget ante ut velit eleifend bibendum ut eget tortor. Phasellus dictum vel nibh eu gravida. Duis tincidunt sit amet odio nec varius. Phasellus aliquam urna vel ligula posuere lacinia. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam pretium venenatis est, a pretium tellus eleifend efficitur. Etiam auctor augue nec ante dictum, a ultricies ex laoreet. Quisque rhoncus nibh quis urna efficitur convallis.
-        
-        Proin blandit vehicula risus vel fermentum. Etiam ullamcorper, elit vel convallis iaculis, justo ex maximus orci, et sagittis nisl ligula eu diam. Curabitur nisi diam, ultrices consequat est vel, congue fermentum lacus. Sed ornare, enim nec suscipit vulputate, magna risus eleifend enim, vitae eleifend mauris neque ut libero. Morbi tristique venenatis congue. Praesent et dui facilisis, vestibulum lacus ut, efficitur tellus. Quisque ut felis auctor, semper purus vel, dictum velit. Maecenas tempor tellus eu lacus scelerisque fermentum. Praesent tincidunt vitae lorem sit amet cursus. Vestibulum cursus viverra ultricies. Maecenas vel finibus elit, ut venenatis dui. Nam sodales sodales magna, sit amet mollis tortor iaculis sed. Donec fringilla dui sed dictum dignissim. Sed sagittis ut diam quis feugiat. Morbi varius risus ac nibh sollicitudin semper.
-        
-        Nullam congue condimentum lectus eget mattis. Praesent gravida eros nec elit posuere, sed vehicula tellus mattis. Vestibulum congue nibh sit amet orci ultrices eleifend. Duis vitae neque eu leo molestie malesuada at in mi. Ut sit amet semper ligula. Proin ultrices egestas magna vitae consequat. Aenean rutrum maximus nibh maximus porta. Maecenas vel eleifend nunc, nec congue orci.
-        
-        Sed eu gravida mi. Nulla tempor commodo felis, et egestas justo placerat quis. Phasellus dictum nulla orci, et imperdiet sapien tempus et. Etiam facilisis eleifend nisi, at eleifend magna eleifend a. Praesent quis sapien neque. Quisque eu neque ut nunc tincidunt consequat. Suspendisse interdum nisl nec tellus iaculis ullamcorper. Maecenas sed aliquet risus, in mattis dui. Pellentesque fermentum placerat arcu quis malesuada. Sed dignissim nulla in sapien consequat, ut vulputate quam dictum. Vivamus eu aliquet orci. Mauris vestibulum eu massa nec accumsan. Aenean erat diam, aliquam sollicitudin purus ac, auctor viverra ex. Phasellus fringilla tincidunt tincidunt.</p>
+    <div class="table table-main">
+        <!-- row 1 -->
+        {% for time,row in schedule.items %}
+        {% if forloop.counter0|divisibleby:2 %}
+        <div class="table-row">
+            <div class="table-cell table-cell-full div-right">
+                {% for stage, event in row.items%}
+                {% if event %}
+                <!-- <img src="{% static 'images/happyface.png' %}" width="100%" height="100%"> -->
+                <img class="event-img" srcset="{{ event.image.thumbnail.320x320.url }} 320w,
+                            {{ event.image.thumbnail.720x720.url }} 720w,
+                            {{ event.image.thumbnail.1024x1024.url }} 1024w"
+                            sizes="(max-width: 576px) 320px,
+                                            (max-width: 992px) 720px,
+                                            1024px"
+                            src="{{ event.image.thumbnail.320x320.url }}"
+                            alt="{{ event.title }}" />
+                {% endif %}
+                {% endfor %}
+            </div>
+            <div class="table-cell table-cell-border">
+                <div class="time-slot">
+                    <pre>{{time}}</pre>
+                </div>
+            </div>
+            <div class="table-cell table-cell-full text-left">
+                <div class="detail-container">
+                    <div class="detail-line col-2"></div>
+                    <div class="detail-text col-10">
+                    {% for stage, event in row.items%}
+                        {% if event %}
+                        <h3>{{event.presenter}}</h3>
+                        <h6>{{ event.title}}</h6>
+                        <p>{{ event.subtitle}}</p>    
+                        <!-- <p>{{ event.description }}</p> -->
+                        {% endif %}
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="table-row">
+            <div class="table-cell table-cell-full div-right">
+                <div class="detail-container">
+                    <div class="detail-text col-10">
+                    {% for stage, event in row.items%}
+                        {% if event %}
+                        <h3>{{event.presenter}}</h3>
+                        <h6>{{ event.title}}</h6>
+                        <p>{{ event.subtitle}}</p>    
+                        <!-- <p>{{ event.description }}</p> -->
+                        {% endif %}
+                    {% endfor %}
+                    </div>
+                    <div class="detail-line col-2"></div>
+                </div>
+            </div>
+            <div class="table-cell table-cell-border">
+                <div class="time-slot">
+                    <pre>{{time}}</pre>
+                </div>
+            </div>
+            <div class="table-cell table-cell-full text-left">
+            {% for stage, event in row.items%}
+                {% if event %}
+                <!-- <img src="{% static 'images/happyface.png' %}" width="100%" height="100%"> -->
+                <img class="event-img" srcset="{{ event.image.thumbnail.320x320.url }} 320w,
+                            {{ event.image.thumbnail.720x720.url }} 720w,
+                            {{ event.image.thumbnail.1024x1024.url }} 1024w"
+                            sizes="(max-width: 576px) 320px,
+                                            (max-width: 992px) 720px,
+                                            1024px"
+                            src="{{ event.image.thumbnail.320x320.url }}"
+                            alt="{{ event.title }}" />
+                {% endif %}
+            {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
 </article>
 {% endblock %}
 {% block scripts %}
