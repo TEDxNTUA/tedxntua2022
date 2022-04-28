@@ -24,6 +24,7 @@ article.home-page {
   section#hero {
     padding: 0 $page-padding-x-lg;
     padding-bottom: 11em;
+    padding-top: 1.5rem;
     display: flex;
     // flex-direction: column;
     .content {
@@ -82,8 +83,11 @@ article.home-page {
           padding-right: 0.8em;
         }
          a .ticketbox {
-          background: rgb(236,81,157);
-          background: linear-gradient(90deg, rgba(236,81,157,1) 0%, rgba(136,50,107,1) 29%, rgba(77,62,173,1) 100%);
+          background: rgb(112,58,237);
+          background: linear-gradient(90deg, rgba(112,58,237,1) 0%, rgba(137,50,105,0.9640990185136554) 34%, rgba(236,81,157,1) 100%); 
+          background-size: 200% 100%;
+          background-position: 100% 0;
+          transition: background-position .5s;
           min-height: 100%;
           border-radius: $border-radius-sm;
           display: flex;
@@ -110,13 +114,7 @@ article.home-page {
             }
           }
           &:hover {
-            background-color: $secondary;
-            // background: rgb(236,81,157);
-            // background: linear-gradient(90deg, rgba(236,81,157,1) 0%, rgba(136,50,107,1) 69%, rgba(77,62,173,0.8632586823792017) 100%);
-            -webkit-transition: background-color 2s ease-out;
-            -moz-transition: background-color 2s ease-out;
-            -o-transition: background-color 2s ease-out;
-            transition: background-color 2s ease-out;
+            background-position: 0 0;
           }
         } 
       }
@@ -127,14 +125,14 @@ article.home-page {
       width: 50%;
       position: relative;
       .backroung-img {
-        position: absolute;
-        // width: 550px;
-        width: 80%;
+        position: relative;
+        width: 75%;
       }
       .head-model {
-        height: 36em;
-        width: 54%;
+        height: 100%;
+        width: 56%;
         --poster-color: transparent;  
+        position: absolute;
       }
     }
     // .infobox {
@@ -510,59 +508,37 @@ article.home-page {
 
 @media only screen and (max-width: 576px) {
   article.home-page {
-  ////// HERO //////
+    ////// HERO //////
     section#hero {
-      padding: 0 $page-padding-x;
-      // padding-bottom: 11em;
-      #model {
-        height: 30em;
-        width: 100%;
-        --poster-color: transparent;  
+      .hero {
+        .head-model {
+          width: 72%;
+        }
+        .backroung-img {
+          width: 90%;
+        }
       }
       .content {
-        flex-direction: column;
-        .hero {
-          width: 100%;
-        }
-        .infobox-left {
-          width: 100%;
-          padding-bottom: 1em;
+        padding-left: 0 !important;
+        padding-top: 1.5em;
+        .infobox-top {
+          .play_logo {
+            width: 85%;
+          }
           span {
-            font-size: 1.9em;
-            font-weight: 600;
+            font-size: 1.5em;
           }
         }
-        .infobox-right {
-          width: 100%;
-          padding-bottom: 6em;
-          span {
-            font-size: 1.7em;
+        .infobox-bottom {
+          padding-top: 3em;
+          .ticket-link {
+            padding-bottom: 2em;
           }
         }
-      }
-      .infobox-left:nth-child(1) {
-        order: 2;
-      }
-      .infobox-right:nth-child(3) {
-        order: 3;
-      }
-      .infobox {
-        width: 100%;
-        .days-left-text {
-          display: none;
-        }
-
-        // .ticket {
-        //   left: 51%;
-        // }
-      }
-      .days-left-text:nth-child(1) {
-        order: 2;
       }
     }
     ////// SUMMARY ////// 
     section#summary {
-      padding-top: 10em;
       .summary-container {
         align-items: end;
         .image-container-summary {
@@ -626,50 +602,44 @@ article.home-page {
   article.home-page {
     ////// HERO ////// 
     section#hero {
-      padding: 0 $page-padding-x;
-      padding-bottom: 11em;
-      #model {
-        height: 30em;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom:   0;
+      .hero {
         width: 100%;
-        --poster-color: transparent;  
+        .head-model {
+          width: 65%;
+        }
+        .backroung-img {
+          width: 85%;
+        }
       }
       .content {
-        flex-direction: column;
-        .hero {
-          width: 100%;
+        width: 100%;
+        padding-left: 0 !important;
+        .infobox-top {
+          align-items: center;
+          .play_logo {
+            width: 72%;
+            right: 0;
+          }
+          span {
+            font-size: 1.7em;
+          }
         }
-        .infobox-left {
-          width: 100%;
-          padding-bottom: 1em;
+        .infobox-bottom {
+          flex-direction: column-reverse;
+          padding-top: 1.5em;
+          .ticket-link {
+            padding-bottom: 1.5em;
+          }
         }
-        .infobox-right {
-          width: 100%;
-          padding-bottom: 6em;
-        }
-      }
-      .infobox-left:nth-child(1) {
-        order: 2;
-      }
-      .infobox-right:nth-child(3) {
-        order: 3;
-      }
-      .infobox {
-        .days-left-text {
-          display: none;
-        }
-
-        .ticket {
-          left: 50%;
-          margin-top: 120px;
-        }
-      }
-      .days-left-text:nth-child(1) {
-        order: 2;
       }
     }
     ////// SUMMARY ////// 
     section#summary {
-      padding-top: 18em;
+      padding-top: 10em;
       .summary-container {
         position: relative;
         justify-content: center;
@@ -694,8 +664,38 @@ article.home-page {
     }
     ////// EVENT STATS ////// 
     section#event_stats {
-      .showcase_content .showcase_stats .showcase_stats_item .showcase_stats_figure {
-        display: none;
+      .showcase_content .showcase_stats .showcase_stats_item {
+        .showcase_stats_count {
+          font-size: 10vw !important;
+          line-height: 0.3 !important;
+        }
+        .showcase_stats_label {
+          font-size: 21vw !important;
+        }
+        .showcase_stats_figure {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  article.home-page {
+    section#hero {
+      .content {
+        .infobox-top {
+          span {
+            font-size: 1.5em;
+          }
+        }
+        .infobox-bottom {
+          // display: none;
+          .info-date {
+            text-align: right;
+            font-size: 1.6em;
+          }
+        }
       }
     }
   }
@@ -703,6 +703,32 @@ article.home-page {
 
 @media only screen and (max-width: 1240px) {
   article.home-page {
+    ////// HERO ////// 
+    section#hero {
+      .hero {
+        // height: 30em;
+        .head-model {
+          // width: 65%;
+        }
+        .backroung-img {
+          // width: 90%;
+        }
+      }
+      .content {
+        .infobox-top {
+          span {
+            font-size: 1.7em;
+          }
+        }
+        .infobox-bottom {
+          // display: none;
+          .info-date {
+            text-align: right;
+            font-size: 1.8em;
+          }
+        }
+      }
+    }
     ////// SUMMARY //////  
     section#summary {
       .summary-container .summary-text-container {
@@ -782,6 +808,33 @@ article.home-page {
               color: $primary;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1520px) {
+  article.home-page {
+    ///// HERO /////
+    section#hero {
+      padding-left: $page-padding-x;
+      padding-right: $page-padding-x;
+      .hero {
+        .head-model {
+          width: 69%;
+        }
+        .backroung-img {
+          width: 90%;
+        }
+      }
+      .content {
+        padding-left: 2em;
+        .infobox-top span {
+          font-size: 1.7em;;
+        }
+        .infobox-bottom span{
+          font-size: 1.9em;
         }
       }
     }

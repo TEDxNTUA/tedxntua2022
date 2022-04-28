@@ -4,9 +4,9 @@
     <div class="hero">
         <img class="backroung-img" src="{% static "images/model_backround.png" %}" width="500px" alt=""/> 
         <model-viewer class="head-model" src="{% static "images/HEADONLY.glb" %}" alt="3d model"
-        loading="eager" auto-rotate camera-controls disable-zoom 
-        reveal="auto" 
-        id="model">
+            loading="eager" auto-rotate camera-controls disable-zoom 
+            reveal="auto" 
+            id="model">
         </model-viewer>
     </div>
     <div class="content">
@@ -24,8 +24,8 @@
             </div>  -->
         </div>
         <div class="infobox-bottom">
-            <span>{% trans 'event.date' %}</span>       
-            <a href="https://www.youtube.com/" target="_blank">
+            <span class="info-date">{% trans 'event.date' %}</span>       
+            <a class="ticket-link" href="https://www.youtube.com/" target="_blank">
                 <div class="ticketbox">  
                     <div class="ticket-text">
                         <span>Tickets</span>

@@ -227,7 +227,6 @@ $social-icon-size: 3em;
             max-height: 2em;
             margin-top: .5em;
             display: flex;
-            flex-direction: row;
             align-items: center;
             height: 100%;
             text-align: center;
@@ -254,16 +253,14 @@ $social-icon-size: 3em;
                     padding-bottom: 1em;
                 }
             }
-        }
-    }
-    #footer-bottom {
-        .legal {
-            flex-direction: column !important;
+            .footer-container .action-container {
+                width: 70%;
+            }
         }
     }
 }
 
-@media (max-width: 800px) {
+@media only screen and (max-width: 800px) {
     #footer {
         section {
             flex-direction: column;
@@ -273,12 +270,21 @@ $social-icon-size: 3em;
         }
         #footer-social-container {
             width: 100%;
+            .social-container {
+                margin-bottom: 0.5em;
+            }
         }
         .action-container {
+            width: 50%;
             p {
                margin-top: 0.5em;
                margin-bottom: 0.5em;
             }
+        }
+    }
+    #footer-bottom {
+        .legal {
+            flex-direction: column;
         }
     }
 }
