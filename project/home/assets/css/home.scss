@@ -510,14 +510,6 @@ article.home-page {
   article.home-page {
     ////// HERO //////
     section#hero {
-<<<<<<< HEAD
-      padding: 0 $page-padding-x;
-      // padding-bottom: 11em;
-      #model {
-        // height: 30em;
-        // width: 100%;
-        --poster-color: transparent;  
-=======
       .hero {
         .head-model {
           width: 72%;
@@ -525,7 +517,6 @@ article.home-page {
         .backroung-img {
           width: 90%;
         }
->>>>>>> a9f0d7c070cbd9af28e349a8c4da1107eab827af
       }
       .content {
         padding-left: 0 !important;
