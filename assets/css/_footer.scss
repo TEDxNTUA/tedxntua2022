@@ -187,6 +187,12 @@ $social-icon-size: 3em;
         border: 1px white solid;
         margin: 0.5em;
         border-radius: $border-radius;
+        @media(max-width: 800px){
+            width: 50%;
+        }
+        @media(max-width: 500px){
+            width: 60%;
+        }
         a {
             position: absolute;
             font-weight: bold;

@@ -1,4 +1,13 @@
 section#listing {
+  .nav-listing{
+    @media(max-width:500px){
+      justify-content: flex-start;
+      scrollbar-width: none;
+    }
+  }
+  .nav-listing::-webkit-scrollbar{
+    display: none;
+  }
   .host-container{
     display: flex;
     justify-content: center;
@@ -25,7 +34,7 @@ section#listing {
     }
     .btn-secondary:hover{
         background-color: $primary;
-        border: 2px solid $primary;
+        // border: 2px solid $primary;
     }
     padding: 0 $page-padding-x-lg;
     .c-work {
@@ -65,6 +74,9 @@ section#listing {
           display: flex;
           flex-wrap: wrap;
           justify-content: space-evenly;
+          @media(max-width:500px){
+            padding:0;
+          }
         }
         &__item {
           position: relative;
@@ -72,7 +84,7 @@ section#listing {
           //max-width: fit-content;
           //margin: auto;
           margin-top: 3em;
-          padding-right: 2em; 
+          padding: 1em; 
           // margin-right: 3em;
           text-align: center;
           
@@ -84,6 +96,7 @@ section#listing {
             display: flex;
             justify-content: center;
             width: 50%;
+            padding: 0.5em;
           }
         //   @include media(">=700px") {
         //     width: 50%;
@@ -219,4 +232,10 @@ section#listing {
  // transform: translateX(-100%);
   right: 100%;
 }
+}
+
+@media (max-width:500px){
+  section#listing{
+    padding:0;
+  }
 }

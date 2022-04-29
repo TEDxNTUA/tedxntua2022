@@ -5,15 +5,15 @@
 {% block content %}
 <article class="presenter-page">
     {% if activities.0.get_activity_type_display == 'Talk' %}
-        <a href="{% url 'speakers' %}" class="btn btn-secondary back-btn">
+        <a href="{% url 'speakers' %}" class="btn btn-secondary back-btn btn-presenter">
             &lt; {% trans 'back' %}
         </a>
     {% elif activities.0.get_activity_type_display == 'Performance' %}
-        <a href="{% url 'performers' %}" class="btn btn-secondary back-btn">
+        <a href="{% url 'performers' %}" class="btn btn-secondary back-btn btn-presenter">
             &lt; {% trans 'back' %}
         </a>
     {% elif activities.0.get_activity_type_display == 'Side event' %}
-        <a href="{% url 'side-events' %}" class="btn btn-secondary back-btn">
+        <a href="{% url 'side-events' %}" class="btn btn-secondary back-btn btn-presenter">
             &lt; {% trans 'back' %}
         </a>
     {% endif %}
@@ -35,7 +35,7 @@
         {% endif %}
         <div class="info">
             <div class="info-name">
-                <h3>{{presenter.name}}</h3>
+                <h3 class="presenter-name">{{presenter.name}}</h3>
                 <div class="link_icon">
                     <a href= {{presenter.link}} target="blank" >
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" class="bi bi-link-45deg" viewBox="0 0 16 16">
@@ -45,7 +45,7 @@
                     </a>
                 </div>
             </div>
-            <h5>{{presenter.occupation}}</h2>
+            <h5 class="presenter-occupation">{{presenter.occupation}}</h2>
         </div>
         <div class="bio">
             <!-- <div><p class="header">Bio</p></div> -->
