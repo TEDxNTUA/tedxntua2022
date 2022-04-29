@@ -5,27 +5,27 @@
     table-layout: fixed;
 }
 
-.table-row{
+.table-row {
     display: table-row;
     height: 33.3vh;
     aspect-ratio: auto;
 
-    .table-cell{
+    .table-cell {
         display: table-cell;
     }
 
-    .table-cell-full{
+    .table-cell-full {
         width: 50%;
         height: 100%;
-        img{
+        img {
             object-fit: contain;
         }
-        .detail-container{
+        .detail-container {
             display:flex; 
             align-items: center; 
             flex-direction: row;
             
-            .detail-line{
+            .detail-line {
                 border-top: 1px solid #EC519D; 
             }
         }

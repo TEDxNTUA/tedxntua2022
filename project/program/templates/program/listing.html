@@ -129,7 +129,9 @@
   {% endfor %}
     </ul>
     <div class="host-container">
+      {% if host %}
       <h1 class="host-title">Host</h1>
+      {%endif%}
       <ul class="c-work__list" >
       {%for item in host%}
       <li class="c-work__item">

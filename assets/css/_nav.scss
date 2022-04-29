@@ -96,21 +96,6 @@ nav#nav {
     }
 }
 
-.navbar-toggler-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 2.5em;
-    height: 1.6em;
-    span {
-        display: block;
-        width: 100%;
-        border-radius: 20%;
-        height: 0.2em;
-        background-color: $navbar-toggler-color;
-    }
-}
-
 .navbar-nav {
     position: absolute;
     top: calc(#{$page-padding-y} + 2.8em);

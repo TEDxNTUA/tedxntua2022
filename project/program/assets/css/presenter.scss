@@ -20,6 +20,12 @@
                 fill: $primary;
             }
         }
+        .presenter-name{
+            text-align: center;
+        }
+    }
+    .presenter-occupation{
+        text-align: center;
     }
 }
 
@@ -32,12 +38,13 @@
 .bio{
     width: 75%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
     // margin-left: 1em;
     p{
         margin:0;
-        margin-left: 1.2em;
+        // margin-left: 1.2em;
+        margin-left: 50px;
         margin-right: 1em;
         font-size: 1.1em;
     }
@@ -54,12 +61,13 @@
     margin-top: 0.5em;
     width: 75%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
     // margin-left: 1em;
     p{
         margin:0;
-        margin-left: 1.2em;
+        // margin-left: 1.2em;
+        margin-left: 50px;
         margin-right: 1em;
         font-size: 1.1em;
     }
@@ -83,6 +91,11 @@
     // box-shadow: 0 0 0 0;
     // -webkit-box-shadow:0 0 0 0;
 }
+
+.btn-presenter{
+    margin: 1em 0 2em;
+}
+
 .btn-secondary:hover{
     background-color: $primary;
     border: none;
