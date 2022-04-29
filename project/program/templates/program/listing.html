@@ -25,17 +25,17 @@
   <div class="listing-container">
     {% with url_name=request.resolver_match.url_name %}
     <ul class="nav nav-scrollable-tabs">
-        <li class="nav-item">
+        <li class="nav-item listing-class">
             <a href="{% url 'speakers' %}" class="btn {% if url_name == 'speakers' %}back-btn{% else %}btn-secondary{% endif %}">{% trans 'Speakers' %}</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item listing-class">
             <a href="{% url 'performers' %}" class="btn {% if url_name == 'performers' %}back-btn{% else %}btn-secondary{% endif %}">{% trans 'Performers' %}</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item listing-class">
             <a href="{% url 'side-events' %}" class="btn {% if url_name == 'side-events' %}back-btn{% else %}btn-secondary{% endif %}">{% trans 'Side events' %}</a>
         </li>
         {% if settings.TEDXNTUA_SCHEDULE_ENABLED %}
-        <li class="nav-item">
+        <li class="nav-item listing-class">
             <a href="{% url 'schedule' %}" class="btn {% if url_name == 'schedule' %}btn-secondary{% else %}btn-white{% endif %}">{% trans 'Schedule' %}</a>
         </li>
         {% endif %}
@@ -44,7 +44,7 @@
 
     <ul class="c-work__list" >
       {% for item in items %}
-        <li class="c-work__item">
+        <li class="c-work__item listing-class">
           <!-- <i class="bi bi-play" style="z-index: 11;"></i> -->
           <a href="{% url "presenter" slug=item.slug %}" class="c-work__link">
             <div class="c-work__showcase" id="js-work-img">
@@ -98,7 +98,7 @@
       <h1 class="host-title">Host</h1>
       <ul class="c-work__list" >
       {%for item in host%}
-      <li class="c-work__item">
+      <li class="c-work__item listing-class">
         <!-- <i class="bi bi-play" style="z-index: 11;"></i> -->
         <a href="{% url "presenter" slug=item.slug %}" class="c-work__link">
           <div class="c-work__showcase" id="js-work-img">
