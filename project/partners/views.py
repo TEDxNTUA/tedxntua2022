@@ -14,6 +14,11 @@ class PartnersView(View):
             unpublished=settings.TEDXNTUA_SHOW_UNPUBLISHED,
         )
 
-        #for footer
-        previousEvents = PreviousEvent.objects.all()
-        return render(request, self.template, {'partners': partners, 'previousEvents': previousEvents})
+        for id, category in partners.items():
+            print(category)
+        return render(request, self.template, {'partners': partners})
+
+
+        # #for footer
+        # previousEvents = PreviousEvent.objects.all()
+        # return render(request, self.template, {'partners': partners, 'previousEvents': previousEvents})
