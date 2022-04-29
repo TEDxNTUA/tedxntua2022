@@ -112,7 +112,7 @@ updateBlackBoxes();
 // --- Change Team Names ---
 if (!isMobile) {
   const teamName = document.getElementById("teamName");
-  var teamNames = ["IT", "EXPERIENCE", "GRAPHICS", "FUNDRAISING", "MEDIA", "SPEAKERS", "PRODUCTION"];
+  var teamNames = ["IT", "EXPERIENCE", "GRAPHICS", "FUNDRAISING", "MEDIA", "SPEAKERS", "VENUE-PRODUCTION"];
 
   // map each word to Y coordinates
   // each word is mapped to range equal to the team container's height
