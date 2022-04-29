@@ -611,23 +611,6 @@ article.home-page {
   article.home-page {
     ////// HERO ////// 
     section#hero {
-<<<<<<< HEAD
-      padding: 0 $page-padding-x;
-      padding-bottom: 11em;
-      #model {
-        // height: 30em;
-        // width: 100%;
-        --poster-color: transparent;  
-      }
-      .content {
-        flex-direction: column;
-        .hero {
-          width: 100%;
-        }
-        .infobox-left {
-          width: 100%;
-          padding-bottom: 1em;
-=======
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -636,7 +619,6 @@ article.home-page {
         width: 100%;
         .head-model {
           width: 65%;
->>>>>>> a9f0d7c070cbd9af28e349a8c4da1107eab827af
         }
         .backroung-img {
           width: 85%;
