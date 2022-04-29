@@ -48,6 +48,7 @@ article.sponsors {
             height: 10em;
             border-radius: $border-radius;
             padding: 0;
+            background-color: white;
             
             .logo{
                 width: 100%;
@@ -154,7 +155,7 @@ article.sponsors {
                 }
     
                 &:hover {
-                    border: 0.6em solid $primary;
+                    border: 0.4em solid $primary;
                 }
             }
         }
@@ -174,7 +175,7 @@ article.sponsors {
                 }
     
                 &:hover {
-                    border: 0.5em solid $primary;
+                    border: 0.4em solid $primary;
                 }
             }
         }
@@ -219,6 +220,7 @@ article.sponsors {
             font-weight: bold;
             width: max-content;
             margin-left: auto;
+            cursor: pointer;
         }
 
         .modal-info {

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-24 11:55+0300\n"
+"POT-Creation-Date: 2022-04-26 12:22+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -27,6 +27,18 @@ msgid "about.description"
 msgstr ""
 "Who are we? What is TED? What is TEDx? Meet the institutions that are "
 "involved in this project and the story behind the team of TEDxNTUA."
+
+#: .\project\home\templates\home\hero.html:6
+msgid "event.location"
+msgstr "Michael Cacoyannis Foundation"
+
+#: .\project\home\templates\home\hero.html:10
+msgid "event.address"
+msgstr "Peireos "
+
+#: .\project\home\templates\home\hero.html:22
+msgid "event.date"
+msgstr "21 May 2022"
 
 #: .\project\home\templates\home\index.html:5
 msgid "home.title"
@@ -83,7 +95,7 @@ msgid "Published"
 msgstr ""
 
 #: .\project\partners\templates\partners\index.html:3
-#: .\project\templates\layouts\partials\nav.html:69
+#: .\project\templates\layouts\partials\nav.html:61
 msgid "Partners"
 msgstr ""
 
@@ -154,57 +166,55 @@ msgid "Hosting"
 msgstr ""
 
 #: .\project\program\templates\program\_event-tabs.html:5
-#: .\project\program\templates\program\listing.html:5
-#: .\project\templates\layouts\partials\nav.html:42
+#: .\project\program\templates\program\listing.html:7
+#: .\project\program\templates\program\listing.html:29
+#: .\project\templates\layouts\partials\nav.html:40
 msgid "Speakers"
 msgstr ""
 
 #: .\project\program\templates\program\_event-tabs.html:8
-#: .\project\program\templates\program\listing.html:7
-#: .\project\templates\layouts\partials\nav.html:48
+#: .\project\program\templates\program\listing.html:9
+#: .\project\program\templates\program\listing.html:32
+#: .\project\templates\layouts\partials\nav.html:44
 msgid "Performers"
 msgstr ""
 
 #: .\project\program\templates\program\_event-tabs.html:11
-#: .\project\program\templates\program\listing.html:9
-#: .\project\templates\layouts\partials\nav.html:54
+#: .\project\program\templates\program\listing.html:11
+#: .\project\program\templates\program\listing.html:35
+#: .\project\templates\layouts\partials\nav.html:48
 msgid "Side events"
 msgstr ""
 
 #: .\project\program\templates\program\_event-tabs.html:15
-#: .\project\templates\layouts\partials\nav.html:61
+#: .\project\program\templates\program\listing.html:39
+#: .\project\templates\layouts\partials\nav.html:53
 msgid "Schedule"
 msgstr ""
 
-#: .\project\program\templates\program\listing.html:14
+#: .\project\program\templates\program\listing.html:16
 msgid "speakers.description"
 msgstr "Meet the speakers of the TEDxNTUA 2021 event!"
 
-#: .\project\program\templates\program\listing.html:16
+#: .\project\program\templates\program\listing.html:18
 msgid "performers.description"
 msgstr "Meet the performers of the TEDxNTUA 2021 event!"
 
-#: .\project\program\templates\program\listing.html:18
+#: .\project\program\templates\program\listing.html:20
 msgid "side_events.description"
 msgstr "Learn more about the side events of the TEDxNTUA 2021 event!"
 
-#: .\project\program\templates\program\listing.html:67
-msgid "more_soon"
-msgstr "More soon"
-
 #: .\project\program\templates\program\presenter.html:9
+#: .\project\program\templates\program\presenter.html:13
+#: .\project\program\templates\program\presenter.html:17
 msgid "back"
 msgstr "Back"
 
-#: .\project\program\templates\program\presenter.html:36
-msgid "presenter.read_full"
-msgstr "Read full description"
-
-#: .\project\program\templates\program\schedule.html:4
+#: .\project\program\templates\program\schedule.html:5
 msgid "schedule.title"
 msgstr "Schedule"
 
-#: .\project\program\templates\program\schedule.html:5
+#: .\project\program\templates\program\schedule.html:6
 msgid "schedule.description"
 msgstr ""
 "The very essence of a TEDx event is its medley of talks, performances and "
@@ -219,6 +229,18 @@ msgstr ""
 msgid "English"
 msgstr ""
 
+#: .\project\templates\layouts\partials\footer.html:10
+msgid "footer.events"
+msgstr "Previous Events"
+
+#: .\project\templates\layouts\partials\footer.html:47
+msgid "footer.social"
+msgstr "Find us on social"
+
+#: .\project\templates\layouts\partials\footer.html:76
+msgid "footer.more"
+msgstr "More Stuff from Us"
+
 #: .\project\templates\layouts\partials\nav.html:19
 msgid "Home"
 msgstr ""
@@ -232,11 +254,11 @@ msgstr ""
 msgid "(Toggle dropdown)"
 msgstr ""
 
-#: .\project\templates\layouts\partials\nav.html:75
+#: .\project\templates\layouts\partials\nav.html:67
 msgid "About us"
 msgstr ""
 
-#: .\project\templates\layouts\partials\nav.html:81
+#: .\project\templates\layouts\partials\nav.html:73
 msgid "Tickets"
 msgstr ""
 
@@ -1452,6 +1474,12 @@ msgstr ""
 #: .\venv\Lib\site-packages\versatileimagefield\templates\versatileimagefield\forms\widgets\versatile_image_bootstrap.html:17
 msgid "Primary Point of Interest"
 msgstr ""
+
+#~ msgid "more_soon"
+#~ msgstr "More soon"
+
+#~ msgid "presenter.read_full"
+#~ msgstr "Read full description"
 
 #~ msgid "about.meet_the_team"
 #~ msgstr "MEET THE TEAM"

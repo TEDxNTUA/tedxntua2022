@@ -3,6 +3,7 @@ from django.shortcuts import render
 from django.views import View
 
 from .models import Partner
+from project.home.models import PreviousEvent
 
 
 class PartnersView(View):
@@ -16,3 +17,8 @@ class PartnersView(View):
         for id, category in partners.items():
             print(category)
         return render(request, self.template, {'partners': partners})
+
+
+        # #for footer
+        # previousEvents = PreviousEvent.objects.all()
+        # return render(request, self.template, {'partners': partners, 'previousEvents': previousEvents})

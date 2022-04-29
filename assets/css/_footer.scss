@@ -28,22 +28,24 @@ $social-icon-size: 3em;
         z-index: 1;
         width: 100%;
     }
-    #footer-social-container{
+    #footer-social-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         width: 100%;
-        header{
+        header {
             height: 10%;
-            margin: 0.5em;
         }
-        .social-container{
+        #newsletter {
+            margin: 0.3em;
+        }
+        .social-container {
             height: 40%;
             display: flex;
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
-            padding:0.5em;
+            margin-bottom: -0.5em;
             img {
                 width: 3.5em;
                 height: 3.5em;
@@ -66,18 +68,22 @@ $social-icon-size: 3em;
             #newsletter-form {
                 width: 40%;
                 // margin-bottom: 1em;
-                box-shadow: $box-shadow-soft;
+                // box-shadow: $box-shadow-soft;
+                -webkit-box-shadow: 0px 21px 32px 0px rgba(0,0,0,0.31); 
+                box-shadow: 0px 21px 32px 0px rgba(0,0,0,0.31);
                 #newsletter-input-field {
                     width: 100%;
                     height: 2em;
-                    border-radius: 5px;
-                    border: 1px solid $body-color;
+                    // border-radius: 5px;
+                    // border: 1px solid $body-color;
                     text-align: center;
                     outline: none;
                     color: $body-color;
                     background-color: transparent;
                     display: flex;
                     margin: auto;
+                    border: none; 
+                    border-bottom: 1px solid $red;
                 }
             }
             .submit-btn {
@@ -171,7 +177,8 @@ $social-icon-size: 3em;
             text-shadow: 0 0 20px rgba(0, 0, 0, .9);
         }
     }
-    .Action-container{
+    .action-container {
+      position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -182,8 +189,13 @@ $social-icon-size: 3em;
         border-radius: $border-radius;
         a {
             position: absolute;
+            font-weight: bold;
+            width:100%;
+            height:100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             img {
-                // position: absolute;
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
@@ -201,13 +213,13 @@ $social-icon-size: 3em;
                 }
             }
         }
-        img{
+        img {
             border-radius: $border-radius;
         }
-        p{
+        p {
             margin-top: 0.5em;
-            margin-bottom: 0.5em; 
-         }
+            margin-bottom: 0.5em;
+        }
     }
 
     #footer-bottom {
@@ -215,7 +227,6 @@ $social-icon-size: 3em;
             max-height: 2em;
             margin-top: .5em;
             display: flex;
-            flex-direction: row;
             align-items: center;
             height: 100%;
             text-align: center;
@@ -232,23 +243,48 @@ $social-icon-size: 3em;
         }
     }
 }
+@media only screen and (max-width: 576px) {
+    #footer {
+        #footer-social-container {
+            #newsletter-card {
+                flex-direction: column;
+                #newsletter-form {
+                    width: 70%;
+                    padding-bottom: 1em;
+                }
+            }
+            .footer-container .action-container {
+                width: 70%;
+            }
+        }
+    }
+}
 
-@media (max-width: 800px){
-    #footer{
-        section{
+@media only screen and (max-width: 800px) {
+    #footer {
+        section {
             flex-direction: column;
         }
-        .footer-container{
+        .footer-container {
             width: 100%;
         }
-        #footer-social-container{
+        #footer-social-container {
             width: 100%;
-        }
-        .Action-container{
-            p{
-               margin-top: 0.5em;
-               margin-bottom: 0.5em; 
+            .social-container {
+                margin-bottom: 0.5em;
             }
+        }
+        .action-container {
+            width: 50%;
+            p {
+               margin-top: 0.5em;
+               margin-bottom: 0.5em;
+            }
+        }
+    }
+    #footer-bottom {
+        .legal {
+            flex-direction: column;
         }
     }
 }
