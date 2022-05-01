@@ -235,7 +235,7 @@ if (!isMobile) {
     setTranslateCords(sidePageList[i], [window.innerWidth * (i+1), ((mult-1) * containerHeight), 0]);
   }
 
-  const speed = 7; // sidescrolling speed
+  const speed = 12; // sidescrolling speed
   var reachEnd = false;
   var prevDeltaY = 0;
   window.addEventListener("wheel", function (e) {
