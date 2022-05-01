@@ -38,11 +38,13 @@
 
 // INSERT HERE OTHER COMPONENT STYLES
 @import "buttons";
+@import "mixins";
 @import "nav";
 @import "nav-scrollable-tabs";
 @import "footer";
 @import "language-switch";
 @import "graphics";
+@import "preloader";
 
 // INDIVIDUAL PAGE STYLES
 @import "~@/home/assets/css/home.scss";

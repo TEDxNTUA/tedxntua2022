@@ -4,6 +4,7 @@ from django.views import View
 
 from .models import Presenter, Activity, Stage
 from project.utils.url import is_url_same_domain
+from project.home.models import PreviousEvent
 
 
 class SpeakersView(View):
@@ -14,11 +15,15 @@ class SpeakersView(View):
             items = Presenter.speakers.all()
         else:
             items = Presenter.speakers.published()
-
+        host = Presenter.hosts.all()
+        #for footer
+        previousEvents = PreviousEvent.objects.all()
         return render(request, self.template_name, {
             'listing_type': 'speakers',
             'items': items,
             'placeholders': list(range(4)),
+            'host':host,
+            'previousEvents':previousEvents,
         })
 
 class PerformersView(View):
@@ -29,11 +34,15 @@ class PerformersView(View):
             items = Presenter.performers.all()
         else:
             items = Presenter.performers.published()
-
+        host = Presenter.hosts.all()
+        #for footer
+        previousEvents = PreviousEvent.objects.all()
         return render(request, self.template_name, {
             'listing_type': 'performers',
             'items': items,
             'placeholders': list(range(4)),
+            'host':host,
+            'previousEvents': previousEvents,
         })
 
 class SideEventsView(View):
@@ -46,11 +55,15 @@ class SideEventsView(View):
             items = Activity.side_events.select_related('presenter')
         else:
             items = Activity.side_events.published().select_related('presenter')
-
+        host = Presenter.hosts.all()
+        #for footer
+        previousEvents = PreviousEvent.objects.all()
         return render(request, self.template_name, {
             'listing_type': 'side_events',
             'items': items,
             'placeholders': list(range(4)),
+            'host': host,
+            'previousEvents': previousEvents,
         })
 
 
@@ -73,11 +86,13 @@ class PresenterView(View):
             presenter = get_object_or_404(Presenter, slug=slug,
                     is_published=True)
             activities = presenter.activity_set.published()
-
+        #for footer
+        previousEvents = PreviousEvent.objects.all()
         return render(request, self.template_name, {
             'presenter': presenter,
             'activities': activities,
             'go_back_url': go_back_url,
+            'previousEvents': previousEvents,
         })
 
 class ScheduleView(View):
@@ -88,7 +103,10 @@ class ScheduleView(View):
             unpublished=settings.TEDXNTUA_SHOW_UNPUBLISHED,
         )
         stages = Stage.get_verbose_names()
+        #for footer
+        previousEvents = PreviousEvent.objects.all()
         return render(request, self.template_name, {
             'schedule': schedule,
             'stages': stages,
+            'previousEvents': previousEvents,
         })

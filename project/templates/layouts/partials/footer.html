@@ -7,7 +7,7 @@
     <!-- Previous Events -->
     <div id="prev-events" class="footer-container">
         <header>
-            <h4>Previous Events</h4>
+            <h4>{% trans 'footer.events' %} </h4>
         </header>
         <div id="prev-events-card" class="carousel" data-ride="carousel" data-interval="4000">
             <div class="carousel-inner scrollable-cards">
@@ -40,11 +40,11 @@
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </a>
         </div>
-    </div> 
+    </div>
     <!-- Social -->
     <div id="footer-social-container">
         <header>
-            <h4>Find us on social</h4>
+            <h4>{% trans 'footer.social' %}</h4>
         </header>
         <div class="social-container">
             <a href="https://www.instagram.com/tedxntua/?hl=en" target="_blank">
@@ -61,7 +61,7 @@
             </a>
         </div>
         <header>
-            <h4>Newsletter</h4>
+            <h4 id="newsletter">Newsletter</h4>
         </header>
         <div id="newsletter-card">
             <form id="newsletter-form">
@@ -73,14 +73,14 @@
     <!-- Infos: Dialogs/Blog -->
     <div id="info" class="footer-container">
         <header>
-            <h4>More Stuff from Us</h4>
+            <h4>{% trans 'footer.more' %}</h4>
         </header>
-        <div class="Action-container">
-            <a>Blog</a>
+        <div class="action-container">
+            <a href="https://blog.tedxntua.com/" target="_blank"><strong>Blog</strong></a>
             <img src="{% static 'images/blog.png' %}" width="100%" height="100%">
         </div>
-        <div class="Action-container">
-            <a>Dialogues</a>
+        <div class="action-container">
+            <a href="https://www.youtube.com/watch?v=IzTNuWGnKrs&list=PLd7-PjFC85gxOG7Ou-H_DjIFGLHpPYqy2&ab_channel=TEDxNTUA" target="_blank"><strong>Dialogues</strong></a>
             <img src="{% static 'images/dialogues.png' %}" width="100%" height="100%">
         </div>
     </div>
