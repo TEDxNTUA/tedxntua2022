@@ -266,7 +266,7 @@ if (!isMobile) {
         }
 
         // animate footer accordingly
-        // animateFooter(reachHorizontalEnd);
+        animateFooter(reachHorizontalEnd);
 
         // stop sidescrolling
         if (mainPage.getBoundingClientRect().x > mainDefaultX) {
@@ -278,11 +278,7 @@ if (!isMobile) {
             setTranslateCords(sidePageList[i], [window.innerWidth * (i+1), ((mult-1) * containerHeight), 0]);
           }
           // scroll a little bit upwards to escape reachEnd
-          window.scrollTo({
-            left: scrollX,
-            top: scrollY - 50,
-            behavior: "smooth"
-          });
+          window.scrollTo(scrollX, scrollY - 150);
           // enable scrolling
           enableScrolling();
         }
