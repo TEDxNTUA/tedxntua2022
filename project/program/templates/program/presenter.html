@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load i18n %}
+{% load render_bundle from webpack_loader %}
 {% block title %}{{ presenter.name }}{% endblock %}
 {% block description %}{{ presenter.name }}: {{ presenter.occupation }}{% endblock %}
 {% block content %}
@@ -64,4 +65,7 @@
         {% endfor %}
     </div>
 </article>
+{% endblock %}
+{% block scripts %}
+    {% render_bundle 'nav' 'js' %}
 {% endblock %}
