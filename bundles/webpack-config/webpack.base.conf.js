@@ -13,10 +13,12 @@ module.exports = {
   context: __dirname,
   entry: {
     main: fromRoot('assets/js/index.js'),
+    nav: fromRoot('assets/js/nav.js'),
     home: fromRoot('project/home/assets/js/home.js'),
     schedule: fromRoot('project/program/assets/js/schedule.js'),
     about: fromRoot('project/about/assets/js/about.js'),
     listing: fromRoot('project/program/assets/js/listing.js'),
+    
   },
   module: {
     rules: [{
