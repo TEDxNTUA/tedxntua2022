@@ -16,7 +16,7 @@ class AboutView(View):
             members = TeamMember.objects.published()
 
         teams = TeamMember.objects.values('team').distinct()
-        previousEvents = previousEvents.objects.all()
+        previousEvents = PreviousEvent.objects.all()
 
         return render(request, self.template_name, {
             'members': members,
