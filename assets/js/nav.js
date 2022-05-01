@@ -1,12 +1,7 @@
-const box = document.getElementById('navbar-button');
-
-box.addEventListener('click', function(e) {
+document.getElementById('navbar-button').addEventListener('click', function(e) {
   const stop_ = document.getElementById('stop-button');
   const play = document.getElementById('play-button');
-  console.log(play); 
-  console.log(stop_);
   stop_.classList.toggle('hidden');
-  console.log("Hi");
   play.classList.toggle('hidden');
 });
 
