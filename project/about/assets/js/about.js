@@ -318,21 +318,21 @@ function hideFooter () {
 
 // --- Footer Animations ---
 
-const footer = document.getElementById("footer");
-var footerHeight = footer.getBoundingClientRect().height;
-var isanimated = false;
-
-// event listener to handle footer animations
-footer.addEventListener("animationend", function (event) {
-  isanimated = false;
-  footer.classList.toggle(event.animationName);
-  if (event.animationName == "footer_up") {
-    setTranslateCords(footer, [0, -(1.7 * footerHeight), 0]);
-  }
-  else if (event.animationName == "footer_down") {
-    setTranslateCords(footer, [0, 0, 0]);
-  }
-});
+// const footer = document.getElementById("footer");
+// var footerHeight = footer.getBoundingClientRect().height;
+// var isanimated = false;
+//
+// // event listener to handle footer animations
+// footer.addEventListener("animationend", function (event) {
+//   isanimated = false;
+//   footer.classList.toggle(event.animationName);
+//   if (event.animationName == "footer_up") {
+//     setTranslateCords(footer, [0, -(1.7 * footerHeight), 0]);
+//   }
+//   else if (event.animationName == "footer_down") {
+//     setTranslateCords(footer, [0, 0, 0]);
+//   }
+// });
 
 /**
  *
