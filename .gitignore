@@ -75,3 +75,6 @@ ted-env/
 
 #node_modules
 node_modules/
+
+#local_database
+db.sqlite
