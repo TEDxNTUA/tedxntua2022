@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap');
 // Colors
 $primary: #EC519D;
 $secondary: #4D3EAD;
-$secondary-2: #921F4A;
+$secondary-2: hsl(338, 65%, 35%);
+$gradient-1: #ff743477;
+$gradient-2: #fe260581;
+$gradient-3: #921f49a7;
+$gradient-4: #4c3aed75;
 $red: hsl(0, 100, 50);
 $ted: hsl(4, 80, 51);
 $yiq-contrasted-threshold: 100;
@@ -42,8 +47,9 @@ $box-shadow: 0 0 10px 10px black;
 $box-shadow-soft: 0 0 20px -5px black;
 
 // Typography
-$font-family-sans-serif: 'Lato', sans-serif;
-$font-family-serif:'Lato', sans-serif;
+$font-family-sans-serif: 'Jura', sans-serif;
+$font-family-serif:'Jura', sans-serif;
+$font-tall-family: 'The Hustle';
 $font-family-base: $font-family-sans-serif;
 
 // Nav

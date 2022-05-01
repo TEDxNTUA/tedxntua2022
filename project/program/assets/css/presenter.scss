@@ -1,0 +1,118 @@
+.presenter{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $primary;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    .info-name{
+        display: flex;
+        flex-direction: row;
+        .link_icon{
+            svg{
+                fill: $primary;
+            }
+        }
+        .presenter-name{
+            text-align: center;
+        }
+    }
+    .presenter-occupation{
+        text-align: center;
+    }
+}
+
+.h-header{
+    color: $primary;
+    text-decoration: underline;
+    width: 30px;
+}
+
+.bio{
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    // margin-left: 1em;
+    p{
+        margin:0;
+        // margin-left: 1.2em;
+        margin-left: 50px;
+        margin-right: 1em;
+        font-size: 1.1em;
+    }
+    .header{
+        color:$primary;
+        margin: 1em 0;
+        font-weight: 600;
+        font-size: 1.2rem;
+        text-decoration: underline;
+    }
+}
+
+.activity{
+    margin-top: 0.5em;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    // margin-left: 1em;
+    p{
+        margin:0;
+        // margin-left: 1.2em;
+        margin-left: 50px;
+        margin-right: 1em;
+        font-size: 1.1em;
+    }
+    .header{
+        color:$primary;
+        margin: 1em 0;
+        font-weight: 600;
+        font-size: 1.2rem;
+        text-decoration: underline;
+    }
+}
+
+.back-btn{
+    border: 2px solid $primary;
+    border-radius: $border-radius;
+}
+
+.btn-secondary{
+    background-color: $primary;
+    background-color: transparent;
+    // box-shadow: 0 0 0 0;
+    // -webkit-box-shadow:0 0 0 0;
+}
+
+.btn-presenter{
+    margin: 1em 0 2em;
+}
+
+.btn-secondary:hover{
+    background-color: $primary;
+    border: none;
+    //border: 2px solid $primary;
+}
+.btn-presenter:hover{
+    border: 2px solid $primary;
+}
+
+@media (max-width:576px){
+    .bio{
+        width: 100%;
+    }
+    .activity{
+        width: 100%;
+    }
+    // img{
+    //     width: 100%;
+    // }
+}

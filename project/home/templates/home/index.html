@@ -6,7 +6,23 @@
 {% block description %}{% trans 'home.description' %}{% endblock %}
 {% block content %}
 
-<!-- CODE HERE -->
+<article class="home-page">
+    <div class="section-container">
+        {% include "home/hero.html" %}
+    </div>
+    <div class="section-container">
+        {% include "home/summary.html" %}
+    </div>
+    <div class="section-container">
+        {% include "home/event_stats.html" %}
+    </div>
+    <div class="section-container">
+        {% include "home/location.html" %}
+    </div>
+    <div>
+        {% include "home/social.html" %}
+    </div>
+</article>
 
 {% endblock %}
 {% block scripts %}

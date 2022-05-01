@@ -32,10 +32,15 @@
             g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
         })();
     </script>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <script src="https://kit.fontawesome.com/f2c42211f6.js" crossorigin="anonymous"></script>
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 </head>
 
 <body>
-
+    <div class="preloader" id="js-preloader">
+        <div class="preloader__line"></div>
+    </div>
     <header id="header" class="dark">
         {% include "layouts/partials/nav.html" %}
     </header>
@@ -53,6 +58,8 @@
         {% block scripts %}
         {% endblock %}
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/CSSRulePlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>  
 </body>
 </html>
