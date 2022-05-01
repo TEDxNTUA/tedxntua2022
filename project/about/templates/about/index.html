@@ -21,7 +21,7 @@
         {% for member in members %}
         {% if member.team == team.team %}
         <div class="team_item">
-          <a href="">
+          <a href="{{ member.linkedin }}">
             <h2>{{ member.name }}</h2>
             <img src="{{ member.image.thumbnail.320x320 }}" class="team_item_img">
             <div class="team_item_blackbox">
