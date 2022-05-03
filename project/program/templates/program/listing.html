@@ -188,6 +188,8 @@
     </div>
 </section>
 {% endblock %}
+
 {% block scripts %}
+    {% render_bundle 'nav' 'js' %}
     {% render_bundle 'listing' 'js' %}
 {% endblock %}

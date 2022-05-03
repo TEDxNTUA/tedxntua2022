@@ -13,10 +13,12 @@ module.exports = {
   context: __dirname,
   entry: {
     main: fromRoot('assets/js/index.js'),
+    nav: fromRoot('assets/js/nav.js'),
     home: fromRoot('project/home/assets/js/home.js'),
     schedule: fromRoot('project/program/assets/js/schedule.js'),
     about: fromRoot('project/about/assets/js/about.js'),
     listing: fromRoot('project/program/assets/js/listing.js'),
+    
   },
   module: {
     rules: [{
@@ -26,8 +28,21 @@ module.exports = {
       use: [
         MiniCssExtractPlugin.loader,
         'css-loader',
-        'sass-loader'
+        'sass-loader', 
       ]
+    },
+    {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name]-[hash].[ext]',
+              outputPath: 'fonts/', 
+              esModule: false
+            }
+          }
+        ]
     }]
   },
   plugins: [],
