@@ -72,15 +72,6 @@ for (i = 0; i < givoDates.length; i++) {
 }
 ////////////
 
-// Hero - Model Viever 
-// const modelViewer = document.getElementById('model'); 
-// const orbitCycle = [
-//   '45deg 55deg 4m',
-//   '-60deg 110deg 2m',
-//   modelViewer.cameraOrbit
-// ];
-
-
 /// Social 
 let navOffsetY = 500
 

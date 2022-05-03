@@ -10,7 +10,7 @@ The project contains some `<VAR:NAME>` occurrences for information that changes 
 * `2022` (ex.2022)
 * `<VAR:REPO_URL>` (ex. https://github.com/TEDxNTUA/tedxntua2022)
 
-## Contributors for website
+## Contributors
 Listed alphabetically:
 1. Elina Syrri ([ElinaSyr](https://github.com/ElinaSyr))
 2. Evaggelos Pipis ([evpipis](https://github.com/evpipis))
