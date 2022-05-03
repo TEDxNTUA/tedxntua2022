@@ -60,7 +60,7 @@ const teamImges = document.getElementsByClassName("team_item_img");
 window.addEventListener("resize", function () {
   // fix picture sizes and black box sizes on resize
   resizePictures();
-  updateBlackBoxes();
+  // updateBlackBoxes();
 });
 
 /**
@@ -110,7 +110,7 @@ function updateBlackBoxes () {
 }
 
 resizePictures();
-updateBlackBoxes();
+// updateBlackBoxes();
 
 // --- Change Team Names ---
 if (!isMobile) {

@@ -126,6 +126,12 @@ body {
   border-radius: 20px;
 }
 
+.team_item_blackbox h3 {
+  background-color: #4D3EAD;
+  padding: 5px;
+  border-radius: 20px 0px 20px 0px;
+}
+
 .team_item_linkedin_hover {
   position: absolute;
 
@@ -159,18 +165,18 @@ body {
   right: 0px;
 
   opacity: 0;
+  transition: 0.5s;
 
   color: white;
 }
 
-.team_item:hover .team_item_linkedin_hover{
+.team_item:hover .team_item_linkedin_hover {
   opacity: 1;
   transition: 0.5s;
 }
 
 .team_item:hover h3 {
   opacity: 1;
-  transition: 0.5s;
 }
 
 .team_item_img {
