@@ -33,9 +33,16 @@ $('.pop-up-button').on("click touch", function(){
     $(m).removeClass('hidden');
 });
 
-
+$('.stopscroll').on("click touch", function(){
+    if (!document.body.classList.contains("noscroll")) {
+        document.body.classList.toggle("noscroll");
+    }
+});
 
 $('.modal-close').on("click touch", function(){
     let m1 = this.parentElement.parentElement;
     $(m1).addClass('hidden');
+    if (document.body.classList.contains("noscroll")) {
+        document.body.classList.toggle("noscroll");
+    }
 });
