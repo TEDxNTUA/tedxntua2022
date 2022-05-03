@@ -46,11 +46,11 @@ body {
 
   position: absolute;
 
-  width: 90%;
+  width: 100%;
   height: 75%;
 
-  margin: 1em;
-  margin-left: 0.3em;
+  // margin: 1em;
+  // margin-left: 0.3em;
   padding-top: 5%;
   padding-left: 10%;
   padding-right: 10%;
@@ -262,7 +262,7 @@ body {
 .sidePage_mobile {
   position: relative;
 
-  left: 10%;
+  // left: 5%;
 
   height: 25%;
 }
@@ -270,9 +270,9 @@ body {
 .sidePage_mobile .glassText {
 
   padding: 5%;
+  width: 100%;
   text-align: justify;
 
-  overflow: scroll;
 }
 
 .sidePage_mobile .glassImage {
@@ -297,6 +297,8 @@ body {
   padding-right: 15%;
 
   text-align: left;
+  overflow: scroll;
+  
 }
 
 .glassText hr {

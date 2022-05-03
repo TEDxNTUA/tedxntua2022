@@ -59,7 +59,9 @@ const teamImges = document.getElementsByClassName("team_item_img");
 
 window.addEventListener("resize", function () {
   // fix picture sizes and black box sizes on resize
-  resizePictures();
+  if (!isMobile) {
+    resizePictures();
+  }
   // updateBlackBoxes();
 });
 
@@ -70,7 +72,12 @@ window.addEventListener("resize", function () {
  */
 function resizePictures () {
   for (teamContainer of teamContainerList) {
-    teamContainer.style.width = `${window.innerWidth}px`;
+    if (isMobile) {
+      teamContainer.style.width = "99%";
+    }
+    else {
+      teamContainer.style.width = `${window.innerWidth}px`;      
+    }
     teamContainer.style.height = `${window.innerHeight}px`;
   }
 }
