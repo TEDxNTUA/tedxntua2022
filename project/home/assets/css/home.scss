@@ -255,6 +255,7 @@ article.home-page {
             display: flex;
             align-items: center;
             flex-direction: column;
+            margin-top: 1em;
             .showcase_stats_item {
               position: relative;
               display: flex;
@@ -266,18 +267,18 @@ article.home-page {
                 align-self: flex-start;
                 margin: .05em .1em;
                 font-size: 6vw;
-                line-height: 0.45;
+                line-height: 0.3;
                 font-family: $font-family-sans-serif;
                 color: $primary;
                 transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1),
                 opacity .6s cubic-bezier(0.215, 0.61, 0.355, 1);  
               }
               .showcase_stats_label {
-                font-size: 16vw ;
+                font-size: 19vw ;
                 font-family: $font-tall-family; 
                 font-weight: 400;
                 color: #fffafa;
-                line-height: .94;
+                line-height: .75;
                 transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1),
                 opacity .6s cubic-bezier(0.215, 0.61, 0.355, 1);
               }

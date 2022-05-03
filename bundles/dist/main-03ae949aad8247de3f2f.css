@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:wght@800&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Jura:wght@300;400;500;600;700&display=swap);
-/*!
+@font-face{font-family:'The Hustle';src:local("The Hustle"),url(fonts/DeliriumNcv-Vm5e.ttf)}/*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
