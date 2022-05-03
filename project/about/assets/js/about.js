@@ -65,6 +65,7 @@ const teamItems = document.getElementsByClassName("team_item_linkedin_hover");
 const teamImges = document.getElementsByClassName("team_item_img");
 
 window.addEventListener("resize", function () {
+
   // fix picture sizes and black box sizes on resize
   if (!isMobile) {
     resizePictures();
@@ -252,14 +253,30 @@ if (!isMobile) {
     setTranslateCords(sidePageList[i], [window.innerWidth * (i+1), ((mult-1) * containerHeight), 0]);
   }
 
+  // add event listeners for scrolling to glass texts
+  const glassTexts = document.getElementsByClassName("glassText");
+  var mouseover = false;
+  for (glassText of glassTexts) {
+    // check for overflow
+    if (glassText.scrollHeight > glassText.clientHeight) {
+      // there is overflow
+      glassText.addEventListener("mouseover", function () {
+        mouseover = true;
+      });
+      glassText.addEventListener("mouseout", function () {
+        mouseover = false;
+      });
+    }
+  }
+
   const speed = 12; // sidescrolling speed
   var reachEnd = false;
   var prevDeltaY = 0;
   window.addEventListener("wheel", function (e) {
-
+      // check that the user is not scrolling inside a div
       // true when we reach the page's vertical end
       reachEnd = scrollY >= ((mult - 1) * containerHeight);
-      if (reachEnd) {
+      if (!mouseover && reachEnd) {
         // scroll back to default height
         scrollTo(scrollX, ((mult - 1) * containerHeight));
 

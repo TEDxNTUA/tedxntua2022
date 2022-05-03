@@ -20,12 +20,20 @@ body {
   overflow-x: hidden;
   display: flex;
   flex-flow: row;
+
+  text-align: center;
+}
+
+.meet_the_team {
+  margin: 1em;
+  // position: absolute;
+  // left: 35%;
 }
 
 .team_description {
   position: fixed;
   left: 25%;
-  top: 25%;
+  top: 40%;
 
   width: 45%;
   height: 50%;
@@ -236,31 +244,6 @@ body {
   left: 60%;
   top: 45%;
 }
-//
-// .team_item_mobile:nth-child(1) {
-//   left: 8%;
-//   top: 30%;
-// }
-//
-// .team_item_mobile:nth-child(2) {
-//   left: 50%;
-//   top: 30%;
-// }
-//
-// .team_item_mobile:nth-child(3) {
-//   left: 8%;
-//   top: 47%;
-// }
-//
-// .team_item_mobile:nth-child(4) {
-//   left: 50%;
-//   top: 47%;
-// }
-//
-// .team_item_mobile:nth-child(5) {
-//   left: 30%;
-//   top: 63%;
-// }
 
 .team_item_linkedin_icon {
   width: 30%;
@@ -278,13 +261,13 @@ body {
   bottom: 0;
   background-color: #2e65b8;
   opacity: 0.7;
-  // padding-right: 0.4em;
-  // padding-left: 0.4em;
-  // padding-bottom: 0.4em;
-  padding-top: 3%;
   border-radius: 10px 0px 20px 0px;
-  height: 25%;
-  width: 20%;
+  height: 2.3em;
+  width: 2.3em;
+  justify-content: center;
+  align-content: center;
+  padding-top: 0.3em;
+  overflow: hidden;
 }
 
 .linkedin_svg svg {
@@ -339,7 +322,7 @@ body {
 
   margin: 0px;
   padding: 5%;
-  padding-right: 15%;
+  // padding-right: 15%;
 
   text-align: left;
   overflow: scroll;
