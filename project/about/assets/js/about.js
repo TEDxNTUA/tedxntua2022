@@ -15,6 +15,13 @@ if (isMobile) {
   // change main page flex-flow to column
   document.getElementById("main").style.flexFlow = "column";
 
+  // change team_containers to mobile only
+  let teamContainerList = document.getElementsByClassName("team_container");
+  while (teamContainerList.length) {
+    teamContainerList[0].classList.add("team_container_mobile");
+    teamContainerList[0].classList.remove("team_container");
+  }
+
   // hide fixed team description element
   document.getElementById("teamDescription").style.display = "none";
 
@@ -53,7 +60,7 @@ window.onbeforeunload = function () {
 }
 
 // team containers and individual team items
-var teamContainerList = document.getElementsByClassName("team_container");
+var teamContainerList = (isMobile) ? document.getElementsByClassName("team_container_mobile") : document.getElementsByClassName("team_container");
 const teamItems = document.getElementsByClassName("team_item_linkedin_hover");
 const teamImges = document.getElementsByClassName("team_item_img");
 
@@ -76,7 +83,7 @@ function resizePictures () {
       teamContainer.style.width = "99%";
     }
     else {
-      teamContainer.style.width = `${window.innerWidth}px`;      
+      teamContainer.style.width = `${window.innerWidth}px`;
     }
     teamContainer.style.height = `${window.innerHeight}px`;
   }
