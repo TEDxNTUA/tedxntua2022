@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-26 20:26+0300\n"
+"POT-Creation-Date: 2022-05-03 18:48+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,15 +28,15 @@ msgstr ""
 "Who are we? What is TED? What is TEDx? Meet the institutions that are "
 "involved in this project and the story behind the team of TEDxNTUA."
 
-#: .\project\home\templates\home\hero.html:16
+#: .\project\home\templates\home\hero.html:21
 msgid "event.location"
 msgstr "Michael Cacoyannis Foundation"
 
-#: .\project\home\templates\home\hero.html:20
+#: .\project\home\templates\home\hero.html:25
 msgid "event.address"
 msgstr "Peireos "
 
-#: .\project\home\templates\home\hero.html:28
+#: .\project\home\templates\home\hero.html:33
 msgid "event.date"
 msgstr "21 May 2022"
 
@@ -88,17 +88,17 @@ msgstr ""
 msgid "Community Partners"
 msgstr ""
 
-#: .\project\partners\models.py:89 .\project\program\models.py:223
-#: .\project\program\models.py:347 .\project\team\models.py:101
+#: .\project\partners\models.py:91 .\project\program\models.py:224
+#: .\project\program\models.py:349 .\project\team\models.py:101
 msgid "Published"
 msgstr ""
 
-#: .\project\partners\templates\partners\index.html:3
+#: .\project\partners\templates\partners\index.html:5
 #: .\project\templates\layouts\partials\nav.html:61
 msgid "Partners"
 msgstr ""
 
-#: .\project\partners\templates\partners\index.html:4
+#: .\project\partners\templates\partners\index.html:6
 msgid "partners.description"
 msgstr ""
 "Our event would not have been possible without the support from "
@@ -167,7 +167,6 @@ msgstr ""
 #: .\project\program\templates\program\_event-tabs.html:5
 #: .\project\program\templates\program\listing.html:7
 #: .\project\program\templates\program\listing.html:29
-#: .\project\program\templates\program\listing_old.html:5
 #: .\project\templates\layouts\partials\nav.html:40
 msgid "Speakers"
 msgstr ""
@@ -175,7 +174,6 @@ msgstr ""
 #: .\project\program\templates\program\_event-tabs.html:8
 #: .\project\program\templates\program\listing.html:9
 #: .\project\program\templates\program\listing.html:32
-#: .\project\program\templates\program\listing_old.html:7
 #: .\project\templates\layouts\partials\nav.html:44
 msgid "Performers"
 msgstr ""
@@ -183,7 +181,6 @@ msgstr ""
 #: .\project\program\templates\program\_event-tabs.html:11
 #: .\project\program\templates\program\listing.html:11
 #: .\project\program\templates\program\listing.html:35
-#: .\project\program\templates\program\listing_old.html:9
 #: .\project\templates\layouts\partials\nav.html:48
 msgid "Side events"
 msgstr ""
@@ -195,29 +192,26 @@ msgid "Schedule"
 msgstr ""
 
 #: .\project\program\templates\program\listing.html:16
-#: .\project\program\templates\program\listing_old.html:14
 msgid "speakers.description"
 msgstr "Meet the speakers of the TEDxNTUA 2021 event!"
 
 #: .\project\program\templates\program\listing.html:18
-#: .\project\program\templates\program\listing_old.html:16
 msgid "performers.description"
 msgstr "Meet the performers of the TEDxNTUA 2021 event!"
 
 #: .\project\program\templates\program\listing.html:20
-#: .\project\program\templates\program\listing_old.html:18
 msgid "side_events.description"
 msgstr "Learn more about the side events of the TEDxNTUA 2021 event!"
 
-#: .\project\program\templates\program\listing_old.html:66
-msgid "more_soon"
-msgstr "More soon"
-
-#: .\project\program\templates\program\presenter.html:9
-#: .\project\program\templates\program\presenter.html:13
-#: .\project\program\templates\program\presenter.html:17
+#: .\project\program\templates\program\presenter.html:10
+#: .\project\program\templates\program\presenter.html:14
+#: .\project\program\templates\program\presenter.html:18
 msgid "back"
 msgstr "Back"
+
+#: .\project\program\templates\program\presenter.html:53
+msgid "presenter.bio"
+msgstr "Bio"
 
 #: .\project\program\templates\program\schedule.html:5
 msgid "schedule.title"
@@ -1480,6 +1474,9 @@ msgstr ""
 #: .\ted-env\Lib\site-packages\versatileimagefield\templates\versatileimagefield\forms\widgets\versatile_image_bootstrap.html:17
 msgid "Primary Point of Interest"
 msgstr ""
+
+#~ msgid "more_soon"
+#~ msgstr "More soon"
 
 #~ msgid "presenter.read_full"
 #~ msgstr "Read full description"

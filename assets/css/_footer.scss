@@ -184,9 +184,12 @@ $social-icon-size: 3em;
         align-items: center;
         width: 60%;
         height: 30%;
-        border: 1px white solid;
+        // border: 1px white solid;
         margin: 0.5em;
         border-radius: $border-radius;
+        @media(max-width: 1200px){
+            width: 90%;
+        }
         @media(max-width: 800px){
             width: 50%;
         }
