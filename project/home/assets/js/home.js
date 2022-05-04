@@ -73,13 +73,43 @@ for (i = 0; i < givoDates.length; i++) {
 ////////////
 
 // Hero - Model Viever 
-// const modelViewer = document.getElementById('model'); 
-// const orbitCycle = [
-//   '45deg 55deg 4m',
-//   '-60deg 110deg 2m',
-//   modelViewer.cameraOrbit
-// ];
+const modelViewer = document.getElementById('model');
+let media_large = window.matchMedia("(min-width: 1200px)");
+let media_change = window.matchMedia("(min-width: 770px)");
+if(navigator.userAgent.indexOf("Win") != -1 || navigator.userAgent.indexOf("Mac") != -1 || navigator.userAgent.indexOf("Linux") != -1){
+  modelViewer.removeAttribute('auto-rotate');
+  modelViewer.removeAttribute('camera-controls');
+}
+document.onmousemove = handleMouseMove;
+    function handleMouseMove(event) { 
+        var eventDoc, doc, body;
 
+        event = event || window.event; // IE-ism
+
+        // If pageX/Y aren't available and clientX/Y are,
+        // calculate pageX/Y - logic taken from jQuery.
+        // (This is to support old IE)
+        if (event.pageX == null && event.clientX != null) {
+            eventDoc = (event.target && event.target.ownerDocument) || document;
+            doc = eventDoc.documentElement;
+            body = eventDoc.body;
+
+            event.pageX = event.clientX +
+              (doc && doc.scrollLeft || body && body.scrollLeft || 0) -
+              (doc && doc.clientLeft || body && body.clientLeft || 0);
+            event.pageY = event.clientY +
+              (doc && doc.scrollTop  || body && body.scrollTop  || 0) -
+              (doc && doc.clientTop  || body && body.clientTop  || 0 );
+        }
+
+        // Use event.pageX / event.pageY here
+        x = - (event.pageX / window.innerWidth * 100 - 50)
+        if(media_change.matches){
+          x = - (event.pageX / window.innerWidth * 100 - 30)
+        }
+        y = - (event.pageY / window.innerHeight * 50) + 120
+        modelViewer.cameraOrbit = x +"deg " + y +"deg 0"
+    }
 
 /// Social 
 let navOffsetY = 500
