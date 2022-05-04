@@ -269,7 +269,7 @@ if (!isMobile) {
     }
   }
 
-  const speed = 12; // sidescrolling speed
+  const speed = 15; // sidescrolling speed
   var reachEnd = false;
   var prevDeltaY = 0;
   window.addEventListener("wheel", function (e) {
@@ -283,11 +283,10 @@ if (!isMobile) {
         // disable vertical scroll when sidescrolling starts
         disableScrolling();
 
-        // check if reached horizontal end
         // check for reaching horizontal end
         let [x, y, z] = getCords(sidePageList[sidePageList.length-1].style.transform);
         x = parseInt(x);
-        let reachHorizontalEnd = (x <= 0);
+        let reachHorizontalEnd = (x <= window.innerWidth/8);
         let direction = (e.deltaY - prevDeltaY < 0); // true for left
         if ((!direction && !reachHorizontalEnd) || direction) {
           // sidescrolling direction
