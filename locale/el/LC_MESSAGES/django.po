@@ -39,7 +39,7 @@ msgstr "Ίδρυμα Μιχάλης Κακογιάννης"
 msgid "event.address"
 msgstr "Πειραιώς "
 
-#: .\project\home\templates\home\hero.html:28
+#: .\project\home\templates\home\hero.html:33
 msgid "event.date"
 msgstr "21 Μαΐου 2022"
 
@@ -195,7 +195,6 @@ msgstr "Παρουσίαση"
 #: .\project\program\templates\program\_event-tabs.html:5
 #: .\project\program\templates\program\listing.html:7
 #: .\project\program\templates\program\listing.html:29
-#: .\project\program\templates\program\listing_old.html:5
 #: .\project\templates\layouts\partials\nav.html:40
 msgid "Speakers"
 msgstr "Ομιλητές"
@@ -203,7 +202,6 @@ msgstr "Ομιλητές"
 #: .\project\program\templates\program\_event-tabs.html:8
 #: .\project\program\templates\program\listing.html:9
 #: .\project\program\templates\program\listing.html:32
-#: .\project\program\templates\program\listing_old.html:7
 #: .\project\templates\layouts\partials\nav.html:44
 msgid "Performers"
 msgstr "Performers"
@@ -211,7 +209,6 @@ msgstr "Performers"
 #: .\project\program\templates\program\_event-tabs.html:11
 #: .\project\program\templates\program\listing.html:11
 #: .\project\program\templates\program\listing.html:35
-#: .\project\program\templates\program\listing_old.html:9
 #: .\project\templates\layouts\partials\nav.html:48
 msgid "Side events"
 msgstr "Side events"
@@ -223,29 +220,26 @@ msgid "Schedule"
 msgstr "Πρόγραμμα"
 
 #: .\project\program\templates\program\listing.html:16
-#: .\project\program\templates\program\listing_old.html:14
 msgid "speakers.description"
 msgstr "Γνώρισε τους ομιλητές του φετινού TEDxNTUA 2020!"
 
 #: .\project\program\templates\program\listing.html:18
-#: .\project\program\templates\program\listing_old.html:16
 msgid "performers.description"
 msgstr "Γνώρισε τους performers του φετινού TEDxNTUA 2020!"
 
 #: .\project\program\templates\program\listing.html:20
-#: .\project\program\templates\program\listing_old.html:18
 msgid "side_events.description"
 msgstr "Μάθε περισσότερα για τα side events του φετινού TEDxNTUA 2020!"
 
-#: .\project\program\templates\program\listing_old.html:66
-msgid "more_soon"
-msgstr "Σύντομα περισσότερα"
-
-#: .\project\program\templates\program\presenter.html:9
-#: .\project\program\templates\program\presenter.html:13
-#: .\project\program\templates\program\presenter.html:17
+#: .\project\program\templates\program\presenter.html:10
+#: .\project\program\templates\program\presenter.html:14
+#: .\project\program\templates\program\presenter.html:18
 msgid "back"
 msgstr "Πίσω"
+
+#: .\project\program\templates\program\presenter.html:53
+msgid "presenter.bio"
+msgstr "Βιογραφικό"
 
 #: .\project\program\templates\program\schedule.html:5
 msgid "schedule.title"
@@ -1517,6 +1511,9 @@ msgstr ""
 #: .\venv\Lib\site-packages\versatileimagefield\templates\versatileimagefield\forms\widgets\versatile_image_bootstrap.html:17
 msgid "Primary Point of Interest"
 msgstr ""
+
+#~ msgid "more_soon"
+#~ msgstr "Σύντομα περισσότερα"
 
 #~ msgid "presenter.read_full"
 #~ msgstr "Διάβασε την πλήρη περιγραφή"

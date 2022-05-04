@@ -9,7 +9,7 @@ from ..forms import ActivityModelForm
 
 class ActivityAdmin(PartiallyTranslatableAdmin):
     form = ActivityModelForm
-    list_display = ('__str__', 'activity_type', 'presenter_link', 'start_time', 'end_time', 'is_published')
+    list_display = ('__str__', 'activity_type', 'presenter_link', 'start_time', 'end_time', 'duration', 'is_published' )
     list_filter = ('activity_type', 'is_published')
     ordering = ['start']
 

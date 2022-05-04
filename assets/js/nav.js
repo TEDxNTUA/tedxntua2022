@@ -12,3 +12,4 @@ document.addEventListener('click', function(e) {
       document.getElementById("navbar-button").click();  
     }
 });
+

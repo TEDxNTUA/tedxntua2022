@@ -684,7 +684,7 @@ article.home-page {
 @media only screen and (max-width: 1000px) {
   article.home-page {
     section#hero {
-      padding-bottom: 16em;
+      // padding-bottom: 16em;
       .content {
         .infobox-top {
           span {
@@ -703,26 +703,26 @@ article.home-page {
   }
 }
 
-@media only screen and (max-width: 1150px) {
-  article.home-page {
-    section#hero {
-      .content {
-        .infobox-top {
-          span {
-            font-size: 1.5em;
-          }
-        }
-        .infobox-bottom {
-          // display: none;
-          .info-date {
-            text-align: right;
-            font-size: 1.6em;
-          }
-        }
-      }
-    }
-  }
-}
+// @media only screen and (max-width: 1150px) {
+//   article.home-page {
+//     section#hero {
+//       .content {
+//         .infobox-top {
+//           span {
+//             font-size: 1.5em;
+//           }
+//         }
+//         .infobox-bottom {
+//           // display: none;
+//           .info-date {
+//             text-align: right;
+//             font-size: 1.6em;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
 @media only screen and (max-width: 1240px) {
   article.home-page {
