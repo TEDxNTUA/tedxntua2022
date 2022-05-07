@@ -18,6 +18,7 @@ module.exports = {
     schedule: fromRoot('project/program/assets/js/schedule.js'),
     about: fromRoot('project/about/assets/js/about.js'),
     listing: fromRoot('project/program/assets/js/listing.js'),
+    partners: fromRoot('project/partners/assets/js/partners.js'), 
     
   },
   module: {
