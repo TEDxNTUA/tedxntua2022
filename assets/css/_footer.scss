@@ -187,15 +187,6 @@ $social-icon-size: 3em;
         // border: 1px white solid;
         margin: 0.5em;
         border-radius: $border-radius;
-        @media(max-width: 1200px){
-            width: 90%;
-        }
-        @media(max-width: 800px){
-            width: 50%;
-        }
-        @media(max-width: 500px){
-            width: 60%;
-        }
         a {
             position: absolute;
             font-weight: bold;
@@ -266,6 +257,9 @@ $social-icon-size: 3em;
                 width: 70%;
             }
         }
+        .action-container {
+            width: 60%;
+        }
     }
 }
 
@@ -295,5 +289,11 @@ $social-icon-size: 3em;
         .legal {
             flex-direction: column;
         }
+    }
+}
+
+@media only screen and (max-width: 1200px){
+    .action-container {
+        width: 90%;
     }
 }
