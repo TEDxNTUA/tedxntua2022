@@ -115,7 +115,9 @@ document.onmousemove = handleMouseMove;
           x = - (event.pageX / window.innerWidth * 100 - 30)
         }
         y = - (event.pageY / window.innerHeight * 50) + 120
-        modelViewer.cameraOrbit = x +"deg " + y +"deg 0"
+        if(!isMobile){
+          modelViewer.cameraOrbit = x +"deg " + y +"deg 0"
+        }
     }
 
 /// Social 
