@@ -65,11 +65,11 @@ const teamItems = document.getElementsByClassName("team_item_linkedin_hover");
 const teamImges = document.getElementsByClassName("team_item_img");
 
 window.addEventListener("resize", function () {
-
+  location.reload();
   // fix picture sizes and black box sizes on resize
-  if (!isMobile) {
-    resizePictures();
-  }
+  // if (!isMobile) {
+  //   resizePictures();
+  // }
   // updateBlackBoxes();
 });
 
@@ -256,6 +256,8 @@ if (!isMobile) {
   // add event listeners for scrolling to glass texts
   const glassTexts = document.getElementsByClassName("glassText");
   var mouseover = false;
+  var scrolledDown = false;
+  var scrolledUp = true;
   for (glassText of glassTexts) {
     // check for overflow
     if (glassText.scrollHeight > glassText.clientHeight) {
@@ -266,6 +268,21 @@ if (!isMobile) {
       glassText.addEventListener("mouseout", function () {
         mouseover = false;
       });
+      glassText.addEventListener("scroll", function (e) {
+        let elem = e.currentTarget;
+        if (elem.scrollHeight - elem.scrollTop <= parseIntFromPixel(window.getComputedStyle(elem).height)) {
+          scrolledDown = true;
+        }
+        else {
+          scrolledDown = false;
+        }
+        if (elem.scrollTop == 0) {
+          scrolledUp = true;
+        }
+        else {
+          scrolledUp = false;
+        }
+      });
     }
   }
 
@@ -273,10 +290,24 @@ if (!isMobile) {
   var reachEnd = false;
   var prevDeltaY = 0;
   window.addEventListener("wheel", function (e) {
+      for (glassText of glassTexts) {
+        let center = glassText.getBoundingClientRect().x + glassText.getBoundingClientRect().width/2;
+        let leftLimit = window.innerWidth/2 - window.innerWidth*0.2;
+        let rightLimit = window.innerWidth/2 + window.innerWidth*0.2;
+        console.log("center:" + center);
+        console.log("leftLimit:" + leftLimit);
+        console.log("rightLimit:" + rightLimit);
+        if ( center >= leftLimit && center <= rightLimit) {
+          glassText.style.overflowY = "scroll";
+        }
+        else {
+          glassText.style.overflowY = "hidden";
+        }
+      }
       // check that the user is not scrolling inside a div
       // true when we reach the page's vertical end
       reachEnd = scrollY >= ((mult - 1) * containerHeight);
-      if (!mouseover && reachEnd) {
+      if ((!mouseover || (mouseover && (scrolledDown || scrolledUp))) && reachEnd) {
         // scroll back to default height
         scrollTo(scrollX, ((mult - 1) * containerHeight));
 
@@ -473,6 +504,17 @@ function setTranslateCords (node, [x_cord, y_cord, z_cord] = [0, 0, 0]) {
  */
 function getCords (str) {
   return str.match(/([\d-]+)px/g);
+}
+
+/**
+ *
+ * Returns an integer of the pixels in the string.
+ *
+ * @param {string} str pixel number in string e.g. '410.12px'
+ *
+ */
+function parseIntFromPixel (str) {
+  return parseInt(str.match(/[\d.]*/)[0]);
 }
 
 }
