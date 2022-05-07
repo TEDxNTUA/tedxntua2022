@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-30 11:29+0300\n"
+"POT-Creation-Date: 2022-05-05 09:23+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,12 +29,12 @@ msgstr ""
 "εμπλέκονται σε αυτήν την προσπάθεια και την ιστορία που κρύβεται πίσω από "
 "την ομάδα του TEDxNTUA."
 
-#: .\project\home\templates\home\hero.html:16
+#: .\project\home\templates\home\hero.html:21
 #: .\project\home\templates\home\location.html:10
 msgid "event.location"
 msgstr "Ίδρυμα Μιχάλης Κακογιάννης"
 
-#: .\project\home\templates\home\hero.html:20
+#: .\project\home\templates\home\hero.html:25
 #: .\project\home\templates\home\location.html:14
 msgid "event.address"
 msgstr "Πειραιώς "
@@ -52,7 +52,7 @@ msgid "home.description"
 msgstr ""
 "Το TEDxNTUA 2022 διεξάγεται φέτος, το Σάββατο 21 Μαΐου, στο Ίδρυμα Μιχάλης "
 "Κακογιάννης. Το θέμα της εκδήλωσης είναι το PLAY. Ακολουθήστε μας σε αυτό το "
-"ταξίδι, γεμάτο από ομιλίες που θα σας κινήσουν την περιέργεια, παραστάσεις "
+"ταξίδι, γεμάτο από ομιλίες που θα σας καθηλώσουν, παραστάσεις "
 "που θα σας γοητεύσουν και πολυδιάστατα workshops."
 
 #: .\project\home\templates\home\location.html:6
@@ -71,9 +71,27 @@ msgstr ""
 "Πρόσβαση μεσω <strong>MMM</strong>:<br> <b>Λεωφορείο:</b> 049, 815, 914 "
 "(στάση Ταύρος)<br> <b>Ηλεκτρικός Σιδηρόδρομος:</b> Στ. Καλλιθέας (Γραμμή 1 - "
 "12’ περίπου με τα πόδια)<br> <b>Προαστιακός Σιδηρόδρομος:</b> Σταθμός Ταύρος "
-"(5' λεπτά με τα πόδια)<br>Χρησιμοποίησε το εργαλείο <a class=\"underline-parent\" href="
-"\"http://telematics.oasa.gr/\">Βέλτιστη "
-"Διαδρομή</a> της ιστοσελίδας του ΟΑΣΑ για αναλυτικές οδηγίες.</a>"
+"(5' λεπτά με τα πόδια)<br>Χρησιμοποίησε το εργαλείο <a class=\"underline-"
+"parent\" href=\"http://telematics.oasa.gr/\">Βέλτιστη Διαδρομή</a> της "
+"ιστοσελίδας του ΟΑΣΑ για αναλυτικές οδηγίες.</a>"
+
+#: .\project\home\templates\home\summary.html:27
+msgid "home.play"
+msgstr ""
+" <span> Από μικρό παιδί, το <b>Play</b> είναι μια λέξη που αντιπροσωπεύει "
+"μια σημαντική κινητήριο δύναμη μέσα σου, η οποία όσο μεγαλώνεις "
+"συνειδητοποιείς ότι συνεχίζει να σ' ακολουθεί καθ' όλη τη διάρκεια της ζωής "
+"σου. </span><span> Στο πρώτο άκουσμα του <b>PLAY</b> μεταφερόμαστε αυτόματα "
+"στην παιδική μας ηλικίακαι  αναπολούμε νοσταλγικά  εκείνες  τις στιγμές,  "
+"όμως  το <b>TEDx  NTUA  2022 </b>θέτει  ως  στόχο  –και  πρόκληση– να "
+"ανατρέψει  αυτή  την αυθόρμητη σκέψη.</span><span> <br> <br> Το παιχνίδι "
+"είναι παρόν σε κάθε πτυχή της ζωής, μας ακολουθεί «σιωπηλά», εξελίσσεται όσο "
+"εμείς μεγαλώνουμε και αλλάζουμε, παραμένοντας πάντα ένα μέσο διαφυγής, μια "
+"υπενθύμιση πως η καθημερινότητα δεν είναι τόσο αυστηρή και μονότονη, όσο "
+"φαντάζει κάποιες φορές.  Σε συνοδεύει σχεδόν σε όλους τους τομείς, από την "
+"καθημερινότητα μέχρι τα όνειρα, από την εργασία μέχρι τη διασκέδαση, από το "
+"stop στο play! <br> <br> Στις <b>21 Μαΐου</b> η ομάδα του TEDxNTUA 2022 θα "
+"δώσει την δική της ερμηνεία. Μην το (ξε)χάσεις!</span>"
 
 #: .\project\partners\admin.py:15
 #: .\project\program\admin\presenter_admin.py:18
@@ -112,17 +130,17 @@ msgstr "Χορηγοί Επικοινωνίας"
 msgid "Community Partners"
 msgstr "Συνεργάτες Κοινότητας"
 
-#: .\project\partners\models.py:91 .\project\program\models.py:223
-#: .\project\program\models.py:347 .\project\team\models.py:101
+#: .\project\partners\models.py:91 .\project\program\models.py:224
+#: .\project\program\models.py:349 .\project\team\models.py:101
 msgid "Published"
 msgstr "Δημόσιο"
 
-#: .\project\partners\templates\partners\index.html:4
+#: .\project\partners\templates\partners\index.html:5
 #: .\project\templates\layouts\partials\nav.html:61
 msgid "Partners"
 msgstr "Συνεργάτες"
 
-#: .\project\partners\templates\partners\index.html:5
+#: .\project\partners\templates\partners\index.html:6
 msgid "partners.description"
 msgstr ""
 "Η εκδήλωσή μας δεν θα ήταν εφικτή χωρίς τη στήριξη από οργανισμούς που "

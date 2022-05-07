@@ -8,11 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-<<<<<<< HEAD
-"POT-Creation-Date: 2022-04-30 11:28+0300\n"
-=======
-"POT-Creation-Date: 2022-05-03 18:48+0300\n"
->>>>>>> f1269d6b3e87dca56bbb4673e1724134c00c8721
+"POT-Creation-Date: 2022-05-05 09:23+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,12 +28,12 @@ msgstr ""
 "Who are we? What is TED? What is TEDx? Meet the institutions that are "
 "involved in this project and the story behind the team of TEDxNTUA."
 
-#: .\project\home\templates\home\hero.html:16
+#: .\project\home\templates\home\hero.html:21
 #: .\project\home\templates\home\location.html:10
 msgid "event.location"
 msgstr "Michael Cacoyannis Foundation"
 
-#: .\project\home\templates\home\hero.html:20
+#: .\project\home\templates\home\hero.html:25
 #: .\project\home\templates\home\location.html:14
 msgid "event.address"
 msgstr "Peireos "
@@ -74,6 +70,25 @@ msgstr ""
 "914 (Tauvros stop)<br> <b>Electric Railway: </b> Kallithea Station (Line 1 - "
 "12' by foot)<br> <b>Suburban Railway: </b> Tavros Station (5' by foot)<br> "
 "Use the Best Route tool from the OASA website to get a detailed itinerary."
+
+#: .\project\home\templates\home\summary.html:27
+msgid "home.play"
+msgstr ""
+"<span> From a young age, <b>Play</b> is a notion that represents a powerful, "
+"motivational force, coming from within ourselves. A force that as we grow "
+"older, accompanies us through the journey that we call life. It’s in our "
+"dreams, our jobs, our activities, basically every aspect of it and it’s "
+"giving us purpose and the necessary motivation to keep going!</span><span> "
+"At the first listen to <b>PLAY</b> we are automatically transported to our "
+"childhood and we nostalgically reminisce about those moments, but <b>TEDx  "
+"NTUA  2022 </b>sets it as a goal - and a challenge - to overturn this "
+"spontaneous thought. </span><span> <br> <br> <b>PLAY</b> is present in every "
+"aspect of life, it follows us \"silently\", it evolves as we grow older and "
+"change, always remaining a means of escape, a reminder that everyday life is "
+"not as strict and monotonous as it sometimes seems. It accompanies you in "
+"almost all areas, from everyday life to dreams, from work to entertainment, "
+"from stop to play! <br> <br> On <b>May 21</b>, the team of TEDxNTUA 2022 "
+"will give its own interpretation. Don’t miss it!</span>"
 
 #: .\project\partners\admin.py:15
 #: .\project\program\admin\presenter_admin.py:18
@@ -112,30 +127,17 @@ msgstr ""
 msgid "Community Partners"
 msgstr ""
 
-<<<<<<< HEAD
-#: .\project\partners\models.py:91 .\project\program\models.py:223
-#: .\project\program\models.py:347 .\project\team\models.py:101
-msgid "Published"
-msgstr ""
-
-#: .\project\partners\templates\partners\index.html:4
-=======
 #: .\project\partners\models.py:91 .\project\program\models.py:224
 #: .\project\program\models.py:349 .\project\team\models.py:101
 msgid "Published"
 msgstr ""
 
 #: .\project\partners\templates\partners\index.html:5
->>>>>>> f1269d6b3e87dca56bbb4673e1724134c00c8721
 #: .\project\templates\layouts\partials\nav.html:61
 msgid "Partners"
 msgstr ""
 
-<<<<<<< HEAD
-#: .\project\partners\templates\partners\index.html:5
-=======
 #: .\project\partners\templates\partners\index.html:6
->>>>>>> f1269d6b3e87dca56bbb4673e1724134c00c8721
 msgid "partners.description"
 msgstr ""
 "Our event would not have been possible without the support from "
