@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-05 09:23+0300\n"
+"POT-Creation-Date: 2022-05-07 13:40+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -71,7 +71,7 @@ msgstr ""
 "12' by foot)<br> <b>Suburban Railway: </b> Tavros Station (5' by foot)<br> "
 "Use the Best Route tool from the OASA website to get a detailed itinerary."
 
-#: .\project\home\templates\home\summary.html:27
+#: .\project\home\templates\home\summary.html:19
 msgid "home.play"
 msgstr ""
 "<span> From a young age, <b>Play</b> is a notion that represents a powerful, "
