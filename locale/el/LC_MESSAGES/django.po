@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-05 09:23+0300\n"
+"POT-Creation-Date: 2022-05-07 13:41+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,8 +52,8 @@ msgid "home.description"
 msgstr ""
 "Το TEDxNTUA 2022 διεξάγεται φέτος, το Σάββατο 21 Μαΐου, στο Ίδρυμα Μιχάλης "
 "Κακογιάννης. Το θέμα της εκδήλωσης είναι το PLAY. Ακολουθήστε μας σε αυτό το "
-"ταξίδι, γεμάτο από ομιλίες που θα σας καθηλώσουν, παραστάσεις "
-"που θα σας γοητεύσουν και πολυδιάστατα workshops."
+"ταξίδι, γεμάτο από ομιλίες που θα σας καθηλώσουν, παραστάσεις που θα σας "
+"γοητεύσουν και πολυδιάστατα workshops."
 
 #: .\project\home\templates\home\location.html:6
 msgid "location.header"
@@ -75,7 +75,7 @@ msgstr ""
 "parent\" href=\"http://telematics.oasa.gr/\">Βέλτιστη Διαδρομή</a> της "
 "ιστοσελίδας του ΟΑΣΑ για αναλυτικές οδηγίες.</a>"
 
-#: .\project\home\templates\home\summary.html:27
+#: .\project\home\templates\home\summary.html:19
 msgid "home.play"
 msgstr ""
 " <span> Από μικρό παιδί, το <b>Play</b> είναι μια λέξη που αντιπροσωπεύει "
