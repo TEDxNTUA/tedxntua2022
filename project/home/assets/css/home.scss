@@ -47,7 +47,7 @@ article.home-page {
         // align-items: center;
         // width: 25%;
         span {
-          text-align: center;
+          text-align: left;
           font-family: $font-family-sans-serif;
           font-weight: 500;
           font-size: 1.9em;
@@ -583,7 +583,7 @@ article.home-page {
   }
 }
 
-@media only screen and (max-width: 810px) {
+@media only screen and (max-width: 850px) {
   article.home-page {
     ////// HERO ////// 
     section#hero {
@@ -677,20 +677,32 @@ article.home-page {
     }
   }
 }
+@media only screen and (max-width: 1020px) {
+  article.home-page {
+    ///// HERO ///// 
+    section#hero {
+      .content {
+        .infobox-top {
+          .play_logo {
+            width: 75% !important; 
+          }
+          span {
+            font-size: 1.56em !important;
+          }
+        }
+        .infobox-bottom .info-date {
+          font-size: 1.65em !important;
+          text-align: left !important;
+        }
+      }
+    }
+  }
+}
 
 @media only screen and (max-width: 1240px) {
   article.home-page {
     ////// HERO ////// 
     section#hero {
-      .hero {
-        // height: 30em;
-        .head-model {
-          // width: 65%;
-        }
-        .backroung-img {
-          // width: 90%;
-        }
-      }
       .content {
         .infobox-top {
           span {
