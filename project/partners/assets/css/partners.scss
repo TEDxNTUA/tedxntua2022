@@ -234,20 +234,28 @@ article.sponsors {
             display: flex;
             flex-direction: row;
             height: 80%;
-        
-            .modal-logo {
+            
+            .logo-card {
                 position: relative;
-                top: 5%;
+                //top: 5%;
                 left: -10%;
-                height: 90%;
-                object-fit: contain;
+                //height: auto;
+                width: 30%;
+                padding: 1em;
+                background-color: white;
                 border-radius: $border-radius;
+
+                .modal-logo {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain; // keep dimensions ratio
+                }
             }
         
             .modal-text {
                 position: relative;
-                left: -5%;
-                //width: 60%;
+                left: -4%;
+                width: 70%;
                 overflow: scroll;
                 &::-webkit-scrollbar {
                     display: none;
@@ -303,11 +311,7 @@ article.sponsors {
                 flex-direction: column;
                 align-items: center;
 
-                .modal-logo {
-                    //position: relative;
-                    //top: 5%;
-                    //left: -10%;
-                    // height: auto;
+                .logo-card {
                     left: 0;
                     top: -6%;
                     width: 45%;
@@ -316,6 +320,7 @@ article.sponsors {
                 .modal-text {
                     top: -3%;
                     left: 0;
+                    width: 90%;
                 }
             }
         }
@@ -328,13 +333,14 @@ article.sponsors {
 
             .modal-info {
 
-                .modal-logo {
+                .logo-card {
                     // left: 0;
                     // top: -6%;
                     width: 50%;
                 }
 
                 .modal-text {
+                    width: 95%;
                     // top: -3%;
                     // left: 0;
                 }
