@@ -3,11 +3,12 @@
 html, body {
 	height: 100%;
 	width: 100%;
-
+	scroll-behavior: smooth;
 	scrollbar-width: thin;
 	scrollbar-color: $primary $body-bg;
 	&::-webkit-scrollbar {
 		background: $body-bg;
+		width: 10px;
 	}
 	&::-webkit-scrollbar-thumb {
 		background: rgba(236, 81, 157, 0.5);

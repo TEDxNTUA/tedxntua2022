@@ -1,15 +1,9 @@
-function menuToggle(){
-  let box = document.querySelector('.navbar-toggler');
-
-  box.addEventListener('click', (e)=>{
-    console.log('hi');
-    let stop_ = document.querySelector('.svg-header-stop');
-    let play = document.querySelector('.svg-header-play');
-    stop_.classList.toggle('hidden');
-    play.classList.toggle('hidden')
-  })
-}
-menuToggle();
+document.getElementById('navbar-button').addEventListener('click', function(e) {
+  const stop_ = document.getElementById('stop-button');
+  const play = document.getElementById('play-button');
+  stop_.classList.toggle('hidden');
+  play.classList.toggle('hidden');
+});
 
 document.addEventListener('click', function(e) {
     const container = document.getElementById('navbar-nav');
