@@ -1,12 +1,9 @@
-const box = document.querySelector('.navbar-toggler')
-const stop_ = document.querySelector('.svg-header-stop');
-const play = document.querySelector('.svg-header-play');
-
-box.addEventListener('click', (e)=>{
+document.getElementById('navbar-button').addEventListener('click', function(e) {
+  const stop_ = document.getElementById('stop-button');
+  const play = document.getElementById('play-button');
   stop_.classList.toggle('hidden');
-  play.classList.toggle('hidden')
-})
-
+  play.classList.toggle('hidden');
+});
 
 document.addEventListener('click', function(e) {
     const container = document.getElementById('navbar-nav');
@@ -15,3 +12,4 @@ document.addEventListener('click', function(e) {
       document.getElementById("navbar-button").click();  
     }
 });
+

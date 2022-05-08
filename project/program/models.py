@@ -202,6 +202,7 @@ class Activity(TranslatableModel):
 
     start = models.TimeField(null=True, blank=True)
     end = models.TimeField(null=True, blank=True)
+    duration = models.PositiveIntegerField(null=True, blank=True)
 
     translations = TranslatedFields(
         title=models.CharField(max_length=255),
@@ -253,6 +254,7 @@ class Activity(TranslatableModel):
         if (not self.start) or (not self.end):
             return None
         return f'{self.start_time}-{self.end_time}'
+
 
     def clean(self):
         '''Ensures that only one activity starts at a certain time and stage'''

@@ -6,6 +6,7 @@
 {% block description %}{% trans 'schedule.description' %}{% endblock %}
 {% block content %}
 <article class="event-page schedule-page">
+    <h1 class="page-title">{% trans program.schedule %}</h1>
     <div class="table table-main">
         <!-- row 1 -->
         {% for time,row in schedule.items %}
@@ -39,7 +40,9 @@
                         {% if event %}
                         <h3>{{event.presenter}}</h3>
                         <h6>{{ event.title}}</h6>
-                        <p>{{ event.subtitle}}</p>    
+                        <p>{{ event.subtitle}}</p>  
+                        <!-- <span>{{event.duration}}'</span>   -->
+                        <span>[{{event.start}}-{{event.end}}]</span>
                         <!-- <p>{{ event.description }}</p> -->
                         {% endif %}
                     {% endfor %}
@@ -56,7 +59,9 @@
                         {% if event %}
                         <h3>{{event.presenter}}</h3>
                         <h6>{{ event.title}}</h6>
-                        <p>{{ event.subtitle}}</p>    
+                        <p>{{ event.subtitle}}</p> 
+                        <!-- <span>{{event.duration}}'</span>   -->  
+                        <span>[{{event.start}}-{{event.end}}]</span>   
                         <!-- <p>{{ event.description }}</p> -->
                         {% endif %}
                     {% endfor %}
@@ -92,4 +97,5 @@
 {% endblock %}
 {% block scripts %}
     {% render_bundle 'schedule' 'js' %}
+    {% render_bundle 'nav' 'js' %}
 {% endblock %}
