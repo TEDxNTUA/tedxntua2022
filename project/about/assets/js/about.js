@@ -262,13 +262,13 @@ if (!isMobile) {
     // check for overflow
     if (glassText.scrollHeight > glassText.clientHeight) {
       // there is overflow
-      glassText.addEventListener("mouseover", function () {
+      glassText.onmouseover = function () {
         mouseover = true;
-      });
-      glassText.addEventListener("mouseout", function () {
+      };
+      glassText.onmouseout = function () {
         mouseover = false;
-      });
-      glassText.addEventListener("scroll", function (e) {
+      };
+      glassText.onscroll = function (e) {
         let elem = e.currentTarget;
         if (elem.scrollHeight - elem.scrollTop <= parseIntFromPixel(window.getComputedStyle(elem).height)) {
           scrolledDown = true;
@@ -282,7 +282,7 @@ if (!isMobile) {
         else {
           scrolledUp = false;
         }
-      });
+      };
     }
   }
 
