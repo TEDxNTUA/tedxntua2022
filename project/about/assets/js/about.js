@@ -162,10 +162,8 @@ function mapTeamNames (range, offset = 0) {
   return map;
 }
 
-// event listener to update team name
-window.addEventListener("scroll", function () {
-  updateTeamName(scrollY);
-});
+//update team name
+window.onscroll = updateTeamName;
 
 /**
  *
@@ -175,8 +173,8 @@ window.addEventListener("scroll", function () {
  * @param {number} cordY
  */
 var prev_index = 0; // global variable to keep track last team name
-function updateTeamName (cordY) {
-
+function updateTeamName () {
+  let cordY = scrollY;
   // find in what part y belongs
   var index; // index of word mapped to current Y coordinate
   if(cordY <= teamName_map[0]){
@@ -291,7 +289,9 @@ if (!isMobile) {
   const speed = 15; // sidescrolling speed
   var reachEnd = false;
   var prevDeltaY = 0;
-  window.addEventListener("wheel", function (e) {
+  window.onwheel = updatePage;
+
+  function updatePage (e) {
       for (glassText of glassTexts) {
         let center = glassText.getBoundingClientRect().x + glassText.getBoundingClientRect().width/2;
         let leftLimit = window.innerWidth/2 - window.innerWidth*0.2;
@@ -353,7 +353,7 @@ if (!isMobile) {
           enableScrolling();
         }
       }
-  });
+  };
 
 /**
  *
