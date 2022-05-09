@@ -95,14 +95,18 @@ article.home-page {
           justify-content: space-between;
           padding: 0.1em 0.5em;
           height: 6em;
-          .ticket-text span{
-            font-size: .75rem;
-            font-weight: 700;
-            line-height: 1;
+          .ticket-text {
+            text-align: left;
+            span {
+              font-size: .75rem;
+              font-weight: 700;
+              line-height: 1;
+            }
           }
           .ticket-arrow-text {
             display: flex;
             justify-content: space-between;
+            text-align: justify;
             // padding-left: 0.5em;
             span {
               padding-right: 3em;

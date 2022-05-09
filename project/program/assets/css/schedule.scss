@@ -1,3 +1,12 @@
+.schedule-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .page-title{
+        margin:0;
+        margin:1em;
+    }
+}
 .table {
     display: table;
     width:100%;
