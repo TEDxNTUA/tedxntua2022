@@ -25,8 +25,8 @@
                         {{ presenter.image.thumbnail.720x720.url }} 720w,
                         {{ presenter.image.thumbnail.1024x1024.url }} 1024w"
                 sizes="(max-width: 576px) 320px,
-                        (max-width: 992px) 400px,
-                        500px"
+                        (max-width: 992px) 320px,
+                        400px"
                 src="{{ presenter.image.thumbnail.320x320.url }}"
                 alt="" />
         {% else %}
@@ -48,21 +48,29 @@
             </div>
             <h5 class="presenter-occupation">{{presenter.occupation}}</h2>
         </div>
-        <div class="bio">
-            <!-- <div><p class="header">Bio</p></div> -->
-            <h5 class="h-header">{% trans 'presenter.bio' %}:</h5>
-            <div><p class="text">{{presenter.short_bio}}</p></div>
-        </div>
-        {% for activity in activities %}
-        <div class="activity">
-            <!-- <div><p class="header">{{activity.get_activity_type_display}}</p></div> -->
-            <h5 class="h-header">{{activity.get_activity_type_display}}:</h5>
-            <div>
-                <p>{{ activity.title }}</p>
-                <p>{{activity.description|safe}}</p>
+        <!-- <div class="presenter-info"> -->
+            <div class="bio">
+                <!-- <div><p class="header">Bio</p></div> -->
+                <h5 class="h-header">{% trans 'presenter.bio' %}:</h5>
+                <div><p class="text">{{presenter.short_bio}}</p></div>
             </div>
-        </div>
-        {% endfor %}
+            {% for activity in activities %}
+            <div class="activity">
+                <!-- <div><p class="header">{{activity.get_activity_type_display}}</p></div> -->
+                <div class="title-header">
+                {%if activity.get_activity_type_display == 'Side event'%}
+                <h5 class="h-header">{% trans 'presenter.side-events' %}: </h5>
+                {% else %}
+                <h5 class="h-header">{% trans 'presenter.performance' %}: </h5>
+                {% endif %}
+                <h5 class="title"> {{ activity.title }} </h5>
+                </div>
+                <div>
+                    <p>{{activity.description|safe}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        <!-- </div> -->
     </div>
 </article>
 {% endblock %}
