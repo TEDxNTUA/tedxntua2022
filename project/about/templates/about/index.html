@@ -18,7 +18,9 @@
     <div id="mainPage">
       <h1 class="meet_the_team">MEET THE TEAM</h1>
       {% for team in teams %}
+      {% if not is_mobile %}
       <div class="team_container">
+      {% endif %}
         {% if is_mobile %}
         <div class="team_description_mobile">
           <div class="team_name">
@@ -63,7 +65,9 @@
       </div>
       </div>
       {% endif %}
+      {% if not is_mobile %}
       </div>
+      {% endif %}
       {% endfor %}
     </div>
 

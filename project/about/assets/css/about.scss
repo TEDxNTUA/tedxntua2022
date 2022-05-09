@@ -49,8 +49,6 @@ body {
 
 .team_description_mobile {
 
-  position: absolute;
-
   width: 100%;
   height: auto;
 
@@ -65,6 +63,8 @@ body {
   z-index: -1;
 
   padding-bottom: 8em;
+
+  margin-bottom: 3em;
 }
 
 .team_items_container_mobile {
@@ -136,7 +136,7 @@ body {
   cursor: pointer;
 }
 
-.team_item_mobile { 
+.team_item_mobile {
   width: 44%;
   position: relative;
 
@@ -386,6 +386,12 @@ body {
   animation: come_in_down .125s;
 }
 
+@media only screen and (min-device-width: 820px) {
+  .team_item_mobile {
+    padding-bottom: 14em !important;
+  }
+}
+
 @media only screen and (max-width: 550px) {
   .linkedin_svg {
     height: 2em !important;
@@ -400,7 +406,7 @@ body {
     padding-left: 1%;
   }
   .team_description_mobile {
-    padding: 5% 1%; 
+    padding: 5% 1%;
   }
   .team_name {
     padding: 0 1.5em;
@@ -435,7 +441,7 @@ body {
     left: 47%;
     top: 32%;
   }
-} 
+}
 
 @keyframes go_out_up {
 
