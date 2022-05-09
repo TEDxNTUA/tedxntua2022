@@ -3,17 +3,12 @@
 <section id="hero">
     <div class="hero">
         <img class="backroung-img" src="{% static "images/model_backround.png" %}" width="500px" alt="">
-        <!-- <model-viewer class="head-model" src="{% static "images/HEADONLY.glb" %}" alt="3d model"
-            loading="eager" auto-rotate camera-controls disable-zoom 
-            reveal="auto" 
-            id="model">
-        </model-viewer> -->
+
         <model-viewer class="head-model" src="{% static "images/HEADONLY.glb" %}" alt="3d model"
         loading="eager"  camera-controls camera-orbit="0 deg 0 deg 0" auto-rotate auto-rotate-delay="500" disable-zoom 
         reveal="auto" 
         id="model">
     </model-viewer>
-    </img> 
     </div>
     <div class="content">
         <div class="infobox-top">
@@ -31,7 +26,7 @@
         </div>
         <div class="infobox-bottom">
             <span class="info-date">{% trans 'event.date' %}</span>       
-            <a class="ticket-link" href="" target="_blank">
+            <a class="ticket-link" href="https://www.eventora.com/el/Events/tedxntua-play" target="_blank">
                 <div class="ticketbox">  
                     <div class="ticket-text">
                         <span>Tickets</span>

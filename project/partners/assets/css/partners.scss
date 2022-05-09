@@ -1,3 +1,7 @@
+.noscroll {
+    overflow-y: hidden;
+}
+
 article.sponsors {
     padding: 0 $page-padding-x-lg;
 
@@ -47,7 +51,7 @@ article.sponsors {
             width: 10em; // default size
             height: 10em;
             border-radius: $border-radius;
-            padding: 0;
+            padding: 1em;
             background-color: white;
             
             .logo{
@@ -211,40 +215,54 @@ article.sponsors {
         padding: 20px;
         border: 1px solid #888;
         width: 80%;
-        height: 60%;
+        height: 70%;
         border-radius: $border-radius;
 
         .modal-close {
-            color: #aaaaaa; // change color and everythin else
-            font-size: 40px;
+            color: $primary; // change color and everythin else
+            font-size: 4em;
             font-weight: bold;
             width: max-content;
             margin-left: auto;
             cursor: pointer;
+            &:hover {
+                color: rgb(237, 142, 193);
+            }
         }
 
         .modal-info {
             display: flex;
             flex-direction: row;
             height: 80%;
-        
-            .modal-logo {
+            
+            .logo-card {
                 position: relative;
+                //top: 5%;
                 left: -10%;
-                height: 90%
+                //height: auto;
+                width: 30%;
+                padding: 1em;
+                background-color: white;
+                border-radius: $border-radius;
+
+                .modal-logo {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain; // keep dimensions ratio
+                }
             }
         
             .modal-text {
                 position: relative;
-                left: -5%;
-                //width: 60%;
+                left: -4%;
+                width: 70%;
                 overflow: scroll;
                 &::-webkit-scrollbar {
                     display: none;
                 }
         
                 h3 {
-        
+                    text-align: center;
                 }
         
                 p {
@@ -256,26 +274,86 @@ article.sponsors {
         .modal-buttons {
             display: inline-flex;
             justify-content: center;
-            width: 95%;
+            width: 100%;
             height: auto;
             flex-wrap: wrap;
-            margin-top: 1em;
             .modal-career-button {
                 border-radius:5px ;
                 background-color: #171717;
                 padding: 0.5em 1em;
                 margin: 0.5em;
                 text-align: center;
+                &:hover {
+                    background-color: rgba(39, 38, 38, 0.8);
+                }
             }
+
             .modal-website-button {
                 border-radius: 5px ;
-                background-color: #171717;
+                background-color: $primary; //#171717;
                 padding: 0.5em 1em;
                 margin: 0.5em;
                 text-align: center;
+                &:hover {
+                    background-color: rgb(237, 142, 193);
+                    color: black;
+                }
             }
-            .modal-career-button:hover, .modal-website-button:hover {
-                background-color: rgba(39, 38, 38, 0.8);
+        }
+    }
+
+    @media (max-width: 800px) {
+        .modal-content {
+            width: 85%;
+            height: 85%;
+
+            .modal-info {
+                flex-direction: column;
+                align-items: center;
+
+                .logo-card {
+                    left: 0;
+                    top: -6%;
+                    width: 45%;
+                }
+
+                .modal-text {
+                    top: -3%;
+                    left: 0;
+                    width: 90%;
+                }
+            }
+        }
+    }
+
+    @media (max-width: 450px) {
+        .modal-content {
+            width: 95%;
+            height: 95%;
+
+            .modal-info {
+
+                .logo-card {
+                    // left: 0;
+                    // top: -6%;
+                    width: 50%;
+                }
+
+                .modal-text {
+                    width: 95%;
+                    // top: -3%;
+                    // left: 0;
+                }
+            }
+
+            .modal-buttons {
+                .modal-career-button {
+                    margin: 0.3em;
+                }
+
+                .modal-website-button {
+                    margin: 0.3em;
+                }
             }
         }
     }

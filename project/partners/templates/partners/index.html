@@ -29,7 +29,7 @@
                         {% endif %}
 
                         {% if partner.description %}
-                        <a class="pop-up-button hidden" id="{{ partner.name }}">Learn More</a>
+                        <a class="pop-up-button hidden stopscroll" id="{{ partner.name }}">Learn More</a>
                         {% else %}
                         <a href="{{ partner.link }}" target="_blank" class="pop-up-button hidden">Website</a>
                         {% endif %}
@@ -42,21 +42,23 @@
                         <span class="modal-close">&times;</span>
                         
                         <div class="modal-info">
-                            {% if partner.image %}
-                            <img class="modal-logo lazy lazy-on-view" 
-                            src="{{ partner.image.thumbnail.320x320.url }}"
-                            data-srcset="{{ partner.image.thumbnail.320x320.url }} 320w,
-                                {{ partner.image.thumbnail.720x720.url }} 720w,
-                                {{ partner.image.thumbnail.1024x1024.url }} 1024w"
-                            sizes="(max-width: 576px) 320px,
-                                (max-width: 992px) 720px,
-                                1024px"
-                            alt="" />
-                            {% else %}
-                            <div class="logo no-image">
-                                <h3>{{ partner.name }}</h3>
+                            <div class="logo-card">
+                                {% if partner.image %}
+                                <img class="modal-logo lazy lazy-on-view" 
+                                src="{{ partner.image.thumbnail.320x320.url }}"
+                                data-srcset="{{ partner.image.thumbnail.320x320.url }} 320w,
+                                    {{ partner.image.thumbnail.720x720.url }} 720w,
+                                    {{ partner.image.thumbnail.1024x1024.url }} 1024w"
+                                sizes="(max-width: 576px) 320px,
+                                    (max-width: 992px) 720px,
+                                    1024px"
+                                alt="" />
+                                {% else %}
+                                <div class="modal-logo no-image">
+                                    <h3>{{ partner.name }}</h3>
+                                </div>
+                                {% endif %}
                             </div>
-                            {% endif %}
 
                             <div class="modal-text">
                                 <h3 class="name">{{ partner.name }}</h3>

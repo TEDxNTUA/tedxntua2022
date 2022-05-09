@@ -74,6 +74,7 @@ class TeamMember(TranslatableModel):
         name=models.CharField(max_length=255, default='')
     )
     email = models.EmailField()
+    linkedin = models.URLField(default=None, blank=True)
     team = models.CharField(max_length=16, choices=TEAM_CHOICES)
 
     image = VersatileImageField(
