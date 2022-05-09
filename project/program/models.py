@@ -202,7 +202,6 @@ class Activity(TranslatableModel):
 
     start = models.TimeField(null=True, blank=True)
     end = models.TimeField(null=True, blank=True)
-    duration = models.PositiveIntegerField(null=True, blank=True)
 
     translations = TranslatedFields(
         title=models.CharField(max_length=255),

@@ -52,9 +52,9 @@ class SideEventsView(View):
         # Side events view is special in that the listing shows the *activities*
         # instead of their presenters
         if settings.TEDXNTUA_SHOW_UNPUBLISHED:
-            items = Activity.side_events.select_related('presenter')
+            items = Presenter.side_presenters.all()
         else:
-            items = Activity.side_events.published().select_related('presenter')
+            items = Presenter.side_presenters.published()
         host = Presenter.hosts.all()
         #for footer
         previousEvents = PreviousEvent.objects.all()
