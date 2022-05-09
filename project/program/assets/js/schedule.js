@@ -1,3 +1,6 @@
+document.body.style.overflowY = "scroll";
+
+
 let media_sm = window.matchMedia("(max-width: 700px)");
 //div-right detail container add aling-items:flex-end
 let rtexts = document.getElementsByClassName("detail-text");

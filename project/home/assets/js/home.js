@@ -1,4 +1,6 @@
-// Header animation 
+document.body.style.overflowY = "scroll";
+
+// Header animation
 const spans = document.querySelectorAll('.header-text span');
 
 spans.forEach((span, idx) => {
@@ -8,14 +10,14 @@ spans.forEach((span, idx) => {
 	span.addEventListener('animationend', (e) => {
 		e.target.classList.remove('active');
 	});
-	
+
 	// Initial animation
 	setInterval(() => {
 		span.classList.add('active');
 	}, 5600 * (idx+1))
 });
 
-// Event Statistics 
+// Event Statistics
 const stats = document.getElementById('event_stats')
 function isInViewport(el) {
   const rect = el.getBoundingClientRect();
@@ -49,7 +51,7 @@ observer.observe(document.querySelector('.stat5'));
 observer.observe(document.querySelector('.stat6'));
 //////////////
 
-// Days Left 
+// Days Left
 let givoDates = document.querySelectorAll('[ending-time]');
 for (i = 0; i < givoDates.length; i++) {
   let time1 = new Date("2022/05/21")
@@ -61,7 +63,7 @@ for (i = 0; i < givoDates.length; i++) {
   if (daysLeft === 1) {
     givoDates[i].innerHTML ='<span>'  + daysLeft + '</span>' + '<span> Day <strong> Left </strong> </span>';
   }
-  
+
   if (daysLeft === 0) {
     givoDates[i].innerHTML = '<span> Ending Soon </span>';
   }
@@ -72,7 +74,7 @@ for (i = 0; i < givoDates.length; i++) {
 }
 ////////////
 
-// Hero - Model Viever 
+// Hero - Model Viever
 const modelViewer = document.getElementById('model');
 let media_large = window.matchMedia("(min-width: 1200px)");
 let media_change = window.matchMedia("(min-width: 770px)");
@@ -91,7 +93,7 @@ if(!isMobile) {
   modelViewer.removeAttribute('camera-controls');
 }
 document.onmousemove = handleMouseMove;
-    function handleMouseMove(event) { 
+    function handleMouseMove(event) {
         var eventDoc, doc, body;
 
         event = event || window.event; // IE-ism
@@ -123,7 +125,7 @@ document.onmousemove = handleMouseMove;
         }
     }
 
-/// Social 
+/// Social
 let navOffsetY = 500
 
 window.addEventListener('scroll', function() {
@@ -135,6 +137,6 @@ window.addEventListener('scroll', function() {
         }
         else {
             socialContainer.classList.remove('scrolled');
-        }  
+        }
     }
 });
