@@ -135,28 +135,6 @@ article.home-page {
         position: absolute;
       }
     }
-    // .infobox {
-    //   height: 6em;
-    //   display: flex;
-    //   width: 25%;
-    //   align-items: center;
-    //   justify-content: center;
-    //   padding: 0 2em;
-      // .days-left {
-      //   .days-left-text {
-      //     font-size: 2em;
-      //     font-family: $font-family-sans-serif;
-      //     font-weight: 400;
-      //     display: flex;
-      //     flex-direction: column;
-      //     align-items: center;
-      //     strong {
-      //       color: $primary;
-      //       font-weight: 500;
-      //     }
-      //   }
-      // }
-    //}
   }
     
     ////// SUMMARY //////   
@@ -172,6 +150,7 @@ article.home-page {
         align-items: flex-start;
         width: 60%;
         padding-right: 5vw;
+        z-index: 1;
         .summary-text {
           display: flex;
           // flex-  : column;
@@ -192,6 +171,9 @@ article.home-page {
             text-align: justify;
             span {
               line-height: 1em;
+            }
+            b {
+              color: $primary;
             }
           }
         }
@@ -255,6 +237,7 @@ article.home-page {
             display: flex;
             align-items: center;
             flex-direction: column;
+            margin-top: 1em;
             .showcase_stats_item {
               position: relative;
               display: flex;
@@ -266,18 +249,18 @@ article.home-page {
                 align-self: flex-start;
                 margin: .05em .1em;
                 font-size: 6vw;
-                line-height: 0.45;
+                line-height: 0.3;
                 font-family: $font-family-sans-serif;
                 color: $primary;
                 transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1),
                 opacity .6s cubic-bezier(0.215, 0.61, 0.355, 1);  
               }
               .showcase_stats_label {
-                font-size: 16vw ;
+                font-size: 19vw ;
                 font-family: $font-tall-family; 
                 font-weight: 400;
                 color: #fffafa;
-                line-height: .94;
+                line-height: .75;
                 transition: transform .6s cubic-bezier(0.215, 0.61, 0.355, 1),
                 opacity .6s cubic-bezier(0.215, 0.61, 0.355, 1);
               }
@@ -540,7 +523,7 @@ article.home-page {
     ////// SUMMARY ////// 
     section#summary {
       .summary-container {
-        align-items: end;
+        // align-items: end;
         .image-container-summary {
           opacity: .3;
           width: 100%;
@@ -548,7 +531,6 @@ article.home-page {
           justify-content: center;
           img {
             margin: 0;
-            width: inherit;
           }
         }
         .summary-text-container {
@@ -587,7 +569,10 @@ article.home-page {
       padding: 0 $page-padding-x;
       .venue {
         .venue-title {
-          font-size: 2.4em;
+          font-size: 2.4em !important;
+        }
+        .place-container .place-info .loc-info span {
+          font-size: 1.75em;
         }
       }
     }
@@ -598,14 +583,14 @@ article.home-page {
   }
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 810px) {
   article.home-page {
     ////// HERO ////// 
     section#hero {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-bottom:   0;
+      padding-bottom: 0;
       .hero {
         width: 100%;
         .head-model {
@@ -621,7 +606,7 @@ article.home-page {
         .infobox-top {
           align-items: center;
           .play_logo {
-            width: 72%;
+            width: 80%;
             right: 0;
           }
           span {
@@ -630,7 +615,7 @@ article.home-page {
         }
         .infobox-bottom {
           flex-direction: column-reverse;
-          padding-top: 1.5em;
+          padding-top: 2.5em;
           .ticket-link {
             padding-bottom: 1.5em;
           }
@@ -640,16 +625,18 @@ article.home-page {
     ////// SUMMARY ////// 
     section#summary {
       padding-top: 10em;
+      padding-bottom: 5em; 
       .summary-container {
         position: relative;
         justify-content: center;
         .image-container-summary {
+          display: flex;
+          justify-content: center;
           position: absolute;
           opacity: .3;
           width: 100%;
           img {
             margin: 0;
-            width: inherit;
           }
         }
         .summary-text-container {
@@ -670,31 +657,21 @@ article.home-page {
           line-height: 0.3 !important;
         }
         .showcase_stats_label {
-          font-size: 21vw !important;
+          font-size: 25vw !important;
         }
         .showcase_stats_figure {
           display: none;
         }
       }
     }
-  }
-}
-
-@media only screen and (max-width: 1150px) {
-  article.home-page {
-    section#hero {
-      .content {
-        .infobox-top {
-          span {
-            font-size: 1.5em;
-          }
+    ////// LOCATION //////
+    section#location {
+      .venue {
+        .venue-title {
+          font-size: 2.5em; 
         }
-        .infobox-bottom {
-          // display: none;
-          .info-date {
-            text-align: right;
-            font-size: 1.6em;
-          }
+        .place-container .place-info .loc-info span {
+          font-size: 1.6em; 
         }
       }
     }
@@ -731,8 +708,17 @@ article.home-page {
     }
     ////// SUMMARY //////  
     section#summary {
-      .summary-container .summary-text-container {
-        padding-left: 2.5em;
+      .summary-container {
+        .summary-text-container {
+          padding-left: 2.5em;
+        }
+        .image-container-summary {
+          display: flex;
+          align-content: center;
+          img {
+            height: 30em !important;
+          }
+        }
       }
     }
     ////// EVENT STATS ////// 
@@ -742,11 +728,11 @@ article.home-page {
         justify-content: center;
         .showcase_stats {
           padding-top: 2em;
-            &:nth-child(2) {
-              .showcase_stats_figure {
-                margin-right: 0;
-              }
+          &:nth-child(2) {
+            .showcase_stats_figure {
+              margin-right: 0;
             }
+          }
         }
       }
     }
