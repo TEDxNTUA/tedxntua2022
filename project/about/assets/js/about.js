@@ -10,7 +10,7 @@ console.log(isMobile);
 if (isMobile) {
 
   // show footer
-  document.getElementById("footer").style.display = "block";
+  // document.getElementById("footer").style.display = "block";
 
   // change main page flex-flow to column
   document.getElementById("main").style.flexFlow = "column";
@@ -64,14 +64,14 @@ var teamContainerList = (isMobile) ? document.getElementsByClassName("team_conta
 const teamItems = document.getElementsByClassName("team_item_linkedin_hover");
 const teamImges = document.getElementsByClassName("team_item_img");
 
-window.addEventListener("resize", function () {
-  location.reload();
-  // fix picture sizes and black box sizes on resize
-  // if (!isMobile) {
-  //   resizePictures();
-  // }
-  // updateBlackBoxes();
-});
+// window.addEventListener("resize", function () {
+//   location.reload();
+//   // fix picture sizes and black box sizes on resize
+//   // if (!isMobile) {
+//   //   resizePictures();
+//   // }
+//   // updateBlackBoxes();
+// });
 
 /**
  *
@@ -382,9 +382,9 @@ function enableScrolling () {
  * Hides the footer
  *
  */
-function hideFooter () {
-  document.getElementById("footer").style.display = "none";
-}
+// function hideFooter () {
+//   document.getElementById("footer").style.display = "none";
+// }
 
 // --- Footer Animations ---
 
@@ -404,38 +404,38 @@ function hideFooter () {
 //   }
 // });
 
-/**
- *
- * Animates footer
- *
- * @param {bool} reachHorizontalEnd True if the horizontal end has been reached
- */
-function animateFooter (reachHorizontalEnd) {
+// /**
+//  *
+//  * Animates footer
+//  *
+//  * @param {bool} reachHorizontalEnd True if the horizontal end has been reached
+//  */
+// function animateFooter (reachHorizontalEnd) {
 
-  // show footer once reaching the horizontal end if it
-  // is not already shown
-  let [footer_x, footer_y, footer_z] = ['0px', '0px', '0px'];
-  if (footer.style.transform) {
-    [footer_x, footer_y, footer_z] = getCords(footer.style.transform);
-  }
-  else {
-    setTranslateCords(footer, [0, 0, 0]);
-  }
-  let isHidden = (footer_x == '0px' && footer_y == '0px' && footer_z == '0px');
+//   // show footer once reaching the horizontal end if it
+//   // is not already shown
+//   let [footer_x, footer_y, footer_z] = ['0px', '0px', '0px'];
+//   if (footer.style.transform) {
+//     [footer_x, footer_y, footer_z] = getCords(footer.style.transform);
+//   }
+//   else {
+//     setTranslateCords(footer, [0, 0, 0]);
+//   }
+//   let isHidden = (footer_x == '0px' && footer_y == '0px' && footer_z == '0px');
 
-  if (isHidden && !isanimated && reachHorizontalEnd) {
-    // animate footer
-    isanimated = true;
-    footer.classList.toggle("footer_up");
-  }
-  // hide footer once leaving the horizontal end if it
-  // is already shown
-  else if (!isHidden && !isanimated && !reachHorizontalEnd) {
-    // animate footer
-    isanimated = true;
-    footer.classList.toggle("footer_down");
-  }
-}
+//   if (isHidden && !isanimated && reachHorizontalEnd) {
+//     // animate footer
+//     isanimated = true;
+//     footer.classList.toggle("footer_up");
+//   }
+//   // hide footer once leaving the horizontal end if it
+//   // is already shown
+//   else if (!isHidden && !isanimated && !reachHorizontalEnd) {
+//     // animate footer
+//     isanimated = true;
+//     footer.classList.toggle("footer_down");
+//   }
+// }
 
 /**
  *
