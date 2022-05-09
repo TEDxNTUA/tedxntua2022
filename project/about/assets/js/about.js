@@ -10,7 +10,7 @@ console.log(isMobile);
 if (isMobile) {
 
   // show footer
-  // document.getElementById("footer").style.display = "block";
+  document.getElementById("footer").style.display = "block";
 
   // change main page flex-flow to column
   document.getElementById("main").style.flexFlow = "column";
