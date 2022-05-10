@@ -204,9 +204,9 @@ class Activity(TranslatableModel):
     end = models.TimeField(null=True, blank=True)
 
     translations = TranslatedFields(
-        title=models.CharField(max_length=255),
-        subtitle=models.TextField(),
-        description=models.TextField(),
+        title=models.CharField(max_length=255, blank=True),
+        subtitle=models.TextField(blank=True),
+        description=models.TextField(blank=True),
     )
 
     image = VersatileImageField(
@@ -234,7 +234,10 @@ class Activity(TranslatableModel):
     side_events = ActivityTypeManager(SIDE_EVENT)
 
     def __str__(self):
-        return self.title
+        if(self.title):
+            return self.title
+        else:
+            return "notitle"
 
     @property
     def start_time(self):

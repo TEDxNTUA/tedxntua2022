@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-07 14:11+0300\n"
+"POT-Creation-Date: 2022-05-10 11:25+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,17 +28,17 @@ msgstr ""
 "Who are we? What is TED? What is TEDx? Meet the institutions that are "
 "involved in this project and the story behind the team of TEDxNTUA."
 
-#: .\project\home\templates\home\hero.html:21
+#: .\project\home\templates\home\hero.html:16
 #: .\project\home\templates\home\location.html:10
 msgid "event.location"
 msgstr "Michael Cacoyannis Foundation"
 
-#: .\project\home\templates\home\hero.html:25
+#: .\project\home\templates\home\hero.html:20
 #: .\project\home\templates\home\location.html:14
 msgid "event.address"
 msgstr "Peireos "
 
-#: .\project\home\templates\home\hero.html:33
+#: .\project\home\templates\home\hero.html:28
 msgid "event.date"
 msgstr "21 May 2022"
 
@@ -127,8 +127,8 @@ msgstr ""
 msgid "Community Partners"
 msgstr ""
 
-#: .\project\partners\models.py:91 .\project\program\models.py:224
-#: .\project\program\models.py:349 .\project\team\models.py:101
+#: .\project\partners\models.py:91 .\project\program\models.py:223
+#: .\project\program\models.py:348 .\project\team\models.py:102
 msgid "Published"
 msgstr ""
 
@@ -248,8 +248,20 @@ msgstr "Learn more about the side events of the TEDxNTUA 2021 event!"
 msgid "back"
 msgstr "Back"
 
-#: .\project\program\templates\program\presenter.html:53
+#: .\project\program\templates\program\presenter.html:54
 msgid "presenter.bio"
+msgstr "Bio"
+
+#: .\project\program\templates\program\presenter.html:62
+#, fuzzy
+#| msgid "presenter.bio"
+msgid "presenter.side-events"
+msgstr "Bio"
+
+#: .\project\program\templates\program\presenter.html:64
+#, fuzzy
+#| msgid "presenter.bio"
+msgid "presenter.performance"
 msgstr "Bio"
 
 #: .\project\program\templates\program\schedule.html:5
