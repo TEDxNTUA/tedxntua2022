@@ -1,11 +1,23 @@
 .presenter-page{
     text-align: left;
+    width: 100%;
 }
 .presenter{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    .image{
+        width: 320px;
+        height: 320px;
+        object-fit: contain;
+        // background-color: #eae9db;
+        border-radius: $border-radius;
+        @media (max-width: 500px){
+            width:250px;
+            height: 250px;
+        }
+    }   
 }
 
 .info{
@@ -120,10 +132,10 @@
 
 @media (max-width:576px){
     .bio{
-        width: 100%;
+        width: 90%;
     }
     .activity{
-        width: 100%;
+        width: 90%;
     }
     // img{
     //     width: 100%;
