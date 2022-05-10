@@ -122,7 +122,7 @@ $social-icon-size: 3em;
         list-style: none;
         padding: 0;
         border-radius: $border-radius;
-        // scrollbar-width: none;
+        scrollbar-width: none;
         .carousel-card {
             flex-shrink: 0;
             scroll-snap-align: center;

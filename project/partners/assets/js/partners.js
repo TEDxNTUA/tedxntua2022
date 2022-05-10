@@ -48,3 +48,13 @@ $('.modal-close').on("click touch", function(){
         document.body.classList.toggle("noscroll");
     }
 });
+
+// document.addEventListener('click', function(e) {
+//     const container = document.getElementById('modal-content-id');
+//     if (!container.contains(e.target)) {
+//       let m2 = container.parentElement; 
+//       var isvis = m2.classList.contains('hidden'); 
+//       document.getElementById("navbar-button").click();  
+//     }
+// });
+
