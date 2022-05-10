@@ -38,7 +38,7 @@
 
                 {% if partner.description %}
                 <div class="modal hidden" id="{{partner.name}}-modal">
-                    <div class="modal-content col-8">
+                    <div class="modal-content col-md-10 col-sm">
                         <span class="modal-close">&times;</span>
                         
                         <div class="modal-info">
@@ -71,7 +71,7 @@
                                     
                             <a href="{{ partner.link }}" target="_blank" class="modal-website-button">Website</a>
                             {% if partner.career_link %}
-                            <a href="{{ partner.career_link }}" target="blank" class="modal-career-button">Career site</a>
+                            <a href="{{ partner.career_link }}" target="blank" class="modal-website-button">Career site</a>
                             {% endif %}
                             
                         </div>

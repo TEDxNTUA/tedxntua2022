@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-07 14:12+0300\n"
+"POT-Creation-Date: 2022-05-10 11:25+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -29,17 +29,17 @@ msgstr ""
 "εμπλέκονται σε αυτήν την προσπάθεια και την ιστορία που κρύβεται πίσω από "
 "την ομάδα του TEDxNTUA."
 
-#: .\project\home\templates\home\hero.html:21
+#: .\project\home\templates\home\hero.html:16
 #: .\project\home\templates\home\location.html:10
 msgid "event.location"
 msgstr "Ίδρυμα Μιχάλης Κακογιάννης"
 
-#: .\project\home\templates\home\hero.html:25
+#: .\project\home\templates\home\hero.html:20
 #: .\project\home\templates\home\location.html:14
 msgid "event.address"
 msgstr "Πειραιώς "
 
-#: .\project\home\templates\home\hero.html:33
+#: .\project\home\templates\home\hero.html:28
 msgid "event.date"
 msgstr "21 Μαΐου 2022"
 
@@ -62,7 +62,7 @@ msgstr "Η τοποθεσία"
 #: .\project\home\templates\home\location.html:19
 #: .\project\home\templates\home\location.html:32
 msgid "location.howto"
-msgstr "Πως να έρθεις εδώ"
+msgstr "Πώς να έρθεις εδώ"
 
 #: .\project\home\templates\home\location.html:21
 #: .\project\home\templates\home\location.html:34
@@ -82,7 +82,7 @@ msgstr ""
 "μια σημαντική κινητήριο δύναμη μέσα σου, η οποία όσο μεγαλώνεις "
 "συνειδητοποιείς ότι συνεχίζει να σ' ακολουθεί καθ' όλη τη διάρκεια της ζωής "
 "σου. </span><span> Στο πρώτο άκουσμα του <b>PLAY</b> μεταφερόμαστε αυτόματα "
-"στην παιδική μας ηλικίακαι  αναπολούμε νοσταλγικά  εκείνες  τις στιγμές,  "
+"στην παιδική μας ηλικία και  αναπολούμε νοσταλγικά  εκείνες  τις στιγμές,  "
 "όμως  το <b>TEDx  NTUA  2022 </b>θέτει  ως  στόχο  –και  πρόκληση– να "
 "ανατρέψει  αυτή  την αυθόρμητη σκέψη.</span><span> <br> <br> Το παιχνίδι "
 "είναι παρόν σε κάθε πτυχή της ζωής, μας ακολουθεί «σιωπηλά», εξελίσσεται όσο "
@@ -130,8 +130,8 @@ msgstr "Χορηγοί Επικοινωνίας"
 msgid "Community Partners"
 msgstr "Συνεργάτες Κοινότητας"
 
-#: .\project\partners\models.py:91 .\project\program\models.py:224
-#: .\project\program\models.py:349 .\project\team\models.py:101
+#: .\project\partners\models.py:91 .\project\program\models.py:223
+#: .\project\program\models.py:348 .\project\team\models.py:102
 msgid "Published"
 msgstr "Δημόσιο"
 
@@ -255,8 +255,20 @@ msgstr "Μάθε περισσότερα για τα side events του φετι�
 msgid "back"
 msgstr "Πίσω"
 
-#: .\project\program\templates\program\presenter.html:53
+#: .\project\program\templates\program\presenter.html:54
 msgid "presenter.bio"
+msgstr "Βιογραφικό"
+
+#: .\project\program\templates\program\presenter.html:62
+#, fuzzy
+#| msgid "presenter.bio"
+msgid "presenter.side-events"
+msgstr "Βιογραφικό"
+
+#: .\project\program\templates\program\presenter.html:64
+#, fuzzy
+#| msgid "presenter.bio"
+msgid "presenter.performance"
 msgstr "Βιογραφικό"
 
 #: .\project\program\templates\program\schedule.html:5
@@ -284,7 +296,7 @@ msgstr "Προηγούμενες Εκδηλώσεις"
 
 #: .\project\templates\layouts\partials\footer.html:47
 msgid "footer.social"
-msgstr "Ακολούθησε μας"
+msgstr "Ακολούθησέ μας"
 
 #: .\project\templates\layouts\partials\footer.html:76
 msgid "footer.more"

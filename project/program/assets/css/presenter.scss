@@ -1,8 +1,8 @@
-.presenter-page{
+.presenter-page {
     text-align: left;
     width: 100%;
 }
-.presenter{
+.presenter {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -20,45 +20,45 @@
     }   
 }
 
-.info{
+.info {
     display: flex;
     flex-direction: column;
     align-items: center;
     color: white;
     margin-top: 1em;
     margin-bottom: 2em;
-    .info-name{
+    .info-nameV{
         display: flex;
         flex-direction: row;
-        .link_icon{
-            svg{
+        .link_icon {
+            svgV{
                 fill: $primary;
             }
         }
-        .presenter-name{
+        .presenter-name {
             text-align: center;
             
         }
     }
-    .presenter-occupation{
+    .presenter-occupation {
         text-align: center;
     }
 }
 
-.h-header{
+.h-header {
     color: $primary;
     text-decoration: underline;
     //width: 30px;
     white-space: nowrap;
 }
 
-.bio{
+.bio {
     width: 75%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-left: 1em;
-    p{
+    p {
         margin:0;
         // margin-left: 1.2em;
         //margin-left: 50px;
