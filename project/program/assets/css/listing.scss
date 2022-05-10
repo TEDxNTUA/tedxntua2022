@@ -145,8 +145,16 @@ section#listing {
             height: 100%;
             width: 100%;
             border-radius: $border-radius;
-            background-color: white;
+            //background-color: white;
+            // background-image: url("/static/images/background_speakers.png");
           }
+          .event-bck-img{
+            position: absolute;
+            z-index: -1;
+          }
+          // .event-img:hover{
+
+          // }
         }
         //button
         &__play{
@@ -170,7 +178,7 @@ section#listing {
           position: relative;
           font-size: 1rem;
           font-weight: 600;
-          text-transform: uppercase;
+          //text-transform: uppercase;
           border-bottom: 1px solid white;
           //white-space: nowrap;
           &:before {
@@ -184,7 +192,7 @@ section#listing {
             // }
           }
           @media(max-width:500px){
-            font-size:0.7rem;
+            font-size:1rem;
           }
         }
         &__text {

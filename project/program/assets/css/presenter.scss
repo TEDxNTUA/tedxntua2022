@@ -7,17 +7,32 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    .image{
-        width: 320px;
-        height: 320px;
-        object-fit: contain;
-        background-color: white;
-        border-radius: $border-radius;
-        @media (max-width: 500px){
-            width:250px;
-            height: 250px;
-        }
-    }   
+    .presenter-image-container{
+        display: flex;
+        .image{
+            width: 320px;
+            height: 320px;
+            object-fit: contain;
+            //background-color: white;
+            border-radius: $border-radius;
+            @media (max-width: 500px){
+                width:250px;
+                height: 250px;
+            }
+        } 
+        .bck-image{
+            position: absolute;
+            z-index: -1;
+            width: 320px;
+            height: 320px;
+            object-fit: contain;
+            border-radius: $border-radius;
+            @media (max-width: 500px){
+                width:250px;
+                height: 250px;
+            }
+        }  
+    }
 }
 
 .info {
@@ -27,11 +42,11 @@
     color: white;
     margin-top: 1em;
     margin-bottom: 2em;
-    .info-nameV{
+    .info-name{
         display: flex;
         flex-direction: row;
         .link_icon {
-            svgV{
+            svg{
                 fill: $primary;
             }
         }
