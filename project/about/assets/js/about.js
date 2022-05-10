@@ -132,7 +132,7 @@ resizePictures();
 // --- Change Team Names ---
 if (!isMobile) {
   const teamName = document.getElementById("teamName");
-  var teamNames = ["IT", "EXPERIENCE", "GRAPHICS", "FUNDRAISING", "MEDIA", "SPEAKERS", "VENUE-PRODUCTION"];
+  var teamNames = ["IT", "EXPERIENCE", "GRAPHICS", "FUNDRAISING", "MEDIA", "SPEAKERS", "VENUE-PRODUCTION", "THE TEDxNTUA"];
 
   // map each word to Y coordinates
   // each word is mapped to range equal to the team container's height
@@ -174,186 +174,188 @@ window.onscroll = updateTeamName;
  */
 var prev_index = 0; // global variable to keep track last team name
 function updateTeamName () {
-  let cordY = scrollY;
-  // find in what part y belongs
-  var index; // index of word mapped to current Y coordinate
-  if(cordY <= teamName_map[0]){
-    index = 0; // return first word in list if Ycord < 0
-  }
-  if(cordY >= teamName_map[teamName_map.length-1]) index = teamName_map.length-1;
-  else {
-    for( let i=1;i<teamName_map.length;i++ ) {
-      if(cordY <= teamName_map[i] && cordY > teamName_map[i-1]){
-        index = i;
-        break;
+  if (window.location.href.match(/about/)) {
+    let cordY = scrollY;
+    // find in what part y belongs
+    var index; // index of word mapped to current Y coordinate
+    if(cordY <= teamName_map[0]){
+      index = 0; // return first word in list if Ycord < 0
+    }
+    if(cordY >= teamName_map[teamName_map.length-1]) index = teamName_map.length-1;
+    else {
+      for( let i=1;i<teamName_map.length;i++ ) {
+        if(cordY <= teamName_map[i] && cordY > teamName_map[i-1]){
+          index = i;
+          break;
+        }
       }
     }
+
+
+    // add animation to text changing
+    // animate word transition
+    if(index != prev_index){
+      let a = teamName;
+
+      a.classList.remove("visible_up");
+      a.classList.remove("visible_down");
+
+      // move both words upwards when exiting/entering
+      var direction = "up";
+      // move both words downwards when exiting/entering
+      if (index < prev_index) direction = "down";
+
+      a.classList.add(`invisible_${direction}`);
+
+      // make new word appear once old one dissapears
+      a.onanimationend = () => {
+        a.classList.remove("invisible_up");
+        a.classList.remove("invisible_down");
+
+        a.classList.add(`visible_${direction}`);
+        // change innerText to new word
+        a.innerText = teamNames[index];
+        prev_index = index;
+      };
+    }
   }
-
-  // add animation to text changing
-  // animate word transition
-  if(index != prev_index){
-    let a = teamName;
-
-    a.classList.remove("visible_up");
-    a.classList.remove("visible_down");
-
-    // move both words upwards when exiting/entering
-    var direction = "up";
-    // move both words downwards when exiting/entering
-    if (index < prev_index) direction = "down";
-
-    a.classList.add(`invisible_${direction}`);
-
-    // make new word appear once old one dissapears
-    a.onanimationend = () => {
-      a.classList.remove("invisible_up");
-      a.classList.remove("invisible_down");
-
-      a.classList.add(`visible_${direction}`);
-      // change innerText to new word
-      a.innerText = teamNames[index];
-      prev_index = index;
-    };
-  }
-
 }
 
-if (!isMobile) {
-  // event listener to update team name map on resize
-  window.addEventListener("resize", function () {
-    // update container list
-    teamContainerList = document.getElementsByClassName("team_container");
-
-    // get new range
-    let containerHeight = parseInt(window.getComputedStyle(teamContainerList[0]).height.slice(0, -2));
-    let range = containerHeight;
-    let offset = -0.33 * containerHeight;
-    teamName_map = mapTeamNames(range, offset);
-  });
+// if (!isMobile) {
+//   // event listener to update team name map on resize
+//   window.addEventListener("resize", function () {
+//     // update container list
+//     teamContainerList = document.getElementsByClassName("team_container");
+//
+//     // get new range
+//     let containerHeight = parseInt(window.getComputedStyle(teamContainerList[0]).height.slice(0, -2));
+//     let range = containerHeight;
+//     let offset = -0.33 * containerHeight;
+//     teamName_map = mapTeamNames(range, offset);
+//   });
 
   // initialise with the first team name
-  teamName.innerHTML = teamNames[0];
-}
+//   teamName.innerHTML = teamNames[0];
+// }
 
 // --- Sidescrolling pages ---
-
-if (!isMobile) {
-  // main page
-  const mainPage = document.getElementById("mainPage");
-  const mainDefaultX = mainPage.getBoundingClientRect().x;
-  const teamNameDiv = document.getElementById("teamDescription");
-
-  let mult = teamContainerList.length; // number of containers
-  containerHeight = parseInt(window.getComputedStyle(teamContainerList[0]).height.slice(0, -2));
-
-  // side pages
-  const sidePageList = document.getElementsByClassName("sidePage");
-  for (let i=0; i < sidePageList.length; i++) {
-    setTranslateCords(sidePageList[i], [window.innerWidth * (i+1), ((mult-1) * containerHeight), 0]);
-  }
-
-  // add event listeners for scrolling to glass texts
-  const glassTexts = document.getElementsByClassName("glassText");
-  var mouseover = false;
-  var scrolledDown = false;
-  var scrolledUp = true;
-  for (glassText of glassTexts) {
-    // check for overflow
-    if (glassText.scrollHeight > glassText.clientHeight) {
-      // there is overflow
-      glassText.onmouseover = function () {
-        mouseover = true;
-      };
-      glassText.onmouseout = function () {
-        mouseover = false;
-      };
-      glassText.onscroll = function (e) {
-        let elem = e.currentTarget;
-        if (elem.scrollHeight - elem.scrollTop <= parseIntFromPixel(window.getComputedStyle(elem).height)) {
-          scrolledDown = true;
-        }
-        else {
-          scrolledDown = false;
-        }
-        if (elem.scrollTop == 0) {
-          scrolledUp = true;
-        }
-        else {
-          scrolledUp = false;
-        }
-      };
-    }
-  }
-
-  const speed = 15; // sidescrolling speed
-  var reachEnd = false;
-  var prevDeltaY = 0;
-  window.onwheel = updatePage;
-
-  function updatePage (e) {
-      for (glassText of glassTexts) {
-        let center = glassText.getBoundingClientRect().x + glassText.getBoundingClientRect().width/2;
-        let leftLimit = window.innerWidth/2 - window.innerWidth*0.2;
-        let rightLimit = window.innerWidth/2 + window.innerWidth*0.2;
-        console.log("center:" + center);
-        console.log("leftLimit:" + leftLimit);
-        console.log("rightLimit:" + rightLimit);
-        if ( center >= leftLimit && center <= rightLimit) {
-          glassText.style.overflowY = "scroll";
-        }
-        else {
-          glassText.style.overflowY = "hidden";
-        }
-      }
-      // check that the user is not scrolling inside a div
-      // true when we reach the page's vertical end
-      reachEnd = scrollY >= ((mult - 1) * containerHeight);
-      if ((!mouseover || (mouseover && (scrolledDown || scrolledUp))) && reachEnd) {
-        // scroll back to default height
-        scrollTo(scrollX, ((mult - 1) * containerHeight));
-
-        // disable vertical scroll when sidescrolling starts
-        disableScrolling();
-
-        // check for reaching horizontal end
-        let [x, y, z] = getCords(sidePageList[sidePageList.length-1].style.transform);
-        x = parseInt(x);
-        let reachHorizontalEnd = (x <= window.innerWidth/8);
-        let direction = (e.deltaY - prevDeltaY < 0); // true for left
-        if ((!direction && !reachHorizontalEnd) || direction) {
-          // sidescrolling direction
-          if (direction) {
-            sidescrollPage(-speed);
-          }
-          else {
-            sidescrollPage(speed);
-          }
-        }
-
-        // animate footer accordingly
-        // animateFooter(reachHorizontalEnd);
-
-        // stop sidescrolling
-        if (mainPage.getBoundingClientRect().x > mainDefaultX) {
-          reachEnd = false;
-          // move pages back to their default positions
-          setTranslateCords(mainPage);
-          setTranslateCords(teamNameDiv);
-          for (let i=0; i < sidePageList.length; i++) {
-            setTranslateCords(sidePageList[i], [window.innerWidth * (i+1), ((mult-1) * containerHeight), 0]);
-          }
-          // scroll a little bit upwards to escape reachEnd
-          window.scrollTo({
-            left: scrollX,
-            top: scrollY - 50,
-            behavior: "smooth"
-          });
-          // enable scrolling
-          enableScrolling();
-        }
-      }
-  };
+//
+// if (!isMobile) {
+//   // main page
+//   const mainPage = document.getElementById("mainPage");
+//   const mainDefaultX = mainPage.getBoundingClientRect().x;
+//   const teamNameDiv = document.getElementById("teamDescription");
+//
+//   let mult = teamContainerList.length; // number of containers
+//   containerHeight = parseInt(window.getComputedStyle(teamContainerList[0]).height.slice(0, -2));
+//
+//   // side pages
+//   const sidePageList = document.getElementsByClassName("sidePage");
+//   for (let i=0; i < sidePageList.length; i++) {
+//     setTranslateCords(sidePageList[i], [window.innerWidth * (i+1), ((mult-1) * containerHeight), 0]);
+//   }
+//
+//   // add event listeners for scrolling to glass texts
+//   const glassTexts = document.getElementsByClassName("glassText");
+//   var mouseover = false;
+//   var scrolledDown = false;
+//   var scrolledUp = true;
+//   for (glassText of glassTexts) {
+//     // check for overflow
+//     if (glassText.scrollHeight > glassText.clientHeight) {
+//       // there is overflow
+//       glassText.onmouseover = function () {
+//         mouseover = true;
+//       };
+//       glassText.onmouseout = function () {
+//         mouseover = false;
+//       };
+//       glassText.onscroll = function (e) {
+//         let elem = e.currentTarget;
+//         if (elem.scrollHeight - elem.scrollTop <= parseIntFromPixel(window.getComputedStyle(elem).height)) {
+//           scrolledDown = true;
+//         }
+//         else {
+//           scrolledDown = false;
+//         }
+//         if (elem.scrollTop == 0) {
+//           scrolledUp = true;
+//         }
+//         else {
+//           scrolledUp = false;
+//         }
+//       };
+//     }
+//   }
+//
+//   const speed = 15; // sidescrolling speed
+//   var reachEnd = false;
+//   var prevDeltaY = 0;
+//   window.onwheel = updatePage;
+//
+//   function updatePage (e) {
+//       for (glassText of glassTexts) {
+//         let center = glassText.getBoundingClientRect().x + glassText.getBoundingClientRect().width/2;
+//         let leftLimit = window.innerWidth/2 - window.innerWidth*0.2;
+//         let rightLimit = window.innerWidth/2 + window.innerWidth*0.2;
+//         console.log("center:" + center);
+//         console.log("leftLimit:" + leftLimit);
+//         console.log("rightLimit:" + rightLimit);
+//         if ( center >= leftLimit && center <= rightLimit) {
+//           glassText.style.overflowY = "scroll";
+//         }
+//         else {
+//           glassText.style.overflowY = "hidden";
+//         }
+//       }
+//       // check that the user is not scrolling inside a div
+//       // true when we reach the page's vertical end
+//       reachEnd = scrollY >= ((mult - 1) * containerHeight);
+//       if ((!mouseover || (mouseover && (scrolledDown || scrolledUp))) && reachEnd) {
+//         // scroll back to default height
+//         scrollTo(scrollX, ((mult - 1) * containerHeight));
+//
+//         // disable vertical scroll when sidescrolling starts
+//         disableScrolling();
+//
+//         // check for reaching horizontal end
+//         let [x, y, z] = getCords(sidePageList[sidePageList.length-1].style.transform);
+//         x = parseInt(x);
+//         let reachHorizontalEnd = (x <= window.innerWidth/8);
+//         let direction = (e.deltaY - prevDeltaY < 0); // true for left
+//         if ((!direction && !reachHorizontalEnd) || direction) {
+//           // sidescrolling direction
+//           if (direction) {
+//             sidescrollPage(-speed);
+//           }
+//           else {
+//             sidescrollPage(speed);
+//           }
+//         }
+//
+//         // animate footer accordingly
+//         // animateFooter(reachHorizontalEnd);
+//
+//         // stop sidescrolling
+//         if (mainPage.getBoundingClientRect().x > mainDefaultX) {
+//           reachEnd = false;
+//           // move pages back to their default positions
+//           setTranslateCords(mainPage);
+//           setTranslateCords(teamNameDiv);
+//           for (let i=0; i < sidePageList.length; i++) {
+//             setTranslateCords(sidePageList[i], [window.innerWidth * (i+1), ((mult-1) * containerHeight), 0]);
+//           }
+//           // scroll a little bit upwards to escape reachEnd
+//           window.scrollTo({
+//             left: scrollX,
+//             top: scrollY - 50,
+//             behavior: "smooth"
+//           });
+//           // enable scrolling
+//           enableScrolling();
+//         }
+//       }
+//   };
 
 /**
  *
@@ -519,4 +521,4 @@ function parseIntFromPixel (str) {
   return parseInt(str.match(/[\d.]*/)[0]);
 }
 
-}
+// }
