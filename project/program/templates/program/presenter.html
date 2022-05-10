@@ -5,7 +5,7 @@
 {% block description %}{{ presenter.name }}: {{ presenter.occupation }}{% endblock %}
 {% block content %}
 <article class="presenter-page">
-    {% if activities.0.get_activity_type_display == 'Talk' %}
+    {% if activities.0.get_activity_type_display == 'Talk' or activities.0.get_activity_type_display == 'Ομιλία' %}
         <a href="{% url 'speakers' %}" class="btn btn-secondary back-btn btn-presenter">
             &lt; {% trans 'back' %}
         </a>
@@ -15,6 +15,10 @@
         </a>
     {% elif activities.0.get_activity_type_display == 'Side event' %}
         <a href="{% url 'side-events' %}" class="btn btn-secondary back-btn btn-presenter">
+            &lt; {% trans 'back' %}
+        </a>
+    {%else%}
+        <a href="{% url 'speakers' %}" class="btn btn-secondary back-btn btn-presenter">
             &lt; {% trans 'back' %}
         </a>
     {% endif %}
@@ -59,10 +63,16 @@
                 <!-- <div><p class="header">{{activity.get_activity_type_display}}</p></div> -->
                 <div class="title-header">
                 {%if activity.get_activity_type_display == 'Side event'%}
-                <h5 class="h-header">{% trans 'presenter.side-events' %}: </h5>
-                {% else %}
-                <h5 class="h-header">{% trans 'presenter.performance' %}: </h5>
-                {% endif %}
+                <h5 class="h-header">Side Event: </h5>
+                {% elif activity.get_activity_type_display == 'Talk' or activity.get_activity_type_display == 'Ομιλία' %}
+                <h5 class="h-header">{% trans 'Talk' %}: </h5>
+                {% elif activity.get_activity_type_display == 'Performance'%}
+                <h5 class="h-header">{% trans 'Performance' %}: </h5>
+                {% elif activity.get_activity_type_display == 'Hosting' or activity.get_activity_type_display == 'Παρουσίαση' %}
+                <h5 class="h-header">{% trans 'Hosting' %}: </h5>
+                {%else%}
+                <h5 class="h-header">{% trans 'General' %}: </h5>
+                {%endif%}
                 <h5 class="title"> {{ activity.title }} </h5>
                 </div>
                 <div>
