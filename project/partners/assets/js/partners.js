@@ -1,5 +1,3 @@
-document.body.style.overflowY = "scroll";
-
 import $ from 'jquery'
 
 const leafletFrame = document.getElementById('leaflet-iframe')

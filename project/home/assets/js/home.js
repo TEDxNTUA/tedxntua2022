@@ -1,5 +1,3 @@
-document.body.style.overflowY = "scroll";
-
 // Header animation
 const spans = document.querySelectorAll('.header-text span');
 
