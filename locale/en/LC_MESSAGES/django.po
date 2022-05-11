@@ -95,10 +95,6 @@ msgstr ""
 msgid "Link"
 msgstr ""
 
-#: .\project\partners\models.py:66
-msgid "Knowledge Partners"
-msgstr ""
-
 #: .\project\partners\models.py:67
 msgid "Platinum Sponsor"
 msgstr ""
