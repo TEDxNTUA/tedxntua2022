@@ -330,6 +330,14 @@ article.sponsors {
         }
     }
 }
+@media only screen and (max-width: 430px) {
+    article.sponsors {
+        .partner-card {
+            width: 10em !important;
+            height: 10em !important;
+        }
+    }
+}
 @media only screen and (max-width: 550px) {
     article.sponsors {
         padding: 0;
@@ -348,8 +356,8 @@ article.sponsors {
             }
         }
         .partner-card {
-            width: 10em !important;
-            height: 10em !important;
+            width: 12em;
+            height: 12em;
         }
     }
     
