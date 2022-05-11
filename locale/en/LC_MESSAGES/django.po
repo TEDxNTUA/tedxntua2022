@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-10 11:25+0300\n"
+"POT-Creation-Date: 2022-05-11 15:44+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,40 +95,44 @@ msgstr ""
 msgid "Link"
 msgstr ""
 
-#: .\project\partners\models.py:65
-msgid "Platinum Sponsor"
-msgstr ""
-
 #: .\project\partners\models.py:66
-msgid "Grand Sponsors"
+msgid "Knowledge Partners"
 msgstr ""
 
 #: .\project\partners\models.py:67
-msgid "Grand Carrier Sponsors"
+msgid "Platinum Sponsor"
 msgstr ""
 
 #: .\project\partners\models.py:68
-msgid "Grand Hospitality Sponsors"
+msgid "Grand Sponsors"
 msgstr ""
 
 #: .\project\partners\models.py:69
-msgid "Sponsors"
+msgid "Grand Carrier Sponsors"
 msgstr ""
 
 #: .\project\partners\models.py:70
-msgid "Supporters"
+msgid "Grand Hospitality Sponsors"
 msgstr ""
 
 #: .\project\partners\models.py:71
-msgid "Media Partners"
+msgid "Sponsors"
 msgstr ""
 
 #: .\project\partners\models.py:72
+msgid "Supporters"
+msgstr ""
+
+#: .\project\partners\models.py:73
+msgid "Media Partners"
+msgstr ""
+
+#: .\project\partners\models.py:74
 msgid "Community Partners"
 msgstr ""
 
-#: .\project\partners\models.py:91 .\project\program\models.py:223
-#: .\project\program\models.py:348 .\project\team\models.py:102
+#: .\project\partners\models.py:93 .\project\program\models.py:223
+#: .\project\program\models.py:351 .\project\team\models.py:102
 msgid "Published"
 msgstr ""
 
@@ -184,14 +188,17 @@ msgid "SIDE EVENTS"
 msgstr ""
 
 #: .\project\program\models.py:193
+#: .\project\program\templates\program\presenter.html:78
 msgid "General"
 msgstr ""
 
 #: .\project\program\models.py:194
+#: .\project\program\templates\program\presenter.html:72
 msgid "Talk"
 msgstr ""
 
 #: .\project\program\models.py:195
+#: .\project\program\templates\program\presenter.html:74
 msgid "Performance"
 msgstr ""
 
@@ -200,6 +207,7 @@ msgid "Side event"
 msgstr ""
 
 #: .\project\program\models.py:197
+#: .\project\program\templates\program\presenter.html:76
 msgid "Hosting"
 msgstr ""
 
@@ -242,26 +250,15 @@ msgstr "Meet the performers of the TEDxNTUA 2021 event!"
 msgid "side_events.description"
 msgstr "Learn more about the side events of the TEDxNTUA 2021 event!"
 
-#: .\project\program\templates\program\presenter.html:10
-#: .\project\program\templates\program\presenter.html:14
-#: .\project\program\templates\program\presenter.html:18
+#: .\project\program\templates\program\presenter.html:11
+#: .\project\program\templates\program\presenter.html:15
+#: .\project\program\templates\program\presenter.html:19
+#: .\project\program\templates\program\presenter.html:23
 msgid "back"
 msgstr "Back"
 
-#: .\project\program\templates\program\presenter.html:54
-msgid "presenter.bio"
-msgstr "Bio"
-
 #: .\project\program\templates\program\presenter.html:62
-#, fuzzy
-#| msgid "presenter.bio"
-msgid "presenter.side-events"
-msgstr "Bio"
-
-#: .\project\program\templates\program\presenter.html:64
-#, fuzzy
-#| msgid "presenter.bio"
-msgid "presenter.performance"
+msgid "presenter.bio"
 msgstr "Bio"
 
 #: .\project\program\templates\program\schedule.html:5
@@ -1528,6 +1525,16 @@ msgstr ""
 #: .\venv\Lib\site-packages\versatileimagefield\templates\versatileimagefield\forms\widgets\versatile_image_bootstrap.html:17
 msgid "Primary Point of Interest"
 msgstr ""
+
+#, fuzzy
+#~| msgid "presenter.bio"
+#~ msgid "presenter.side-events"
+#~ msgstr "Bio"
+
+#, fuzzy
+#~| msgid "presenter.bio"
+#~ msgid "presenter.performance"
+#~ msgstr "Bio"
 
 #~ msgid "more_soon"
 #~ msgstr "More soon"

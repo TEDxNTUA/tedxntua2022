@@ -136,7 +136,7 @@ article.sponsors {
     /////////////////////////////////
     // special adjustments - check responsibility because we cancelled bootstrap classes
     /////////////////////////////////
-    .category-container#PS {
+    .category-container#PS, .category-container#KP  {
         .page-heading { // erase PS-heading above!
             margin-top: 1rem;
             font-size: 2.5rem;
@@ -234,16 +234,17 @@ article.sponsors {
             display: flex;
             flex-direction: row;
             height: 80%;
+            align-items: center;
             
             .logo-card {
                 position: relative;
                 //top: 5%;
                 left: -10%;
-                //height: auto;
                 width: 30%;
                 padding: 1em;
                 background-color: white;
                 border-radius: $border-radius;
+                height: fit-content;
 
                 .modal-logo {
                     width: 100%;
@@ -256,7 +257,8 @@ article.sponsors {
                 position: relative;
                 left: -4%;
                 width: 70%;
-                overflow: scroll;
+                height: inherit;
+                overflow: hidden;
                 &::-webkit-scrollbar {
                     display: none;
                 }
@@ -264,9 +266,11 @@ article.sponsors {
                 h3 {
                     text-align: center;
                 }
-        
-                p {
-                    
+                .partner-description {
+                    overflow: scroll;
+                    scrollbar-width: none;
+                    height: 90%;
+                    margin-top: 1em;
                 }
             }
         }
@@ -314,7 +318,7 @@ article.sponsors {
                 .logo-card {
                     left: 0;
                     top: -6%;
-                    width: 45%;
+                    width: 50%;
                 }
 
                 .modal-text {
@@ -325,47 +329,66 @@ article.sponsors {
             }
         }
     }
-
-    @media (max-width: 550px) {
-        // .page-heading {
-        //     font-size: 2.1rem;
-        // }
-        // article.sponsors {
-        //     padding: 0 0.5em;
-        //     .category-container#PS .partner-instance .partner-card {
-        //         width: 8em;
-        //         height: 8em;
-        //     }
-        // }
-        
-        .modal-content {
-            width: 95%;
-            height: auto;
-
-            .modal-info {
-
-                .logo-card {
-                    width: 100%;
-                    margin: 1em;
-                }
-
-                .modal-text {
-                    width: 95%;
-                    p {
-                        padding: 1em 0;
+}
+@media only screen and (max-width: 430px) {
+    article.sponsors {
+        .partner-card {
+            width: 10em !important;
+            height: 10em !important;
+        }
+    }
+}
+@media only screen and (max-width: 550px) {
+    article.sponsors {
+        padding: 0;
+        .page-heading {
+            font-size: 1.8rem !important;
+        }
+        .category-container {
+            .partners-collection {
+                .partner-instance {
+                    padding-left: 0;
+                    padding-right: 0;
+                    .pop-up-button {
+                        font-size: 1.2em !important;
                     }
                 }
             }
+        }
+        .partner-card {
+            width: 12em;
+            height: 12em;
+        }
+    }
+    
+    .modal-content {
+        width: 95%;
+        height: auto;
 
-            .modal-buttons {
-                justify-content: space-evenly;
-                .modal-career-button {
-                    margin: 0.3em;
-                }
+        .modal-info {
 
-                .modal-website-button {
-                    margin: 0.3em;
+            .logo-card {
+                width: 100%;
+                margin: 1em;
+                margin-top: 3em;
+            }
+
+            .modal-text {
+                width: 95%;
+                p {
+                    padding: 1em 0;
                 }
+            }
+        }
+
+        .modal-buttons {
+            justify-content: space-evenly;
+            .modal-career-button {
+                margin: 0.3em;
+            }
+
+            .modal-website-button {
+                margin: 0.3em;
             }
         }
     }
