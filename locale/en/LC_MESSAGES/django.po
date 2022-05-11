@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-11 15:44+0300\n"
+"POT-Creation-Date: 2022-05-11 17:37+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -137,9 +137,10 @@ msgid "Published"
 msgstr ""
 
 #: .\project\partners\templates\partners\index.html:5
-#: .\project\templates\layouts\partials\nav.html:61
-msgid "Partners"
-msgstr ""
+#, fuzzy
+#| msgid "speakers.title"
+msgid "partners.title"
+msgstr "Speakers"
 
 #: .\project\partners\templates\partners\index.html:6
 msgid "partners.description"
@@ -303,6 +304,10 @@ msgstr ""
 
 #: .\project\templates\layouts\partials\nav.html:28
 msgid "(Toggle dropdown)"
+msgstr ""
+
+#: .\project\templates\layouts\partials\nav.html:61
+msgid "Partners"
 msgstr ""
 
 #: .\project\templates\layouts\partials\nav.html:67
@@ -1747,6 +1752,3 @@ msgstr ""
 
 #~ msgid "side_events.title"
 #~ msgstr "Side events"
-
-#~ msgid "speakers.title"
-#~ msgstr "Speakers"
