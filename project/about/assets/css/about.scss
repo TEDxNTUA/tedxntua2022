@@ -11,7 +11,7 @@ body {
 #main {
   overflow-x: hidden;
   display: flex;
-  flex-flow: row;
+  flex-flow: column;
 
   text-align: center;
 }
@@ -49,8 +49,6 @@ body {
 
 .team_description_mobile {
 
-  position: absolute;
-
   width: 100%;
   height: auto;
 
@@ -65,6 +63,8 @@ body {
   z-index: -1;
 
   padding-bottom: 8em;
+
+  margin-bottom: 3em;
 }
 
 .team_items_container_mobile {
@@ -136,7 +136,7 @@ body {
   cursor: pointer;
 }
 
-.team_item_mobile { 
+.team_item_mobile {
   width: 44%;
   position: relative;
 
@@ -290,7 +290,6 @@ body {
 }
 
 .sidePage {
-  position: absolute;
   top: 25%;
 
   width: 100%;
@@ -329,18 +328,18 @@ body {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(236, 81, 157, 0.3);
 
-  width: 80%;
-  height: 70%;
+  // width: 80%;
+  height: auto;
 
   top: 25%;
 
-  margin: 0px;
+  margin: 1em;
   padding: 5%;
   // padding-right: 15%;
 
   text-align: left;
   // overflow-y: scroll;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 
 }
 
@@ -386,6 +385,12 @@ body {
   animation: come_in_down .125s;
 }
 
+@media only screen and (min-device-width: 820px) {
+  .team_item_mobile {
+    padding-bottom: 14em !important;
+  }
+}
+
 @media only screen and (max-width: 550px) {
   .linkedin_svg {
     height: 2em !important;
@@ -400,7 +405,7 @@ body {
     padding-left: 1%;
   }
   .team_description_mobile {
-    padding: 5% 1%; 
+    padding: 5% 1%;
   }
   .team_name {
     padding: 0 1.5em;
@@ -411,7 +416,7 @@ body {
   }
   .glassText {
     height: auto;
-    margin-bottom: 9em;
+    margin:  0 0 2em 0;
     overflow: auto;
   }
   .sidePage_mobile {
@@ -435,7 +440,7 @@ body {
     left: 47%;
     top: 32%;
   }
-} 
+}
 
 @keyframes go_out_up {
 
