@@ -396,9 +396,20 @@ body {
     height: 2em !important;
     width: 2.1em !important;
   }
+  .team_item {
+    width: 34% !important;
+  }
+  .team_description {
+    width: 61% !important;
+    left: 19% !important;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
+  .team_description {
+    width: 62% !important;
+    padding-top: 3% !important;
+  }
   .team_container_mobile {
     width: 98% !important;
     height: 1250px;
@@ -407,12 +418,31 @@ body {
   .team_description_mobile {
     padding: 5% 1%;
   }
+  .team_item {
+    width: 26%;
+  }
   .team_name {
     padding: 0 1.5em;
   }
+  .team_item:nth-child(2) {
+    left: 59% !important;
+    top: 6% !important;
+  }
+  .team_item:nth-child(3) {
+    left: 50% !important;
+    top: 24% !important;
+  }
+  .team_item:nth-child(4) {
+    left: 11% !important;
+    top: 34% !important;
+  }
+  .team_item:nth-child(5) {
+    left: 44% !important;
+    top: 44% !important;
+  }
   .team_item_mobile {
     width: 42%;
-    padding-bottom: 11em;
+    padding-bottom: 8em;
   }
   .glassText {
     height: auto;
