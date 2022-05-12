@@ -176,6 +176,46 @@ var prev_index = 0; // global variable to keep track last team name
 function updateTeamName () {
   if (window.location.href.match(/about/)) {
     let cordY = scrollY;
+    if(navigator.userAgent.indexOf("Firefox") != -1 ){
+      let first_text = document.getElementById('secondaryPage');
+      let height_first_text= first_text.getBoundingClientRect().y;
+      // console.log(cordY)
+      // console.log(first_text.getBoundingClientRect())
+      let foo = document.getElementById('footer');
+      let height_foo= foo.getBoundingClientRect().y;
+      // console.log( height_last_text)
+      console.log(foo.getBoundingClientRect())
+      
+      let tmd = document.getElementById("teamDescription")
+      // console.log('o')
+      // console.log(tmd.getBoundingClientRect())
+      if(tmd.getBoundingClientRect().y < height_first_text){
+        if(tmd.classList.contains("td-blur")){
+          tmd.classList.remove("td-blur")
+        }
+        if(tmd.classList.contains("td-hidden")){
+          tmd.classList.remove("td-hidden")
+        }
+      }
+      if(tmd.getBoundingClientRect().y >= height_first_text){
+        if(!tmd.classList.contains("td-blur")){
+          tmd.classList.add("td-blur")
+        }
+        if(tmd.classList.contains("td-hidden")){
+          tmd.classList.remove("td-hidden")
+        }
+      }
+      // if(height_foo <= (window.innerHeight - foo.getBoundingClientRect().height +1)){
+      //   if(tmd.classList.contains("td-blur")){
+      //     tmd.classList.remove("td-blur")
+      //   }
+      // }
+      if(height_foo <= (window.innerHeight - foo.getBoundingClientRect().height +1)){
+        if(!tmd.classList.contains("td-hidden")){
+          tmd.classList.add("td-hidden")
+        }
+      }
+    }
     // find in what part y belongs
     var index; // index of word mapped to current Y coordinate
     if(cordY <= teamName_map[0]){

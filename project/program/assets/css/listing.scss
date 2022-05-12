@@ -207,6 +207,7 @@ section#listing {
           transition: opacity 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
           font-weight: 100;
           span {
+            text-transform: uppercase;
             margin-left: 20px;
           }
         }

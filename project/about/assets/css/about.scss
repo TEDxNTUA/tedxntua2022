@@ -45,6 +45,20 @@ body {
   background-color: $primary;
 
   box-shadow: 3px 5px $secondary;
+
+  opacity: 1;
+  filter: blur(0px);
+  transition: 0.4s;
+  z-index: -1;
+}
+
+.td-blur{
+  opacity: 0.75;
+  filter: blur(3px);
+}
+
+.td-hidden{
+  opacity: 0;
 }
 
 .team_description_mobile {
@@ -562,3 +576,4 @@ body {
   }
 
 }
+
