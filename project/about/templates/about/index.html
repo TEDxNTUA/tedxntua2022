@@ -8,7 +8,7 @@
 {% block content %}
 
 <!-- CODE HERE -->
-  <!-- <script src="https://kit.fontawesome.com/9bebf666e9.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/9bebf666e9.js" crossorigin="anonymous"></script>
 
     <div id="teamDescription" class="team_description">
       <h2 id="teamName">GRAPHICS</h2>
@@ -18,7 +18,9 @@
     <div id="mainPage">
       <h1 class="meet_the_team">MEET THE TEAM</h1>
       {% for team in teams %}
+      {% if not is_mobile %}
       <div class="team_container">
+      {% endif %}
         {% if is_mobile %}
         <div class="team_description_mobile">
           <div class="team_name">
@@ -63,7 +65,9 @@
       </div>
       </div>
       {% endif %}
+      {% if not is_mobile %}
       </div>
+      {% endif %}
       {% endfor %}
     </div>
 
@@ -110,7 +114,7 @@
       </p>
     </div>
     <img src="{% static 'images/hand_play.png' %}" class="glassImage">
-  </div> -->
+  </div>
 
 {% endblock %}
 {% block scripts %}
