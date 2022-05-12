@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-11 15:44+0300\n"
+"POT-Creation-Date: 2022-05-12 20:11+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,6 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: .\project\about\templates\about\index.html:5
+#: .\project\about\templates\about\index.html:19
 msgid "about.title"
 msgstr "Σχετικά με μας"
 
@@ -28,6 +29,87 @@ msgstr ""
 "Ποιοι είμαστε; Τι είναι το TED; Τι είναι το TEDx; Γνωρίστε τους θεσμούς που "
 "εμπλέκονται σε αυτήν την προσπάθεια και την ιστορία που κρύβεται πίσω από "
 "την ομάδα του TEDxNTUA."
+
+#: .\project\about\templates\about\index.html:76
+msgid "about.tedxntua"
+msgstr ""
+"<h3>Τι είναι το TEDxNTUA;</h3><hr><p>Το TEDxNTUA είναι ένα συνέδριο που "
+"περιλαμβάνει <strong>ομιλίες</strong> γύρω από την <strong>εκλαϊκευμένη "
+"επιστήμη</strong>, την <strong>τέχνη</strong>, και τα <strong>κοινωνικά "
+"ζητήματα</strong>, <strong>ιστορίες που εμπνέουν</strong>, καθώς και "
+"<strong>πολυδιάστατα workshops</strong> και <strong>παραστάσεις</strong>. "
+"Τελεί υπό την αιγίδα του Εθνικού Μετσόβιου Πολυτεχνείου (<a href=\"https://"
+"www.ntua.gr\" target=\"_blank\">ΕΜΠ</a>) και απευθύνεται κυρίως στην "
+"κοινότητα του πανεπιστημίου αλλά και στις ευρύτερες φοιτητικές και τοπικές "
+"κοινότητες της Αθήνας.</p><p>Η οργανωτική μας ομάδα αποτελείται από "
+"<strong>εθελοντές φοιτητές</strong>, κυρίως του ΕΜΠ, που ασπάζονται τη "
+"φιλοσοφία της κοινότητας του TED για &quot;ιδέες που αξίζει να "
+"διαδοθούν&quot;. Η φιλοδοξία μας σαν ομάδα είναι να αναπτύξουμε την εκδήλωση "
+"σε μία πλατφόρμα όπου θα μπορούν να ακουστούν οι φωνές ατόμων που μπορούν να "
+"κάνουν τη διαφορά. Όπου τα μέλη της κοινότητας θα μπορούν να αλληλεπιδρούν "
+"μεταξύ τους και να πυροδοτούν γόνιμες συζητήσεις για τις κοινές μας "
+"ανησυχίες, όπως η <strong>μηχανική</strong> και ο ρόλος της στο χτίσιμο "
+"<strong>μίας καλύτερης και πιο συμπεριληπτικής κοινωνίας</strong>.</p><p>Από "
+"την αρχή του εγχειρήματος το <strong>2015</strong>, τα μέλη της φοιτητικής "
+"κοινότητας έχουν δείξει σταθερά τη στήριξή τους, συμμετέχοντας τόσο ως "
+"θεατές όσο και ως εθελοντές. Έτσι, έχουν βοηθήσει να καθιερωθεί το TEDxNTUA "
+"σαν θεσμός και μας έχουν εμποτίσει με αίσθημα ευθύνης απέναντί τους. Για να "
+"επιτευχθεί αυτό, αποτελεί σημαντικό στοιχείο η συνεχής προσπάθειά μας να "
+"παρέχουμε μία εκδήλωση <strong>ανοιχτή προς όλους</strong> χωρίς αντίτιμο, "
+"με τη βοήθεια των συνεργατών μας.</p><p>Το TEDxNTUA έχει <strong>μη "
+"κερδοσκοπικό</strong> χαρακτήρα και χρηματοδοτείται αποκλειστικά από "
+"χορηγούς, όπως εταιρίες, οργανισμούς ή ευεργέτες. Τελεί υπό την επίβλεψη "
+"καθηγητών του ΕΜΠ και ανήκει θεσμικά στο Ερευνητικό Πανεπιστημιακό "
+"Ινστιτούτο Συστημάτων Επικοινωνιών και Υπολογιστών (<a href=\"https://www."
+"iccs.gr\" target=\"_blank\">ΕΠΙΣΕΥ</a>) του ΕΜΠ.</p>"
+
+#: .\project\about\templates\about\index.html:83
+msgid "about.ted"
+msgstr ""
+"<h3>Τι είναι το TED;</h3><hr><p>Το TED είναι ένας μη κερδοσκοπικός "
+"οργανισμός αφοσιωμένος σε <strong>Ιδέες που Αξίζει να Διαδοθούν</strong>. "
+"Ξεκινώντας ως τετραήμερο συνέδριο στην Καλιφόρνια 30 χρόνια πριν, το TED "
+"έχει μεγαλώσει για να υποστηρίξει την αποστολή του με πολλαπλές "
+"πρωτοβουλίες. Τα δύο ετήσια συνέδρια TED προσκαλούν τους καλύτερους "
+"στοχαστές του κόσμου για να μιλήσουν 18 ή λιγότερα λεπτά. Πολλές από αυτές "
+"τις ομιλίες προσφέρονται δωρεάν στο κοινό, στο <a href=\"https://www.ted.com"
+"\" target=\"_blank\">TED.com</a>.</p><p>Μεταξύ των ατόμων που έχουν υπάρξει "
+"<strong>ομιλητές του TED</strong> είναι και ο Bill Gates, η Jane Goodall, η "
+"Elizabeth Gilbert, ο Sir Richard Branson, η Nandan Nilekani, ο Philippe "
+"Starck, η Ngozi Okonjo-Iweala, ο Sal Khan και ο Daniel Kahneman.</p><p>Το "
+"ετήσιο συνέδριο TED πραγματοποιείται κάθε άνοιξη στο Βανκούβερ, στη "
+"Βρετανική Κολομβία. Οι πρωτοβουλίες του TED σε θέματα κοινωνικής δικτύωσης, "
+"περιλαμβάνουν το <a href=\"https://www.ted.com\" target=\"_blank\">TED.com</"
+"a>, όπου οι νέες ομιλίες δημοσιεύονται καθημερινά, υποτιτλίζονται και "
+"εφοδιάζονται με διαδραστικά transcripts από το <a href=\"https://www.ted.com/"
+"about/programs-initiatives/ted-translators\" target=\"_blank\">Open "
+"Translation Project</a>, και την εκπαιδευτική πρωτοβουλία <a href=\"https://"
+"www.ted.com/about/programs-initiatives/ted-ed\" target=\"_blank\">TED-Ed</"
+"a>. Το TED έχει καθιερώσει το ετήσιο <a href=\"https://www.ted.com/about/"
+"programs-initiatives/ted-prize\" target=\"_blank\">TED Prize</a>, όπου "
+"εξέχοντες υποψήφιοι με μια ευχή να αλλάξουν τον κόσμο βοηθούν στη μετατροπή "
+"των ευχών τους σε πράξεις, το <a href=\"https://www.ted.com/about/programs-"
+"initiatives/tedx-program\" target=\"_blank\">TEDx</a>, το οποίο υποστηρίζει "
+"πρόσωπα και ομάδες στη διοργάνωση τοπικών, αυτόνομα οργανωμένων εκδηλώσεων "
+"στο στυλ του TED σε ολόκληρο τον κόσμο, καθώς και το πρόγραμμα <a href="
+"\"https://www.ted.com/about/programs-initiatives/ted-fellows-program\" "
+"target=\"_blank\">TED Fellows</a> που βοηθάει πρωτοπόρους που θέλουν να "
+"αλλάξουν τον κόσμο να ενισχύσουν τον αντίκτυπο των αξιοσημείωτων έργων τους, "
+"όπως και των δραστηριοτήτων τους.</p>"
+
+#: .\project\about\templates\about\index.html:90
+msgid "about.tedx"
+msgstr ""
+"<h3>Τι είναι το TEDx;</h3><hr><p>Στο πνεύμα των Ιδεών που Αξίζει να "
+"Διαδοθούν, το TEDx είναι ένα πρόγραμμα <strong>τοπικών, αυτόνομα οργανωμένων "
+"εκδηλώσεων</strong> που φέρνουν τους ανθρώπους μαζί για να μοιραστούν μια "
+"εμπειρία TED. Σε μια εκδήλωση TEDx, τα βίντεο των ομιλιών TED και οι "
+"ζωντανοί ομιλητές συνδυάζονται για να προκαλέσουν <strong>βαθιά συζήτηση και "
+"σύνδεση</strong>. Αυτές οι τοπικές, αυτόνομα οργανωμένες εκδηλώσεις "
+"ονομάζονται TEDx, όπου <em>x = ανεξάρτητα οργανωμένη εκδήλωση TED</em>.</"
+"p><p>Το συνέδριο TED παρέχει γενικές οδηγίες για το πρόγραμμα TEDx, αλλά τα "
+"μεμονωμένα γεγονότα TEDx είναι αυτόνομα οργανωμένα (σύμφωνα με ορισμένους "
+"κανόνες και κανονισμούς).</p>"
 
 #: .\project\home\templates\home\hero.html:16
 #: .\project\home\templates\home\location.html:10
@@ -100,9 +182,9 @@ msgstr "Σύνδεσμος"
 
 #: .\project\partners\models.py:66
 #, fuzzy
-#| msgid "Knowledge Sponsors"
+#| msgid "Media Partners"
 msgid "Knowledge Partners"
-msgstr "Χορηγοί Γνώσης"
+msgstr "Χορηγοί Επικοινωνίας"
 
 #: .\project\partners\models.py:67
 msgid "Platinum Sponsor"
@@ -136,15 +218,19 @@ msgstr "Χορηγοί Επικοινωνίας"
 msgid "Community Partners"
 msgstr "Συνεργάτες Κοινότητας"
 
-#: .\project\partners\models.py:93 .\project\program\models.py:223
-#: .\project\program\models.py:351 .\project\team\models.py:102
+#: .\project\partners\models.py:93 .\project\program\models.py:226
+#: .\project\program\models.py:354 .\project\team\models.py:102
 msgid "Published"
 msgstr "Δημόσιο"
 
 #: .\project\partners\templates\partners\index.html:5
-#: .\project\templates\layouts\partials\nav.html:61
-msgid "Partners"
-msgstr "Συνεργάτες"
+#, fuzzy
+#| msgid "partners.description"
+msgid "partners.title"
+msgstr ""
+"Η εκδήλωσή μας δεν θα ήταν εφικτή χωρίς τη στήριξη από οργανισμούς που "
+"συμμερίζονται τις αξίες και τα οράματά μας. Επισκεφθείτε τις ιστοσελίδες "
+"τους και μάθετε περισσότερα για αυτούς."
 
 #: .\project\partners\templates\partners\index.html:6
 msgid "partners.description"
@@ -197,17 +283,17 @@ msgid "SIDE EVENTS"
 msgstr "SIDE EVENTS"
 
 #: .\project\program\models.py:193
-#: .\project\program\templates\program\presenter.html:78
+#: .\project\program\templates\program\presenter.html:83
 msgid "General"
 msgstr "Γενικά"
 
 #: .\project\program\models.py:194
-#: .\project\program\templates\program\presenter.html:72
+#: .\project\program\templates\program\presenter.html:77
 msgid "Talk"
 msgstr "Ομιλία"
 
 #: .\project\program\models.py:195
-#: .\project\program\templates\program\presenter.html:74
+#: .\project\program\templates\program\presenter.html:79
 msgid "Performance"
 msgstr "Performance"
 
@@ -216,7 +302,7 @@ msgid "Side event"
 msgstr "Side event"
 
 #: .\project\program\models.py:197
-#: .\project\program\templates\program\presenter.html:76
+#: .\project\program\templates\program\presenter.html:81
 msgid "Hosting"
 msgstr "Παρουσίαση"
 
@@ -266,7 +352,11 @@ msgstr "Μάθε περισσότερα για τα side events του φετι�
 msgid "back"
 msgstr "Πίσω"
 
-#: .\project\program\templates\program\presenter.html:62
+#: .\project\program\templates\program\presenter.html:61
+msgid "Claim your spot"
+msgstr "Διεκδίκησε την θέση σου"
+
+#: .\project\program\templates\program\presenter.html:67
 msgid "presenter.bio"
 msgstr "Βιογραφικό"
 
@@ -313,6 +403,10 @@ msgstr "Η εκδήλωση"
 #: .\project\templates\layouts\partials\nav.html:28
 msgid "(Toggle dropdown)"
 msgstr "(Εμφάνιση/Απόκρυψη υπομενού)"
+
+#: .\project\templates\layouts\partials\nav.html:61
+msgid "Partners"
+msgstr "Συνεργάτες"
 
 #: .\project\templates\layouts\partials\nav.html:67
 msgid "About us"
@@ -1541,6 +1635,9 @@ msgstr ""
 msgid "Primary Point of Interest"
 msgstr ""
 
+#~ msgid "Knowledge Sponsor"
+#~ msgstr "Χορηγός Γνώσης"
+
 #, fuzzy
 #~| msgid "presenter.bio"
 #~ msgid "presenter.side-events"
@@ -1563,39 +1660,6 @@ msgstr ""
 #~ msgid "%(team_name)s TEAM"
 #~ msgstr "ΟΜΑΔΑ %(team_name)s"
 
-#~ msgid "about.tedxntua"
-#~ msgstr ""
-#~ "<h3>Τι είναι το TEDxNTUA;</h3><p>Το TEDxNTUA είναι ένα συνέδριο που "
-#~ "περιλαμβάνει <strong>ομιλίες</strong> γύρω από την <strong>εκλαϊκευμένη "
-#~ "επιστήμη</strong>, την <strong>τέχνη</strong>, και τα <strong>κοινωνικά "
-#~ "ζητήματα</strong>, <strong>ιστορίες που εμπνέουν</strong>, καθώς και "
-#~ "<strong>πολυδιάστατα workshops</strong> και <strong>παραστάσεις</strong>. "
-#~ "Τελεί υπό την αιγίδα του Εθνικού Μετσόβιου Πολυτεχνείου (<a href="
-#~ "\"https://www.ntua.gr\" target=\"_blank\">ΕΜΠ</a>) και απευθύνεται κυρίως "
-#~ "στην κοινότητα του πανεπιστημίου αλλά και στις ευρύτερες φοιτητικές και "
-#~ "τοπικές κοινότητες της Αθήνας.</p><p>Η οργανωτική μας ομάδα αποτελείται "
-#~ "από <strong>εθελοντές φοιτητές</strong>, κυρίως του ΕΜΠ, που ασπάζονται "
-#~ "τη φιλοσοφία της κοινότητας του TED για &quot;ιδέες που αξίζει να "
-#~ "διαδοθούν&quot;. Η φιλοδοξία μας σαν ομάδα είναι να αναπτύξουμε την "
-#~ "εκδήλωση σε μία πλατφόρμα όπου θα μπορούν να ακουστούν οι φωνές ατόμων "
-#~ "που μπορούν να κάνουν τη διαφορά. Όπου τα μέλη της κοινότητας θα μπορούν "
-#~ "να αλληλεπιδρούν μεταξύ τους και να πυροδοτούν γόνιμες συζητήσεις για τις "
-#~ "κοινές μας ανησυχίες, όπως η <strong>μηχανική</strong> και ο ρόλος της "
-#~ "στο χτίσιμο <strong>μίας καλύτερης και πιο συμπεριληπτικής κοινωνίας</"
-#~ "strong>.</p><p>Από την αρχή του εγχειρήματος το <strong>2015</strong>, τα "
-#~ "μέλη της φοιτητικής κοινότητας έχουν δείξει σταθερά τη στήριξή τους, "
-#~ "συμμετέχοντας τόσο ως θεατές όσο και ως εθελοντές. Έτσι, έχουν βοηθήσει "
-#~ "να καθιερωθεί το TEDxNTUA σαν θεσμός και μας έχουν εμποτίσει με αίσθημα "
-#~ "ευθύνης απέναντί τους. Για να επιτευχθεί αυτό, αποτελεί σημαντικό "
-#~ "στοιχείο η συνεχής προσπάθειά μας να παρέχουμε μία εκδήλωση "
-#~ "<strong>ανοιχτή προς όλους</strong> χωρίς αντίτιμο, με τη βοήθεια των "
-#~ "συνεργατών μας.</p><p>Το TEDxNTUA έχει <strong>μη κερδοσκοπικό</strong> "
-#~ "χαρακτήρα και χρηματοδοτείται αποκλειστικά από χορηγούς, όπως εταιρίες, "
-#~ "οργανισμούς ή ευεργέτες. Τελεί υπό την επίβλεψη καθηγητών του ΕΜΠ και "
-#~ "ανήκει θεσμικά στο Ερευνητικό Πανεπιστημιακό Ινστιτούτο Συστημάτων "
-#~ "Επικοινωνιών και Υπολογιστών (<a href=\"https://www.iccs.gr\" target="
-#~ "\"_blank\">ΕΠΙΣΕΥ</a>) του ΕΜΠ.</p>"
-
 #~ msgid "about.join"
 #~ msgstr ""
 #~ "<details><summary><strong>Θέλω να συμμετέχω στην ομάδα!</strong></"
@@ -1617,53 +1681,6 @@ msgstr ""
 #~ "εκδήλωση για τους εθελοντές εκείνης της μέρας. <strong>Συντονίσου</"
 #~ "strong> στις σελίδες μας στα social media ώστε να παραμένεις ενημερωμένος/"
 #~ "η.</p></details>"
-
-#~ msgid "about.ted"
-#~ msgstr ""
-#~ "<h3>Τι είναι το TED;</h3><p>Το TED είναι ένας μη κερδοσκοπικός οργανισμός "
-#~ "αφοσιωμένος σε <strong>Ιδέες που Αξίζει να Διαδοθούν</strong>. Ξεκινώντας "
-#~ "ως τετραήμερο συνέδριο στην Καλιφόρνια 30 χρόνια πριν, το TED έχει "
-#~ "μεγαλώσει για να υποστηρίξει την αποστολή του με πολλαπλές πρωτοβουλίες. "
-#~ "Τα δύο ετήσια συνέδρια TED προσκαλούν τους καλύτερους στοχαστές του "
-#~ "κόσμου για να μιλήσουν 18 ή λιγότερα λεπτά. Πολλές από αυτές τις ομιλίες "
-#~ "προσφέρονται δωρεάν στο κοινό, στο <a href=\"https://www.ted.com\" target="
-#~ "\"_blank\">TED.com</a>.</p><p>Μεταξύ των ατόμων που έχουν υπάρξει "
-#~ "<strong>ομιλητές του TED</strong> είναι και ο Bill Gates, η Jane Goodall, "
-#~ "η Elizabeth Gilbert, ο Sir Richard Branson, η Nandan Nilekani, ο Philippe "
-#~ "Starck, η Ngozi Okonjo-Iweala, ο Sal Khan και ο Daniel Kahneman.</p><p>Το "
-#~ "ετήσιο συνέδριο TED πραγματοποιείται κάθε άνοιξη στο Βανκούβερ, στη "
-#~ "Βρετανική Κολομβία. Οι πρωτοβουλίες του TED σε θέματα κοινωνικής "
-#~ "δικτύωσης, περιλαμβάνουν το <a href=\"https://www.ted.com\" target="
-#~ "\"_blank\">TED.com</a>, όπου οι νέες ομιλίες δημοσιεύονται καθημερινά, "
-#~ "υποτιτλίζονται και εφοδιάζονται με διαδραστικά transcripts από το <a href="
-#~ "\"https://www.ted.com/about/programs-initiatives/ted-translators\" target="
-#~ "\"_blank\">Open Translation Project</a>, και την εκπαιδευτική πρωτοβουλία "
-#~ "<a href=\"https://www.ted.com/about/programs-initiatives/ted-ed\" target="
-#~ "\"_blank\">TED-Ed</a>. Το TED έχει καθιερώσει το ετήσιο <a href=\"https://"
-#~ "www.ted.com/about/programs-initiatives/ted-prize\" target=\"_blank\">TED "
-#~ "Prize</a>, όπου εξέχοντες υποψήφιοι με μια ευχή να αλλάξουν τον κόσμο "
-#~ "βοηθούν στη μετατροπή των ευχών τους σε πράξεις, το <a href=\"https://www."
-#~ "ted.com/about/programs-initiatives/tedx-program\" target=\"_blank\">TEDx</"
-#~ "a>, το οποίο υποστηρίζει πρόσωπα και ομάδες στη διοργάνωση τοπικών, "
-#~ "αυτόνομα οργανωμένων εκδηλώσεων στο στυλ του TED σε ολόκληρο τον κόσμο, "
-#~ "καθώς και το πρόγραμμα <a href=\"https://www.ted.com/about/programs-"
-#~ "initiatives/ted-fellows-program\" target=\"_blank\">TED Fellows</a> που "
-#~ "βοηθάει πρωτοπόρους που θέλουν να αλλάξουν τον κόσμο να ενισχύσουν τον "
-#~ "αντίκτυπο των αξιοσημείωτων έργων τους, όπως και των δραστηριοτήτων τους."
-#~ "</p>"
-
-#~ msgid "about.tedx"
-#~ msgstr ""
-#~ "<h3>Τι είναι το TEDx;</h3><p>Στο πνεύμα των Ιδεών που Αξίζει να "
-#~ "Διαδοθούν, το TEDx είναι ένα πρόγραμμα <strong>τοπικών, αυτόνομα "
-#~ "οργανωμένων εκδηλώσεων</strong> που φέρνουν τους ανθρώπους μαζί για να "
-#~ "μοιραστούν μια εμπειρία TED. Σε μια εκδήλωση TEDx, τα βίντεο των ομιλιών "
-#~ "TED και οι ζωντανοί ομιλητές συνδυάζονται για να προκαλέσουν "
-#~ "<strong>βαθιά συζήτηση και σύνδεση</strong>. Αυτές οι τοπικές, αυτόνομα "
-#~ "οργανωμένες εκδηλώσεις ονομάζονται TEDx, όπου <em>x = ανεξάρτητα "
-#~ "οργανωμένη εκδήλωση TED</em>.</p><p>Το συνέδριο TED παρέχει γενικές "
-#~ "οδηγίες για το πρόγραμμα TEDx, αλλά τα μεμονωμένα γεγονότα TEDx είναι "
-#~ "αυτόνομα οργανωμένα (σύμφωνα με ορισμένους κανόνες και κανονισμούς).</p>"
 
 #~ msgid "home.about.title"
 #~ msgstr "ΣΧΕΤΙΚΑ"
