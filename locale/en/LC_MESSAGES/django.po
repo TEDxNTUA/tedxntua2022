@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-12 17:04+0300\n"
+"POT-Creation-Date: 2022-05-11 15:44+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,43 +95,43 @@ msgid "Link"
 msgstr ""
 
 #: .\project\partners\models.py:66
-msgid "Platinum Sponsor"
-msgstr ""
-
-#: .\project\partners\models.py:67
-msgid "Grand Sponsors"
-msgstr ""
-
-#: .\project\partners\models.py:68
-msgid "Grand Carrier Sponsors"
-msgstr ""
-
-#: .\project\partners\models.py:69
-msgid "Grand Hospitality Sponsors"
-msgstr ""
-
-#: .\project\partners\models.py:70
-msgid "Sponsors"
-msgstr ""
-
-#: .\project\partners\models.py:71
-msgid "Supporters"
-msgstr ""
-
-#: .\project\partners\models.py:72
-msgid "Media Partners"
-msgstr ""
-
-#: .\project\partners\models.py:73
-msgid "Community Partners"
-msgstr ""
-
-#: .\project\partners\models.py:74
 msgid "Knowledge Partners"
 msgstr ""
 
-#: .\project\partners\models.py:93 .\project\program\models.py:226
-#: .\project\program\models.py:354 .\project\team\models.py:102
+#: .\project\partners\models.py:67
+msgid "Platinum Sponsor"
+msgstr ""
+
+#: .\project\partners\models.py:68
+msgid "Grand Sponsors"
+msgstr ""
+
+#: .\project\partners\models.py:69
+msgid "Grand Carrier Sponsors"
+msgstr ""
+
+#: .\project\partners\models.py:70
+msgid "Grand Hospitality Sponsors"
+msgstr ""
+
+#: .\project\partners\models.py:71
+msgid "Sponsors"
+msgstr ""
+
+#: .\project\partners\models.py:72
+msgid "Supporters"
+msgstr ""
+
+#: .\project\partners\models.py:73
+msgid "Media Partners"
+msgstr ""
+
+#: .\project\partners\models.py:74
+msgid "Community Partners"
+msgstr ""
+
+#: .\project\partners\models.py:93 .\project\program\models.py:223
+#: .\project\program\models.py:351 .\project\team\models.py:102
 msgid "Published"
 msgstr ""
 
@@ -187,17 +187,17 @@ msgid "SIDE EVENTS"
 msgstr ""
 
 #: .\project\program\models.py:193
-#: .\project\program\templates\program\presenter.html:83
+#: .\project\program\templates\program\presenter.html:78
 msgid "General"
 msgstr ""
 
 #: .\project\program\models.py:194
-#: .\project\program\templates\program\presenter.html:77
+#: .\project\program\templates\program\presenter.html:72
 msgid "Talk"
 msgstr ""
 
 #: .\project\program\models.py:195
-#: .\project\program\templates\program\presenter.html:79
+#: .\project\program\templates\program\presenter.html:74
 msgid "Performance"
 msgstr ""
 
@@ -206,7 +206,7 @@ msgid "Side event"
 msgstr ""
 
 #: .\project\program\models.py:197
-#: .\project\program\templates\program\presenter.html:81
+#: .\project\program\templates\program\presenter.html:76
 msgid "Hosting"
 msgstr ""
 

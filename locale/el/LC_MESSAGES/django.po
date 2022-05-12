@@ -8,7 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
+<<<<<<< HEAD
 "POT-Creation-Date: 2022-05-12 17:04+0300\n"
+=======
+"POT-Creation-Date: 2022-05-11 15:44+0300\n"
+>>>>>>> 34e87411b0341d8ebfd4c28e7b2ee530bd5e6686
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -98,6 +102,7 @@ msgid "Link"
 msgstr "Σύνδεσμος"
 
 #: .\project\partners\models.py:66
+<<<<<<< HEAD
 msgid "Platinum Sponsor"
 msgstr "Platinum Χορηγός"
 
@@ -137,6 +142,47 @@ msgstr "Χορηγοί Επικοινωνίας"
 
 #: .\project\partners\models.py:93 .\project\program\models.py:226
 #: .\project\program\models.py:354 .\project\team\models.py:102
+=======
+#, fuzzy
+#| msgid "Knowledge Sponsors"
+msgid "Knowledge Partners"
+msgstr "Χορηγοί Γνώσης"
+
+#: .\project\partners\models.py:67
+msgid "Platinum Sponsor"
+msgstr "Platinum Χορηγός"
+
+#: .\project\partners\models.py:68
+msgid "Grand Sponsors"
+msgstr "Μεγάλοι Χορηγοί"
+
+#: .\project\partners\models.py:69
+msgid "Grand Carrier Sponsors"
+msgstr "Μεγάλοι Χορηγοί Μεταφορών"
+
+#: .\project\partners\models.py:70
+msgid "Grand Hospitality Sponsors"
+msgstr "Μεγάλοι Χορηγοί Φιλοξενίας"
+
+#: .\project\partners\models.py:71
+msgid "Sponsors"
+msgstr "Χορηγοί"
+
+#: .\project\partners\models.py:72
+msgid "Supporters"
+msgstr "Υποστηρικτές"
+
+#: .\project\partners\models.py:73
+msgid "Media Partners"
+msgstr "Χορηγοί Επικοινωνίας"
+
+#: .\project\partners\models.py:74
+msgid "Community Partners"
+msgstr "Συνεργάτες Κοινότητας"
+
+#: .\project\partners\models.py:93 .\project\program\models.py:223
+#: .\project\program\models.py:351 .\project\team\models.py:102
+>>>>>>> 34e87411b0341d8ebfd4c28e7b2ee530bd5e6686
 msgid "Published"
 msgstr "Δημόσιο"
 
@@ -196,17 +242,29 @@ msgid "SIDE EVENTS"
 msgstr "SIDE EVENTS"
 
 #: .\project\program\models.py:193
+<<<<<<< HEAD
 #: .\project\program\templates\program\presenter.html:83
+=======
+#: .\project\program\templates\program\presenter.html:78
+>>>>>>> 34e87411b0341d8ebfd4c28e7b2ee530bd5e6686
 msgid "General"
 msgstr "Γενικά"
 
 #: .\project\program\models.py:194
+<<<<<<< HEAD
 #: .\project\program\templates\program\presenter.html:77
+=======
+#: .\project\program\templates\program\presenter.html:72
+>>>>>>> 34e87411b0341d8ebfd4c28e7b2ee530bd5e6686
 msgid "Talk"
 msgstr "Ομιλία"
 
 #: .\project\program\models.py:195
+<<<<<<< HEAD
 #: .\project\program\templates\program\presenter.html:79
+=======
+#: .\project\program\templates\program\presenter.html:74
+>>>>>>> 34e87411b0341d8ebfd4c28e7b2ee530bd5e6686
 msgid "Performance"
 msgstr "Performance"
 
@@ -215,7 +273,11 @@ msgid "Side event"
 msgstr "Side event"
 
 #: .\project\program\models.py:197
+<<<<<<< HEAD
 #: .\project\program\templates\program\presenter.html:81
+=======
+#: .\project\program\templates\program\presenter.html:76
+>>>>>>> 34e87411b0341d8ebfd4c28e7b2ee530bd5e6686
 msgid "Hosting"
 msgstr "Παρουσίαση"
 
@@ -265,11 +327,15 @@ msgstr "Μάθε περισσότερα για τα side events του φετι�
 msgid "back"
 msgstr "Πίσω"
 
+<<<<<<< HEAD
 #: .\project\program\templates\program\presenter.html:61
 msgid "Claim your spot"
 msgstr "Διεκδίκησε την θέση σου"
 
 #: .\project\program\templates\program\presenter.html:67
+=======
+#: .\project\program\templates\program\presenter.html:62
+>>>>>>> 34e87411b0341d8ebfd4c28e7b2ee530bd5e6686
 msgid "presenter.bio"
 msgstr "Βιογραφικό"
 
