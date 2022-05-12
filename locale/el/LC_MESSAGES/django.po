@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-12 19:45+0300\n"
+"POT-Creation-Date: 2022-05-12 20:11+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -218,8 +218,8 @@ msgstr "Χορηγοί Επικοινωνίας"
 msgid "Community Partners"
 msgstr "Συνεργάτες Κοινότητας"
 
-#: .\project\partners\models.py:93 .\project\program\models.py:223
-#: .\project\program\models.py:351 .\project\team\models.py:102
+#: .\project\partners\models.py:93 .\project\program\models.py:226
+#: .\project\program\models.py:354 .\project\team\models.py:102
 msgid "Published"
 msgstr "Δημόσιο"
 
@@ -283,17 +283,17 @@ msgid "SIDE EVENTS"
 msgstr "SIDE EVENTS"
 
 #: .\project\program\models.py:193
-#: .\project\program\templates\program\presenter.html:78
+#: .\project\program\templates\program\presenter.html:83
 msgid "General"
 msgstr "Γενικά"
 
 #: .\project\program\models.py:194
-#: .\project\program\templates\program\presenter.html:72
+#: .\project\program\templates\program\presenter.html:77
 msgid "Talk"
 msgstr "Ομιλία"
 
 #: .\project\program\models.py:195
-#: .\project\program\templates\program\presenter.html:74
+#: .\project\program\templates\program\presenter.html:79
 msgid "Performance"
 msgstr "Performance"
 
@@ -302,7 +302,7 @@ msgid "Side event"
 msgstr "Side event"
 
 #: .\project\program\models.py:197
-#: .\project\program\templates\program\presenter.html:76
+#: .\project\program\templates\program\presenter.html:81
 msgid "Hosting"
 msgstr "Παρουσίαση"
 
@@ -352,7 +352,11 @@ msgstr "Μάθε περισσότερα για τα side events του φετι�
 msgid "back"
 msgstr "Πίσω"
 
-#: .\project\program\templates\program\presenter.html:62
+#: .\project\program\templates\program\presenter.html:61
+msgid "Claim your spot"
+msgstr "Διεκδίκησε την θέση σου"
+
+#: .\project\program\templates\program\presenter.html:67
 msgid "presenter.bio"
 msgstr "Βιογραφικό"
 
