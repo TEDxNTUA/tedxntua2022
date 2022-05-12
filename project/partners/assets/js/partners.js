@@ -18,7 +18,7 @@ $('.image-container').on("click touch", function() {
     $(this).addClass('hover');
     $('.image-container').not(this).removeClass('hover');
 });
-    
+
 $(window).on("click", function(e) {
     if (activePartner != null) {
         if ($(e.target.parentElement).hasClass('image-container') == false) {

@@ -207,7 +207,10 @@ class Activity(TranslatableModel):
         title=models.CharField(max_length=255, blank=True),
         subtitle=models.TextField(blank=True),
         description=models.TextField(blank=True),
+        workshopLink = models.URLField(null = True, blank=True,verbose_name='Workshop ticket')
     )
+
+
 
     image = VersatileImageField(
         'Image',

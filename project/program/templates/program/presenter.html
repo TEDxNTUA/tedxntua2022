@@ -42,7 +42,7 @@
                 <div class="squares-overlayed blue-black"></div>
             </div>
         {% endif %}
-        <div class="info">
+        <div class="info {% if activities.0.workshopLink %} no-margin-bottom {% endif %}">
             <div class="info-name">
                 <h3 class="presenter-name">{{presenter.name}}</h3>
                 <div class="link_icon">
@@ -56,6 +56,11 @@
             </div>
             <h5 class="presenter-occupation">{{presenter.occupation}}</h2>
         </div>
+        {% if activities.0.workshopLink %}
+        <a href="{{activities.0.workshopLink}}" target="_blank" class="btn btn-secondary back-btn btn-presenter">
+            {% trans 'Claim your spot' %}
+        </a>
+        {% endif %}
         <!-- <div class="presenter-info"> -->
             <div class="bio">
                 <!-- <div><p class="header">Bio</p></div> -->
