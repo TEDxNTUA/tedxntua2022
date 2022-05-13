@@ -18,7 +18,7 @@ body {
 
 .meet_the_team {
   margin: 1em;
-  font-size: 2em;
+  font-size: 2.3em;
   // position: absolute;
   // left: 35%;
 }
@@ -57,10 +57,13 @@ body {
   filter: blur(3px);
 }
 
+<<<<<<< HEAD
 .td-hidden{
   opacity: 0;
 }
 
+=======
+>>>>>>> f64c4629e81c9f0378b95336d1c4baaeada2f5f6
 .team_description_mobile {
 
   width: 100%;
@@ -86,7 +89,7 @@ body {
   flex-direction: row;
   flex-wrap: wrap;
   align-content: flex-start;
-  justify-content: space-around;
+  justify-content: space-evenly;
   padding-top: 1em;
 }
 
@@ -254,8 +257,8 @@ body {
 }
 
 .team_item:nth-child(3) {
-  left: 60%;
-  top: 45%;
+  left: 59%;
+  top: 35%;
 }
 
 .team_item:nth-child(4) {
@@ -283,7 +286,7 @@ body {
   right: 0;
   bottom: 0;
   background-color: #2e65b8;
-  opacity: 0.7;
+  opacity: 0.5;
   border-radius: 10px 0px 5px 0px;
   height: 2.3em;
   width: 2.3em;
@@ -402,6 +405,7 @@ body {
 @media only screen and (min-device-width: 820px) {
   .team_item_mobile {
     padding-bottom: 14em !important;
+<<<<<<< HEAD
   }
 }
 
@@ -409,6 +413,8 @@ body {
   .linkedin_svg {
     height: 2em !important;
     width: 2.1em !important;
+=======
+>>>>>>> f64c4629e81c9f0378b95336d1c4baaeada2f5f6
   }
   .team_item {
     width: 34% !important;
@@ -455,8 +461,13 @@ body {
     top: 44% !important;
   }
   .team_item_mobile {
+<<<<<<< HEAD
     width: 42%;
     padding-bottom: 8em;
+=======
+    width: 36% !important;
+    padding-bottom: 9em !important;
+>>>>>>> f64c4629e81c9f0378b95336d1c4baaeada2f5f6
   }
   .glassText {
     height: auto;
@@ -468,20 +479,53 @@ body {
   }
 }
 
+@media only screen and (max-width: 550px) {
+  .meet_the_team {
+    font-size: 2.0em;
+  }
+  .linkedin_svg {
+    height: 2em !important;
+    width: 2.1em !important;
+  }
+  .team_item {
+    width: 34% !important;
+  }
+  .team_description {
+    width: 61% !important;
+    left: 19% !important;
+  }
+  .team_item_mobile h2 {
+    font-size: 0.8em !important;
+    white-space: nowrap;
+  }
+  .team_item_mobile {
+    padding-bottom: 6em !important;
+  }
+}
+
+
 @media only screen and (max-width: 1300px) {
   .team_container {
     height: 1400px !important;
   }
   .team_item:nth-child(1) {
-    left: 6%;
-    top: 9%;
+    left: 9%;
+    top: 8%;
   }
   .team_item:nth-child(2) {
-    left: 50%;
-    top: 4%;
+    left: 58%;
+    top: 2%;
   }
   .team_item:nth-child(3) {
-    left: 47%;
+    left: 64%;
+    top: 24%;
+  }
+  .team_item:nth-child(4) {
+    left: 5%;
+    top: 27%;
+  }
+  .team_item:nth-child(5) {
+    left: 36%;
     top: 32%;
   }
 }

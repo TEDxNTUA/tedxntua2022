@@ -1,7 +1,9 @@
 .noscroll {
     overflow-y: hidden;
 }
-
+#main {
+    justify-content: center;
+}
 article.sponsors {
     padding: 0 $page-padding-x-lg;
 
@@ -142,9 +144,6 @@ article.sponsors {
             font-size: 2.5rem;
         }
 
-        // .partners-collection {
-        //     justify-content: space-evenly;
-        // }
 
         .partner-instance {
             max-width: 100%; // ?
@@ -173,7 +172,7 @@ article.sponsors {
             .partner-card {
                 width: 12em;
                 height: 12em;
-                
+
                 .pop-up-button {
                     font-size: 1.2em;
                 }
@@ -332,14 +331,6 @@ article.sponsors {
 }
 @media only screen and (max-width: 430px) {
     article.sponsors {
-        .partner-card {
-            width: 10em !important;
-            height: 10em !important;
-        }
-    }
-}
-@media only screen and (max-width: 550px) {
-    article.sponsors {
         padding: 0;
         .page-heading {
             font-size: 1.8rem !important;
@@ -356,8 +347,20 @@ article.sponsors {
             }
         }
         .partner-card {
-            width: 12em;
-            height: 12em;
+            width: 10em !important;
+            height: 10em !important;
+        }
+    }
+}
+@media only screen and (min-width: 430px) and (max-width: 550px) {
+    article.sponsors {
+        padding: 0;
+        .page-heading {
+            font-size: 1.8rem !important;
+        }
+        .partner-card {
+            width: 12em !important;
+            height: 12em !important;
         }
     }
     
