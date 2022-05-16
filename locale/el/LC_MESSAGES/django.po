@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-13 15:54+0300\n"
+"POT-Creation-Date: 2022-05-16 20:22+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -182,12 +182,12 @@ msgstr "Σύνδεσμος"
 
 #: .\project\partners\models.py:66
 #, fuzzy
-#| msgid "Media Partners"
-msgid "Knowledge Partners"
-msgstr ""
+#| msgid "Knowledge Sponsor"
+msgid "Knowledge Partner"
+msgstr "Χορηγός Γνώσης"
 
 #: .\project\partners\models.py:67
-msgid "Platinum Sponsor"
+msgid "Platinum Sponsors"
 msgstr ""
 
 #: .\project\partners\models.py:68
@@ -202,11 +202,8 @@ msgstr ""
 msgid "Grand Hospitality Sponsors"
 msgstr ""
 
-msgid "Partners"
-msgstr "" 
-
 #: .\project\partners\models.py:71
-msgid "Sponsors"
+msgid "Partners"
 msgstr ""
 
 #: .\project\partners\models.py:72
@@ -408,7 +405,7 @@ msgid "(Toggle dropdown)"
 msgstr "(Εμφάνιση/Απόκρυψη υπομενού)"
 
 #: .\project\templates\layouts\partials\nav.html:61
-msgid "Partners"
+msgid "nav.partners"
 msgstr "Συνεργάτες"
 
 #: .\project\templates\layouts\partials\nav.html:67
@@ -1584,6 +1581,51 @@ msgstr ""
 msgid "Index of %(directory)s"
 msgstr ""
 
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:7
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:221
+msgid "The install worked successfully! Congratulations!"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:207
+#, python-format
+msgid ""
+"View <a href=\"https://docs.djangoproject.com/en/%(version)s/releases/\" "
+"target=\"_blank\" rel=\"noopener\">release notes</a> for Django %(version)s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:222
+#, python-format
+msgid ""
+"You are seeing this page because <a href=\"https://docs.djangoproject.com/en/"
+"%(version)s/ref/settings/#debug\" target=\"_blank\" rel=\"noopener"
+"\">DEBUG=True</a> is in your settings file and you have not configured any "
+"URLs."
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:230
+msgid "Django Documentation"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:231
+msgid "Topics, references, &amp; how-to’s"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:239
+msgid "Tutorial: A Polling App"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:240
+msgid "Get started with Django"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:248
+msgid "Django Community"
+msgstr ""
+
+#: .\venv\Lib\site-packages\django\views\templates\default_urlconf.html:249
+msgid "Connect, get help, or contribute"
+msgstr ""
+
 #: .\venv\Lib\site-packages\versatileimagefield\fields.py:35
 msgid "Versatile Image Field"
 msgstr ""
@@ -1592,9 +1634,6 @@ msgstr ""
 #: .\venv\Lib\site-packages\versatileimagefield\templates\versatileimagefield\forms\widgets\versatile_image_bootstrap.html:17
 msgid "Primary Point of Interest"
 msgstr ""
-
-#~ msgid "Knowledge Sponsor"
-#~ msgstr "Χορηγός Γνώσης"
 
 #, fuzzy
 #~| msgid "presenter.bio"
