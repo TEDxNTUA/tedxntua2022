@@ -62,10 +62,10 @@ class Partner(TranslatableModel):
     SUPPORTERS = 'SUP'
     MEDIA_PARTNERS = 'MP'
     COMMUNITY_PARTNERS = 'CP'
-    OTHER_SPONSORS = 'OS'
+    PARTNERS = 'P'
     PARTNER_TYPES = (
-        (KNOWLEGDE_PARTNERS, _('Knowledge Partners')),
-        (PLATINUM_SPONSORS, _('Platinum Sponsor')),
+        (KNOWLEGDE_PARTNERS, _('Knowledge Partner')),
+        (PLATINUM_SPONSORS, _('Platinum Sponsors')),
         (GRAND_SPONSORS, _('Grand Sponsors')),
         (GRAND_CARRIER_SPONSORS, _('Grand Carrier Sponsors')),
         (GRAND_HOSPITALITY_SPONSORS, _('Grand Hospitality Sponsors')),
@@ -73,7 +73,7 @@ class Partner(TranslatableModel):
         (SUPPORTERS, _('Supporters')),
         (MEDIA_PARTNERS, _('Media Partners')),
         (COMMUNITY_PARTNERS, _('Community Partners')),
-        (OTHER_SPONSORS, _('Other Sponsors')),
+        (PARTNERS, _('Partners')),
     )
     translations = TranslatedFields(
         name=models.CharField(max_length=255, verbose_name='name'),

@@ -189,6 +189,9 @@ msgstr ""
 msgid "Grand Hospitality Sponsors"
 msgstr ""
 
+msgid "Partners"
+msgstr "" 
+
 #: .\project\partners\models.py:71
 msgid "Sponsors"
 msgstr ""

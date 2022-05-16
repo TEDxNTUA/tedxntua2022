@@ -188,7 +188,7 @@ msgstr "Χορηγοί Επικοινωνίας"
 
 #: .\project\partners\models.py:67
 msgid "Platinum Sponsor"
-msgstr "Platinum Χορηγός"
+msgstr "Platinum Χορηγοί"
 
 #: .\project\partners\models.py:68
 msgid "Grand Sponsors"
@@ -201,6 +201,9 @@ msgstr "Μεγάλοι Χορηγοί Μεταφορών"
 #: .\project\partners\models.py:70
 msgid "Grand Hospitality Sponsors"
 msgstr "Μεγάλοι Χορηγοί Φιλοξενίας"
+
+msgid "Partners"
+msgstr "Συνεργάτες" 
 
 #: .\project\partners\models.py:71
 msgid "Sponsors"
