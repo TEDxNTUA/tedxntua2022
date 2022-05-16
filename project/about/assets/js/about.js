@@ -132,7 +132,11 @@ resizePictures();
 // --- Change Team Names ---
 if (!isMobile) {
   const teamName = document.getElementById("teamName");
+<<<<<<< HEAD
+  var teamNames = ["IT", "EXPERIENCE", "GRAPHICS", "FUNDRAISING", "MEDIA", "SPEAKERS", "VENUE-PRODUCTION", "THE TEDxNTUA"];
+=======
   var teamNames = ["GRAPHICS", "EXPERIENCE", "IT", "FUNDRAISING", "MEDIA", "SPEAKERS", "VENUE-PRODUCTION", "THE TEDx NTUA 2022"];
+>>>>>>> f64c4629e81c9f0378b95336d1c4baaeada2f5f6
 
   // map each word to Y coordinates
   // each word is mapped to range equal to the team container's height

@@ -140,10 +140,17 @@ body {
 }
 
 .team_item {
-  width: 19%;
+  width: 14%;
   position: absolute;
 
   cursor: pointer;
+}
+
+.team_item_cont{
+  display: flex;
+  flex-flow:  column-reverse;
+  align-items: center;
+  height: 100%;
 }
 
 .team_item_mobile {
@@ -189,10 +196,14 @@ body {
 }
 
 .team_item h2, .team_item_mobile h2 {
-  position: absolute;
+  //position: absolute;
+word-spacing: 200px;
+text-align: center;
+
 
   padding: 0;
   margin: 0px;
+  padding-top: 0.7em;
 
   top: -1.3em;
   left: 0;
@@ -395,6 +406,8 @@ body {
   animation: come_in_down .125s;
 }
 
+
+
 @media only screen and (min-device-width: 820px) {
   .team_item_mobile {
     padding-bottom: 14em !important;
@@ -426,7 +439,7 @@ body {
   }
   .team_item:nth-child(3) {
     left: 50% !important;
-    top: 24% !important;
+    top: 25% !important;
   }
   .team_item:nth-child(4) {
     left: 11% !important;
@@ -437,8 +450,8 @@ body {
     top: 44% !important;
   }
   .team_item_mobile {
-    width: 36% !important;
-    padding-bottom: 9em !important;
+    width: 23% !important;  
+    padding-bottom: 10em !important;
   }
   .glassText {
     height: auto;
@@ -447,30 +460,6 @@ body {
   }
   .sidePage_mobile {
     padding: 0 1%;
-  }
-}
-
-@media only screen and (max-width: 550px) {
-  .meet_the_team {
-    font-size: 2.0em;
-  }
-  .linkedin_svg {
-    height: 2em !important;
-    width: 2.1em !important;
-  }
-  .team_item {
-    width: 34% !important;
-  }
-  .team_description {
-    width: 61% !important;
-    left: 19% !important;
-  }
-  .team_item_mobile h2 {
-    font-size: 0.8em !important;
-    white-space: nowrap;
-  }
-  .team_item_mobile {
-    padding-bottom: 6em !important;
   }
 }
 
@@ -498,6 +487,31 @@ body {
   .team_item:nth-child(5) {
     left: 36%;
     top: 32%;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .meet_the_team {
+    font-size: 2.0em;
+  }
+  .linkedin_svg {
+    height: 2em !important;
+    width: 2.1em !important;
+  }
+  .team_item {
+    width: 34% !important;
+  }
+  .team_description {
+    width: 61% !important;
+    left: 19% !important;
+  }
+  .team_item_mobile h2 {
+    font-size: 0.8em !important;
+    //white-space: nowrap;
+  }
+  .team_item_mobile {
+    padding-bottom: 12em !important;
+    width: 37% !important;
   }
 }
 
