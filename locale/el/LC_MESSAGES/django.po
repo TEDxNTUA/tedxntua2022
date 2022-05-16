@@ -184,34 +184,34 @@ msgstr "Σύνδεσμος"
 #, fuzzy
 #| msgid "Media Partners"
 msgid "Knowledge Partners"
-msgstr "Χορηγοί Επικοινωνίας"
+msgstr ""
 
 #: .\project\partners\models.py:67
 msgid "Platinum Sponsor"
-msgstr "Platinum Χορηγοί"
+msgstr ""
 
 #: .\project\partners\models.py:68
 msgid "Grand Sponsors"
-msgstr "Μεγάλοι Χορηγοί"
+msgstr ""
 
 #: .\project\partners\models.py:69
 msgid "Grand Carrier Sponsors"
-msgstr "Μεγάλοι Χορηγοί Μεταφορών"
+msgstr ""
 
 #: .\project\partners\models.py:70
 msgid "Grand Hospitality Sponsors"
-msgstr "Μεγάλοι Χορηγοί Φιλοξενίας"
+msgstr ""
 
 msgid "Partners"
-msgstr "Συνεργάτες" 
+msgstr "" 
 
 #: .\project\partners\models.py:71
 msgid "Sponsors"
-msgstr "Χορηγοί"
+msgstr ""
 
 #: .\project\partners\models.py:72
 msgid "Supporters"
-msgstr "Υποστηρικτές"
+msgstr ""
 
 #: .\project\partners\models.py:73
 msgid "Media Partners"
