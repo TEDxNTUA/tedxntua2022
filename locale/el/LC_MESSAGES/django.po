@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-05-16 20:22+0300\n"
+"POT-Creation-Date: 2022-05-16 20:31+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -224,13 +224,9 @@ msgid "Published"
 msgstr "Δημόσιο"
 
 #: .\project\partners\templates\partners\index.html:5
-#, fuzzy
-#| msgid "partners.description"
-msgid "partners.title"
-msgstr ""
-"Η εκδήλωσή μας δεν θα ήταν εφικτή χωρίς τη στήριξη από οργανισμούς που "
-"συμμερίζονται τις αξίες και τα οράματά μας. Επισκεφθείτε τις ιστοσελίδες "
-"τους και μάθετε περισσότερα για αυτούς."
+#: .\project\templates\layouts\partials\nav.html:61
+msgid "nav.partners"
+msgstr "Συνεργάτες"
 
 #: .\project\partners\templates\partners\index.html:6
 msgid "partners.description"
@@ -403,10 +399,6 @@ msgstr "Η εκδήλωση"
 #: .\project\templates\layouts\partials\nav.html:28
 msgid "(Toggle dropdown)"
 msgstr "(Εμφάνιση/Απόκρυψη υπομενού)"
-
-#: .\project\templates\layouts\partials\nav.html:61
-msgid "nav.partners"
-msgstr "Συνεργάτες"
 
 #: .\project\templates\layouts\partials\nav.html:67
 msgid "About us"
@@ -1634,6 +1626,14 @@ msgstr ""
 #: .\venv\Lib\site-packages\versatileimagefield\templates\versatileimagefield\forms\widgets\versatile_image_bootstrap.html:17
 msgid "Primary Point of Interest"
 msgstr ""
+
+#, fuzzy
+#~| msgid "partners.description"
+#~ msgid "partners.title"
+#~ msgstr ""
+#~ "Η εκδήλωσή μας δεν θα ήταν εφικτή χωρίς τη στήριξη από οργανισμούς που "
+#~ "συμμερίζονται τις αξίες και τα οράματά μας. Επισκεφθείτε τις ιστοσελίδες "
+#~ "τους και μάθετε περισσότερα για αυτούς."
 
 #, fuzzy
 #~| msgid "presenter.bio"
