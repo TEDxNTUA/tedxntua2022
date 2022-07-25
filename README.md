@@ -12,7 +12,7 @@ The project contains some `<VAR:NAME>` occurrences for information that changes 
 
 ## Contributors
 Listed alphabetically:
-1. Elina Syrri ([ElinaSyr](https://github.com/ElinaSyr))
+1. Elina Syrri ([elinasyr](https://github.com/elinasyr))
 2. Evaggelos Pipis ([evpipis](https://github.com/evpipis))
 3. George Papadoulis ([G-Papad](https://github.com/G-Papad))
 4. Yiannis Hadjiyianni ([yiannisha](https://github.com/yiannisha))
